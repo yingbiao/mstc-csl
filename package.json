@@ -1,0 +1,26 @@
+{
+  "name": "mstc-csl",
+  "version": "1.0.0",
+  "description": "MSTC CSL",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yingbiao/mstc-csl.git"
+  },
+  "author": "Yingbiao Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yingbiao/mstc-csl/issues"
+  },
+  "homepage": "https://github.com/yingbiao/mstc-csl#readme",
+  "dependencies": {   
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "citeproc-js-node": "0.0.3",
+    "mocha": "^5.1.1"
+  }
+}
