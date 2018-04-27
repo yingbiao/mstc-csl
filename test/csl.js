@@ -56,7 +56,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北: 校园书房出版社, 1989。</div>';
+        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北: 校园书房出版社，1989。</div>';
         
         assert.equal(output, expected);
     });
@@ -124,7 +124,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">博能汉：《历史学》，黄晓兰译。香港: 天天出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">博能汉：《历史学》，黄晓兰译。香港: 天天出版社，2003。</div>';
         
         assert.equal(output, expected);
     });
@@ -155,7 +155,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北: 校园出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北: 校园出版社，2003。</div>';
         
         assert.equal(output, expected);
     });
@@ -274,7 +274,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杜德民, 张爱杨和陈丰裕：《雨过天晴》。新加坡: 和联出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》。新加坡: 和联出版社，2003。</div>';
         
         assert.equal(output, expected);
     });
@@ -351,7 +351,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门: 汉阳出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门: 汉阳出版社，2003。</div>';
         
         assert.equal(output, expected);
     });    
@@ -490,6 +490,39 @@ describe("MSTC CSL", function() {
 
         var output = makeBibliography(items);
         var expected = '<div class="csl-entry">Weber, Bruce. "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24–26.</div>';
+        
+        assert.equal(output, expected);
+    }); 
+
+    it("Article in a Magazine Chinese", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "美国华侨习俗趣谈",
+                "author": [
+                    {
+                        "family": "李",
+                        "given": "约翰",
+                    }
+                ],
+                "container-title":"时代华侨周刊",
+                "language":"zh-CN",
+                "issued": {
+                    "date-parts": [
+                        [
+                            1957,
+                            10,
+                            30
+                        ]
+                    ]
+                },
+                "page": "43-47",
+                "type": "article-magazine"
+            }
+        };
+
+        var output = makeBibliography(items);
+        var expected = '<div class="csl-entry">李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43–47。</div>';
         
         assert.equal(output, expected);
     }); 
