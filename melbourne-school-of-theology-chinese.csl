@@ -88,21 +88,21 @@
       <choose>
         <if variable="container-title editor" match="all">
           <names variable="editor">
-              <name and="text" delimiter=", "/>
+              <name and="text" delimiter="，"/>
               <label form="verb-short" text-case="title" suffix=""/>
             </names>
         </if>
         <else-if variable="author">
-            <names variable="editor" delimiter=", ">
+            <names variable="editor" delimiter="，">
               <label form="verb" text-case="title" suffix=" "/>
-              <name and="text" delimiter=", "/>
+              <name and="text" delimiter="，"/>
             </names>
         </else-if>
       </choose>
       <choose>
         <if variable="author editor" match="any">
-          <names variable="translator" delimiter=", ">
-            <name and="text" delimiter=", "/>
+          <names variable="translator" delimiter="，">
+            <name and="text" delimiter="，"/>
             <label form="verb-short" text-case="lowercase" suffix=""/>
           </names>
         </if>
@@ -150,7 +150,7 @@
   </macro>
   <macro name="editor-chinese">
     <names variable="editor">
-      <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
+      <name name-as-sort-order="first" and="text" sort-separator="，" delimiter="，" delimiter-precedes-last="always"/>
       <label form="short" prefix="" suffix=""/>
     </names>
   </macro>  
@@ -187,13 +187,13 @@
   </macro>
   <macro name="contributors-chinese">
     <names variable="author interviewer">
-      <name and="text" delimiter-precedes-last="always" name-as-sort-order="first"/>
+      <name and="text" delimiter-precedes-last="always" name-as-sort-order="first" delimiter="，"/>
       <substitute>
         <text macro="editor-chinese"/>
         <text macro="translator"/>
       </substitute>
     </names>
-    <text macro="recipient" prefix=". "/>
+    <text macro="recipient" prefix="。"/>
   </macro>  
   <macro name="recipient-short">
     <names variable="recipient">
@@ -515,7 +515,7 @@
           <if type="graphic report" match="any">
             <date variable="issued" text-case="capitalize-all">
               <date-part name="month" suffix=" "/>
-              <date-part name="day" suffix=", "/>
+              <date-part name="day" suffix="，"/>
               <date-part name="year"/>
             </date>
           </if>
@@ -531,7 +531,7 @@
             </date>
           </else-if>
           <else-if type="interview" match="any">
-            <group delimiter=", " prefix="(" suffix=")">
+            <group delimiter="，" prefix="(" suffix=")">
               <text variable="note"/>
               <date form="text" date-parts="year-month-day" variable="issued">
                 <date-part name="day" form="ordinal"/>
@@ -539,7 +539,7 @@
             </group>
           </else-if>
           <else-if type="article-magazine" match="any">
-            <date form="text" variable="issued" prefix="(" suffix=")">
+            <date form="text" variable="issued">
               <date-part name="month"/>
               <date-part name="year"/>
             </date>
@@ -548,7 +548,7 @@
             <date variable="issued" text-case="Title">
               <date-part name="year"/>
               <date-part name="month" prefix=" " form="short"/>
-              <date-part name="day" suffix=", "/>
+              <date-part name="day" suffix="，"/>
             </date>
           </else>
         </choose>
@@ -659,7 +659,7 @@
         <text macro="pages" prefix="，"/>
       </else-if>      
       <else>
-        <text macro="point-locators-note" prefix=", "/>
+        <text macro="point-locators-note" prefix="，"/>
       </else>
     </choose>
   </macro>  
@@ -777,6 +777,7 @@
     </choose>
   </macro>
   <macro name="issue-bib-chinese">
+    <text macro="divider-chinese" />
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
@@ -810,7 +811,7 @@
               </choose>
             </group>
           </group>
-          <group delimiter=", ">
+          <group delimiter="，">
             <group delimiter=" ">
               <choose>
                 <if variable="title" match="none"/>
@@ -826,12 +827,12 @@
               <text macro="event"/>
             </group>
             <text macro="publisher"/>
-            <text macro="issued"/>
+            <text macro="issued-chinese"/>
           </group>
         </group>
       </else-if>
       <else>
-        <text macro="issued" prefix=", "/>
+        <text macro="issued-chinese" prefix="，"/>
       </else>
     </choose>
   </macro>  
@@ -901,9 +902,12 @@
   </macro>
   <macro name="divider-chinese">
     <choose>
-      <if type="article-journal article-magazine" match="any">
+      <if type="article-journal">
         <text value="，" />
       </if>
+      <else-if type="article-magazine">
+        <text value="" />
+      </else-if>      
       <else>
         <text value="。" />
       </else>
@@ -959,11 +963,10 @@
         <text macro="title-note-chinese"/>
         <text macro="description-note"/>
         <text macro="container-title-chinese" />
-        <text macro="divider-chinese" />
       </group>
       <text macro="issue-bib-chinese"/>
-      <text macro="locators-newspaper" prefix=", "/>
-      <text macro="access-bib" prefix=", "/>
+      <text macro="locators-newspaper" prefix="，"/>
+      <text macro="access-bib" prefix="，"/>
       <text macro="point-locators-chinese"/>
     </layout>    
     <layout suffix=".">
