@@ -460,4 +460,37 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     }); 
+
+    it("Article in a Magazine English", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "The Myth Maker",
+                "author": [
+                    {
+                        "family": "Weber",
+                        "given": "Bruce",
+                    }
+                ],
+                "container-title":"New York Magazine",
+                "language":"en-US",
+                "issued": {
+                    "date-parts": [
+                        [
+                            1985,
+                            10,
+                            20
+                        ]
+                    ]
+                },
+                "page": "24-26",
+                "type": "article-magazine"
+            }
+        };
+
+        var output = makeBibliography(items);
+        var expected = '<div class="csl-entry">Weber, Bruce. "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24–26.</div>';
+        
+        assert.equal(output, expected);
+    }); 
 });
