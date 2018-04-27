@@ -394,4 +394,37 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     }); 
+
+    it("Article in a Journal Chinese", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "神学的本质探讨",
+                "author": [
+                    {
+                        "family": "杨",
+                        "given": "品通",
+                    }
+                ],
+                "container-title":"教会神学期刊",
+                "language":"zh-CN",
+                "issue":"14",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003,
+                            5
+                        ]
+                    ]
+                },
+                "page": "19-24",
+                "type": "article-journal"
+            }
+        };
+
+        var output = makeBibliography(items);
+        var expected = '<div class="csl-entry">杨品通：「神学的本质探讨」，《教会神学期刊》，14 (2003 5月)：19-24。</div>';
+        
+        assert.equal(output, expected);
+    }); 
 });
