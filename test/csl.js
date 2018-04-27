@@ -423,7 +423,40 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杨品通：「神学的本质探讨」，《教会神学期刊》，14 (2003 5月)：19-24。</div>';
+        var expected = '<div class="csl-entry">杨品通：「神学的本质探讨」，《教会神学期刊》，14 (2003 5月): 19–24。</div>';
+        
+        assert.equal(output, expected);
+    }); 
+
+    it("Article in a Journal English", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "A History of Christian Church in Bangkok",
+                "author": [
+                    {
+                        "family": "Tallman",
+                        "given": "Francis C.",
+                    }
+                ],
+                "container-title":"Journal of World Religions",
+                "language":"en-US",
+                "issue":"44",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003,
+                            10
+                        ]
+                    ]
+                },
+                "page": "203-223",
+                "type": "article-journal"
+            }
+        };
+
+        var output = makeBibliography(items);
+        var expected = '<div class="csl-entry">Tallman, Francis C. "A History of Christian Church in Bangkok". <i>Journal of World Religions</i> 44 (October 2003):203–223.</div>';
         
         assert.equal(output, expected);
     }); 
