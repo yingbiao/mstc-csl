@@ -19,6 +19,7 @@
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-GB">
+    <!-- <style-options punctuation-in-quote="false"/> -->
     <date form="text" delimiter=" ">
       <date-part name="day"/>
       <date-part name="month"/>
@@ -58,13 +59,13 @@
     </group>
   </macro>
   <macro name="container-contributors-bibliography">
-    <group delimiter="。">
+    <group>
       <choose>
         <if variable="author">
-          <names variable="editor" delimiter=", ">
-            <label form="verb" text-case="lowercase" suffix=" "/>
-            <name and="text" delimiter=", "/>
-          </names>
+            <names variable="editor" delimiter=", ">
+              <label form="verb" text-case="sentence" suffix=" "/>
+              <name and="text" delimiter=", "/>
+            </names>
         </if>
       </choose>
       <choose>
@@ -75,6 +76,28 @@
           </names>
         </if>
       </choose>
+      <text macro="pages" />
+    </group>
+  </macro>
+  <macro name="container-contributors-bibliography-chinese">
+    <group>
+      <choose>
+        <if variable="author">
+            <names variable="editor" delimiter=", ">
+              <label form="verb" text-case="title" suffix=" "/>
+              <name and="text" delimiter=", "/>
+            </names>
+        </if>
+      </choose>
+      <choose>
+        <if variable="author editor" match="any">
+          <names variable="translator" delimiter=", ">
+            <name and="text" delimiter=", "/>
+            <label form="verb-short" text-case="lowercase" suffix=""/>
+          </names>
+        </if>
+      </choose>
+      <text macro="pages" />
     </group>
   </macro>
   <macro name="editor-note">
@@ -190,20 +213,22 @@
     </names>
   </macro>
   <macro name="title-note">
-    <choose>
-      <if variable="title" match="none">
-        <text variable="genre" text-case="title"/>
-      </if>
-      <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-        <text variable="title" text-case="title" font-style="italic"/>
-      </else-if>
-      <else-if match="all" variable="reviewed-author">
-        <text macro="review-title" text-case="title"/>
-      </else-if>
-      <else>
-        <text variable="title" text-case="title" quotes="true" suffix=","/>
-      </else>
-    </choose>
+    <group suffix="">
+      <choose>
+        <if variable="title" match="none">
+          <text variable="genre" text-case="title"/>
+        </if>
+        <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+          <text variable="title" text-case="title" font-style="italic"/>
+        </else-if>
+        <else-if match="all" variable="reviewed-author">
+          <text macro="review-title" text-case="title"/>
+        </else-if>
+        <else>
+          <text variable="title" text-case="title" prefix="&quot;" suffix="&quot;."/>
+        </else>
+      </choose>
+    </group>
   </macro>
   <macro name="title-note-chinese">
     <choose>
@@ -281,13 +306,27 @@
       <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
         <choose>
           <if match="any" variable="title">
-            <text term="in" suffix=" "/>
+            <text term="in" suffix=" " text-case="title"/>
           </if>
         </choose>
       </if>
     </choose>
     <text variable="container-title" text-case="title" font-style="italic"/>
+    <text macro="container-contributors-bibliography" prefix=". "/>
   </macro>
+  <macro name="container-title-chinese">
+    <choose>
+      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+        <choose>
+          <if match="any" variable="title">
+            <text term="in" suffix=" " text-case="title"/>
+          </if>
+        </choose>
+      </if>
+    </choose>
+    <text variable="container-title" text-case="title" font-style="italic"/>
+    <text macro="container-contributors-bibliography-chinese" prefix="，"/>
+  </macro>  
   <macro name="collection-title">
     <text variable="collection-title" text-case="title"/>
     <text variable="collection-number" prefix=" "/>
@@ -505,12 +544,12 @@
   </macro>
   <macro name="point-locators">
     <choose>
-      <if variable="locator" match="none">
+      <!-- <if variable="locator" match="none">
         <text macro="pages"/>
-      </if>
-      <else-if type="article-journal">
+      </if> -->
+      <if type="article-journal">
         <text variable="locator" prefix=", "/>
-      </else-if>
+      </if>
       <else>
         <text macro="point-locators-note" prefix=", "/>
       </else>
@@ -727,9 +766,8 @@
       <group delimiter=" " suffix="。">
         <text macro="contributors-chinese" suffix="："/>
         <text macro="title-note-chinese" suffix="》" prefix="《"/>
-        <text macro="container-contributors-bibliography" prefix="，"/>
         <text macro="description-note"/>
-        <text macro="container-title"/>
+        <text macro="container-title-chinese" />
       </group>
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
@@ -737,9 +775,9 @@
       <text macro="point-locators"/>
     </layout>    
     <layout suffix=".">
-      <group delimiter=" ">
-        <text macro="contributors" suffix=""/>
-        <text macro="title-note" prefix="" suffix=". "/>
+      <group delimiter=" " suffix=". ">
+        <text macro="contributors" suffix="."/>
+        <text macro="title-note" prefix="" suffix=""/>
         <text macro="description-note"/>
         <text macro="container-title"/>
       </group>
