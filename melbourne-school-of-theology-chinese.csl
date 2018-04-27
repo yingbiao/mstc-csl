@@ -76,7 +76,11 @@
           </names>
         </if>
       </choose>
-      <text macro="pages" prefix=", "  />
+      <choose>
+        <if type="article-journal" match="none">
+          <text macro="pages" prefix=", " />
+        </if>
+      </choose>
     </group>
   </macro>
   <macro name="container-contributors-bibliography-chinese">
@@ -325,7 +329,16 @@
       </if>
     </choose>
     <text variable="container-title" text-case="title" font-style="italic"/>
-    <text macro="container-contributors-bibliography" prefix=". "/>
+    <choose>
+      <if type="chapter">
+        <choose>
+          <if variable="container-title editor" match="all">
+            <text value=". " />
+          </if>
+        </choose>
+      </if>
+    </choose>
+    <text macro="container-contributors-bibliography"/>
   </macro>
   <macro name="container-title-chinese">
     <choose>
@@ -623,7 +636,7 @@
         <text macro="pages"/>
       </if> -->
       <if type="article-journal">
-        <text variable="locator" prefix=", "/>
+        <text macro="pages" prefix=":"/>
       </if>
       <else>
         <text macro="point-locators-note" prefix=", "/>
@@ -697,6 +710,7 @@
     </choose>
   </macro>
   <macro name="issue-bib">
+    <text macro="divider" />
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
@@ -878,6 +892,26 @@
       <name/>
     </names>
   </macro>
+  <macro name="divider-chinese">
+    <choose>
+      <if type="article-journal">
+        <text value="，" />
+      </if>
+      <else>
+        <text value="。" />
+      </else>
+    </choose>
+  </macro>
+  <macro name="divider">
+    <choose>
+      <if type="article-journal">
+        <text value=" " />
+      </if>
+      <else>
+        <text value=". " />
+      </else>
+    </choose>
+  </macro>  
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
     <layout suffix="." delimiter="; ">
       <choose>
@@ -910,11 +944,12 @@
       <key variable="issued"/>
     </sort>
     <layout locale="zh-CN" suffix="。">
-      <group delimiter="" suffix="。">
+      <group delimiter="" suffix="">
         <text macro="contributors-chinese" suffix="："/>
         <text macro="title-note-chinese"/>
         <text macro="description-note"/>
         <text macro="container-title-chinese" />
+        <text macro="divider-chinese" />
       </group>
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper" prefix=", "/>
@@ -922,7 +957,7 @@
       <text macro="point-locators-chinese"/>
     </layout>    
     <layout suffix=".">
-      <group delimiter=" " suffix=". ">
+      <group delimiter=" " suffix="">
         <text macro="contributors" suffix="."/>
         <text macro="title-note" prefix="" suffix=""/>
         <text macro="description-note"/>
