@@ -82,12 +82,18 @@
   <macro name="container-contributors-bibliography-chinese">
     <group>
       <choose>
-        <if variable="author">
+        <if variable="container-title editor" match="all">
+          <names variable="editor">
+              <name and="text" delimiter=", "/>
+              <label form="verb-short" text-case="title" suffix=""/>
+            </names>
+        </if>
+        <else-if variable="author">
             <names variable="editor" delimiter=", ">
               <label form="verb" text-case="title" suffix=" "/>
               <name and="text" delimiter=", "/>
             </names>
-        </if>
+        </else-if>
       </choose>
       <choose>
         <if variable="author editor" match="any">
@@ -236,7 +242,10 @@
         <text variable="genre" text-case="title"/>
       </if>
       <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-        <text variable="title" text-case="title" font-style="italic"/>
+        <text variable="title" text-case="title" font-style="italic" suffix="》" prefix="《"/>
+      </else-if>
+      <else-if variable="container-title title" match="all">
+        <text variable="title" text-case="title" prefix="「" suffix="」" />
       </else-if>
       <else-if match="all" variable="reviewed-author">
         <text macro="review-title" text-case="title"/>
@@ -316,7 +325,7 @@
   </macro>
   <macro name="container-title-chinese">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" " text-case="title"/>
@@ -324,7 +333,7 @@
         </choose>
       </if>
     </choose>
-    <text variable="container-title" text-case="title" font-style="italic"/>
+    <text variable="container-title" text-case="title" prefix="。《" suffix="》"/>
     <text macro="container-contributors-bibliography-chinese" prefix="，"/>
   </macro>  
   <macro name="collection-title">
@@ -763,9 +772,9 @@
       <key variable="issued"/>
     </sort>
     <layout locale="zh-CN" suffix="。">
-      <group delimiter=" " suffix="。">
+      <group delimiter="" suffix="。">
         <text macro="contributors-chinese" suffix="："/>
-        <text macro="title-note-chinese" suffix="》" prefix="《"/>
+        <text macro="title-note-chinese"/>
         <text macro="description-note"/>
         <text macro="container-title-chinese" />
       </group>

@@ -56,7 +56,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杨牧谷： 《泪眼先知耶利米》。台北: 校园书房出版社, 1989。</div>';
+        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北: 校园书房出版社, 1989。</div>';
         
         assert.equal(output, expected);
     });
@@ -124,7 +124,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">博能汉： 《历史学》 ，黄晓兰译。香港: 天天出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">博能汉：《历史学》，黄晓兰译。香港: 天天出版社, 2003。</div>';
         
         assert.equal(output, expected);
     });
@@ -155,7 +155,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">李三谷编： 《旧约小品》。台北: 校园出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北: 校园出版社, 2003。</div>';
         
         assert.equal(output, expected);
     });
@@ -274,7 +274,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杜德民, 张爱杨和陈丰裕： 《雨过天晴》。新加坡: 和联出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">杜德民, 张爱杨和陈丰裕：《雨过天晴》。新加坡: 和联出版社, 2003。</div>';
         
         assert.equal(output, expected);
     });
@@ -318,7 +318,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
-    xit("Article in a Book Edited by Others Chinese", function() {
+    it("Article in a Book Edited by Others Chinese", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -335,7 +335,7 @@ describe("MSTC CSL", function() {
                         "given": "百文",
                     }
                 ],
-                "collection-title":"地球村的演变",
+                "container-title":"地球村的演变",
                 "publisher": "汉阳出版社",
                 "publisher-place": "厦门",
                 "language":"zh-CN",
@@ -351,7 +351,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">黄二东： 【天下一家】。《地球村的演变》，千百文编。 厦门: 汉阳出版社, 2003。</div>';
+        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门: 汉阳出版社, 2003。</div>';
         
         assert.equal(output, expected);
     });    
