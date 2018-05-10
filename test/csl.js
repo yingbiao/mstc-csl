@@ -873,7 +873,7 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杨品通：「神学的本质探讨」，《教会神学期刊》，14 (2003 5月): 19–24。</div>';
+        var expected = '<div class="csl-entry">杨品通：「神学的本质探讨」，《教会神学期刊》，14（2003 5月）：19–24。</div>';
         
         assert.equal(output, expected);
     }); 
