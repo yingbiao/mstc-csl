@@ -30,7 +30,15 @@ describe("MSTC CSL", function() {
         return bib[1][0].trim();
     }
 
-    it("Book: Single Author Chinese", function() {
+    function makeCitationCluster(items, citation) {
+        sys.items = items;
+        
+        var citation = engine.previewCitationCluster(citation, [], [], "html");
+        
+        return citation;
+    }
+
+    it("Bibliography::Chinese::Book Single Author", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -56,12 +64,56 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北: 校园书房出版社，1989。</div>';
+        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北：校园书房出版社，1989。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Book: Single Author English", function() {
+    it("Citation::Chinese::Book Single Author", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "泪眼先知耶利米",
+                "author": [
+                    {
+                        "family": "杨",
+                        "given": "牧谷"
+                    }
+                ],
+                "publisher": "校园书房出版社",
+                "publisher-place": "台北",
+                "language":"zh-CN",
+                "issued": {
+                    "date-parts": [
+                        [
+                            1989
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "24",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = '杨牧谷：《泪眼先知耶利米》（台北：校园书房出版社，1989），24。';
+        assert.equal(output, expected);
+    });    
+
+    it("Bibliography::English::Book Single Author", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -92,7 +144,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
-    it("Book: Single Author with Translator Chinese", function() {
+    it("Bibliography::Chinese::Book Single Author with Translator", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -124,12 +176,12 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">博能汉：《历史学》，黄晓兰译。香港: 天天出版社，2003。</div>';
+        var expected = '<div class="csl-entry">博能汉：《历史学》，黄晓兰译。香港：天天出版社，2003。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Book: Single Editor Chinese", function() {
+    it("Bibliography::Chinese::Book Single Editor", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -155,12 +207,12 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北: 校园出版社，2003。</div>';
+        var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北：校园出版社，2003。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Book: Single Editor English", function() {
+    it("Bibliography::English::Book Single Editor", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -192,7 +244,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
-    xit("Book: Multiple Editors English", function() {
+    xit("Bibliography::English::Book Multiple Editors", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -240,7 +292,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });  
 
-    it("Book: Multiple Authors Chinese", function() {
+    it("Bibliography::Chinese::Book Multiple Authors", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -274,12 +326,12 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》。新加坡: 和联出版社，2003。</div>';
+        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》。新加坡：和联出版社，2003。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Book: Multiple Authors English", function() {
+    it("Bibliography::English::Book Multiple Authors", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -318,7 +370,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
-    it("Article in a Book Edited by Others Chinese", function() {
+    it("Bibliography::Chinese::Article in a Book Edited by Others", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -351,12 +403,12 @@ describe("MSTC CSL", function() {
         };
 
         var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门: 汉阳出版社，2003。</div>';
+        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门：汉阳出版社，2003。</div>';
         
         assert.equal(output, expected);
     });    
 
-    it("Article in a Book Edited by Others English", function() {
+    it("Bibliography::English::Article in a Book Edited by Others", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -395,7 +447,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     }); 
 
-    it("Article in a Journal Chinese", function() {
+    it("Bibliography::Chinese::Article in a Journal", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -428,7 +480,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     }); 
 
-    it("Article in a Journal English", function() {
+    it("Bibliography::English::Article in a Journal", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -461,7 +513,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     }); 
 
-    it("Article in a Magazine English", function() {
+    it("Bibliography::English::Article in a Magazine", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -494,7 +546,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     }); 
 
-    it("Article in a Magazine Chinese", function() {
+    it("Bibliography::Chinese::Article in a Magazine", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -526,4 +578,47 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     }); 
+
+    xit("Bibliography::English::Book in a Multi-Volume Series", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "The Gospel according to John I–XII",
+                "author": [
+                    {
+                        "family": "Brown",
+                        "given": "Raymond E.",
+                    }
+                ],
+                "editor":[
+                    {
+                        "family":"Albright",
+                        "given": "William Foxwell"
+                    },
+                    {
+                        "family":"Freedman",
+                        "given": "David Noel"
+                    },
+                ],
+                "collection-title":"Anchor Bible",
+                "publisher": "Doubleday",
+                "publisher-place": "New York",                
+                "language":"en-US",
+                "issued": {
+                    "date-parts": [
+                        [
+                            1966
+                        ]
+                    ]
+                },
+                "volume":"29",
+                "type": "book"
+            }
+        };
+
+        var output = makeBibliography(items);
+        var expected = '<div class="csl-entry">Brown, Raymond E. <i>The Gospel According to John I–XII</i>. Anchor Bible. Edited by William Foxwell Albright and David Noel Freedman, vol. 29. New York: Doubleday, 1966.</div>';
+        
+        assert.equal(output, expected);
+    });     
 });
