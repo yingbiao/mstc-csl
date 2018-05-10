@@ -18,7 +18,7 @@
     <updated>2017-04-21T02:01:09+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
-  <locale xml:lang="en-GB">
+  <locale xml:lang="en-US">
     <!-- <style-options punctuation-in-quote="false"/> -->
     <date form="text" delimiter=" ">
       <date-part name="day"/>
@@ -39,7 +39,7 @@
     </terms>
   </locale>
   <macro name="container-contributors-note">
-    <group delimiter="; ">
+    <group delimiter="; " prefix=", ">
       <choose>
         <if variable="author">
           <names variable="editor" delimiter=", ">
@@ -358,6 +358,7 @@
         <text variable="container-title" text-case="title" font-style="italic"/>
       </else>
     </choose>
+    <text macro="container-contributors-note" />
   </macro>
   <macro name="container-title-note-chinese">
     <choose>
@@ -792,7 +793,6 @@
       <else-if variable="publisher-place publisher" match="any">
         <group prefix=" (" suffix=")">
           <group delimiter="; " suffix="; ">
-            <text macro="container-contributors-note"/>
             <text macro="locators-note"/>
             <text macro="collection-title"/>
           </group>

@@ -695,22 +695,8 @@ describe("MSTC CSL", function() {
             }
         };
 
-        var citation=
-        {
-            "citationItems": [ 
-                {
-                "id": "ITEM-1",
-                "locator": "339",
-                "label": "page"
-                }
-            ],
-            "properties": {
-                "noteIndex": 1
-            }
-        }
-        
-        var output = makeCitationCluster(items, citation);
-        var expected = '黄二东：「天下一家」。《地球村的演变》，千百文编（厦门：汉阳出版社，2003），339。';
+        var output = makeBibliography(items);
+        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门：汉阳出版社，2003。</div>';
         
         assert.equal(output, expected);
     });    
@@ -747,8 +733,22 @@ describe("MSTC CSL", function() {
             }
         };
 
-        var output = makeBibliography(items);
-        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门：汉阳出版社，2003。</div>';
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "339",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = '黄二东：「天下一家」。《地球村的演变》，千百文编（厦门：汉阳出版社，2003），339。';
         
         assert.equal(output, expected);
     });  
@@ -791,6 +791,59 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     }); 
+
+    it("Citation::English::Article in a Book Edited by Others", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "Japan and East Asia",
+                "author": [
+                    {
+                        "family": "Hughes",
+                        "given": "Christopher W.",
+                    }
+                ],
+                "editor":[
+                    {
+                        "family": "Heenan",
+                        "given": "Patrick",
+                    }
+                ],
+                "container-title":"The Japan Handbook",
+                "publisher": "Fitzroy Dearborn Publishers",
+                "publisher-place": "London",
+                "language":"en-US",
+                "issued": {
+                    "date-parts": [
+                        [
+                            1998
+                        ]
+                    ]
+                },
+                "page": "23-40",
+                "type": "chapter"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "23",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = 'Christopher W. Hughes, "Japan and East Asia". in <i>The Japan Handbook</i>, ed. Patrick Heenan (London: Fitzroy Dearborn Publishers, 1998), 23.';
+        
+        assert.equal(output, expected);
+    });     
 
     it("Bibliography::Chinese::Article in a Journal", function() {
         var items = {
