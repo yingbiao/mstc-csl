@@ -695,11 +695,63 @@ describe("MSTC CSL", function() {
             }
         };
 
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "339",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = '黄二东：「天下一家」。《地球村的演变》，千百文编（厦门：汉阳出版社，2003），339。';
+        
+        assert.equal(output, expected);
+    });    
+
+    it("Citation::Chinese::Article in a Book Edited by Others", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "天下一家",
+                "author": [
+                    {
+                        "family": "黄",
+                        "given": "二东",
+                    }
+                ],
+                "editor":[
+                    {
+                        "family": "千",
+                        "given": "百文",
+                    }
+                ],
+                "container-title":"地球村的演变",
+                "publisher": "汉阳出版社",
+                "publisher-place": "厦门",
+                "language":"zh-CN",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003
+                        ]
+                    ]
+                },
+                "type": "chapter"
+            }
+        };
+
         var output = makeBibliography(items);
         var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门：汉阳出版社，2003。</div>';
         
         assert.equal(output, expected);
-    });    
+    });  
 
     it("Bibliography::English::Article in a Book Edited by Others", function() {
         var items = {
