@@ -226,7 +226,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Citation::Chinese::Book Single Author with Translator", function() {
+    it("Citation::Chinese::Book Single Author with Translator", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -304,6 +304,51 @@ describe("MSTC CSL", function() {
 
         var output = makeBibliography(items);
         var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北：校园出版社，2003。</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    it.only("Citation::Chinese::Book Single Editor", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "旧约小品",
+                "editor": [
+                    {
+                        "family": "李",
+                        "given": "三谷"
+                    }
+                ],
+                "publisher": "校园出版社",
+                "publisher-place": "台北",
+                "language":"zh-CN",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "24",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = '李三谷编：《旧约小品》（台北：校园出版社，2003），24。';
         
         assert.equal(output, expected);
     });

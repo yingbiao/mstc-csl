@@ -140,6 +140,12 @@
       <label form="short" prefix=" (" suffix=")"/>
     </names>
   </macro>
+  <macro name="editor-note-chinese">
+    <names variable="editor">
+      <name and="text" et-al-min="4" et-al-use-first="1"/>
+      <label form="short" prefix="" suffix=""/>
+    </names>
+  </macro>  
   <macro name="translator-note">
     <names variable="translator">
       <name and="text" et-al-min="4" et-al-use-first="1"/>
@@ -162,6 +168,16 @@
     </names>
     <text macro="recipient-note"/>
   </macro>
+  <macro name="contributors-note-chinese">
+    <names variable="author">
+      <name and="text" et-al-min="4" et-al-use-first="1"/>
+      <substitute>
+        <text macro="editor-note-chinese"/>
+        <text macro="translator-note"/>
+      </substitute>
+    </names>
+    <text macro="recipient-note"/>
+  </macro>  
   <macro name="editor">
     <names variable="editor">
       <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always" />
@@ -1056,7 +1072,7 @@
         </if>
         <else>
           <group delimiter="">
-            <text macro="contributors-note" suffix="："/>
+            <text macro="contributors-note-chinese" suffix="："/>
             <text macro="title-note-chinese"/>
             <!-- <text macro="description-note"/> -->
             <text macro="container-title-note-chinese"/>
