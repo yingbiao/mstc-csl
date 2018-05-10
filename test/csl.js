@@ -308,7 +308,7 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Citation::Chinese::Book Single Editor", function() {
+    it("Citation::Chinese::Book Single Editor", function() {
         var items = {
             "ITEM-1": {
                 "id": "ITEM-1",
@@ -384,6 +384,52 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::English::Book Single Editor", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "The Love of Brothers",
+                "editor": [
+                    {
+                        "family": "Headman",
+                        "given": "David",
+                        "static-ordering": false
+                    }
+                ],
+                "publisher": "Evergreen Books",
+                "publisher-place": "London",
+                "language":"en-US",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "68",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = 'David Headman, ed., <i>The Love of Brothers</i> (London: Evergreen Books, 2003), 68.';
+        
+        assert.equal(output, expected);
+    });    
 
     xit("Bibliography::English::Book Multiple Editors", function() {
         var items = {
