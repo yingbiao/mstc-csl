@@ -242,6 +242,11 @@
           <text variable="title" text-case="title" prefix="&quot;" suffix="&quot;."/>
         </else>
       </choose>
+      <choose>
+        <if variable="collection-title">
+          <text value="." />
+        </if>
+      </choose>
     </group>
   </macro>
   <macro name="title-note-chinese">
@@ -329,6 +334,7 @@
       </if>
     </choose>
     <text variable="container-title" text-case="title" font-style="italic"/>
+    <text variable="collection-title" text-case="title" />
     <choose>
       <if type="chapter">
         <choose>
@@ -337,6 +343,9 @@
           </if>
         </choose>
       </if>
+      <else-if variable="collection-title">
+        <text value=". " />
+      </else-if>
     </choose>
     <text macro="container-contributors-bibliography"/>
   </macro>
@@ -457,6 +466,34 @@
       </choose>
     </group>
   </macro>
+  <macro name="publisher-chinese">
+    <group delimiter="：">
+      <choose>
+        <if type="thesis" match="any">
+          <group delimiter="，">
+            <text variable="publisher"/>
+            <text variable="publisher-place"/>
+          </group>
+          <group delimiter=" ">
+            <text value="Unpublished"/>
+            <text variable="genre"/>
+            <text value="dissertation"/>
+          </group>
+        </if>
+        <else>
+          <choose>
+            <if match="none" variable="publisher-place">
+              <text value="n.p."/>
+            </if>
+            <else>
+              <text variable="publisher-place" text-case="capitalize-first"/>
+            </else>
+          </choose>
+          <text variable="publisher"/>
+        </else>
+      </choose>
+    </group>
+  </macro>  
   <macro name="issued">
     <choose>
       <if variable="issued">
@@ -716,6 +753,45 @@
       </else>
     </choose>
   </macro>
+  <macro name="issue-note-chinese">
+    <choose>
+      <if type="article-journal">
+        <text variable="volume" prefix=" "/>
+        <text variable="issue" prefix=", no. "/>
+        <text macro="issued-chinese" prefix="（" suffix="）"/>
+      </if>
+      <else-if variable="publisher-place publisher" match="any">
+        <group prefix="（" suffix="）">
+          <group delimiter="；" suffix="；">
+            <text macro="container-contributors-note"/>
+            <text macro="locators-note"/>
+            <text macro="collection-title"/>
+          </group>
+          <group delimiter="，">
+            <group delimiter=" ">
+              <choose>
+                <if variable="title" match="none"/>
+                <else-if type="speech" match="any">
+                  <choose>
+                    <if match="none" variable="publisher-place">
+                      <text value="Unpublished "/>
+                    </if>
+                  </choose>
+                  <text variable="genre"/>
+                </else-if>
+              </choose>
+              <text macro="event"/>
+            </group>
+            <text macro="publisher-chinese"/>
+            <text macro="issued-chinese"/>
+          </group>
+        </group>
+      </else-if>
+      <else>
+        <text macro="issued-chinese" prefix="，"/>
+      </else>
+    </choose>
+  </macro>  
   <macro name="issue-bib">
     <text macro="divider" />
     <choose>
@@ -728,7 +804,7 @@
         <group delimiter="; " prefix="" suffix="">
           <group delimiter="; ">
             <text macro="locators-note"/>
-            <text macro="collection-title"/>
+            <!-- <text macro="collection-title"/> -->
           </group>
           <group>
             <choose>
@@ -826,7 +902,7 @@
               </choose>
               <text macro="event"/>
             </group>
-            <text macro="publisher"/>
+            <text macro="publisher-chinese"/>
             <text macro="issued-chinese"/>
           </group>
         </group>
@@ -921,12 +997,38 @@
       <else-if type="article-magazine">
         <text value="" />
       </else-if>
+      <else-if variable="collection-title">
+        <text value=", " />
+      </else-if>
       <else>
         <text value=". " />
       </else>
     </choose>
   </macro>  
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
+    <layout locale="zh-CN" suffix="。" delimiter="；">
+      <choose>
+        <if position="subsequent ibid ibid-with-locator" match="any">
+          <group delimiter="，">
+            <text macro="contributors-short"/>
+            <text macro="title-short"/>
+            <text macro="point-locators-note"/>
+          </group>
+        </if>
+        <else>
+          <group delimiter="">
+            <text macro="contributors-note" suffix="："/>
+            <text macro="title-note-chinese"/>
+            <text macro="description-note"/>
+            <text macro="container-title-note"/>
+          </group>
+          <text macro="issue-note-chinese"/>
+          <text macro="locators-newspaper" prefix="，"/>
+          <text macro="access-note" prefix="，"/>
+          <text macro="point-locators-chinese"/>
+        </else>
+      </choose>
+    </layout>
     <layout suffix="." delimiter="; ">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">
@@ -949,7 +1051,7 @@
           <text macro="point-locators"/>
         </else>
       </choose>
-    </layout>
+    </layout>    
   </citation>
   <bibliography et-al-min="10" et-al-use-first="9" hanging-indent="true">
     <sort>
@@ -961,7 +1063,7 @@
       <group delimiter="" suffix="">
         <text macro="contributors-chinese" suffix="："/>
         <text macro="title-note-chinese"/>
-        <text macro="description-note"/>
+        <!-- <text macro="description-note"/> -->
         <text macro="container-title-chinese" />
       </group>
       <text macro="issue-bib-chinese"/>
@@ -973,7 +1075,7 @@
       <group delimiter=" " suffix="">
         <text macro="contributors" suffix="."/>
         <text macro="title-note" prefix="" suffix=""/>
-        <text macro="description-note"/>
+        <!-- <text macro="description-note"/> -->
         <text macro="container-title"/>
       </group>
       <text macro="issue-bib"/>
