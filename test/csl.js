@@ -610,6 +610,59 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
+    it("Citation::English::Book Multiple Authors", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "The Sun Is Black",
+                "author": [
+                    {
+                        "family": "Victor",
+                        "given": "Solomon",
+                    },
+                    {
+                        "family": "Laib",
+                        "given": "Augustine",
+                    },
+                    {
+                        "family": "Calson",
+                        "given": "Yancey",
+                    }
+                ],
+                "publisher": "Doreen Publishing House",
+                "publisher-place": "Kuala Lumpur",
+                "language":"en-US",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "193",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = 'Solomon Victor, Augustine Laib, and Yancey Calson, <i>The Sun Is Black</i> (Kuala Lumpur: Doreen Publishing House, 2003), 193.';
+        
+        assert.equal(output, expected);
+    });    
+
     it("Bibliography::Chinese::Article in a Book Edited by Others", function() {
         var items = {
             "ITEM-1": {
