@@ -99,7 +99,7 @@ describe("MSTC CSL", function() {
             "citationItems": [ 
                 {
                 "id": "ITEM-1",
-                "locator": "24",
+                "locator": "74-76",
                 "label": "page"
                 }
             ],
@@ -109,7 +109,7 @@ describe("MSTC CSL", function() {
         }
         
         var output = makeCitationCluster(items, citation);
-        var expected = '杨牧谷：《泪眼先知耶利米》（台北：校园书房出版社，1989），24。';
+        var expected = '杨牧谷：《泪眼先知耶利米》（台北：校园书房出版社，1989），74–76。';
         assert.equal(output, expected);
     });    
 
@@ -143,6 +143,51 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::English::Book Single Author", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "The Clash of Civilizations",
+                "author": [
+                    {
+                        "family": "Huntington",
+                        "given": "Samuel P."
+                    }
+                ],
+                "publisher": "Touchstone Books",
+                "publisher-place": "London",
+                "language":"en-US",
+                "issued": {
+                    "date-parts": [
+                        [
+                            1998
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "268-272",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = 'Samuel P. Huntington, <i>The Clash of Civilizations</i> (London: Touchstone Books, 1998), 268–272.';
+        
+        assert.equal(output, expected);
+    });    
 
     it("Bibliography::Chinese::Book Single Author with Translator", function() {
         var items = {
@@ -180,6 +225,57 @@ describe("MSTC CSL", function() {
         
         assert.equal(output, expected);
     });
+
+    it.only("Citation::Chinese::Book Single Author with Translator", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "历史学",
+                "author": [
+                    {
+                        "family": "博",
+                        "given": "能汉"
+                    }
+                ],
+                "translator": [
+                    {
+                        "family": "黄",
+                        "given": "晓兰",
+                    }
+                ],
+                "publisher": "天天出版社",
+                "publisher-place": "香港",
+                "language":"zh-CN",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "96",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = '博能汉：《历史学》，黄晓兰译（香港：天天出版社，2003），96。';
+        
+        assert.equal(output, expected);
+    });    
 
     it("Bibliography::Chinese::Book Single Editor", function() {
         var items = {

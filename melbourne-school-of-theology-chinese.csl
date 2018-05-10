@@ -58,6 +58,26 @@
       </choose>
     </group>
   </macro>
+  <macro name="container-contributors-note-chinese">
+    <group delimiter="; ">
+      <choose>
+        <if variable="author">
+          <names variable="editor" delimiter="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" suffix=""/>
+          </names>
+        </if>
+      </choose>
+      <choose>
+        <if variable="author editor" match="any">
+          <names variable="translator" delimiter="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" suffix=""/>
+          </names>
+        </if>
+      </choose>
+    </group>
+  </macro>  
   <macro name="container-contributors-bibliography">
     <group>
       <choose>
@@ -323,6 +343,26 @@
       </else>
     </choose>
   </macro>
+  <macro name="container-title-note-chinese">
+    <choose>
+      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+        <choose>
+          <if match="any" variable="title">
+            <text term="in" suffix=" "/>
+          </if>
+        </choose>
+      </if>
+    </choose>
+    <choose>
+      <if type="article-journal" match="all" variable="container-title-short">
+        <text variable="container-title-short" font-style="italic"/>
+      </if>
+      <else>
+        <text variable="container-title" text-case="title" font-style="italic"/>
+      </else>
+    </choose>
+    <text macro="container-contributors-note-chinese" prefix="，"/>
+  </macro>  
   <macro name="container-title">
     <choose>
       <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
@@ -763,7 +803,6 @@
       <else-if variable="publisher-place publisher" match="any">
         <group prefix="（" suffix="）">
           <group delimiter="；" suffix="；">
-            <text macro="container-contributors-note"/>
             <text macro="locators-note"/>
             <text macro="collection-title"/>
           </group>
@@ -1019,8 +1058,8 @@
           <group delimiter="">
             <text macro="contributors-note" suffix="："/>
             <text macro="title-note-chinese"/>
-            <text macro="description-note"/>
-            <text macro="container-title-note"/>
+            <!-- <text macro="description-note"/> -->
+            <text macro="container-title-note-chinese"/>
           </group>
           <text macro="issue-note-chinese"/>
           <text macro="locators-newspaper" prefix="，"/>
