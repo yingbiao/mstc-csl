@@ -518,6 +518,59 @@ describe("MSTC CSL", function() {
         assert.equal(output, expected);
     });
 
+    it("Citation::Chinese::Book Multiple Authors", function() {
+        var items = {
+            "ITEM-1": {
+                "id": "ITEM-1",
+                "title": "雨过天晴",
+                "author": [
+                    {
+                        "family": "杜",
+                        "given": "德民",
+                    },
+                    {
+                        "family": "张",
+                        "given": "爱杨",
+                    },
+                    {
+                        "family": "陈",
+                        "given": "丰裕",
+                    }
+                ],
+                "publisher": "和联出版社",
+                "publisher-place": "新加坡",
+                "language":"zh-CN",
+                "issued": {
+                    "date-parts": [
+                        [
+                            2003
+                        ]
+                    ]
+                },
+                "type": "book"
+            }
+        };
+
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "36",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        
+        var output = makeCitationCluster(items, citation);
+        var expected = '杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003），36。';
+        
+        assert.equal(output, expected);
+    });    
+
     it("Bibliography::English::Book Multiple Authors", function() {
         var items = {
             "ITEM-1": {
