@@ -361,20 +361,32 @@
   </macro>
   <macro name="container-title-note-chinese">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
         <choose>
           <if match="any" variable="title">
-            <text term="in" suffix=" "/>
+            <text term="in" suffix="" text-case="title"/>
           </if>
         </choose>
       </if>
     </choose>
     <choose>
+      <if type="chapter article-journal article-magazine" match="any">
+        <choose>
+          <if type="article-journal article-magazine" match="any">
+            <text value="，"/>
+          </if>
+          <else-if variable="container-title">
+            <text value="。"/>
+          </else-if>
+        </choose>
+      </if>
+    </choose>    
+    <choose>
       <if type="article-journal" match="all" variable="container-title-short">
         <text variable="container-title-short" font-style="italic"/>
       </if>
       <else>
-        <text variable="container-title" text-case="title" font-style="italic"/>
+        <text variable="container-title" text-case="title" font-style="italic" prefix="《" suffix="》"/>
       </else>
     </choose>
     <text macro="container-contributors-note-chinese" prefix="，"/>
