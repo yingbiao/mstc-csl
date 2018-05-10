@@ -759,7 +759,7 @@
         <text macro="pages"/>
       </if> -->
       <if type="article-journal">
-        <text macro="pages" prefix=": "/>
+        <text macro="pages" prefix="："/>
       </if>
       <else-if type="article-magazine">
         <text macro="pages" prefix="，"/>
@@ -925,7 +925,7 @@
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
         <text variable="issue" prefix=""/>
-        <text macro="issued-chinese" prefix=" (" suffix=")"/>
+        <text macro="issued-chinese" prefix="（" suffix="）"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
         <group delimiter="; " prefix="" suffix="">
