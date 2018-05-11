@@ -110,7 +110,7 @@ describe("Bibliography", function() {
 
     it("Bibliography::English::Article in a Journal", function() {
         var output = makeBibliography(items.articleInAJournalEnglish);
-        var expected = '<div class="csl-entry">Tallman, Francis C. "A History of Christian Church in Bangkok". <i>Journal of World Religions</i> 44 (October 2003):203–223.</div>';
+        var expected = '<div class="csl-entry">Tallman, Francis C. "A History of Christian Church in Bangkok". <i>Journal of World Religions</i> 44 (October 2003): 203–223.</div>';
         
         assert.equal(output, expected);
     }); 
