@@ -237,12 +237,25 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
 
-    // xit("Citation::English::Article in a Journal", function() {
-    //     var output = makeBibliography(items.articleInAJournalEnglish);
-    //     var expected = '<div class="csl-entry">Tallman, Francis C. "A History of Christian Church in Bangkok". <i>Journal of World Religions</i> 44 (October 2003):203–223.</div>';
+    it("Citation::English::Article in a Journal", function() {
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "207",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        var output = makeCitationCluster(items.articleInAJournalEnglish, citation);
+        var expected = 'Francis C. Tallman, "A History of Christian Church in Bangkok", <i>Journal of World Religions</i> 44 (October 2003): 207.';
         
-    //     assert.equal(output, expected);
-    // }); 
+        assert.equal(output, expected);
+    }); 
 
     // xit("Citation::English::Article in a Magazine", function() {
     //     var output = makeBibliography(items.articleInMagzineEnglish);
