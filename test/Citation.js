@@ -297,10 +297,23 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
 
-    // xit("Bibliography::English::Book in a Multi-Volume Series", function() {
-    //     var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish);
-    //     var expected = '<div class="csl-entry">Brown, Raymond E. <i>The Gospel According to John I–XII</i>. Anchor Bible. Edited by William Foxwell Albright and David Noel Freedman, vol. 29. New York: Doubleday, 1966.</div>';
+    it("Citation::English::Book in a Multi-Volume Series", function() {
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "97",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        var output = makeCitationCluster(items.bookInAMultiVolumeSeriesEnglish, citation);        
+        var expected = 'Raymond E. Brown, <i>The Gospel According to John I–XII</i>, Anchor Bible, ed. William Foxwell Albright and David Noel Freedman, vol. 29 (New York: Doubleday, 1966), 97.';
         
-    //     assert.equal(output, expected);
-    // });    
+        assert.equal(output, expected);
+    });    
 });

@@ -389,7 +389,7 @@ module.exports = {
     bookInAMultiVolumeSeriesEnglish: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "The Gospel according to John I–XII",
+            "title": "The Gospel According to John I–XII",
             "author": [
                 {
                     "family": "Brown",
