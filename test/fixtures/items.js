@@ -336,7 +336,7 @@ module.exports = {
             "type": "article-journal"
         }        
     },
-    articleInMagzineEnglish: {
+    articleInMagazineEnglish: {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "The Myth Maker",
@@ -361,7 +361,7 @@ module.exports = {
             "type": "article-magazine"
         }        
     },
-    articleInMagzineChinese: {
+    articleInMagazineChinese: {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "美国华侨习俗趣谈",
