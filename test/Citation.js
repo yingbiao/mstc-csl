@@ -257,15 +257,28 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
 
-    // xit("Citation::English::Article in a Magazine", function() {
-    //     var output = makeBibliography(items.articleInMagzineEnglish);
-    //     var expected = '<div class="csl-entry">Weber, Bruce. "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24–26.</div>';
+    it("Citation::English::Article in a Magazine", function() {
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "24",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        var output = makeCitationCluster(items.articleInMagazineEnglish, citation);        
+        var expected = 'Bruce Weber, "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24.';
         
-    //     assert.equal(output, expected);
-    // }); 
+        assert.equal(output, expected);
+    }); 
 
     // xit("Citation::Chinese::Article in a Magazine", function() {
-    //     var output = makeBibliography(items.articleInMagzineChinese);
+    //     var output = makeBibliography(items.articleInMagazineChinese);
     //     var expected = '<div class="csl-entry">李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43–47。</div>';
         
     //     assert.equal(output, expected);

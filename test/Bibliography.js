@@ -116,14 +116,14 @@ describe("Bibliography", function() {
     }); 
 
     it("Bibliography::English::Article in a Magazine", function() {
-        var output = makeBibliography(items.articleInMagzineEnglish);
+        var output = makeBibliography(items.articleInMagazineEnglish);
         var expected = '<div class="csl-entry">Weber, Bruce. "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24–26.</div>';
         
         assert.equal(output, expected);
     }); 
 
     it("Bibliography::Chinese::Article in a Magazine", function() {
-        var output = makeBibliography(items.articleInMagzineChinese);
+        var output = makeBibliography(items.articleInMagazineChinese);
         var expected = '<div class="csl-entry">李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43–47。</div>';
         
         assert.equal(output, expected);
