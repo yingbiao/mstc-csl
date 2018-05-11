@@ -129,7 +129,7 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     }); 
 
-    xit("Bibliography::English::Book in a Multi-Volume Series", function() {
+    it("Bibliography::English::Book in a Multi-Volume Series", function() {
         var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish);
         var expected = '<div class="csl-entry">Brown, Raymond E. <i>The Gospel According to John I–XII</i>. Anchor Bible. Edited by William Foxwell Albright and David Noel Freedman, vol. 29. New York: Doubleday, 1966.</div>';
         

@@ -939,16 +939,15 @@
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="; " prefix="" suffix="">
+        <group delimiter=" " prefix="" suffix="">
           <group delimiter="; ">
             <text macro="locators-note"/>
-            <!-- <text macro="collection-title"/> -->
           </group>
           <group>
             <choose>
               <if match="all" variable="volume">
                 <text term="volume" form="short" suffix=" "/>
-                <number variable="volume"/>
+                <number variable="volume" suffix="."/>
                 <choose>
                   <if match="any" variable="number-of-volumes">
                     <text value="of" prefix=" " suffix=" "/>
