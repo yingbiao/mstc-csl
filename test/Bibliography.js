@@ -134,5 +134,12 @@ describe("Bibliography", function() {
         var expected = '<div class="csl-entry">Brown, Raymond E. <i>The Gospel According to John I–XII</i>. Anchor Bible. Edited by William Foxwell Albright and David Noel Freedman, vol. 29. New York: Doubleday, 1966.</div>';
         
         assert.equal(output, expected);
-    });     
+    });
+
+    it("Bibliography::Chinese::Article in a Dictionary", function() {
+        var output = makeBibliography(items.articleInADictionaryChinese);
+        var expected = '<div class="csl-entry">冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册。上海：展徒出版社，25–26。</div>';
+        
+        assert.equal(output, expected);
+    });    
 });

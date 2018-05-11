@@ -128,7 +128,7 @@
         </if>
       </choose>
       <choose>
-        <if type="article-journal article-magazine" match="none">
+        <if type="article-journal article-magazine entry-encyclopedia entry-dictionary" match="none">
           <text macro="pages" />
         </if>
       </choose>
@@ -486,7 +486,7 @@
   </macro>
   <macro name="container-title-chinese">
     <choose>
-      <if type="paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="paper-conference webpage " match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" " text-case="title"/>
@@ -495,9 +495,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine" match="any">
+      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
         <choose>
-          <if type="article-journal article-magazine" match="any">
+          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -726,7 +726,13 @@
         </choose>
       </if>
       <else>
-        <text term="no date" form="short"/>
+        <choose>
+          <if type="entry-dictionary entry-encyclopedia" match="any">
+          </if>
+          <else>
+            <text term="no date" form="short"/>
+          </else>
+        </choose>
       </else>
     </choose>
   </macro>  
@@ -961,6 +967,9 @@
           <else-if type="article-magazine">
             <text macro="pages" prefix="，"/>
           </else-if>
+          <else>
+            <text macro="pages" prefix="，"/>
+          </else>
         </choose>
       </if>
       <else>
@@ -978,7 +987,7 @@
   </macro>    
   <macro name="pages">
     <choose>
-      <if type="chapter paper-conference article article-journal article-magazine article-newspaper" match="any">
+      <if type="chapter paper-conference article article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
         <text variable="page"/>
       </if>
     </choose>
@@ -1154,15 +1163,15 @@
         <text macro="issued-chinese" prefix="（" suffix="）"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="; " prefix="" suffix="">
+        <group delimiter="" prefix="" suffix="">
           <group delimiter="; ">
             <text macro="locators-note"/>
-            <text macro="collection-title"/>
+            <!-- <text macro="collection-title"/> -->
           </group>
-          <group>
+          <group suffix="。">
             <choose>
               <if match="all" variable="volume">
-                <text term="volume" form="short" suffix=" "/>
+                <!-- <text term="volume" form="short" suffix=" "/> -->
                 <number variable="volume"/>
                 <choose>
                   <if match="any" variable="number-of-volumes">
@@ -1271,7 +1280,7 @@
   </macro>
   <macro name="divider-chinese">
     <choose>
-      <if type="article-journal">
+      <if type="article-journal entry-dictionary entry-encyclopedia" match="any">
         <text value="，" />
       </if>
       <else-if type="article-magazine">

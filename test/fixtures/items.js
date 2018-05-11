@@ -420,5 +420,30 @@ module.exports = {
             "volume":"29",
             "type": "book"
         }        
+    },
+    articleInADictionaryChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "基督的宽容",
+            "author": [
+                {
+                    "family": "冯",
+                    "given": "来平",
+                }
+            ],
+            "editor":[
+                {
+                    "family":"邱",
+                    "given": "宋恩"
+                }
+            ],
+            "container-title":"世界神学辞典",
+            "publisher": "展徒出版社",
+            "publisher-place": "上海",                
+            "language":"zh-CN",
+            "volume":"第三册",
+            "page":"25-26",
+            "type": "entry-dictionary"
+        }         
     }
 }
