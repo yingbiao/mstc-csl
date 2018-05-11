@@ -755,17 +755,26 @@
   </macro>
   <macro name="point-locators-chinese">
     <choose>
-      <!-- <if variable="locator" match="none">
-        <text macro="pages"/>
-      </if> -->
-      <if type="article-journal">
-        <text macro="pages" prefix="："/>
+      <if variable="locator" match="none">
+        <choose>
+          <if type="article-journal">
+            <text macro="pages" prefix="："/>
+          </if>
+          <else-if type="article-magazine">
+            <text macro="pages" prefix="，"/>
+          </else-if>
+        </choose>
       </if>
-      <else-if type="article-magazine">
-        <text macro="pages" prefix="，"/>
-      </else-if>      
       <else>
-        <text macro="point-locators-note" prefix="，"/>
+        <choose>
+          <if type="article-journal">
+            <text value="：" />
+          </if>
+          <else>
+            <text value="，" />
+          </else>
+        </choose>
+        <text macro="point-locators-note"/>
       </else>
     </choose>
   </macro>  
@@ -825,7 +834,7 @@
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=", no. "/>
+        <text variable="issue" prefix="，"/>
         <text macro="issued-chinese" prefix="（" suffix="）"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">

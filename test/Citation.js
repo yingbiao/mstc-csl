@@ -215,5 +215,53 @@ describe("Citation", function() {
         var expected = 'Christopher W. Hughes, "Japan and East Asia". in <i>The Japan Handbook</i>, ed. Patrick Heenan (London: Fitzroy Dearborn Publishers, 1998), 23.';
         
         assert.equal(output, expected);
-    });     
+    });  
+    
+    it("Citation::Chinese::Article in a Journal", function() {
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "21",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        var output = makeCitationCluster(items.articleInAJournalChinese, citation);
+        var expected = '杨品通：「神学的本质探讨」，《教会神学期刊》，14（2003 5月）：21。';
+        
+        assert.equal(output, expected);
+    }); 
+
+    // xit("Citation::English::Article in a Journal", function() {
+    //     var output = makeBibliography(items.articleInAJournalEnglish);
+    //     var expected = '<div class="csl-entry">Tallman, Francis C. "A History of Christian Church in Bangkok". <i>Journal of World Religions</i> 44 (October 2003):203–223.</div>';
+        
+    //     assert.equal(output, expected);
+    // }); 
+
+    // xit("Citation::English::Article in a Magazine", function() {
+    //     var output = makeBibliography(items.articleInMagzineEnglish);
+    //     var expected = '<div class="csl-entry">Weber, Bruce. "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24–26.</div>';
+        
+    //     assert.equal(output, expected);
+    // }); 
+
+    // xit("Citation::Chinese::Article in a Magazine", function() {
+    //     var output = makeBibliography(items.articleInMagzineChinese);
+    //     var expected = '<div class="csl-entry">李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43–47。</div>';
+        
+    //     assert.equal(output, expected);
+    // }); 
+
+    // xit("Bibliography::English::Book in a Multi-Volume Series", function() {
+    //     var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish);
+    //     var expected = '<div class="csl-entry">Brown, Raymond E. <i>The Gospel According to John I–XII</i>. Anchor Bible. Edited by William Foxwell Albright and David Noel Freedman, vol. 29. New York: Doubleday, 1966.</div>';
+        
+    //     assert.equal(output, expected);
+    // });    
 });
