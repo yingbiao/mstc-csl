@@ -287,9 +287,12 @@
         </else>
       </choose>
       <choose>
-        <if variable="collection-title">
-          <text value="." />
+        <if variable="collection-title volume editor" match="all">
+          <text value="," />
         </if>
+        <else-if variable="collection-title">
+          <text value="." />
+        </elseif>
       </choose>
     </group>
   </macro>
@@ -405,7 +408,14 @@
         <text variable="container-title-short" font-style="italic"/>
       </if>
       <else>
-        <text variable="container-title" text-case="title" font-style="italic"/>
+        <choose>
+          <if variable="container-title">
+            <text variable="container-title" text-case="title" font-style="italic"/>
+          </if>
+          <else-if variable="collection-title">
+            <text variable="collection-title" text-case="title" />
+          </else-if>
+        </choose>        
       </else>
     </choose>
     <text macro="container-contributors-note" />
@@ -452,8 +462,14 @@
         </choose>
       </if>
     </choose>
-    <text variable="container-title" text-case="title" font-style="italic"/>
-    <text variable="collection-title" text-case="title" />
+    <choose>
+      <if variable="container-title">
+        <text variable="container-title" text-case="title" font-style="italic"/>
+      </if>
+      <else-if variable="collection-title">
+        <text variable="collection-title" text-case="title" />
+      </else-if>
+    </choose>
     <choose>
       <if type="chapter">
         <choose>
@@ -741,6 +757,79 @@
                 </if>
               </choose>
             </if>
+            <!-- <else-if variable="volume" match="all">
+              <choose>
+                <if type="chapter paper-conference article article-journal article-magazine article-newspaper entry entry-dictionary entry-encyclopedia" match="none">
+                  <choose>
+                    <if match="all" variable="locator" locator="page">
+                      <number suffix=":" variable="volume"/>
+                    </if>
+                  </choose>
+                </if>
+              </choose>
+            </else-if> -->
+          </choose>
+        </if>
+        <else>
+          <choose>
+            <if locator="page chapter" match="none">
+              <choose>
+                <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+                  <choose>
+                    <if variable="volume">
+                      <group>
+                        <text term="volume" form="short" suffix=" "/>
+                        <number variable="volume" form="numeric"/>
+                        <label prefix=", " suffix=" " variable="locator" form="short"/>
+                      </group>
+                    </if>
+                    <else>
+                      <label variable="locator" form="short" suffix=" "/>
+                    </else>
+                  </choose>
+                </if>
+              </choose>
+            </if>
+            <!-- <else-if variable="volume" match="all">
+              <choose>
+                <if type="chapter paper-conference article entry-dictionary article-newspaper entry-encyclopedia book" match="any">
+                  <number suffix=":" variable="volume"/>
+                </if>
+              </choose>
+            </else-if> -->
+          </choose>
+        </else>
+      </choose>
+      <text variable="locator"/>
+    </group>
+  </macro>
+  <macro name="point-locators-note-bib">
+    <group>
+      <choose>
+        <if match="any" position="subsequent ibid ibid-with-locator">
+          <choose>
+            <if locator="page" match="none">
+              <choose>
+                <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+                  <choose>
+                    <if match="none" locator="verse">
+                      <choose>
+                        <if variable="volume">
+                          <group>
+                            <text term="volume" form="short" suffix=" "/>
+                            <number variable="volume" form="numeric"/>
+                            <label prefix=", " suffix=" " variable="locator" form="short"/>
+                          </group>
+                        </if>
+                        <else>
+                          <label variable="locator" form="short" suffix=" "/>
+                        </else>
+                      </choose>
+                    </if>
+                  </choose>
+                </if>
+              </choose>
+            </if>
             <else-if variable="volume" match="all">
               <choose>
                 <if type="chapter paper-conference article article-journal article-magazine article-newspaper entry entry-dictionary entry-encyclopedia" match="none">
@@ -786,12 +875,9 @@
       </choose>
       <text variable="locator"/>
     </group>
-  </macro>
+  </macro>  
   <macro name="point-locators">
     <choose>
-      <!-- <if variable="locator" match="none">
-        <text macro="pages"/>
-      </if> -->
       <if variable="locator" match="none">
         <choose>
           <if type="article-journal">
@@ -839,7 +925,57 @@
         <text macro="point-locators-note"/>
       </else>
     </choose>
-  </macro>  
+  </macro>
+  <macro name="point-locators-bib">
+    <choose>
+      <if variable="locator" match="none">
+        <choose>
+          <if type="article-journal">
+            <text macro="pages" prefix=": "/>
+          </if>
+          <else-if type="article-magazine">
+            <text macro="pages" prefix=", "/>
+          </else-if>
+        </choose> 
+      </if>
+      <else>
+        <choose>
+          <if type="article-journal">
+            <text value=": " />
+          </if>
+          <else>
+            <text value=", " />
+          </else>
+        </choose>      
+        <text macro="point-locators-note-bib"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="point-locators-bib-chinese">
+    <choose>
+      <if variable="locator" match="none">
+        <choose>
+          <if type="article-journal">
+            <text macro="pages" prefix="："/>
+          </if>
+          <else-if type="article-magazine">
+            <text macro="pages" prefix="，"/>
+          </else-if>
+        </choose>
+      </if>
+      <else>
+        <choose>
+          <if type="article-journal">
+            <text value="：" />
+          </if>
+          <else>
+            <text value="，" />
+          </else>
+        </choose>
+        <text macro="point-locators-note-bib"/>
+      </else>
+    </choose>
+  </macro>    
   <macro name="pages">
     <choose>
       <if type="chapter paper-conference article article-journal article-magazine article-newspaper" match="any">
@@ -862,10 +998,30 @@
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
+        <group prefix=", ">
+          <choose>
+            <if match="all" variable="volume">
+              <text term="volume" form="short" suffix=" "/>
+              <number variable="volume"/>
+              <choose>
+                <if match="any" variable="number-of-volumes">
+                  <text value="of" prefix=" " suffix=" "/>
+                </if>
+              </choose>
+            </if>
+          </choose>
+          <group>
+            <number variable="number-of-volumes" form="numeric"/>
+            <choose>
+              <if match="none" variable="volume">
+                <text term="volume" form="short" plural="true" prefix=" "/>
+              </if>
+            </choose>
+          </group>
+        </group> 
         <group prefix=" (" suffix=")">
           <group delimiter="; " suffix="; ">
             <text macro="locators-note"/>
-            <text macro="collection-title"/>
           </group>
           <group delimiter=", ">
             <group delimiter=" ">
@@ -1206,7 +1362,7 @@
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper" prefix="，"/>
       <text macro="access-bib" prefix="，"/>
-      <text macro="point-locators-chinese"/>
+      <text macro="point-locators-bib-chinese"/>
     </layout>    
     <layout suffix=".">
       <group delimiter=" " suffix="">
@@ -1218,7 +1374,7 @@
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
       <text macro="access-bib" prefix=", "/>
-      <text macro="point-locators"/>
+      <text macro="point-locators-bib"/>
     </layout>
   </bibliography>
 </style>
