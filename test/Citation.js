@@ -277,12 +277,25 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
 
-    // xit("Citation::Chinese::Article in a Magazine", function() {
-    //     var output = makeBibliography(items.articleInMagazineChinese);
-    //     var expected = '<div class="csl-entry">李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43–47。</div>';
+    it("Citation::Chinese::Article in a Magazine", function() {
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "43",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        var output = makeCitationCluster(items.articleInMagazineChinese, citation);         
+        var expected = '李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43。';
         
-    //     assert.equal(output, expected);
-    // }); 
+        assert.equal(output, expected);
+    }); 
 
     // xit("Bibliography::English::Book in a Multi-Volume Series", function() {
     //     var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish);
