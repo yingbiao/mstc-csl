@@ -315,5 +315,25 @@ describe("Citation", function() {
         var expected = 'Raymond E. Brown, <i>The Gospel According to John I–XII</i>, Anchor Bible, ed. William Foxwell Albright and David Noel Freedman, vol. 29 (New York: Doubleday, 1966), 97.';
         
         assert.equal(output, expected);
-    });    
+    }); 
+    
+    it("Citation::Chinese::Article in a Dictionary", function() {
+        var citation=
+        {
+            "citationItems": [ 
+                {
+                "id": "ITEM-1",
+                "locator": "25",
+                "label": "page"
+                }
+            ],
+            "properties": {
+                "noteIndex": 1
+            }
+        }
+        var output = makeCitationCluster(items.articleInADictionaryChinese, citation);        
+        var expected = '冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册（上海：展徒出版社），25。';
+        
+        assert.equal(output, expected);
+    });     
 });
