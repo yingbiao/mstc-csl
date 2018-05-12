@@ -422,7 +422,7 @@
   </macro>
   <macro name="container-title-note-chinese">
     <choose>
-      <if type="paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="paper-conference webpage" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix="" text-case="title"/>
@@ -431,9 +431,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine" match="any">
+      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
         <choose>
-          <if type="article-journal article-magazine" match="any">
+          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -1065,10 +1065,29 @@
         <text macro="issued-chinese" prefix="（" suffix="）"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
+        <group prefix="，">
+          <choose>
+            <if match="all" variable="volume">
+              <number variable="volume"/>
+              <choose>
+                <if match="any" variable="number-of-volumes">
+                  <text value="of" prefix=" " suffix=" "/>
+                </if>
+              </choose>
+            </if>
+          </choose>
+          <group>
+            <number variable="number-of-volumes" form="numeric"/>
+            <choose>
+              <if match="none" variable="volume">
+                <text term="volume" form="short" plural="true" prefix=" "/>
+              </if>
+            </choose>
+          </group>
+        </group>          
         <group prefix="（" suffix="）">
           <group delimiter="；" suffix="；">
             <text macro="locators-note"/>
-            <text macro="collection-title"/>
           </group>
           <group delimiter="，">
             <group delimiter=" ">
