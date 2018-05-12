@@ -97,7 +97,7 @@
         </if>
       </choose>
       <choose>
-        <if type="article-journal article-magazine" match="none">
+        <if type="article-journal article-magazine entry-dictionary entry-encyclopedia" match="none">
           <text macro="pages" prefix=", " />
         </if>
       </choose>
@@ -471,7 +471,7 @@
       </else-if>
     </choose>
     <choose>
-      <if type="chapter">
+      <if type="chapter entry-dictionary entry-encyclopedia" match="any">
         <choose>
           <if variable="container-title editor" match="all">
             <text value=". " />
@@ -1131,7 +1131,12 @@
             <choose>
               <if match="all" variable="volume">
                 <text term="volume" form="short" suffix=" "/>
-                <number variable="volume" suffix="."/>
+                <number variable="volume" suffix=""/>
+                <choose>
+                  <if type="entry-dictionary entry-encyclopedia" match="none">
+                    <text value="." />
+                  </if>
+                </choose>                
                 <choose>
                   <if match="any" variable="number-of-volumes">
                     <text value="of" prefix=" " suffix=" "/>
@@ -1147,6 +1152,11 @@
                 </if>
               </choose>
             </group>
+            <choose>
+              <if type="entry-dictionary entry-encyclopedia" match="any">
+                <text macro="pages" prefix=", " suffix="."/>
+              </if>
+            </choose>
           </group>
           <group delimiter=", ">
             <group delimiter=" ">
@@ -1317,6 +1327,9 @@
       </if>
       <else-if type="article-magazine">
         <text value="" />
+      </else-if>
+      <else-if type="entry-dictionary entry-encyclopedia" match="any">
+        <text value=", " />      
       </else-if>
       <else-if variable="collection-title">
         <text value=", " />

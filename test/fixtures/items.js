@@ -445,5 +445,37 @@ module.exports = {
             "page":"25-26",
             "type": "entry-dictionary"
         }         
-    }
+    },
+    articleInADictionaryEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Gnosticism",
+            "author": [
+                {
+                    "family": "Perkins",
+                    "given": "Pheme",
+                }
+            ],
+            "editor":[
+                {
+                    "family":"Sakenfeld",
+                    "given": "Katherine Doob"
+                }
+            ],
+            "container-title":"New Interpreter's Dictionary of the Bible",
+            "publisher": "Abingdon Press",
+            "publisher-place": "Nashville",                
+            "language":"en-US",
+            "volume":"2",
+            "page":"581-584",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "type": "entry-dictionary"
+        }         
+    }    
 }
