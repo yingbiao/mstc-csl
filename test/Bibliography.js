@@ -141,5 +141,12 @@ describe("Bibliography", function() {
         var expected = '<div class="csl-entry">冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册。上海：展徒出版社，25–26。</div>';
         
         assert.equal(output, expected);
-    });    
+    });
+
+    it("Bibliography::English::Article in a Dictionary", function() {
+        var output = makeBibliography(items.articleInADictionaryEnglish);
+        var expected = '<div class="csl-entry">Perkins, Pheme. "Gnosticism". In <i>New Interpreter’s Dictionary of the Bible</i>. Edited by Katherine Doob Sakenfeld, vol. 2, 581–584. Nashville: Abingdon Press, 2007.</div>';
+        
+        assert.equal(output, expected);
+    });     
 });
