@@ -112,6 +112,12 @@
               <label form="verb-short" text-case="title" suffix=""/>
             </names>
         </if>
+        <if variable="collection-title editor" match="all">
+          <names variable="editor">
+              <name and="text" delimiter="，"/>
+              <label form="verb-short" text-case="title" suffix=""/>
+            </names>
+        </if>        
         <else-if variable="author">
             <names variable="editor" delimiter="，">
               <label form="verb" text-case="title" suffix=" "/>
@@ -129,7 +135,16 @@
       </choose>
       <choose>
         <if type="article-journal article-magazine entry-encyclopedia entry-dictionary" match="none">
-          <text macro="pages" />
+          <choose>
+            <if variable="page">
+              <choose>
+                <if type="report">
+                  <text value="，" />
+                </if>
+              </choose>
+              <text variable="page"/>
+            </if>
+          </choose>
         </if>
       </choose>
     </group>
@@ -343,17 +358,20 @@
       <if variable="title" match="none">
         <text variable="genre" text-case="title"/>
       </if>
-      <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-        <text variable="title" text-case="title" font-style="italic" suffix="》" prefix="《"/>
-      </else-if>
       <else-if variable="container-title title" match="all">
         <text variable="title" text-case="title" prefix="「" suffix="」" />
+      </else-if>
+      <else-if variable="collection-title title" match="all">
+        <text variable="title" text-case="title" prefix="「" suffix="」" />
+      </else-if>      
+      <else-if type="bill book graphic legal_case legislation motion_picture song" match="any">
+        <text variable="title" text-case="title" font-style="italic" prefix="《" suffix="》"/>
       </else-if>
       <else-if match="all" variable="reviewed-author">
         <text macro="review-title" text-case="title"/>
       </else-if>
       <else>
-        <text variable="title" text-case="title" quotes="false"/>
+        <text variable="title" text-case="title" quotes="false" prefix="《" suffix="》" />
       </else>
     </choose>
   </macro>    
@@ -495,9 +513,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia report" match="any">
         <choose>
-          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
+          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia report" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -506,7 +524,14 @@
         </choose>
       </if>
     </choose>
-    <text variable="container-title" text-case="title" prefix="《" suffix="》"/>
+    <choose>
+      <if variable="container-title">
+        <text variable="container-title" text-case="title" prefix="《" suffix="》"/>
+      </if>
+      <else-if variable="collection-title">
+        <text variable="collection-title" text-case="title" prefix="《" suffix="》"/>
+      </else-if>
+    </choose>    
     <text macro="container-contributors-bibliography-chinese" prefix="，"/>
   </macro>  
   <macro name="collection-title">

@@ -29,8 +29,17 @@ mocha
 7. Weber, Bruce. “The Myth Maker.” New York Magazine, 20 October 1985, 24-26.
 8. Brown, Raymond E. The Gospel according to John I–XII. Anchor Bible. Edited by William Foxwell Albright and David Noel Freedman, vol. 29. New York: Doubleday, 1966.
 9. Thurén, Lauri. Argument and Theology in 1 Peter: The Origins of Christian Paraenesis. Journal for the Study of the New Testament: Supplement Series. Edited by Stanley E. Porter et al., vol. 114. Sheffield: Sheffield Academic Press, 1995.
-10. Perkins, Pheme. “Gnosticism.” In New Interpreter’s Dictionary of the Bible. Edited by Katherine Doob Sakenfeld, vol.2, 581-84. Nashville: Abingdon Press, 2007.
-11. Behn, Johannes. “qu,w.” In Theological Dictionary of the New Testament. Edited by Gerhard Kittel. Translated and edited by Geoffrey W. Bromiley, vol. 3, 180-90. Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965.
+10. Perkins, Pheme. “Gnosticism.” In New Interpreter’s Dictionary of the Bible. Edited by Katherine Doob Sakenfeld, vol.2, 581-584. Nashville: Abingdon Press, 2007.
+11. Behn, Johannes. “qu,w.” In Theological Dictionary of the New Testament. Edited by Gerhard Kittel. Translated and edited by Geoffrey W. Bromiley, vol. 3, 180-190. Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965.
 12. Chou, Ivy. “Board of Lay Training.” In Minutes of 12th Session of the Sarawak Annual Conference of the Methodist Church 1963, 69-70. Sibu: The Methodist Church, 1963.
 13. Department of Statistics Malaysia. “Total Population by Age Group: Sarawak.” In Population and Housing Census of Malaysia 2000, 58-60. Kuala Lumpur: Government Printing Office, 2000.
 14. Aston, Steve. “The Stars of Tomorrow.” The New York Times. 4 January 1987, 12.
+
+
+
+# A few notes
+1. 所有的参考资料和注脚依靠类型（type）的准确性。
+2. 所有的中文书籍的语言项必须用"zh-CN"。
+3. 页码格式必须是展开的，不能混合简略（581-84）与展开（209-210）两种格式，一个文件只可以有一个格式。
+4. 英文的标题引号内的“.”或“,”移到了引号外面。
+5. 因为混合了标题的格式（有的是title格式，而有的采用小写格式），所以现在采用了原本的数据输入，也就是说标题必须准确，数据是什么，就显示什么。
