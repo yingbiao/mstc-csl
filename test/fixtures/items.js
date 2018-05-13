@@ -523,5 +523,36 @@ module.exports = {
             },
             "type": "entry-dictionary"
         }         
+    },
+    reportChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "执行部呈年会报告书",
+            "author": [
+                {
+                    "family": "陈",
+                    "given": "泽崇",
+                }                
+            ],
+            "editor": [
+                {
+                    "family": "许",
+                    "given": "必斌",
+                }                
+            ],            
+            "collection-title":"2001砂拉越华人年议会第二十六届年议会会议记录",
+            "publisher": "砂拉越华人年议会",
+            "publisher-place": "诗巫",
+            "language":"zh-CN",
+            "page":"18-22",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "type": "report"
+        }         
     }
 }
