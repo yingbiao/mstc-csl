@@ -90,9 +90,9 @@
       </choose>
       <choose>
         <if variable="author editor" match="any">
-          <names variable="translator" delimiter=", ">
+          <names variable="translator" delimiter=", " prefix=". ">
+            <label form="verb" text-case="sentence" suffix=" "/>
             <name and="text" delimiter=", "/>
-            <label form="verb-short" text-case="lowercase" suffix=""/>
           </names>
         </if>
       </choose>
@@ -322,13 +322,13 @@
           <text variable="genre" text-case="title"/>
         </if>
         <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-          <text variable="title" text-case="title" font-style="italic"/>
+          <text variable="title" font-style="italic"/>
         </else-if>
         <else-if match="all" variable="reviewed-author">
           <text macro="review-title" text-case="title"/>
         </else-if>
         <else>
-          <text variable="title" text-case="title" prefix="&quot;" suffix="&quot;."/>
+          <text variable="title" prefix="&quot;" suffix="&quot;."/>
         </else>
       </choose>
       <choose>

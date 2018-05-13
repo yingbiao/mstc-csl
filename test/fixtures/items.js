@@ -477,5 +477,51 @@ module.exports = {
             },
             "type": "entry-dictionary"
         }         
-    }    
+    },
+    articleInADictionaryWithTranslatorEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "xb;z\"",
+            "author": [
+                {
+                    "family": "Bergman",
+                    "given": "B. Lang",
+                },
+                {
+                    "family": "Ringgren",
+                    "given": "H.",
+                }                
+            ],
+            "editor":[
+                {
+                    "family":"Botterweck",
+                    "given": "G. Johannes"
+                },
+                {
+                    "family":"Ringgren",
+                    "given": "Helmer"
+                }                
+            ],
+            "translator":[
+                {
+                    "family":"Green",
+                    "given": "David E."
+                }                
+            ],            
+            "container-title":"Theological Dictionary of the Old Testament",
+            "publisher": "William B. Eerdmans Publishing Company",
+            "publisher-place": "Grand Rapids",
+            "language":"en-US",
+            "volume":"4",
+            "page":"8-29",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "type": "entry-dictionary"
+        }         
+    }
 }
