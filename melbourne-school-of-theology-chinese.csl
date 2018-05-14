@@ -307,7 +307,7 @@
         </if>
         <else-if variable="collection-title">
           <text value="." />
-        </elseif>
+        </else-if>
       </choose>
     </group>
   </macro>
