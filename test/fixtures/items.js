@@ -579,5 +579,30 @@ module.exports = {
             },
             "type": "report"
         }         
-    }
+    },
+    statisticsChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "1997年墨尔本华人人口的增长情况",
+            "author": [
+                {
+                    "family": "澳洲统计部",
+                    "given": "",
+                }                
+            ],
+            "collection-title":"澳洲人口普查1997",
+            "publisher": "澳洲官方出版社",
+            "publisher-place": "堪培拉",
+            "language":"zh-CN",
+            "page":"209-210",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "type": "report"
+        }         
+    },    
 }
