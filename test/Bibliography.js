@@ -198,4 +198,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Chinese::Thesis", function() {
+        var output = makeBibliography(items.thesisChinese);
+        var expected = '<div class="csl-entry">刘庸：「基督教教育在南非华人教会群体中的发展模式」，博士论文，太平洋天国神学院，2000。</div>';
+        
+        assert.equal(output, expected);
+    });
 });
