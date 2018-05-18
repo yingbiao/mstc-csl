@@ -170,5 +170,19 @@ describe("Citation", function() {
         var expected = 'Ivy Chou, "Board of Lay Training", in <i>Minutes of 12th Session of the Sarawak Annual Conference of the Methodist Church 1963</i> (Sibu: The Methodist Church, 1963), 69.';
         
         assert.equal(output, expected);
-    });    
+    });
+
+    it("Citation::Chiense::Statistics", function() {
+        var output = makeCitationCluster(items.statisticsChinese, "209");
+        var expected = '澳洲统计部：「1997年墨尔本华人人口的增长情况」，《澳洲人口普查1997》（堪培拉：澳洲官方出版社，1998），209。';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Citation::English::Statistics", function() {
+        var output = makeCitationCluster(items.statisticsEnglish, "58");
+        var expected = 'Department of Statistics Malaysia, "Total Polulation by Age Group: Sarawak", in <i>Population and Housing Census of Malaysia 2000</i> (Kuala Lumpur: Government Printing Office, 2000), 58.';
+        
+        assert.equal(output, expected);
+    });
 });
