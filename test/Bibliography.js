@@ -184,4 +184,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Chinese::Newspaper", function() {
+        var output = makeBibliography(items.newpaperChinese);
+        var expected = '<div class="csl-entry">黄孟礼：「美以美是新福州垦场的催化剂」，《卫理报》，2000年11月30日，A4–A5。</div>';
+        
+        assert.equal(output, expected);
+    });
 });

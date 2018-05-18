@@ -134,7 +134,7 @@
         </if>
       </choose>
       <choose>
-        <if type="article-journal article-magazine entry-encyclopedia entry-dictionary" match="none">
+        <if type="article-journal article-magazine article-newspaper entry-encyclopedia entry-dictionary" match="none">
           <choose>
             <if variable="page">
               <text variable="page"/>
@@ -538,7 +538,7 @@
   </macro>
   <macro name="container-title-chinese">
     <choose>
-      <if type="paper-conference webpage " match="any">
+      <if type="paper-conference webpage" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" " text-case="title"/>
@@ -547,9 +547,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia report" match="any">
+      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report" match="any">
         <choose>
-          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia report" match="any">
+          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -769,7 +769,7 @@
               </date>
             </group>
           </else-if>
-          <else-if type="article-magazine" match="any">
+          <else-if type="article-magazine article-newspaper" match="any">
             <date form="text" variable="issued">
               <date-part name="month"/>
               <date-part name="year"/>
@@ -1374,7 +1374,7 @@
       <if type="article-journal entry-dictionary entry-encyclopedia" match="any">
         <text value="，" />
       </if>
-      <else-if type="article-magazine">
+      <else-if type="article-magazine article-newspaper" match="any">
         <text value="" />
       </else-if>      
       <else>
