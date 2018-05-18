@@ -170,4 +170,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Chiense::Statistics", function() {
+        var output = makeBibliography(items.statisticsChinese);
+        var expected = '<div class="csl-entry">澳洲统计部：「1997年墨尔本华人人口的增长情况」，《澳洲人口普查1997》，209–210。堪培拉：澳洲官方出版社，1998。</div>';
+        
+        assert.equal(output, expected);
+    });
 });

@@ -108,21 +108,21 @@
       <choose>
         <if variable="container-title editor" match="all">
           <names variable="editor">
-              <name and="text" delimiter="，"/>
-              <label form="verb-short" text-case="title" suffix=""/>
-            </names>
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" text-case="title" suffix=""/>
+          </names>
         </if>
         <if variable="collection-title editor" match="all">
-          <names variable="editor">
-              <name and="text" delimiter="，"/>
-              <label form="verb-short" text-case="title" suffix=""/>
-            </names>
+          <names variable="editor" suffix="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" text-case="title" suffix=""/>
+          </names>
         </if>        
         <else-if variable="author">
-            <names variable="editor" delimiter="，">
-              <label form="verb" text-case="title" suffix=" "/>
-              <name and="text" delimiter="，"/>
-            </names>
+          <names variable="editor" delimiter="，">
+            <label form="verb" text-case="title" suffix=" "/>
+            <name and="text" delimiter="，"/>
+          </names>
         </else-if>
       </choose>
       <choose>
@@ -137,11 +137,6 @@
         <if type="article-journal article-magazine entry-encyclopedia entry-dictionary" match="none">
           <choose>
             <if variable="page">
-              <choose>
-                <if type="report">
-                  <text value="，" />
-                </if>
-              </choose>
               <text variable="page"/>
             </if>
           </choose>
