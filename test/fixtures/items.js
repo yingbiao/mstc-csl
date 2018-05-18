@@ -604,5 +604,30 @@ module.exports = {
             },
             "type": "report"
         }         
-    },    
+    },
+    statisticsEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Total Polulation by Age Group: Sarawak",
+            "author": [
+                {
+                    "family": "Department of Statistics Malaysia",
+                    "given": "",
+                }                
+            ],
+            "collection-title":"Population and Housing Census of Malaysia 2000",
+            "publisher": "Government Printing Office",
+            "publisher-place": "Kuala Lumpur",
+            "language":"en-US",
+            "page":"58-60",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "type": "report"
+        }         
+    }    
 }

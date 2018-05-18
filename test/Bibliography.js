@@ -177,4 +177,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::Statistics", function() {
+        var output = makeBibliography(items.statisticsEnglish);
+        var expected = '<div class="csl-entry">Department of Statistics Malaysia. "Total Polulation by Age Group: Sarawak". In <i>Population and Housing Census of Malaysia 2000</i>, 58–60. Kuala Lumpur: Government Printing Office, 2000.</div>';
+        
+        assert.equal(output, expected);
+    });
 });
