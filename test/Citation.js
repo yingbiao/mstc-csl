@@ -185,4 +185,18 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::Chinese::Newspaper", function() {
+        var output = makeCitationCluster(items.newpaperChinese, "A4");
+        var expected = '黄孟礼：「美以美是新福州垦场的催化剂」，《卫理报》，2000年11月30日，A4。';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Citation::English::Newspaper", function() {
+        var output = makeCitationCluster(items.newpaperEnglish, "12");
+        var expected = 'Steve Aston, "The Stars of Tomorrow", <i>The New York Times</i>, 4 January 1987, 12.';
+        
+        assert.equal(output, expected);
+    });
 });
