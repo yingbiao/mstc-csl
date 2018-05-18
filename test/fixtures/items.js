@@ -629,5 +629,30 @@ module.exports = {
             },
             "type": "report"
         }         
-    }    
+    },
+    newpaperChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "美以美是新福州垦场的催化剂",
+            "author": [
+                {
+                    "family": "黄",
+                    "given": "孟礼",
+                }                
+            ],
+            "container-title":"卫理报",
+            "language":"zh-CN",
+            "page":"A4-A5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000,
+                        11,
+                        30
+                    ]
+                ]
+            },            
+            "type": "article-newspaper"
+        }         
+    }   
 }
