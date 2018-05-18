@@ -702,5 +702,28 @@ module.exports = {
             },            
             "type": "thesis"
         }         
+    },
+    thesisEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "The Quest for a Historical Jesus in Sarawak",
+            "author": [
+                {
+                    "family": "Austin",
+                    "given": "Lancer",
+                }                
+            ],
+            "thesisType":"Ph.D. diss.",
+            "language":"en-US",
+            "publisher":"University of Chicago",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },            
+            "type": "thesis"
+        }         
     }
 }

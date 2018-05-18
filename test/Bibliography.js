@@ -205,4 +205,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::Thesis", function() {
+        var output = makeBibliography(items.thesisEnglish);
+        var expected = '<div class="csl-entry">Austin, Lancer. "The Quest for a Historical Jesus in Sarawak". Ph.D. diss., University of Chicago, 1996.</div>';
+        
+        assert.equal(output, expected);
+    });
 });

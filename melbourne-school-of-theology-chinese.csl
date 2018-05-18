@@ -1251,6 +1251,11 @@
               </choose>
               <text macro="event"/>
             </group>
+            <choose>
+              <if type="thesis" variable="thesisType">
+                <text variable="thesisType"  />
+              </if>
+            </choose>            
             <text macro="publisher"/>
             <text macro="issued"/>
           </group>
@@ -1405,7 +1410,7 @@
   </macro>
   <macro name="divider">
     <choose>
-      <if type="article-journal">
+      <if type="article-journal thesis" match="any">
         <text value=" " />
       </if>
       <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
