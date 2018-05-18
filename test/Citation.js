@@ -206,4 +206,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::English::Thesis", function() {
+        var output = makeCitationCluster(items.thesisEnglish, "90");
+        var expected = 'Lancer Austin, "The Quest for a Historical Jesus in Sarawak" (Ph.D. diss., University of Chicago, 1996), 90.';
+        
+        assert.equal(output, expected);
+    });
 });
