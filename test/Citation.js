@@ -149,5 +149,12 @@ describe("Citation", function() {
         var expected = 'Pheme Perkins, "Gnosticism", in <i>New Interpreter’s Dictionary of the Bible</i>, ed. Katherine Doob Sakenfeld, vol. 2 (Nashville: Abingdon Press, 2007), 583.';
         
         assert.equal(output, expected);
-    });  
+    });
+
+    it("Citation::English::Article in a Dictionary with Translator", function() {
+        var output = makeCitationCluster(items.articleInADictionaryWithTranslatorEnglish, "8");
+        var expected = 'B. Lang Bergman, and H. Ringgren, "xb;z"", in <i>Theological Dictionary of the Old Testament</i>, ed. G. Johannes Botterweck and Helmer Ringgren, trans. David E. Green, vol. 4 (Grand Rapids: William B. Eerdmans Publishing Company, 1980), 8.';
+        
+        assert.equal(output, expected);
+    });    
 });
