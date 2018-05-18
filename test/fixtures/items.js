@@ -679,5 +679,28 @@ module.exports = {
             },            
             "type": "article-newspaper"
         }         
-    }   
+    },
+    thesisChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "基督教教育在南非华人教会群体中的发展模式",
+            "author": [
+                {
+                    "family": "刘",
+                    "given": "庸",
+                }                
+            ],
+            "thesisType":"博士论文",
+            "language":"zh-CN",
+            "publisher":"太平洋天国神学院",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },            
+            "type": "thesis"
+        }         
+    }
 }

@@ -376,7 +376,10 @@
       </else-if>
       <else-if variable="collection-title title" match="all">
         <text variable="title" text-case="title" prefix="「" suffix="」" />
-      </else-if>      
+      </else-if>
+      <else-if type="thesis" match="all">
+        <text variable="title" text-case="title" prefix="「" suffix="」" />
+      </else-if>
       <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
         <text variable="title" text-case="title" font-style="italic" prefix="《" suffix="》"/>
       </else-if>
@@ -1298,6 +1301,11 @@
               </choose>
               <text macro="event"/>
             </group>
+            <choose>
+              <if type="thesis" variable="thesisType">
+                <text variable="thesisType"  />
+              </if>
+            </choose>
             <text macro="publisher-chinese"/>
             <text macro="issued-chinese"/>
           </group>
@@ -1374,7 +1382,7 @@
   </macro>
   <macro name="divider-chinese">
     <choose>
-      <if type="article-journal entry-dictionary entry-encyclopedia" match="any">
+      <if type="article-journal entry-dictionary entry-encyclopedia thesis" match="any">
         <text value="，" />
       </if>
       <else-if type="article-magazine article-newspaper" match="any">
