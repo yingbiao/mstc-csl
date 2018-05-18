@@ -162,5 +162,12 @@ describe("Bibliography", function() {
         var expected = '<div class="csl-entry">陈泽崇：「执行部呈年会报告书」，《2001砂拉越华人年议会第二十六届年议会会议记录》，许必斌编，18–22。诗巫：砂拉越华人年议会，2001。</div>';
         
         assert.equal(output, expected);
-    });      
+    });
+
+    it("Bibliography::English::Report", function() {
+        var output = makeBibliography(items.reportEnglish);
+        var expected = '<div class="csl-entry">Chou, Ivy. "Board of Lay Training". In <i>Minutes of 12th Session of the Sarawak Annual Conference of the Methodist Church 1963</i>, 69–70. Sibu: The Methodist Church, 1963.</div>';
+        
+        assert.equal(output, expected);
+    });
 });

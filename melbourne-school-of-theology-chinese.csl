@@ -345,14 +345,19 @@
         <if variable="title" match="none">
           <text variable="genre" text-case="title"/>
         </if>
-        <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+        <else-if type="bill book graphic legal_case legislation motion_picture song" match="any">
           <text variable="title" font-style="italic"/>
         </else-if>
         <else-if match="all" variable="reviewed-author">
           <text macro="review-title" text-case="title"/>
         </else-if>
         <else>
-          <text variable="title" prefix="&quot;" suffix="&quot;."/>
+          <text variable="title" prefix="&quot;" suffix="&quot;"/>
+          <choose>
+            <if variable="collection-title" match="none">
+              <text value="." />
+            </if>
+          </choose>
         </else>
       </choose>
       <choose>
@@ -488,7 +493,7 @@
   </macro>  
   <macro name="container-title">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia report" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" " text-case="title"/>
@@ -501,7 +506,14 @@
         <text variable="container-title" text-case="title" font-style="italic"/>
       </if>
       <else-if variable="collection-title">
-        <text variable="collection-title" text-case="title" />
+        <choose>
+          <if type="book">
+            <text variable="collection-title" text-case="title"/>
+          </if>
+          <else>
+            <text variable="collection-title" text-case="title" font-style="italic"/>
+          </else>
+        </choose>
       </else-if>
     </choose>
     <choose>
@@ -512,7 +524,7 @@
           </if>
         </choose>
       </if>
-      <else-if variable="collection-title">
+      <else-if variable="collection-title" type="book">
         <text value=". " />
       </else-if>
     </choose>
@@ -1197,6 +1209,9 @@
               <if type="entry-dictionary entry-encyclopedia" match="any">
                 <text macro="pages" prefix=", " suffix="."/>
               </if>
+              <else-if type="report">
+                <text variable="page" suffix="."/>
+              </else-if>
             </choose>
           </group>
           <group delimiter=", ">
