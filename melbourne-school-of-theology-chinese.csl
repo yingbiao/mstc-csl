@@ -97,7 +97,7 @@
         </if>
       </choose>
       <choose>
-        <if type="article-journal article-magazine entry-dictionary entry-encyclopedia" match="none">
+        <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="none">
           <text macro="pages" prefix=", " />
         </if>
       </choose>
@@ -718,7 +718,7 @@
               </date>
             </group>
           </else-if>
-          <else-if type="article-magazine" match="any">
+          <else-if type="article-magazine article-newspaper" match="any">
             <date variable="issued" delimiter=" ">
               <date-part name="day"/>
               <date-part name="month"/>
@@ -1001,6 +1001,9 @@
           <else-if type="article-magazine">
             <text macro="pages" prefix=", "/>
           </else-if>
+          <else-if type="article-newspaper">
+            <text macro="pages" prefix=", "/>
+          </else-if>          
         </choose> 
       </if>
       <else>
@@ -1241,7 +1244,7 @@
         </group>
       </else-if>
       <else>
-        <text macro="issued" prefix=", "/>
+        <text macro="issued"/>
       </else>
     </choose>
   </macro>
@@ -1387,10 +1390,7 @@
       <if type="article-journal">
         <text value=" " />
       </if>
-      <else-if type="article-magazine">
-        <text value="" />
-      </else-if>
-      <else-if type="entry-dictionary entry-encyclopedia" match="any">
+      <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
         <text value=", " />      
       </else-if>
       <else-if variable="collection-title">

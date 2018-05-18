@@ -654,5 +654,30 @@ module.exports = {
             },            
             "type": "article-newspaper"
         }         
+    },
+    newpaperEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "The Stars of Tomorrow",
+            "author": [
+                {
+                    "family": "Aston",
+                    "given": "Steve",
+                }                
+            ],
+            "container-title":"The New York Times",
+            "language":"en-US",
+            "page":"12",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987,
+                        1,
+                        4
+                    ]
+                ]
+            },            
+            "type": "article-newspaper"
+        }         
     }   
 }

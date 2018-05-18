@@ -191,4 +191,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::Newspaper", function() {
+        var output = makeBibliography(items.newpaperEnglish);
+        var expected = '<div class="csl-entry">Aston, Steve. "The Stars of Tomorrow". <i>The New York Times</i>. 4 January 1987, 12.</div>';
+        
+        assert.equal(output, expected);
+    });
 });
