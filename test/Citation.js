@@ -164,4 +164,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::English::Report", function() {
+        var output = makeCitationCluster(items.reportEnglish, "69");
+        var expected = 'Ivy Chou, "Board of Lay Training", in <i>Minutes of 12th Session of the Sarawak Annual Conference of the Methodist Church 1963</i> (Sibu: The Methodist Church, 1963), 69.';
+        
+        assert.equal(output, expected);
+    });    
 });

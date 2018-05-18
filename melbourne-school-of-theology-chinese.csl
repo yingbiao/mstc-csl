@@ -283,7 +283,7 @@
         <if variable="title" match="none">
           <text variable="genre" text-case="title"/>
         </if>
-        <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+        <else-if type="bill book graphic legal_case legislation motion_picture song" match="any">
           <text variable="title" text-case="title" font-style="italic"/>
         </else-if>
         <else-if match="all" variable="reviewed-author">
@@ -292,7 +292,7 @@
         <else>
           <text variable="title" prefix="&quot;" suffix="&quot;"/>
           <choose>
-            <if type="article-journal">
+            <if type="article-journal report" match="any">
               <text value="," />
             </if>
             <else-if variable="container-title volume editor" match="all">
@@ -309,7 +309,11 @@
           <text value="," />
         </if>      
         <else-if variable="collection-title">
-          <text value="." />
+          <choose>
+            <if type="report" match="none">
+              <text value="." />
+            </if>
+          </choose>
         </else-if>
       </choose>
     </group>
@@ -427,7 +431,7 @@
   </macro>
   <macro name="container-title-note">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia report" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" "/>
@@ -445,7 +449,14 @@
             <text variable="container-title" text-case="title" font-style="italic"/>
           </if>
           <else-if variable="collection-title">
-            <text variable="collection-title" text-case="title" />
+            <choose>
+              <if type="book">
+                <text variable="collection-title" text-case="title"/>
+              </if>
+              <else>
+                <text variable="collection-title" text-case="title" font-style="italic"/>
+              </else>
+            </choose>
           </else-if>
         </choose>        
       </else>
