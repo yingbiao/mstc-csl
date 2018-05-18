@@ -554,5 +554,30 @@ module.exports = {
             },
             "type": "report"
         }         
+    },
+    reportEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Board of Lay Training",
+            "author": [
+                {
+                    "family": "Chou",
+                    "given": "Ivy",
+                }                
+            ],
+            "collection-title":"Minutes of 12th Session of the Sarawak Annual Conference of the Methodist Church 1963",
+            "publisher": "The Methodist Church",
+            "publisher-place": "Sibu",
+            "language":"en-US",
+            "page":"69-70",
+            "issued": {
+                "date-parts": [
+                    [
+                        1963
+                    ]
+                ]
+            },
+            "type": "report"
+        }         
     }
 }
