@@ -156,5 +156,12 @@ describe("Citation", function() {
         var expected = 'B. Lang Bergman, and H. Ringgren, "xb;z"", in <i>Theological Dictionary of the Old Testament</i>, ed. G. Johannes Botterweck and Helmer Ringgren, trans. David E. Green, vol. 4 (Grand Rapids: William B. Eerdmans Publishing Company, 1980), 8.';
         
         assert.equal(output, expected);
-    });    
+    });
+
+    it("Citation::Chiense::Report", function() {
+        var output = makeCitationCluster(items.reportChinese, "20");
+        var expected = '陈泽崇：「执行部呈年会报告书」，《2001砂拉越华人年议会第二十六届年议会会议记录》，许必斌编（诗巫：砂拉越华人年议会，2001），20。';
+        
+        assert.equal(output, expected);
+    });
 });
