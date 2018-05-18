@@ -319,6 +319,12 @@
       <if variable="title" match="none">
         <text variable="genre" text-case="title"/>
       </if>
+      <else-if variable="container-title title" match="all">
+        <text variable="title" text-case="title" prefix="「" suffix="」" />
+      </else-if>
+      <else-if variable="collection-title title" match="all">
+        <text variable="title" text-case="title" prefix="「" suffix="」" />
+      </else-if>      
       <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
         <text variable="title" text-case="title" font-style="italic" suffix="》" prefix="《"/>
       </else-if>
@@ -367,7 +373,7 @@
       <else-if variable="collection-title title" match="all">
         <text variable="title" text-case="title" prefix="「" suffix="」" />
       </else-if>      
-      <else-if type="bill book graphic legal_case legislation motion_picture song" match="any">
+      <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
         <text variable="title" text-case="title" font-style="italic" prefix="《" suffix="》"/>
       </else-if>
       <else-if match="all" variable="reviewed-author">
@@ -452,9 +458,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter article-journal article-magazine entry-dictionary entry-encyclopedia report" match="any">
         <choose>
-          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia" match="any">
+          <if type="article-journal article-magazine entry-dictionary entry-encyclopedia report" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -465,10 +471,17 @@
     </choose>    
     <choose>
       <if type="article-journal" match="all" variable="container-title-short">
-        <text variable="container-title-short" font-style="italic"/>
+        <text variable="container-title-short" text-case="title" prefix="《" suffix="》"/>
       </if>
       <else>
-        <text variable="container-title" text-case="title" font-style="italic" prefix="《" suffix="》"/>
+        <choose>
+          <if variable="container-title">
+            <text variable="container-title" text-case="title" prefix="《" suffix="》"/>
+          </if>
+          <else-if variable="collection-title">
+            <text variable="collection-title" text-case="title" prefix="《" suffix="》"/>
+          </else-if>
+        </choose>         
       </else>
     </choose>
     <text macro="container-contributors-note-chinese" prefix="，"/>
