@@ -32,14 +32,14 @@
     </date>
     <terms>
       <term name="editor" form="verb-short">ed.</term>
-      <term name="translator" form="verb-short">Trans.</term>
+      <term name="translator" form="verb-short">trans.</term>
       <term name="et-al">et al.</term>
       <term name="open-quote" form="symbol">'</term>
       <term name="close-quote" form="symbol">'</term>
     </terms>
   </locale>
   <macro name="container-contributors-note">
-    <group delimiter="; " prefix=", ">
+    <group delimiter=", " prefix=", ">
       <choose>
         <if variable="author">
           <names variable="editor" delimiter=", ">
@@ -175,7 +175,7 @@
   </macro>
   <macro name="contributors-note">
     <names variable="author">
-      <name and="text" et-al-min="4" et-al-use-first="1"/>
+      <name and="text" et-al-min="4" et-al-use-first="1" delimiter-precedes-last="always"/>
       <substitute>
         <text macro="editor-note"/>
         <text macro="translator-note"/>
@@ -290,7 +290,7 @@
           <text macro="review-title" text-case="title"/>
         </else-if>
         <else>
-          <text variable="title" text-case="title" prefix="&quot;" suffix="&quot;"/>
+          <text variable="title" prefix="&quot;" suffix="&quot;"/>
           <choose>
             <if type="article-journal">
               <text value="," />
