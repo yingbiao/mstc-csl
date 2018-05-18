@@ -295,6 +295,9 @@
             <if type="article-journal">
               <text value="," />
             </if>
+            <else-if variable="container-title volume editor" match="all">
+              <text value="," />
+            </else-if>             
             <else>
               <text value="." />
             </else>
@@ -304,7 +307,7 @@
       <choose>
         <if variable="collection-title volume editor" match="all">
           <text value="," />
-        </if>
+        </if>      
         <else-if variable="collection-title">
           <text value="." />
         </else-if>
@@ -1401,7 +1404,7 @@
           <group delimiter=" ">
             <text macro="contributors-note" suffix=","/>
             <text macro="title-note"/>
-            <text macro="description-note"/>
+            <!-- <text macro="description-note"/> -->
             <text macro="container-title-note"/>
           </group>
           <text macro="issue-note"/>
