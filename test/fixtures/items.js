@@ -725,5 +725,53 @@ module.exports = {
             },            
             "type": "thesis"
         }         
+    },
+    webpageChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "历史玩完了？",
+            "container-title":"汉语基督教文化研究所",
+            "author": [
+                {
+                    "family": "刘",
+                    "given": "小枫",
+                }                
+            ],
+            "URL":"http://www.iscs.org.hk/article18.htm",
+            "language":"zh-CN",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2002,
+                        8,
+                        5
+                    ]
+                ]
+            },            
+            "type": "webpage"
+        }         
+    },
+    websiteEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "The Quest for a Historical Jesus in Sarawak",
+            "author": [
+                {
+                    "family": "Austin",
+                    "given": "Lancer",
+                }                
+            ],
+            "thesisType":"Ph.D. diss.",
+            "language":"en-US",
+            "publisher":"University of Chicago",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },            
+            "type": "webpage"
+        }         
     }
 }
