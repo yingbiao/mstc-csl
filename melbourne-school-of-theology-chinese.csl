@@ -471,7 +471,7 @@
   </macro>
   <macro name="container-title-note-chinese">
     <choose>
-      <if type="paper-conference webpage" match="any">
+      <if type="paper-conference" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix="" text-case="title"/>
@@ -480,9 +480,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report" match="any">
+      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage" match="any">
         <choose>
-          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report" match="any">
+          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -1372,6 +1372,27 @@
       </choose>
     </group>
   </macro>
+  <macro name="access-note-chinese">
+    <group delimiter="">
+      <choose>
+        <if type="graphic report" match="any">
+          <text macro="archive-note"/>
+        </if>
+        <else-if type="article-journal article-magazine article-newspaper bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="none">
+          <text macro="archive-note"/>
+        </else-if>
+      </choose>
+      <choose>
+        <if variable="URL">
+          <text value="取自 " />
+          <text variable="URL"/>
+          <text value=" 网址，" />
+          <date variable="accessed" form="text"/>
+          <text term="accessed"/>
+        </if>
+      </choose>
+    </group>
+  </macro>  
   <macro name="access-bib">
     <group delimiter=", ">
       <choose>
@@ -1414,7 +1435,7 @@
         <if variable="URL">
           <text value="取自 " />
           <text variable="URL"/>
-          <text value=" 网址，" />
+          <text value=" 网址。" />
           <date variable="accessed" form="text"/>
           <text term="accessed"/>
         </if>
@@ -1479,7 +1500,7 @@
           </group>
           <text macro="issue-note-chinese"/>
           <text macro="locators-newspaper" prefix="，"/>
-          <text macro="access-note" prefix="，"/>
+          <text macro="access-note-chinese" prefix="，"/>
           <text macro="point-locators-chinese"/>
         </else>
       </choose>

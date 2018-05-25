@@ -213,4 +213,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::Chinese::Webpage", function() {
+        var output = makeCitationCluster(items.webpageChinese, "");
+        var expected = '刘小枫：「历史玩完了？」，《汉语基督教文化研究所》，取自 http://www.iscs.org.hk/article18.htm 网址，2002年8月5日参阅。';
+        
+        assert.equal(output, expected);
+    });    
 });
