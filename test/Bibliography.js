@@ -215,7 +215,7 @@ describe("Bibliography", function() {
 
     it("Bibliography::Chinese::Webpage", function() {
         var output = makeBibliography(items.webpageChinese);
-        var expected = '<div class="csl-entry">刘小枫：「历史玩完了？」，《汉语基督教文化研究所》，取自 http://www.iscs.org.hk/article18.htm 网址，2002年8月5日参阅。</div>';
+        var expected = '<div class="csl-entry">刘小枫：「历史玩完了？」，《汉语基督教文化研究所》，取自 http://www.iscs.org.hk/article18.htm 网址。2002年8月5日参阅。</div>';
         
         assert.equal(output, expected);
     });
