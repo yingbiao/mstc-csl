@@ -293,7 +293,7 @@
         <else>
           <text variable="title" prefix="&quot;" suffix="&quot;"/>
           <choose>
-            <if type="article-journal article-newspaper report" match="any">
+            <if type="article-journal article-newspaper report webpage" match="any">
               <text value="," />
             </if>
             <else-if type="thesis" match="all">
@@ -438,7 +438,7 @@
   </macro>
   <macro name="container-title-note">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia report" match="any">
+      <if type="chapter paper-conference entry-dictionary entry-encyclopedia report" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" "/>
@@ -1352,7 +1352,7 @@
     </choose>
   </macro>  
   <macro name="access-note">
-    <group delimiter=", ">
+    <group delimiter="">
       <choose>
         <if type="graphic report" match="any">
           <text macro="archive-note"/>
@@ -1363,17 +1363,13 @@
       </choose>
       <choose>
         <if variable="URL">
-          <text variable="URL"/>
-          <group delimiter=" " prefix="(" suffix=")">
-            <choose>
-              <if match="none" variable="accessed">
-                <date form="text" variable="issued"/>
-              </if>
-              <else>
-                <text term="accessed"/>
-                <date variable="accessed" form="text"/>
-              </else>
-            </choose>
+          <group delimiter=" " suffix="">
+            <text term="available at" text-case="lowercase"/>
+            <text variable="URL"/>
+          </group>
+          <group delimiter=" " prefix=" (" suffix=")">
+            <text term="accessed" text-case="lowercase"/>
+            <date variable="accessed" form="text"/>
           </group>
         </if>
       </choose>
@@ -1526,7 +1522,7 @@
           </group>
           <text macro="issue-note"/>
           <text macro="locators-newspaper" prefix=", "/>
-          <text macro="access-note" prefix=", "/>
+          <text macro="access-note" prefix="; "/>
           <text macro="point-locators"/>
         </else>
       </choose>
