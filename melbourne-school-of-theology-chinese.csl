@@ -36,6 +36,7 @@
       <term name="et-al">et al.</term>
       <term name="open-quote" form="symbol">'</term>
       <term name="close-quote" form="symbol">'</term>
+      <term name="available at">available from</term>
     </terms>
   </locale>
   <locale xml:lang="zh-CN">
@@ -361,7 +362,7 @@
         <else>
           <text variable="title" prefix="&quot;" suffix="&quot;"/>
           <choose>
-            <if variable="collection-title" match="none">
+            <if variable="collection-title" type="webpage" match="none">
               <text value="." />
             </if>
           </choose>
@@ -510,7 +511,7 @@
   </macro>  
   <macro name="container-title">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia report" match="any">
+      <if type="chapter paper-conference entry-dictionary entry-encyclopedia report" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" " text-case="title"/>
@@ -746,7 +747,13 @@
         </choose>
       </if>
       <else>
-        <text term="no date" form="short"/>
+        <choose>
+          <if type="entry-dictionary entry-encyclopedia webpage" match="any">
+          </if>
+          <else>
+            <text term="no date" form="short"/>
+          </else>
+        </choose>
       </else>
     </choose>
   </macro>
@@ -1394,7 +1401,7 @@
     </group>
   </macro>  
   <macro name="access-bib">
-    <group delimiter=", ">
+    <group delimiter="">
       <choose>
         <if type="graphic report" match="any">
           <text macro="archive-note"/>
@@ -1405,17 +1412,13 @@
       </choose>
       <choose>
         <if variable="URL">
-          <text variable="URL"/>
-          <group delimiter=" " prefix="(" suffix=")">
-            <choose>
-              <if match="none" type="webpage post-weblog">
-                <date form="text" variable="issued"/>
-              </if>
-              <else>
-                <text term="accessed"/>
-                <date variable="accessed" form="text"/>
-              </else>
-            </choose>
+          <group delimiter=" " suffix=". ">
+            <text term="available at" text-case="sentence"/>
+            <text variable="URL"/>
+          </group>
+          <group delimiter=" ">
+            <text term="accessed" text-case="sentence"/>
+            <date variable="accessed" form="text"/>
           </group>
         </if>
       </choose>
@@ -1455,10 +1458,8 @@
       <if type="article-journal entry-dictionary entry-encyclopedia thesis" match="any">
         <text value="，" />
       </if>
-      <else-if type="article-magazine article-newspaper" match="any">
+      <else-if type="article-magazine article-newspaper webpage" match="any">
         <text value="" />
-      </else-if>
-      <else-if type="webpage">
       </else-if>
       <else>
         <text value="。" />
@@ -1470,6 +1471,8 @@
       <if type="article-journal thesis" match="any">
         <text value=" " />
       </if>
+      <else-if type="webpage">
+      </else-if>      
       <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
         <text value=", " />      
       </else-if>
@@ -1556,7 +1559,7 @@
       </group>
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
-      <text macro="access-bib" prefix=", "/>
+      <text macro="access-bib" prefix=". "/>
       <text macro="point-locators-bib"/>
     </layout>
   </bibliography>
