@@ -219,5 +219,12 @@ describe("Citation", function() {
         var expected = '刘小枫：「历史玩完了？」，《汉语基督教文化研究所》，取自 http://www.iscs.org.hk/article18.htm 网址，2002年8月5日参阅。';
         
         assert.equal(output, expected);
-    });    
+    }); 
+    
+    it.only("Citation::English::Webpage", function() {
+        var output = makeCitationCluster(items.websiteEnglish, "");
+        var expected = 'Michael Pingka, "Flowers in Sarawak", <i>Sarawak Flower Journal</i>; available from http://www.sarawakflower/ggg.html (accessed 14 August 2002).';
+        
+        assert.equal(output, expected);
+    });
 });
