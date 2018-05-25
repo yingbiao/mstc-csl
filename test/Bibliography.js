@@ -219,4 +219,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::Webpage", function() {
+        var output = makeBibliography(items.websiteEnglish);
+        var expected = '<div class="csl-entry">Pingka, Michael. "Flowers in Sarawak" <i>Sarawak Flower Journal</i>. Available from http://www.sarawakflower/ggg.html. Accessed 14 August 2002.</div>';
+        
+        assert.equal(output, expected);
+    });
 });
