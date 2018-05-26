@@ -1,6 +1,8 @@
-# mstc-csl
+[![Build status](https://ci.appveyor.com/api/projects/status/5iy5b7t8x8avp4rw/branch/master?svg=true)](https://ci.appveyor.com/project/YingbiaoWang/mstc-csl/branch/master)
+
+# Development
 ```bash
-npm install -g mocha
+npm install
 
 #Run the following command to test
 mocha 
