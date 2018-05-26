@@ -221,7 +221,7 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
     
-    it.only("Citation::English::Webpage", function() {
+    it("Citation::English::Webpage", function() {
         var output = makeCitationCluster(items.websiteEnglish, "");
         var expected = 'Michael Pingka, "Flowers in Sarawak", <i>Sarawak Flower Journal</i>; available from http://www.sarawakflower/ggg.html (accessed 14 August 2002).';
         
