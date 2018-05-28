@@ -456,7 +456,7 @@ module.exports = {
             "volume":"13",
             "type": "book"
         }        
-    },    
+    },
     articleInADictionaryChinese: {
         "ITEM-1": {
             "id": "ITEM-1",
