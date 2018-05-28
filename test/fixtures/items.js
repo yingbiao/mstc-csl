@@ -421,6 +421,42 @@ module.exports = {
             "type": "book"
         }        
     },
+    bookInAMultiVolumeSeriesEnglish2: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Der Brief an die Hebräer: Übersetzt und Erklärt",
+            "author": [
+                {
+                    "family": "Weiss",
+                    "given": "Hans-Frederich",
+                }
+            ],
+            "editor":[
+                {
+                    "family":"Meyer",
+                    "given": "Heinrich August Wilhelm"
+                },
+                {
+                    "family":"Hahn",
+                    "given": "Ferdinand"
+                },
+            ],
+            "collection-title": "Kritisch-exegetischer Kommentar über das Neue Testament",
+            "publisher": "Vandenhoeck & Ruprecht",
+            "publisher-place": "Göttingen",                
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        1991
+                    ]
+                ]
+            },
+            "edition": 15,
+            "volume":"13",
+            "type": "book"
+        }        
+    },    
     articleInADictionaryChinese: {
         "ITEM-1": {
             "id": "ITEM-1",

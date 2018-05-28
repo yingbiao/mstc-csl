@@ -526,7 +526,10 @@
       <else-if variable="collection-title">
         <choose>
           <if type="book">
-            <text variable="collection-title" text-case="title"/>
+            <group delimiter=" ">
+              <text macro="edition-note" />
+              <text variable="collection-title"/>
+            </group>
           </if>
           <else>
             <text variable="collection-title" text-case="title" font-style="italic"/>
@@ -1219,9 +1222,9 @@
       </if>
       <else-if variable="publisher-place publisher" match="any">
         <group delimiter=" " prefix="" suffix="">
-          <group delimiter="; ">
+          <!-- <group delimiter="; ">
             <text macro="locators-note"/>
-          </group>
+          </group> -->
           <group>
             <choose>
               <if match="all" variable="volume">
