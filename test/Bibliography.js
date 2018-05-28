@@ -136,6 +136,13 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
+    it("Bibliography::English::Book in a Multi-Volume Series", function() {
+        var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish2);
+        var expected = '<div class="csl-entry">Weiss, Hans-Frederich. <i>Der Brief an die Hebräer: Übersetzt und Erklärt</i>. 15th ed. Kritisch-exegetischer Kommentar über das Neue Testament. Edited by Heinrich August Wilhelm Meyer and Ferdinand Hahn, vol. 13. Göttingen: Vandenhoeck &#38; Ruprecht, 1991.</div>';
+        
+        assert.equal(output, expected);
+    });
+
     it("Bibliography::Chinese::Article in a Dictionary", function() {
         var output = makeBibliography(items.articleInADictionaryChinese);
         var expected = '<div class="csl-entry">冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册。上海：展徒出版社，25–26。</div>';
