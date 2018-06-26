@@ -201,9 +201,9 @@
         <text macro="translator-note"/>
       </substitute>
     </names>
-    <text macro="recipient-note-chinese"/>
+    <text macro="recipient-note-chinese" prefix="，"/>
     <choose>
-      <if type="interview" match="none">
+      <if type="interview personal_communication" match="none">
         <text value="：" />
       </if>
     </choose>    
@@ -499,7 +499,27 @@
         </group>
       </if>
       <else-if type="personal_communication">
-        <group delimiter="，" prefix="，">
+        <group delimiter="，" >
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+        </group>
+      </else-if>
+    </choose>
+  </macro>
+  <macro name="description-bib-chinese">
+    <choose>
+      <if type="interview" match="any">
+        <group delimiter="，">
+          <text macro="interviewer-note-chinese"/>
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+          <text variable="medium" text-case="capitalize-first"/>
+        </group>
+      </if>
+      <else-if type="personal_communication">
+        <group delimiter="，" prefix="，" >
           <date form="text" date-parts="year-month-day" variable="issued">
           </date>
           <text variable="note"/>
@@ -1614,7 +1634,7 @@
         <text macro="title-bib-chinese"/>
         <text macro="container-title-chinese" />
       </group>
-      <text macro="description-note-chinese"/>
+      <text macro="description-bib-chinese"/>
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper" prefix="，"/>
       <text macro="access-bib-chinese" prefix="，"/>
