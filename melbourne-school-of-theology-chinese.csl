@@ -37,6 +37,7 @@
       <term name="open-quote" form="symbol">'</term>
       <term name="close-quote" form="symbol">'</term>
       <term name="available at">available from</term>
+      <term name="interview">interview by</term>
     </terms>
   </locale>
   <locale xml:lang="zh-CN">
@@ -229,7 +230,7 @@
     <text macro="recipient-note" prefix=" "/>
   </macro>
   <macro name="contributors">
-    <names variable="author interviewer">
+    <names variable="author">
       <name and="text" delimiter-precedes-last="always" name-as-sort-order="first"/>
       <substitute>
         <text macro="editor"/>
@@ -282,10 +283,15 @@
     </names>
   </macro>
   <macro name="interviewer-note">
-    <names variable="interviewer" delimiter=", ">
-      <!-- <label form="verb" prefix=" " suffix=" "/> -->
-      <name and="text" delimiter=", "/>
-    </names>
+    <choose>
+      <if variable="interviewer">
+        <text term="interview" prefix=" " suffix=" " text-case="sentence"/>
+        <names variable="interviewer" delimiter="，">
+          <!-- <label form="verb" prefix=" " suffix=" "/> -->
+          <name and="text" delimiter="，"/>
+        </names>
+      </if>
+    </choose>    
   </macro>
   <macro name="interviewer-note-chinese">
     <choose>
@@ -447,6 +453,16 @@
   <macro name="description-note">
     <group delimiter=", ">
       <text macro="interviewer-note"/>
+      <choose>
+        <if type="interview">
+          <group delimiter=", ">
+            <date form="text" date-parts="year-month-day" variable="issued">
+              <!-- <date-part name="day" form="ordinal"/> -->
+            </date>
+            <text variable="note"/>
+          </group>
+        </if>
+      </choose>
       <text variable="medium" text-case="capitalize-first"/>
       <choose>
         <if variable="title" match="none"/>
@@ -464,7 +480,7 @@
           <if type="interview" match="any">
             <group delimiter="，">
               <date form="text" date-parts="year-month-day" variable="issued">
-                <date-part name="day" form="ordinal"/>
+                <!-- <date-part name="day" form="ordinal"/> -->
               </date>
               <text variable="note"/>
             </group>
@@ -770,12 +786,12 @@
             </date>
           </else-if>
           <else-if type="interview" match="any">
-            <group delimiter=", " prefix="(" suffix=")">
+            <!-- <group delimiter=", " prefix="(" suffix=")">
               <text variable="note"/>
               <date form="text" date-parts="year-month-day" variable="issued">
                 <date-part name="day" form="ordinal"/>
               </date>
-            </group>
+            </group> -->
           </else-if>
           <else-if type="article-magazine article-newspaper" match="any">
             <date variable="issued" delimiter=" ">
@@ -1514,7 +1530,7 @@
       <if type="article-journal thesis" match="any">
         <text value=" " />
       </if>
-      <else-if type="webpage">
+      <else-if type="webpage interview">
       </else-if>      
       <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
         <text value=", " />      
@@ -1596,10 +1612,10 @@
     <layout suffix=".">
       <group delimiter=" " suffix="">
         <text macro="contributors" suffix="."/>
-        <text macro="title-bib" prefix="" suffix=""/>
-        <text macro="description-note"/>
+        <text macro="title-bib"/>
         <text macro="container-title"/>
       </group>
+      <text macro="description-note"/>
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
       <text macro="access-bib" prefix=". "/>
