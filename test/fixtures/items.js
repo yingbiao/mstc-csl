@@ -939,7 +939,7 @@ module.exports = {
                 }
             ],
             "medium":"Tape recording",
-            "extra":"Sibu, East Malaysia",
+            "note":"Sibu, East Malaysia",
             "language":"en-US",
             "issued": {
                 "date-parts": [
