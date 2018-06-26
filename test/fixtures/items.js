@@ -457,6 +457,45 @@ module.exports = {
             "type": "book"
         }        
     },
+    bookInAMultiVolumeSeriesEnglish3: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Argument and Theology in 1 Peter: The Origins of Christian Paraenesis",
+            "author": [
+                {
+                    "family": "Thurén",
+                    "given": "Lauri",
+                }
+            ],
+            "editor":[
+                {
+                    "family":"Porter",
+                    "given": "Stanley E."
+                },
+                {
+                    "family":"Unknown",
+                    "given": "Unknown"
+                },
+                {
+                    "family":"Unknown",
+                    "given": "Unknown"
+                },
+            ],
+            "collection-title": "Journal for the Study of the New Testament: Supplement Series",
+            "publisher": "Sheffield Academic Press",
+            "publisher-place": "Sheffield",                
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "volume":"114",
+            "type": "book"
+        }        
+    }, 
     articleInADictionaryChinese: {
         "ITEM-1": {
             "id": "ITEM-1",
@@ -560,6 +599,48 @@ module.exports = {
             "type": "entry-dictionary"
         }         
     },
+    articleInADictionaryWithTranslatorEnglish2: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "qu,w",
+            "author": [
+                {
+                    "family": "Behn",
+                    "given": "Johannes",
+                }                
+            ],
+            "editor":[
+                {
+                    "family":"Gerhard",
+                    "given": "Kittel"
+                },
+                {
+                    "family":"Bromiley",
+                    "given": "Geoffrey W."
+                }                
+            ],
+            "translator":[
+                {
+                    "family":"Bromiley",
+                    "given": "Geoffrey W."
+                }                
+            ],            
+            "container-title":"Theological Dictionary of the New Testament",
+            "publisher": "Wm. B. Eerdmans Publishing Company",
+            "publisher-place": "Grand Rapids",
+            "language":"en-US",
+            "volume":"3",
+            "page":"180-190",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "type": "entry-dictionary"
+        }         
+    },    
     reportChinese: {
         "ITEM-1": {
             "id": "ITEM-1",
@@ -811,5 +892,65 @@ module.exports = {
             },            
             "type": "webpage"
         }         
-    }
+    },
+    interviewChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "叶",
+                    "given": "少华，成团主席",
+                }                
+            ],
+            "interviewer":[
+                {
+                    "family": "笔者",
+                    "given": "",
+                }
+            ],
+            "medium": "卡带录音",
+            "note": "墨尔本",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        4,
+                        9
+                    ]
+                ]
+            },            
+            "type": "interview"
+        }         
+    },
+    interviewEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "Albert",
+                    "given": "Steven, mayor of Kuching",
+                }                
+            ],
+            "interviewer":[
+                {
+                    "family": "author",
+                    "given": "",
+                }
+            ],
+            "medium":"Tape recording",
+            "extra":"Sibu, East Malaysia",
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        9,
+                        23
+                    ]
+                ]
+            },            
+            "type": "interview"
+        }         
+    },
 }
