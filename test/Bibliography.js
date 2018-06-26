@@ -68,7 +68,7 @@ describe("Bibliography", function() {
 
     xit("Bibliography::English::Book Multiple Editors", function() {
         var output = makeBibliography(items.bookMultipleEditorsEnglish);
-        var expected = '<div class="csl-entry">Headman, David, ed. <i>The Love of Brothers</i>. London: Evergreen Books, 2003.</div>';
+        var expected = '<div class="csl-entry"><i>Novum Testamentum Graece</i>. Edited by Barbara and Kurt Aland, Johannes Karavidopoulos, Carlo M. Martini, and Bruce M. Metzger. 27th rev. ed. Stuttgart: Deutsche Bibelgesellschaft, 1993.</div>';
         
         assert.equal(output, expected);
     });  
@@ -143,6 +143,13 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
+    xit("Bibliography::English::Book in a Multi-Volume Series 3", function() {
+        var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish3);
+        var expected = '<div class="csl-entry">Thurén, Lauri. <i>Argument and Theology in 1 Peter: The Origins of Christian Paraenesis</i>. Journal for the Study of the New Testament: Supplement Series. Edited by Stanley E. Porter et al., vol. 114. Sheffield: Sheffield Academic Press, 1995.</div>';
+        
+        assert.equal(output, expected);
+    });    
+
     it("Bibliography::Chinese::Article in a Dictionary", function() {
         var output = makeBibliography(items.articleInADictionaryChinese);
         var expected = '<div class="csl-entry">冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册。上海：展徒出版社，25–26。</div>';
@@ -160,6 +167,13 @@ describe("Bibliography", function() {
     it("Bibliography::English::Article in a Dictionary with Translator", function() {
         var output = makeBibliography(items.articleInADictionaryWithTranslatorEnglish);
         var expected = '<div class="csl-entry">Bergman, B. Lang, and H. Ringgren. "xb;z"". In <i>Theological Dictionary of the Old Testament</i>. Edited by G. Johannes Botterweck and Helmer Ringgren. Translated by David E. Green, vol. 4, 8–29. Grand Rapids: William B. Eerdmans Publishing Company, 1980.</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    xit("Bibliography::English::Article in a Dictionary with Translator 2", function() {
+        var output = makeBibliography(items.articleInADictionaryWithTranslatorEnglish2);
+        var expected = '<div class="csl-entry">Behn, Johannes. "qu,w." In <i>Theological Dictionary of the New Testament</i>. Edited by Gerhard Kittel. Translated and edited by Geoffrey W. Bromiley, vol. 3, 180-190. Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965.</div>';
         
         assert.equal(output, expected);
     });
@@ -230,6 +244,20 @@ describe("Bibliography", function() {
     it("Bibliography::English::Webpage", function() {
         var output = makeBibliography(items.websiteEnglish);
         var expected = '<div class="csl-entry">Pingka, Michael. "Flowers in Sarawak" <i>Sarawak Flower Journal</i>. Available from http://www.sarawakflower/ggg.html. Accessed 14 August 2002.</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::Chinese::Interview", function() {
+        var output = makeBibliography(items.interviewChinese);
+        var expected = '<div class="csl-entry">叶少华，成团主席。由笔者采访，2003年4月9日，墨尔本，卡带录音。</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    xit("Bibliography::Chinese::Interview", function() {
+        var output = makeBibliography(items.interviewEnglish);
+        var expected = '<div class="csl-entry">Albert, Steven, mayor of Kuching. Interview by author, 23 September 2003, Sibu, East Malaysia. Tape recording.</div>';
         
         assert.equal(output, expected);
     });
