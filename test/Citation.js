@@ -233,5 +233,12 @@ describe("Citation", function() {
         var expected = '叶少华，成团主席，由笔者采访，2003年4月9日，墨尔本，卡带录音。';
         
         assert.equal(output, expected);
-    });    
+    }); 
+    
+    it("Citation::English::Interview", function() {
+        var output = makeCitationCluster(items.interviewEnglish, "");
+        var expected = 'Steven Albert mayor of Kuching, Interview by author, 23 September 2003, Sibu, East Malaysia, Tape recording.';
+        
+        assert.equal(output, expected);
+    });
 });
