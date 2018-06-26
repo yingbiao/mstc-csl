@@ -195,6 +195,14 @@
       </substitute>
     </names>
     <text macro="recipient-note"/>
+    <choose>
+      <if type="interview">
+        <text value="，" />
+      </if>
+      <else>
+        <text value="：" />
+      </else>
+    </choose>    
   </macro>  
   <macro name="editor">
     <names variable="editor">
@@ -1555,11 +1563,11 @@
         </if>
         <else>
           <group delimiter="">
-            <text macro="contributors-note-chinese" suffix="："/>
+            <text macro="contributors-note-chinese"/>
             <text macro="title-note-chinese"/>
-            <!-- <text macro="description-note"/> -->
             <text macro="container-title-note-chinese"/>
           </group>
+          <text macro="description-note-chinese"/>
           <text macro="issue-note-chinese"/>
           <text macro="locators-newspaper" prefix="，"/>
           <text macro="access-note-chinese" prefix="，"/>
@@ -1580,9 +1588,9 @@
           <group delimiter=" ">
             <text macro="contributors-note" suffix=","/>
             <text macro="title-note"/>
-            <!-- <text macro="description-note"/> -->
             <text macro="container-title-note"/>
           </group>
+          <text macro="description-note"/>
           <text macro="issue-note"/>
           <text macro="locators-newspaper" prefix=", "/>
           <text macro="access-note" prefix="; "/>
