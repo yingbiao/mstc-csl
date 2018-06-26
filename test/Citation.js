@@ -227,4 +227,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::Chinese::Interview", function() {
+        var output = makeCitationCluster(items.interviewChinese, "");
+        var expected = '叶少华，成团主席，由笔者采访，2003年4月9日，墨尔本，卡带录音。';
+        
+        assert.equal(output, expected);
+    });    
 });
