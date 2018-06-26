@@ -255,7 +255,7 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it("Bibliography::Chinese::Interview", function() {
+    it("Bibliography::English::Interview", function() {
         var output = makeBibliography(items.interviewEnglish);
         var expected = '<div class="csl-entry">Albert, Steven, mayor of Kuching. Interview by author, 23 September 2003, Sibu, East Malaysia, Tape recording.</div>';
         
