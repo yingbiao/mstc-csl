@@ -953,4 +953,63 @@ module.exports = {
             "type": "interview"
         }         
     },
+    letterChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "田",
+                    "given": "德建",
+                }                
+            ],
+            "recipient":[
+                {
+                    "family": "方",
+                    "given": "重名",
+                }
+            ],
+            "note":"抄本存于北京大学图书馆特藏部，中国北京",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        1876,
+                        10,
+                        25
+                    ]
+                ]
+            },            
+            "type": "personal_communication"
+        }         
+    },
+    letterEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "Albert",
+                    "given": "Steven, mayor of Kuching",
+                }                
+            ],
+            "interviewer":[
+                {
+                    "family": "author",
+                    "given": "",
+                }
+            ],
+            "medium":"Tape recording",
+            "note":"Sibu, East Malaysia",
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        9,
+                        23
+                    ]
+                ]
+            },            
+            "type": "personal_communication"
+        }         
+    },
 }

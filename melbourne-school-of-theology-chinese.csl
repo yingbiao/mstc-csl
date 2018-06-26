@@ -44,6 +44,7 @@
     <terms>
       <term name="accessed">参阅</term>
       <term name="interview">采访</term>
+      <term name="recipient" form="verb">致函于</term>
     </terms>
   </locale>  
   <macro name="container-contributors-note">
@@ -67,7 +68,7 @@
     </group>
   </macro>
   <macro name="container-contributors-note-chinese">
-    <group delimiter="; ">
+    <group delimiter="；">
       <choose>
         <if variable="author">
           <names variable="editor" delimiter="，">
@@ -176,6 +177,12 @@
       <name and="text" et-al-min="4" et-al-use-first="3"/>
     </names>
   </macro>
+  <macro name="recipient-note-chinese">
+    <names variable="recipient" delimiter="，">
+      <label form="verb" prefix="" suffix=""/>
+      <name and="text" et-al-min="4" et-al-use-first="3"/>
+    </names>
+  </macro>
   <macro name="contributors-note">
     <names variable="author">
       <name and="text" et-al-min="4" et-al-use-first="1" delimiter-precedes-last="always"/>
@@ -194,14 +201,11 @@
         <text macro="translator-note"/>
       </substitute>
     </names>
-    <text macro="recipient-note"/>
+    <text macro="recipient-note-chinese"/>
     <choose>
-      <if type="interview">
-        <text value="，" />
-      </if>
-      <else>
+      <if type="interview" match="none">
         <text value="：" />
-      </else>
+      </if>
     </choose>    
   </macro>  
   <macro name="editor">
@@ -255,11 +259,13 @@
           <text macro="translator"/>
         </substitute>
       </names>
-      <text macro="recipient" prefix="。"/>
+      <text macro="recipient-note-chinese" prefix="，"/>
       <choose>
         <if type="interview">
           <text value="。" />
         </if>
+        <else-if type="personal_communication" match="any">          
+        </else-if>
         <else>
           <text value="：" />
         </else>
@@ -482,27 +488,24 @@
     </group>
   </macro>
   <macro name="description-note-chinese">
-    <group delimiter="，">
-      <text macro="interviewer-note-chinese"/>
-      <choose>
-          <if type="interview" match="any">
-            <group delimiter="，">
-              <date form="text" date-parts="year-month-day" variable="issued">
-                <!-- <date-part name="day" form="ordinal"/> -->
-              </date>
-              <text variable="note"/>
-            </group>
-          </if>
-      </choose>
-      <text variable="medium" text-case="capitalize-first"/>
-      <choose>
-        <if variable="title" match="none"/>
-        <else-if type="thesis speech" match="any"/>
-        <else>
-          <text variable="genre" text-case="title"/>
-        </else>
-      </choose>
-    </group>
+    <choose>
+      <if type="interview" match="any">
+        <group delimiter="，">
+          <text macro="interviewer-note-chinese"/>
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+          <text variable="medium" text-case="capitalize-first"/>
+        </group>
+      </if>
+      <else-if type="personal_communication">
+        <group delimiter="，" prefix="，">
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+        </group>
+      </else-if>
+    </choose>
   </macro>
   <macro name="container-title-note">
     <choose>
@@ -850,7 +853,7 @@
               <date-part name="year"/>
             </date>
           </else-if>
-          <else-if type="interview" match="any">
+          <else-if type="interview personal_communication" match="any">
             <!-- <group delimiter="，">
               <text variable="note"/>
               <date form="text" date-parts="year-month-day" variable="issued">
@@ -1525,7 +1528,7 @@
       <if type="article-journal entry-dictionary entry-encyclopedia thesis" match="any">
         <text value="，" />
       </if>
-      <else-if type="article-magazine article-newspaper webpage interview" match="any">
+      <else-if type="article-magazine article-newspaper webpage interview personal_communication" match="any">
         <text value="" />
       </else-if>
       <else>
@@ -1567,7 +1570,7 @@
             <text macro="title-note-chinese"/>
             <text macro="container-title-note-chinese"/>
           </group>
-          <text macro="description-note-chinese"/>
+          <text macro="description-note-chinese" prefix="，"/>
           <text macro="issue-note-chinese"/>
           <text macro="locators-newspaper" prefix="，"/>
           <text macro="access-note-chinese" prefix="，"/>

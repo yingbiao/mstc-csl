@@ -261,4 +261,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Chinese::Letter", function() {
+        var output = makeBibliography(items.letterChinese);
+        var expected = '<div class="csl-entry">田德建，致函于方重名，1876年10月25日，抄本存于北京大学图书馆特藏部，中国北京。</div>';
+        
+        assert.equal(output, expected);
+    });
 });
