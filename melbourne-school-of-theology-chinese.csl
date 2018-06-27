@@ -474,6 +474,9 @@
           <text variable="note"/>
         </group>
       </else-if>
+      <else-if type="motion_picture">
+        <text value="[CD-ROM]" prefix=", "/>
+      </else-if>
     </choose>
   </macro>
   <macro name="description-bib">
@@ -489,6 +492,9 @@
       </if>
       <else-if type="personal_communication">
         <text variable="note" prefix=" " text-case="capitalize-first"/>
+      </else-if>
+      <else-if type="motion_picture">
+        <text value="[CD-ROM]" prefix=". "/>
       </else-if>
     </choose>
   </macro>
