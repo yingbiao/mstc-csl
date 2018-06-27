@@ -226,30 +226,22 @@
       <label form="verb-short" prefix=", "/>
     </names>
   </macro>
-  <macro name="recipient">
-    <choose>
-      <if type="personal_communication">
-        <choose>
-          <if variable="genre">
-            <text variable="genre" text-case="capitalize-first"/>
-          </if>
-          <else>
-            <text term="letter" text-case="capitalize-first"/>
-          </else>
-        </choose>
-      </if>
-    </choose>
-    <text macro="recipient-note" prefix=" "/>
-  </macro>
   <macro name="contributors">
-    <names variable="author">
-      <name and="text" delimiter-precedes-last="always" name-as-sort-order="first"/>
-      <substitute>
-        <text macro="editor"/>
-        <text macro="translator"/>
-      </substitute>
-    </names>
-    <text macro="recipient" prefix=". "/>
+    <group delimiter=", ">
+      <names variable="author">
+        <name and="text" delimiter-precedes-last="always" name-as-sort-order="first"/>
+        <substitute>
+          <text macro="editor"/>
+          <text macro="translator"/>
+        </substitute>
+      </names>
+      <text macro="recipient-note" />
+      <choose>
+        <if type="personal_communication" match="any">          
+          <date form="text" date-parts="year-month-day" variable="issued"></date>
+        </if>
+      </choose>
+    </group>
   </macro>
   <macro name="contributors-chinese">
       <names variable="author">
@@ -465,27 +457,40 @@
     </choose>
   </macro>
   <macro name="description-note">
-    <group delimiter=", ">
-      <text macro="interviewer-note"/>
-      <choose>
-        <if type="interview">
-          <group delimiter=", ">
-            <date form="text" date-parts="year-month-day" variable="issued">
-              <!-- <date-part name="day" form="ordinal"/> -->
-            </date>
-            <text variable="note"/>
-          </group>
-        </if>
-      </choose>
-      <text variable="medium" text-case="capitalize-first"/>
-      <choose>
-        <if variable="title" match="none"/>
-        <else-if type="thesis speech" match="any"/>
-        <else>
-          <text variable="genre" text-case="title"/>
-        </else>
-      </choose>
-    </group>
+    <choose>
+      <if type="interview" match="any">
+        <group delimiter=", ">
+          <text macro="interviewer-note"/>
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+          <text variable="medium" text-case="capitalize-first"/>
+        </group>
+      </if>
+      <else-if type="personal_communication">
+        <group delimiter=", " >
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+        </group>
+      </else-if>
+    </choose>
+  </macro>
+  <macro name="description-bib">
+    <choose>
+      <if type="interview" match="any">
+        <group delimiter=", ">
+          <text macro="interviewer-note"/>
+          <date form="text" date-parts="year-month-day" variable="issued">
+          </date>
+          <text variable="note"/>
+          <text variable="medium" text-case="capitalize-first"/>
+        </group>
+      </if>
+      <else-if type="personal_communication">
+        <text variable="note" prefix=" "/>
+      </else-if>
+    </choose>
   </macro>
   <macro name="description-note-chinese">
     <choose>
@@ -816,7 +821,7 @@
               <date-part name="year"/>
             </date>
           </else-if>
-          <else-if type="interview" match="any">
+          <else-if type="interview personal_communication" match="any">
             <!-- <group delimiter=", " prefix="(" suffix=")">
               <text variable="note"/>
               <date form="text" date-parts="year-month-day" variable="issued">
@@ -1561,7 +1566,7 @@
       <if type="article-journal thesis" match="any">
         <text value=" " />
       </if>
-      <else-if type="webpage interview">
+      <else-if type="webpage interview personal_communication" match="any">
       </else-if>      
       <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
         <text value=", " />      
@@ -1646,7 +1651,7 @@
         <text macro="title-bib"/>
         <text macro="container-title"/>
       </group>
-      <text macro="description-note"/>
+      <text macro="description-bib"/>
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
       <text macro="access-bib" prefix=". "/>

@@ -268,4 +268,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::Letter", function() {
+        var output = makeBibliography(items.letterEnglish);
+        var expected = '<div class="csl-entry">Hoover, James Matthew, to A. B. Leonard, 13 March 1899. Transcript in Hoover, J.M. - Malaya 1899, Missionary Files 1, United Methodist Church Archives, Madison, NJ, USA.</div>';
+        
+        assert.equal(output, expected);
+    });    
 });

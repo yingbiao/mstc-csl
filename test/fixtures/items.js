@@ -987,25 +987,24 @@ module.exports = {
             "id": "ITEM-1",
             "author": [
                 {
-                    "family": "Albert",
-                    "given": "Steven, mayor of Kuching",
+                    "family": "Hoover",
+                    "given": "James Matthew",
                 }                
             ],
-            "interviewer":[
+            "recipient":[
                 {
-                    "family": "author",
-                    "given": "",
+                    "family": "Leonard",
+                    "given": "A. B.",
                 }
             ],
-            "medium":"Tape recording",
-            "note":"Sibu, East Malaysia",
+            "note":"Transcript in Hoover, J.M. - Malaya 1899, Missionary Files 1, United Methodist Church Archives, Madison, NJ, USA.",
             "language":"en-US",
             "issued": {
                 "date-parts": [
                     [
-                        2003,
-                        9,
-                        23
+                        1899,
+                        3,
+                        13
                     ]
                 ]
             },            
