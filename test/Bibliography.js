@@ -282,4 +282,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::CD-ROM", function() {
+        var output = makeBibliography(items.cdEnglish);
+        var expected = '<div class="csl-entry">Morris, King. <i>The Chinese Mind</i>. [CD-ROM]. Kuala Lumpur: The Chinese Press, 2002.</div>';
+        
+        assert.equal(output, expected);
+    });
 });

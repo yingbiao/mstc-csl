@@ -262,4 +262,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::English::CD-ROM", function() {
+        var output = makeCitationCluster(items.cdEnglish, "");
+        var expected = 'King Morris, <i>The Chinese Mind</i>, [CD-ROM] (Kuala Lumpur: The Chinese Press, 2002).';
+        
+        assert.equal(output, expected);
+    });
 });

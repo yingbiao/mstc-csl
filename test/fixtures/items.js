@@ -1035,4 +1035,27 @@ module.exports = {
             "type": "motion_picture"
         }         
     },
+    cdEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "Morris",
+                    "given": "King",
+                }                
+            ],
+            "title":"The Chinese Mind",
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "The Chinese Press",
+            "publisher-place": "Kuala Lumpur",
+            "type": "motion_picture"
+        }         
+    },
 }
