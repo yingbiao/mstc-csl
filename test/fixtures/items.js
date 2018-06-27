@@ -1011,4 +1011,28 @@ module.exports = {
             "type": "personal_communication"
         }         
     },
+    cdChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "唐",
+                    "given": "明清",
+                }                
+            ],
+            "title":"启示录的七个教会",
+            "collection-title":"新约圣经CD版",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "publisher": "校园出版社",
+            "publisher-place": "台北",
+            "type": "motion_picture"
+        }         
+    },
 }

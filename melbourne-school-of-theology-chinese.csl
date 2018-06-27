@@ -577,9 +577,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage" match="any">
+      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
         <choose>
-          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage" match="any">
+          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -658,9 +658,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage" match="any">
+      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
         <choose>
-          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage" match="any">
+          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">

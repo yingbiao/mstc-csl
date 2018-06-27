@@ -274,5 +274,12 @@ describe("Bibliography", function() {
         var expected = '<div class="csl-entry">Hoover, James Matthew, to A. B. Leonard, 13 March 1899. Transcript in Hoover, J.M. - Malaya 1899, Missionary Files 1, United Methodist Church Archives, Madison, NJ, USA.</div>';
         
         assert.equal(output, expected);
-    });    
+    });
+
+    it("Bibliography::Chinese::CD-ROM", function() {
+        var output = makeBibliography(items.cdChinese);
+        var expected = '<div class="csl-entry">唐明清：「启示录的七个教会」，《新约圣经CD版》。台北：校园出版社，2001。</div>';
+        
+        assert.equal(output, expected);
+    });
 });

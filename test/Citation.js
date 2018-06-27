@@ -255,4 +255,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::Chinese::CD-ROM", function() {
+        var output = makeCitationCluster(items.cdChinese, "");
+        var expected = '唐明清：「启示录的七个教会」，《新约圣经CD版》（台北：校园出版社，2001）。';
+        
+        assert.equal(output, expected);
+    });
 });
