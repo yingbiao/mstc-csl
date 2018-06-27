@@ -276,14 +276,28 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it("Bibliography::Chinese::CD-ROM", function() {
+    it("Bibliography::Chinese::VCD", function() {
+        var output = makeBibliography(items.vcdChinese);
+        var expected = '<div class="csl-entry">唐明清：「启示录的七个教会」，《新约圣经CD版》。台北：校园出版社，2001。</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::English::VCD", function() {
+        var output = makeBibliography(items.vcdEnglish);
+        var expected = '<div class="csl-entry">Morris, King. <i>The Chinese Mind</i>. [CD-ROM]. Kuala Lumpur: The Chinese Press, 2002.</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::Chinese::CD", function() {
         var output = makeBibliography(items.cdChinese);
         var expected = '<div class="csl-entry">唐明清：「启示录的七个教会」，《新约圣经CD版》。台北：校园出版社，2001。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Bibliography::English::CD-ROM", function() {
+    it("Bibliography::English::CD", function() {
         var output = makeBibliography(items.cdEnglish);
         var expected = '<div class="csl-entry">Morris, King. <i>The Chinese Mind</i>. [CD-ROM]. Kuala Lumpur: The Chinese Press, 2002.</div>';
         
