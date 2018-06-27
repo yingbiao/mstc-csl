@@ -474,7 +474,7 @@
           <text variable="note"/>
         </group>
       </else-if>
-      <else-if type="motion_picture">
+      <else-if type="motion_picture song" match="any">
         <text value="[CD-ROM]" prefix=", "/>
       </else-if>
     </choose>
@@ -493,7 +493,7 @@
       <else-if type="personal_communication">
         <text variable="note" prefix=" " text-case="capitalize-first"/>
       </else-if>
-      <else-if type="motion_picture">
+      <else-if type="motion_picture song" match="any">
         <text value="[CD-ROM]" prefix=". "/>
       </else-if>
     </choose>
@@ -583,9 +583,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
+      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture song" match="any">
         <choose>
-          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
+          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture song" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">
@@ -664,9 +664,9 @@
       </if>
     </choose>
     <choose>
-      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
+      <if type="chapter article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture song" match="any">
         <choose>
-          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture" match="any">
+          <if type="article-journal article-magazine article-newspaper entry-dictionary entry-encyclopedia report webpage motion_picture song" match="any">
             <text value="，"/>
           </if>
           <else-if variable="container-title">

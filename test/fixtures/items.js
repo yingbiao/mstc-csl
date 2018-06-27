@@ -1011,7 +1011,7 @@ module.exports = {
             "type": "personal_communication"
         }         
     },
-    cdChinese: {
+    vcdChinese: {
         "ITEM-1": {
             "id": "ITEM-1",
             "author": [
@@ -1035,7 +1035,7 @@ module.exports = {
             "type": "motion_picture"
         }         
     },
-    cdEnglish: {
+    vcdEnglish: {
         "ITEM-1": {
             "id": "ITEM-1",
             "author": [
@@ -1056,6 +1056,53 @@ module.exports = {
             "publisher": "The Chinese Press",
             "publisher-place": "Kuala Lumpur",
             "type": "motion_picture"
+        }         
+    },
+    cdChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "唐",
+                    "given": "明清",
+                }                
+            ],
+            "title":"启示录的七个教会",
+            "collection-title":"新约圣经CD版",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "publisher": "校园出版社",
+            "publisher-place": "台北",
+            "type": "song"
+        }         
+    },
+    cdEnglish: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "author": [
+                {
+                    "family": "Morris",
+                    "given": "King",
+                }                
+            ],
+            "title":"The Chinese Mind",
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "The Chinese Press",
+            "publisher-place": "Kuala Lumpur",
+            "type": "song"
         }         
     },
 }
