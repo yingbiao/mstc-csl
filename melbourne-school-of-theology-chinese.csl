@@ -191,7 +191,7 @@
         <text macro="translator-note"/>
       </substitute>
     </names>
-    <text macro="recipient-note"/>
+    <text macro="recipient-note" prefix=", " />
   </macro>
   <macro name="contributors-note-chinese">
     <names variable="author">
@@ -468,7 +468,7 @@
         </group>
       </if>
       <else-if type="personal_communication">
-        <group delimiter=", " >
+        <group delimiter=", " prefix=", " >
           <date form="text" date-parts="year-month-day" variable="issued">
           </date>
           <text variable="note"/>
@@ -488,7 +488,7 @@
         </group>
       </if>
       <else-if type="personal_communication">
-        <text variable="note" prefix=" "/>
+        <text variable="note" prefix=" " text-case="capitalize-first"/>
       </else-if>
     </choose>
   </macro>

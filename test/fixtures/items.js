@@ -997,8 +997,8 @@ module.exports = {
                     "given": "A. B.",
                 }
             ],
-            "note":"Transcript in Hoover, J.M. - Malaya 1899, Missionary Files 1, United Methodist Church Archives, Madison, NJ, USA.",
-            "language":"en-US",
+            "note": "transcript in Hoover, J.M. - Malaya 1899, Missionary Files 1, United Methodist Church Archives, Madison, NJ, USA.",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
