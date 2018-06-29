@@ -151,9 +151,9 @@ describe("Citation", function() {
         assert.equal(output, expected);
     });
 
-    xit("Citation::English::Book in a Multi-Volume Series 3", function() {
-        var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish3);
-        var expected = '<div class="csl-entry">Thurén, Lauri. <i>Argument and Theology in 1 Peter: The Origins of Christian Paraenesis</i>. Journal for the Study of the New Testament: Supplement Series. Edited by Stanley E. Porter et al., vol. 114. Sheffield: Sheffield Academic Press, 1995.</div>';
+    it("Citation::English::Book in a Multi-Volume Series 3", function() {
+        var output = makeCitationCluster(items.bookInAMultiVolumeSeriesEnglish3, "10");
+        var expected = 'Lauri Thurén, <i>Argument and Theology in 1 Peter: The Origins of Christian Paraenesis</i>, Journal for the Study of the New Testament: Supplement Series, ed. Stanley E. Porter et al., vol. 114 (Sheffield: Sheffield Academic Press, 1995), 10.';
         
         assert.equal(output, expected);
     });   
