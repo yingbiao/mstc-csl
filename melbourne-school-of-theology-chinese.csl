@@ -155,7 +155,7 @@
   </macro>
   <macro name="editor-note">
     <names variable="editor">
-      <name and="text" et-al-min="4" et-al-use-first="1"/>
+      <name and="text" et-al-min="4" et-al-use-first="3" delimiter-precedes-et-al="never"/>
       <label form="short" prefix=", " suffix=""/>
     </names>
   </macro>
@@ -185,7 +185,7 @@
   </macro>
   <macro name="contributors-note">
     <names variable="author">
-      <name and="text" et-al-min="4" et-al-use-first="1" delimiter-precedes-last="always"/>
+      <name and="text" et-al-min="4" et-al-use-first="3" delimiter-precedes-last="always" delimiter-precedes-et-al="never"/>
       <substitute>
         <text macro="editor-note"/>
         <text macro="translator-note"/>
@@ -353,6 +353,7 @@
           </choose>
         </else-if>
       </choose>
+      <text macro="edition-note" prefix=". " />
     </group>
   </macro>
   <macro name="title-note-chinese">
@@ -406,6 +407,7 @@
           <text value="." />
         </if>
       </choose>
+      <text macro="edition-note" prefix=". " />
     </group>
   </macro>
   <macro name="title-bib-chinese">
@@ -628,10 +630,7 @@
       <else-if variable="collection-title">
         <choose>
           <if type="book">
-            <group delimiter=" ">
-              <text macro="edition-note" />
-              <text variable="collection-title"/>
-            </group>
+            <text variable="collection-title"/>
           </if>
           <else>
             <text variable="collection-title" text-case="title" font-style="italic"/>
@@ -722,7 +721,7 @@
           <choose>
             <if variable="locator" match="any"/>
           </choose>
-          <text macro="edition-note"/>
+          <!-- <text macro="edition-note"/> -->
         </group>
       </if>
     </choose>
@@ -1214,9 +1213,6 @@
           </group>
         </group> 
         <group prefix=" (" suffix=")">
-          <group delimiter="; " suffix="; ">
-            <text macro="locators-note"/>
-          </group>
           <group delimiter=", ">
             <group delimiter=" ">
               <choose>
@@ -1573,12 +1569,17 @@
         <text value=" " />
       </if>
       <else-if type="webpage interview personal_communication" match="any">
-      </else-if>      
+      </else-if>
       <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
         <text value=", " />      
       </else-if>
       <else-if variable="collection-title">
         <text value=", " />
+      </else-if>
+      <else-if variable="edition" match="any">
+        <choose>
+          <text value=" " />
+        </choose>
       </else-if>
       <else>
         <text value=". " />
