@@ -318,7 +318,7 @@
           <text variable="genre" text-case="title"/>
         </if>
         <else-if type="bill book graphic legal_case legislation motion_picture song" match="any">
-          <text variable="title" text-case="title" font-style="italic"/>
+          <text variable="title"  font-style="italic"/>
         </else-if>
         <else-if match="all" variable="reviewed-author">
           <text macro="review-title" text-case="title"/>
@@ -353,7 +353,7 @@
           </choose>
         </else-if>
       </choose>
-      <text macro="edition-note" prefix=". " />
+      <text macro="edition-note" prefix=", " />
     </group>
   </macro>
   <macro name="title-note-chinese">
@@ -562,7 +562,7 @@
           <else-if variable="collection-title">
             <choose>
               <if type="book">
-                <text variable="collection-title" text-case="title"/>
+                <text variable="collection-title" />
               </if>
               <else>
                 <text variable="collection-title" text-case="title" font-style="italic"/>
