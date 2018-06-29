@@ -171,9 +171,9 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::English::Article in a Dictionary with Translator 2", function() {
+    it("Bibliography::English::Article in a Dictionary with Translator 2", function() {
         var output = makeBibliography(items.articleInADictionaryWithTranslatorEnglish2);
-        var expected = '<div class="csl-entry">Behn, Johannes. "qu,w." In <i>Theological Dictionary of the New Testament</i>. Edited by Gerhard Kittel. Translated and edited by Geoffrey W. Bromiley, vol. 3, 180-190. Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965.</div>';
+        var expected = '<div class="csl-entry">Behn, Johannes. "qu,w". In <i>Theological Dictionary of the New Testament</i>. Edited by Gerhard Kittel and Geoffrey W. Bromiley. Translated by Geoffrey W. Bromiley, vol. 3, 180–190. Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965.</div>';
         
         assert.equal(output, expected);
     });
