@@ -74,6 +74,13 @@ describe("Citation", function() {
         assert.equal(output, expected);
     });    
 
+    it("Citation::English::Book Multiple Editors", function() {
+        var output = makeCitationCluster(items.bookMultipleEditorsEnglish, "120");
+        var expected = 'Barbara, Kurt Aland, Johannes Karavidopoulos et al., eds., <i>Novum Testamentum Graece</i>. 27th rev. ed. (Stuttgart: Deutsche Bibelgesellschaft, 1993), 120.';
+        
+        assert.equal(output, expected);
+    }); 
+
     it("Citation::Chinese::Book Multiple Authors", function() {
         var output = makeCitationCluster(items.bookMultipleAuthorsChinese, "36");
         var expected = '杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003），36。';
@@ -137,6 +144,20 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
     
+    xit("Citation::English::Book in a Multi-Volume Series 2", function() {
+        var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish2);
+        var expected = '<div class="csl-entry">Weiss, Hans-Frederich. <i>Der Brief an die Hebräer: Übersetzt und Erklärt</i>. 15th ed. Kritisch-exegetischer Kommentar über das Neue Testament. Edited by Heinrich August Wilhelm Meyer and Ferdinand Hahn, vol. 13. Göttingen: Vandenhoeck &#38; Ruprecht, 1991.</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    xit("Citation::English::Book in a Multi-Volume Series 3", function() {
+        var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish3);
+        var expected = '<div class="csl-entry">Thurén, Lauri. <i>Argument and Theology in 1 Peter: The Origins of Christian Paraenesis</i>. Journal for the Study of the New Testament: Supplement Series. Edited by Stanley E. Porter et al., vol. 114. Sheffield: Sheffield Academic Press, 1995.</div>';
+        
+        assert.equal(output, expected);
+    });   
+
     it("Citation::Chinese::Article in a Dictionary", function() {
         var output = makeCitationCluster(items.articleInADictionaryChinese, "25");        
         var expected = '冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册（上海：展徒出版社），25。';
@@ -154,6 +175,13 @@ describe("Citation", function() {
     it("Citation::English::Article in a Dictionary with Translator", function() {
         var output = makeCitationCluster(items.articleInADictionaryWithTranslatorEnglish, "8");
         var expected = 'B. Lang Bergman, and H. Ringgren, "xb;z"", in <i>Theological Dictionary of the Old Testament</i>, ed. G. Johannes Botterweck and Helmer Ringgren, trans. David E. Green, vol. 4 (Grand Rapids: William B. Eerdmans Publishing Company, 1980), 8.';
+        
+        assert.equal(output, expected);
+    });
+
+    xit("Citation::English::Article in a Dictionary with Translator 2", function() {
+        var output = makeBibliography(items.articleInADictionaryWithTranslatorEnglish2);
+        var expected = '<div class="csl-entry">Behn, Johannes. "qu,w." In <i>Theological Dictionary of the New Testament</i>. Edited by Gerhard Kittel. Translated and edited by Geoffrey W. Bromiley, vol. 3, 180-190. Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965.</div>';
         
         assert.equal(output, expected);
     });

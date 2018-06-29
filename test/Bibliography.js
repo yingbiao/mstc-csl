@@ -66,9 +66,9 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::English::Book Multiple Editors", function() {
+    it("Bibliography::English::Book Multiple Editors", function() {
         var output = makeBibliography(items.bookMultipleEditorsEnglish);
-        var expected = '<div class="csl-entry"><i>Novum Testamentum Graece</i>. Edited by Barbara and Kurt Aland, Johannes Karavidopoulos, Carlo M. Martini, and Bruce M. Metzger. 27th rev. ed. Stuttgart: Deutsche Bibelgesellschaft, 1993.</div>';
+        var expected = '<div class="csl-entry">Barbara, Kurt Aland, Johannes Karavidopoulos, Carlo M. Martini, and Bruce M. Metzger, eds. <i>Novum Testamentum Graece</i>. 27th rev. ed. Stuttgart: Deutsche Bibelgesellschaft, 1993.</div>';
         
         assert.equal(output, expected);
     });  
