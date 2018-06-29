@@ -76,7 +76,7 @@ describe("Citation", function() {
 
     it("Citation::English::Book Multiple Editors", function() {
         var output = makeCitationCluster(items.bookMultipleEditorsEnglish, "120");
-        var expected = 'Barbara, Kurt Aland, Johannes Karavidopoulos et al., eds., <i>Novum Testamentum Graece</i>. 27th rev. ed. (Stuttgart: Deutsche Bibelgesellschaft, 1993), 120.';
+        var expected = 'Barbara, Kurt Aland, Johannes Karavidopoulos et al., eds., <i>Novum Testamentum Graece</i>, 27th rev. ed. (Stuttgart: Deutsche Bibelgesellschaft, 1993), 120.';
         
         assert.equal(output, expected);
     }); 
@@ -144,9 +144,9 @@ describe("Citation", function() {
         assert.equal(output, expected);
     }); 
     
-    xit("Citation::English::Book in a Multi-Volume Series 2", function() {
-        var output = makeBibliography(items.bookInAMultiVolumeSeriesEnglish2);
-        var expected = '<div class="csl-entry">Weiss, Hans-Frederich. <i>Der Brief an die Hebräer: Übersetzt und Erklärt</i>. 15th ed. Kritisch-exegetischer Kommentar über das Neue Testament. Edited by Heinrich August Wilhelm Meyer and Ferdinand Hahn, vol. 13. Göttingen: Vandenhoeck &#38; Ruprecht, 1991.</div>';
+    it("Citation::English::Book in a Multi-Volume Series 2", function() {
+        var output = makeCitationCluster(items.bookInAMultiVolumeSeriesEnglish2, "19");
+        var expected = 'Hans-Frederich Weiss, <i>Der Brief an die Hebräer: Übersetzt und Erklärt</i>, 15th ed. Kritisch-exegetischer Kommentar über das Neue Testament, ed. Heinrich August Wilhelm Meyer and Ferdinand Hahn, vol. 13 (Göttingen: Vandenhoeck &#38; Ruprecht, 1991), 19.';
         
         assert.equal(output, expected);
     });
