@@ -611,8 +611,8 @@ module.exports = {
             ],
             "editor":[
                 {
-                    "family":"Gerhard",
-                    "given": "Kittel"
+                    "family":"Kittel",
+                    "given": "Gerhard"
                 },
                 {
                     "family":"Bromiley",
