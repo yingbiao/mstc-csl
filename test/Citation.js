@@ -13,8 +13,8 @@ describe("Citation", function() {
     before(function() {
         sys = new citeproc.simpleSys();
         //Wherever your locale and style files are. None are included with the package.
-        var enUS = fs.readFileSync('./csl-locales/locales-en-US.xml', 'utf8');
-        var zhCN = fs.readFileSync('./csl-locales/locales-zh-CN.xml', 'utf8');
+        var enUS = fs.readFileSync('./locales/locales-en-US.xml', 'utf8');
+        var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
         var styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
