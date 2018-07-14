@@ -4,7 +4,8 @@
   "description": "MSTC CSL",
   "main": "src/app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "docs:serve":"gitbook serve ./src ./docs"
   },
   "repository": {
     "type": "git",
