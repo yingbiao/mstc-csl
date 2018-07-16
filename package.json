@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "mocha",
-    "docs:serve": "gitbook serve ./src ./docs"
+    "docs:serve": "gitbook serve ./src ./docs",
+    "docs:build": "gitbook build ./src ./docs"
   },
   "repository": {
     "type": "git",

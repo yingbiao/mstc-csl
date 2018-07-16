@@ -3,4 +3,4 @@
 *参* 　唐明清：「启示录的七个教会」，《新约圣经CD版》。台北：校园出版社，2001。
 
 ## Zotero的设置
-![电子档/资料：磁片，CD-ROM等](images/VideoRecordingChinese.png)
+![电子档/资料：磁片，CD-ROM等](images/VideoRecordingChinese.PNG)

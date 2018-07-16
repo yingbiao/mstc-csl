@@ -3,4 +3,4 @@
 *参* 　黄二东：「天下一家」。《地球村的演变》，千百文编。厦门：汉阳出版社，2003。
 
 ## Zotero的设置
-![书本中的一篇文章](images/BookSectionChinese.png)
+![书本中的一篇文章](images/BookSectionChinese.PNG)

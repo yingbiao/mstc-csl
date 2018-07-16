@@ -3,4 +3,4 @@
 *参* 　李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43–47。
 
 ## Zotero的设置
-![杂志中的一篇文章](images/MagazineArticleChinese.png)
+![杂志中的一篇文章](images/MagazineArticleChinese.PNG)
