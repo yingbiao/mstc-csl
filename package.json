@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "mocha",
-    "docs:serve":"gitbook serve ./src ./docs"
+    "docs:serve": "gitbook serve ./src ./docs"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,7 @@
     "url": "https://github.com/yingbiao/mstc-csl/issues"
   },
   "homepage": "https://github.com/yingbiao/mstc-csl#readme",
-  "dependencies": {   
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^4.1.2",
     "citeproc-js-node": "0.0.3",
