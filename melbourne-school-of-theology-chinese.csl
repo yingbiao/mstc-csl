@@ -756,11 +756,6 @@
             <text variable="publisher"/>
             <text variable="publisher-place"/>
           </group>
-          <group delimiter=" ">
-            <text value="Unpublished"/>
-            <text variable="genre"/>
-            <text value="dissertation"/>
-          </group>
         </if>
         <else>
           <choose>
@@ -783,11 +778,6 @@
           <group delimiter="，">
             <text variable="publisher"/>
             <text variable="publisher-place"/>
-          </group>
-          <group delimiter=" ">
-            <text value="Unpublished"/>
-            <text variable="genre"/>
-            <text value="dissertation"/>
           </group>
         </if>
         <else>
@@ -1229,8 +1219,8 @@
               <text macro="event"/>
             </group>
             <choose>
-              <if type="thesis" variable="thesisType">
-                <text variable="thesisType"  />
+              <if type="thesis" variable="genre">
+                <text variable="genre"  />
               </if>
             </choose>             
             <text macro="publisher"/>
@@ -1296,8 +1286,8 @@
               <text macro="event"/>
             </group>
             <choose>
-              <if type="thesis" variable="thesisType">
-                <text variable="thesisType"  />
+              <if type="thesis" variable="genre">
+                <text variable="genre"  />
               </if>
             </choose>            
             <text macro="publisher-chinese"/>
@@ -1373,8 +1363,8 @@
               <text macro="event"/>
             </group>
             <choose>
-              <if type="thesis" variable="thesisType">
-                <text variable="thesisType"  />
+              <if type="thesis" variable="genre">
+                <text variable="genre"  />
               </if>
             </choose>            
             <text macro="publisher"/>
@@ -1438,8 +1428,8 @@
               <text macro="event"/>
             </group>
             <choose>
-              <if type="thesis" variable="thesisType">
-                <text variable="thesisType"  />
+              <if type="thesis" variable="genre">
+                <text variable="genre"  />
               </if>
             </choose>
             <text macro="publisher-chinese"/>
