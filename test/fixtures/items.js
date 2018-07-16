@@ -807,7 +807,7 @@ module.exports = {
                     "given": "庸",
                 }                
             ],
-            "thesisType":"博士论文",
+            "genre":"博士论文",
             "language":"zh-CN",
             "publisher":"太平洋天国神学院",
             "issued": {
@@ -830,7 +830,7 @@ module.exports = {
                     "given": "Lancer",
                 }                
             ],
-            "thesisType":"Ph.D. diss.",
+            "genre":"Ph.D. diss.",
             "language":"en-US",
             "publisher":"University of Chicago",
             "issued": {
