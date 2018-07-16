@@ -651,7 +651,7 @@ module.exports = {
                     "given": "泽崇",
                 }                
             ],
-            "editor": [
+            "collection-editor": [
                 {
                     "family": "许",
                     "given": "必斌",
