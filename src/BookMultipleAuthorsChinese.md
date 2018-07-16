@@ -3,4 +3,4 @@
 *参* 　杜德民，张爱杨和陈丰裕：《雨过天晴》。新加坡：和联出版社，2003。
 
 ## Zotero的设置
-![书本：超过一位作者](images/BookMultipleAuthorsChinese.png)
+![书本：超过一位作者](images/BookMultipleAuthorsChinese.PNG)

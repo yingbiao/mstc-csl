@@ -3,4 +3,4 @@
 *参* 　杨牧谷：《泪眼先知耶利米》。台北：校园书房出版社，1989。 
 
 ## Zotero的设置
-![书本：单一作者](images/BookSingleAuthorChinese.png)
+![书本：单一作者](images/BookSingleAuthorChinese.PNG)

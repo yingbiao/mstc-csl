@@ -3,4 +3,4 @@
 *参* 　杨品通：「神学的本质探讨」，《教会神学期刊》，14（2003 5月）：19–24。
 
 ## Zotero的设置
-![学术期刊中的文章](images/JournalArticleChinese.png)
+![学术期刊中的文章](images/JournalArticleChinese.PNG)

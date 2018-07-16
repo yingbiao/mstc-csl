@@ -3,4 +3,4 @@
 *参* 　陈泽崇：「执行部呈年会报告书」，《2001砂拉越华人年议会第二十六届年议会会议记录》，许必斌编，18–22。诗巫：砂拉越华人年议会，2001。
 
 ## Zotero的设置
-![已经出版的会议记录或档](images/ReportWithEditorChinese.png)
+![已经出版的会议记录或档](images/ReportWithEditorChinese.PNG)
