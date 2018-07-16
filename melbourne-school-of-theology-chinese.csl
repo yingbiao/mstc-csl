@@ -32,6 +32,7 @@
     </date>
     <terms>
       <term name="editor" form="verb-short">ed.</term>
+      <term name="collection-editor" form="verb-short">ed.</term>
       <term name="translator" form="verb-short">trans.</term>
       <term name="et-al">et al.</term>
       <term name="open-quote" form="symbol">'</term>
@@ -45,12 +46,13 @@
       <term name="accessed">参阅</term>
       <term name="interview">采访</term>
       <term name="recipient" form="verb">致函于</term>
+      <term name="collection-editor" form="verb-short">编</term>      
     </terms>
   </locale>  
   <macro name="container-contributors-note">
     <group delimiter=", " prefix=", ">
       <choose>
-        <if variable="author">
+        <if variable="editor">
           <names variable="editor" delimiter=", ">
             <label form="verb-short" suffix=" "/>
             <name and="text" delimiter=", "  et-al-min="3" et-al-use-first="1"/>
@@ -58,7 +60,7 @@
         </if>
       </choose>
       <choose>
-        <if variable="author editor" match="any">
+        <if variable="translator" match="any">
           <names variable="translator" delimiter=", ">
             <label form="verb-short" suffix=" "/>
             <name and="text" delimiter=", "/>
@@ -70,7 +72,7 @@
   <macro name="container-contributors-note-chinese">
     <group delimiter="；">
       <choose>
-        <if variable="author">
+        <if variable="editor">
           <names variable="editor" delimiter="，">
             <name and="text" delimiter="，"/>
             <label form="verb-short" suffix=""/>
@@ -78,19 +80,25 @@
         </if>
       </choose>
       <choose>
-        <if variable="author editor" match="any">
+        <if variable="translator" match="any">
           <names variable="translator" delimiter="，">
             <name and="text" delimiter="，"/>
             <label form="verb-short" suffix=""/>
           </names>
         </if>
+        <else-if variable="collection-title collection-editor" match="all">
+          <names variable="collection-editor" delimiter="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" suffix=""/>
+          </names>
+        </else-if>
       </choose>
     </group>
   </macro>  
   <macro name="container-contributors-bibliography">
     <group>
       <choose>
-        <if variable="author">
+        <if variable="editor">
             <names variable="editor" delimiter=", ">
               <label form="verb" text-case="sentence" suffix=" "/>
               <name and="text" delimiter=", " et-al-min="3" et-al-use-first="1"/>
@@ -98,9 +106,17 @@
         </if>
       </choose>
       <choose>
-        <if variable="author editor" match="any">
+        <if variable="translator" match="any">
           <names variable="translator" delimiter=", " prefix=". ">
             <label form="verb" text-case="sentence" suffix=" "/>
+            <name and="text" delimiter=", "/>
+          </names>
+        </if>
+      </choose>
+      <choose>
+        <if variable="collection-title collection-editor" match="all">
+          <names variable="collection-editor" prefix=", ">
+            <label form="verb-short" text-case="lowercase" suffix=" "/>
             <name and="text" delimiter=", "/>
           </names>
         </if>
@@ -110,7 +126,7 @@
           <text macro="pages" prefix=", " />
         </if>
       </choose>
-    </group>
+      </group>
   </macro>
   <macro name="container-contributors-bibliography-chinese">
     <group>
@@ -121,13 +137,19 @@
             <label form="verb-short" text-case="title" suffix=""/>
           </names>
         </if>
-        <if variable="collection-title editor" match="all">
+        <else-if variable="collection-title editor" match="all">
           <names variable="editor" suffix="，">
             <name and="text" delimiter="，"/>
             <label form="verb-short" text-case="title" suffix=""/>
           </names>
-        </if>        
-        <else-if variable="author">
+        </else-if>
+        <else-if variable="collection-title collection-editor" match="all">
+          <names variable="collection-editor" suffix="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" text-case="title" suffix=""/>
+          </names>
+        </else-if>        
+        <else-if variable="editor">
           <names variable="editor" delimiter="，">
             <label form="verb" text-case="title" suffix=" "/>
             <name and="text" delimiter="，"/>
@@ -135,7 +157,7 @@
         </else-if>
       </choose>
       <choose>
-        <if variable="author editor" match="any">
+        <if variable="translator" match="any">
           <names variable="translator" delimiter="，">
             <name and="text" delimiter="，"/>
             <label form="verb-short" text-case="lowercase" suffix=""/>
