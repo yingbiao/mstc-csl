@@ -304,6 +304,16 @@
     </names>
     <text macro="recipient-short"/>
   </macro>
+  <macro name="contributors-short-chinese">
+    <names variable="author">
+      <name form="short" and="text" et-al-min="4" et-al-use-first="1" delimiter="，"/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+      </substitute>
+    </names>
+    <text macro="recipient-short"/>
+  </macro>
   <macro name="contributors-sort">
     <names variable="author">
       <name name-as-sort-order="all" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
@@ -480,6 +490,29 @@
       </else-if>
       <else>
         <text variable="title" form="short" text-case="title" quotes="true"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="title-short-chinese">
+    <choose>
+      <if variable="title" match="none">
+        <choose>
+          <if type="interview">
+            <text term="interview" text-case="title"/>
+          </if>
+          <else-if type="manuscript speech" match="any">
+            <text variable="genre" form="short" text-case="title"/>
+          </else-if>
+          <else-if type="personal_communication">
+            <text macro="issued"/>
+          </else-if>
+        </choose>
+      </if>
+      <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+        <text variable="title" form="short" text-case="title" prefix="《" suffix="》"/>
+      </else-if>
+      <else>
+        <text variable="title" form="short" text-case="title" quotes="true" prefix="《" suffix="》"/>
       </else>
     </choose>
   </macro>
@@ -1605,10 +1638,10 @@
     <layout locale="zh-CN" suffix="。" delimiter="；">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">
-          <group delimiter="，">
-            <text macro="contributors-short"/>
-            <text macro="title-short"/>
-            <text macro="point-locators-note"/>
+          <group>
+            <text macro="contributors-short-chinese" suffix="："/>
+            <text macro="title-short-chinese"/>
+            <text macro="point-locators-note" prefix="，"/>
           </group>
         </if>
         <else>
