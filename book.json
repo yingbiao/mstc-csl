@@ -1,6 +1,0 @@
-{
-    "root":"./src",
-    "plugins": [
-        "-lunr", "-search", "search-pro"
-    ]
-}
