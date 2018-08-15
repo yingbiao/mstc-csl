@@ -4,12 +4,13 @@
 
 ## 安装
 
-1. 下载文件 [melbourne-school-of-theology-chinese.csl](https://github.com/yingbiao/mstc-csl/raw/master/melbourne-school-of-theology-chinese.csl)
+1. 下载文件 [melbourne-school-of-theology-chinese.csl](https://github.com/yingbiao/mstc-csl/raw/master/melbourne-school-of-theology-chinese.csl), 请确保文件的后缀是.csl
 2. 打开Zotero的Preferences
 3. 在Cite标签页添加下载的样式
 
 
 ## 中文例子
+注意，中文的参考资料请在Zotero中把语言(Language)一项设置成```zh-CN```
   1. [书本：单一作者](docs/BookSingleAuthorChinese.md)
   2. [书本：单一作者和译者](docs/BookSingleAuthorWithEditorChinese.md)
   3. [书本：单一编者或编者为作者](docs/BookEditorChinese.md)
