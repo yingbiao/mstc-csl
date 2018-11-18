@@ -311,4 +311,11 @@ describe("Citation", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::English::BookWithNoSeriesAuthor", function() {
+        var output = makeCitationCluster(items.bookWithNoSeriesAuthor, "126");
+        var expected = 'Harold Henry Rowley, <i>The Book of Job</i>, New century Bible commentary (Grand Rapids, Mich: Eerdmans, 1980), 126.';
+        
+        assert.equal(output, expected);
+    });
 });

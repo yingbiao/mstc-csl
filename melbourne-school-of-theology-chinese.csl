@@ -377,17 +377,14 @@
         </else>
       </choose>
       <choose>
-        <if variable="collection-title volume editor" match="all">
-          <text value="," />
-        </if>      
-        <else-if variable="collection-title">
-          <choose>
-            <if type="report" match="none">
-              <text value="." />
-            </if>
-          </choose>
-        </else-if>
-      </choose>
+        <if variable="collection-title">
+            <choose>
+              <if type="report" match="none">
+                <text value="," />
+              </if>
+            </choose>
+          </if>
+        </choose>
       <text macro="edition-note" prefix=", " />
     </group>
   </macro>
@@ -1604,29 +1601,6 @@
       </else>
     </choose>
   </macro>
-  <macro name="divider">
-    <choose>
-      <if type="article-journal thesis" match="any">
-        <text value=" " />
-      </if>
-      <else-if type="webpage interview personal_communication" match="any">
-      </else-if>
-      <else-if type="article-magazine entry-dictionary entry-encyclopedia" match="any">
-        <text value=", " />      
-      </else-if>
-      <else-if variable="collection-title">
-        <!-- <text value=", " /> -->
-      </else-if>
-      <else-if variable="edition" match="any">
-        <choose>
-          <text value=" " />
-        </choose>
-      </else-if>
-      <else>
-        <text value=". " />
-      </else>
-    </choose>
-  </macro>  
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
     <layout locale="zh-CN" suffix="。" delimiter="；">
       <choose>
