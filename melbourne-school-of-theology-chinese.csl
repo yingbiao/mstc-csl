@@ -696,19 +696,7 @@
         </choose>
       </else-if>
     </choose>
-    <choose>
-      <if type="chapter entry-dictionary entry-encyclopedia" match="any">
-        <choose>
-          <if variable="container-title editor" match="all">
-            <text value=". " />
-          </if>
-        </choose>
-      </if>
-      <else-if variable="collection-title" type="book">
-        <text value=". " />
-      </else-if>
-    </choose>
-    <text macro="container-contributors-bibliography"/>
+    <text macro="container-contributors-bibliography" prefix=". "/>
   </macro>
   <macro name="container-title-chinese">
     <choose>
@@ -1359,28 +1347,19 @@
     </choose>
   </macro>  
   <macro name="issue-bib">
-    <text macro="divider" />
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=""/>
+        <text variable="issue" prefix=" "/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter=" " prefix="" suffix="">
-          <!-- <group delimiter="; ">
-            <text macro="locators-note"/>
-          </group> -->
+        <group>
           <group>
             <choose>
               <if match="all" variable="volume">
-                <text term="volume" form="short" suffix=" "/>
-                <number variable="volume" suffix=""/>
-                <choose>
-                  <if type="entry-dictionary entry-encyclopedia" match="none">
-                    <text value="." />
-                  </if>
-                </choose>                
+                <text term="volume" form="short" prefix=", "/>
+                <number variable="volume" prefix=" "/>
                 <choose>
                   <if match="any" variable="number-of-volumes">
                     <text value="of" prefix=" " suffix=" "/>
@@ -1401,7 +1380,7 @@
                 <text macro="pages" prefix=", " suffix="."/>
               </if>
               <else-if type="report">
-                <text variable="page" suffix="."/>
+                <text variable="page" suffix="." prefix=", "/>
               </else-if>
             </choose>
           </group>
@@ -1422,16 +1401,30 @@
             </group>
             <choose>
               <if type="thesis" variable="genre">
-                <text variable="genre"  />
+                <text variable="genre" prefix=" " />
               </if>
+            </choose>
+            <choose>
+              <if type="thesis" variable="genre">
+                <text macro="publisher"/>
+              </if>
+              <else>
+                <text macro="publisher" prefix=". "/>
+              </else>
             </choose>            
-            <text macro="publisher"/>
             <text macro="issued"/>
           </group>
         </group>
       </else-if>
       <else>
-        <text macro="issued"/>
+        <choose>
+          <if type="article-newspaper">
+            <text macro="issued" prefix=". "/>
+          </if>
+          <else>
+            <text macro="issued" prefix=", "/>
+          </else>
+        </choose>
       </else>
     </choose>
   </macro>
@@ -1622,7 +1615,7 @@
         <text value=", " />      
       </else-if>
       <else-if variable="collection-title">
-        <text value=", " />
+        <!-- <text value=", " /> -->
       </else-if>
       <else-if variable="edition" match="any">
         <choose>
@@ -1701,10 +1694,10 @@
       <text macro="point-locators-bib-chinese"/>
     </layout>    
     <layout suffix=".">
-      <group delimiter=" " suffix="">
+      <group delimiter=" ">
         <text macro="contributors" suffix="."/>
         <text macro="title-bib"/>
-        <text macro="container-title"/>
+        <text macro="container-title"/>       
       </group>
       <text macro="description-bib"/>
       <text macro="issue-bib"/>

@@ -1105,4 +1105,28 @@ module.exports = {
             "type": "song"
         }         
     },
+    bookWithNoSeriesAuthor: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "The Book of Job",
+            "author": [
+                {
+                    "family": "Rowley",
+                    "given": "Harold Henry",
+                }
+            ],
+            "collection-title":"New century Bible commentary",
+            "publisher": "Eerdmans",
+            "publisher-place": "Grand Rapids, Mich",                
+            "language":"en-US",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "type": "book"
+        }        
+    }
 }
