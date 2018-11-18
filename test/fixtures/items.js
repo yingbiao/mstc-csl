@@ -1128,5 +1128,34 @@ module.exports = {
             },
             "type": "book"
         }        
-    }
+    },
+    bookSingleAuthorWithEditorChinese: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "天道圣经注释：约伯记上",
+            "author": [
+                {
+                    "family": "唐",
+                    "given": "佑之"
+                }
+            ],
+            "editor": [
+                {
+                    "family": "鲍",
+                    "given": "会园"
+                }
+            ],
+            "publisher": "天道书楼有限公司",
+            "publisher-place": "香港九龙",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "type": "book"
+        }
+    },    
 }

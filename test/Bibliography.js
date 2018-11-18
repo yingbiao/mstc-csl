@@ -310,4 +310,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it.only("Bibliography::Chinese::Book Single Author with Editor", function() {
+        var output = makeBibliography(items.bookSingleAuthorWithEditorChinese);
+        var expected = '<div class="csl-entry">唐佑之：《天道圣经注释：约伯记上》，鲍会园编。香港九龙：天道书楼有限公司，1994。</div>';
+        
+        assert.equal(output, expected);
+    });
 });
