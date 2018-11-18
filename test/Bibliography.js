@@ -303,4 +303,11 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::English::BookWithNoSeriesAuthor", function() {
+        var output = makeBibliography(items.bookWithNoSeriesAuthor);
+        var expected = '<div class="csl-entry">Rowley, Harold Henry. <i>The Book of Job</i>. New century Bible commentary. Grand Rapids, Mich: Eerdmans, 1980.</div>';
+        
+        assert.equal(output, expected);
+    });
 });
