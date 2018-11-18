@@ -18,7 +18,7 @@
     <category citation-format="note"/>
     <category field="theology"/>
     <summary>Melbourne School of Theology format based on the Essay Style Guide</summary>
-    <updated>2018-07-16T20:00:00+10:00</updated>
+    <updated>2018-11-18T13:00:00+10:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
@@ -154,8 +154,8 @@
         </else-if>        
         <else-if variable="editor">
           <names variable="editor" delimiter="，">
-            <label form="verb" text-case="title" suffix=" "/>
             <name and="text" delimiter="，"/>
+            <label form="verb-short" text-case="title"/>
           </names>
         </else-if>
       </choose>
@@ -1426,24 +1426,18 @@
     </choose>
   </macro>
   <macro name="issue-bib-chinese">
-    <text macro="divider-chinese" />
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=""/>
+        <text variable="issue" prefix="，"/>
         <text macro="issued-chinese" prefix="（" suffix="）"/>
       </if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="" prefix="" suffix="">
-          <group delimiter="; ">
-            <text macro="locators-note"/>
-            <!-- <text macro="collection-title"/> -->
-          </group>
-          <group suffix="。">
+        <group>
+          <group>
             <choose>
               <if match="all" variable="volume">
-                <!-- <text term="volume" form="short" suffix=" "/> -->
-                <number variable="volume"/>
+                <number variable="volume" prefix="，"/>
                 <choose>
                   <if match="any" variable="number-of-volumes">
                     <text value="of" prefix=" " suffix=" "/>
@@ -1467,7 +1461,7 @@
                 <else-if type="speech" match="any">
                   <choose>
                     <if match="none" variable="publisher-place">
-                      <text value="Unpublished "/>
+                      <text value="未出版"/>
                     </if>
                   </choose>
                   <text variable="genre"/>
@@ -1477,10 +1471,17 @@
             </group>
             <choose>
               <if type="thesis" variable="genre">
-                <text variable="genre"  />
+                <text variable="genre" prefix="，"  />
               </if>
             </choose>
-            <text macro="publisher-chinese"/>
+            <choose>
+              <if type="thesis" variable="genre">
+                <text macro="publisher-chinese"/>
+              </if>
+              <else>
+                <text macro="publisher-chinese" prefix="。"/>
+              </else>
+            </choose>
             <text macro="issued-chinese"/>
           </group>
         </group>
@@ -1587,19 +1588,6 @@
     <names variable="reviewed-author">
       <name/>
     </names>
-  </macro>
-  <macro name="divider-chinese">
-    <choose>
-      <if type="article-journal entry-dictionary entry-encyclopedia thesis" match="any">
-        <text value="，" />
-      </if>
-      <else-if type="article-magazine article-newspaper webpage interview personal_communication" match="any">
-        <text value="" />
-      </else-if>
-      <else>
-        <text value="。" />
-      </else>
-    </choose>
   </macro>
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
     <layout locale="zh-CN" suffix="。" delimiter="；">
