@@ -340,7 +340,7 @@
           <choose>
             <if variable="publisher-place">              
               <text variable="publisher-place" text-case="capitalize-first"/>
-            </else>
+            </if>
           </choose>
           <text variable="publisher"/>
         </else>
