@@ -172,6 +172,7 @@ module.exports = {
                 }
             ],
             "number-of-volumes": 2,
+            "volume": 2,
             "publisher": "Harper & Row",
             "publisher-place": "San Francisco",
             "issued": {
@@ -440,7 +441,7 @@ module.exports = {
             ],
             "container-title": "Luther’s Works: Career of the Reformer: I",
             "publisher": "Concordia",
-            "publisher-place": "St. Louis, MO",
+            "publisher-place": "St. Louis, Mo.",
             "issued": {
                 "date-parts": [
                     [

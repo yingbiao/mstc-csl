@@ -96,7 +96,7 @@ describe("Bibliography", function() {
 
     it("Bibliography::ebook", function() {
         var output = makeBibliography(items.ebook);
-        var expected = '<div class="csl-entry">Lewis, C. S. <i>Mere Christianity</i> (Kindle edition; Fount, 2010).</div>';
+        var expected = '<div class="csl-entry">Lewis, C. S. <i>Mere Christianity</i> (Kindle ed.; Fount, 2010).</div>';
         
         assert.equal(output, expected);
     });
@@ -159,7 +159,7 @@ describe("Bibliography", function() {
 
     it("Bibliography::Thesis or dissertation", function() {
         var output = makeBibliography(items.thesis);
-        var expected = '<div class="csl-entry">Giere, Samuel D. “A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE,” (The University of St. Andrews: Ph.D. dissertation, 2007).</div>';
+        var expected = '<div class="csl-entry">Giere, Samuel D. “A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE” (The University of St. Andrews: Ph.D. dissertation, 2007).</div>';
         
         assert.equal(output, expected);
     });
