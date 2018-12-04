@@ -181,14 +181,14 @@ describe("Bibliography", function() {
     xit("Bibliography::Podcast or online video", function() {
         var output = makeBibliography(items.podcastOrOnlineVideo);
         var expected = '<div class="csl-entry">Tlozek, Eric. “25 years after Oslo, the Middle East peace process is in pieces,” <i>The World Today</i> (Podcast audio; Thursday 13 Sept, 2018), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.</div>';
-        //actual        <div class="csl-entry">Tlozek, Eric. <i>25 Years after Oslo, the Middle East Peace Process Is in Pieces</i> Podcast audio, n.d., http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.</div>
+        //actual        <div class="csl-entry">Tlozek, Eric. “25 Years after Oslo, the Middle East Peace Process Is in Pieces,” Podcast audio, http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.</div>
         assert.equal(output, expected);
     });
 
     xit("Bibliography::Webpage", function() {
         var output = makeBibliography(items.webpage);
         var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).</div>';
-        //actual        <div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” in <i>Sapientia</i>, May 3, 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/.</div>
+        //actual        <div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” in <i>Sapientia</i> May 3, 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>
         assert.equal(output, expected);
     });
 });

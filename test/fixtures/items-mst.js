@@ -665,16 +665,7 @@ module.exports = {
             ],
             "collection-title": "The World Today",
             "medium": "Podcast audio",
-            "URL": "http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2018,
-                        9,
-                        13
-                    ]
-                ]
-            },
+            "URL": "http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450",            
             "type": "song"
         }
     },
@@ -689,7 +680,15 @@ module.exports = {
                 }
             ],
             "container-title": "Sapientia",
-            "accessed": "2018-01-29",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2018,
+                        1,
+                        29
+                    ]
+                ]
+            },
             "URL": "http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/",
             "issued": {
                 "date-parts": [
