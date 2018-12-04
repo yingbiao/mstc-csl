@@ -132,7 +132,7 @@ module.exports = {
             "type": "book"
         }        
     },
-    classicalOrAncientText: {
+    classicalOrAncientTextWholeVolume: {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)",
@@ -251,7 +251,15 @@ module.exports = {
                 ]
             },
             "URL": "http://books.google.com.au/books?id=UuMRFJqmJ_sC",
-            "accessed": "2015-01-29",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2015,
+                        1,
+                        29
+                    ]
+                ]
+            },
             "type": "book"
         }        
     },
@@ -342,7 +350,7 @@ module.exports = {
                 ]
             },
             "page": "599-601",
-            "volumne": 3,
+            "volume": 3,
             "number-of-volumes":4,
             "type": "entry-dictionary"
         }
