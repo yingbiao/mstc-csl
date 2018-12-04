@@ -150,7 +150,7 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::Magazine or newspaper article", function() {
+    it("Bibliography::Magazine or newspaper article", function() {
         var output = makeBibliography(items.magazineOrNewspaperArticle);
         var expected = '<div class="csl-entry">Stafford, Tim. “A Tale of Two Scientists,” <i>Christianity Today</i> (July 2012), 22–29.</div>';
         
