@@ -582,7 +582,7 @@ module.exports = {
                     "given": "Samuel D."
                 }
             ],
-            "genre": "Ph.D. dissertation",
+            "genre": "Ph.D.",
             "publisher": "The University of St. Andrews",
             "issued": {
                 "date-parts": [

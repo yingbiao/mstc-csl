@@ -329,7 +329,6 @@
             <text variable="publisher-place"/>
           </group>
           <group delimiter=" ">
-            <text value="Unpublished"/>
             <text variable="genre"/>
             <text value="dissertation"/>
           </group>
@@ -581,7 +580,7 @@
         </group>
       </else-if>
       <else>
-        <text macro="issued" prefix=", "/>
+        <text macro="issued" prefix=" "/>
       </else>
     </choose>
   </macro>

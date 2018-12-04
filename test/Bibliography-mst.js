@@ -157,7 +157,7 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::Thesis or dissertation", function() {
+    it("Bibliography::Thesis or dissertation", function() {
         var output = makeBibliography(items.thesis);
         var expected = '<div class="csl-entry">Giere, Samuel D. “A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE,” (The University of St. Andrews: Ph.D. dissertation, 2007).</div>';
         
