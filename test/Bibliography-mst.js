@@ -129,7 +129,7 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::Classical or ancient text", function() {
+    it("Bibliography::Classical or ancient text", function() {
         var output = makeBibliography(items.classicalOrAncientText);
         var expected = '<div class="csl-entry">Luther, Martin. “Disputation on the Power and Efficacy of Indulgences,” in <i>Luther’s Works: Career of the Reformer: I</i> (edited by Harold J. Grimm; translated by C. M. Jacobs; 55 vols.; St. Louis, Mo.: Concordia, 1958), 31:17–33.</div>';
         

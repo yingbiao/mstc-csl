@@ -124,17 +124,17 @@ describe("Citation", function() {
         assert.equal(output, expected);
     });
 
-    xit("Citation::Encyclopedia or dictionary", function() {
-        var output = makeCitationCluster(items.encyclopediaOrDictionary);
-        var expected = '<div class="csl-entry">Walters, Stanley D. “Jacob Narrative,” in <i>The Anchor Bible Dictionary</i> (edited by David Noel Freedman; 6 vols.; New York: Doubleday, 1992), 3:599–606.</div>';
+    it("Citation::Encyclopedia or dictionary", function() {
+        var output = makeCitationCluster(items.encyclopediaOrDictionary, "601");
+        var expected = 'Stanley D. Walters, “Jacob Narrative,” in <i>The Anchor Bible Dictionary</i> (ed. David Noel Freedman; New York: Doubleday, 1992), 3:601.';
         
         assert.equal(output, expected);
     });
 
-    xit("Citation::Anonymous dictionary acticle", function() {
-        var output = makeCitationCluster(items.anonymousDictionaryArticle);
-        var expected = '<div class="csl-entry">Cross, F. L., and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2d ed.; Oxford: Oxford University Press, 1983), 232.</div>';
-        
+    it("Citation::Anonymous dictionary acticle", function() {
+        var output = makeCitationCluster(items.anonymousDictionaryArticle, "232");
+        var expected = 'F. L. Cross and E. A. Livingstone (eds.), “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.';
+        //  expected = 'F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2d ed.; Oxford: Oxford University Press, 1983), 232.'
         assert.equal(output, expected);
     });
 
