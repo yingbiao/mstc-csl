@@ -122,10 +122,10 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Bibliography::Anonymous dictionary acticle", function() {
+    it("Bibliography::Anonymous dictionary acticle", function() {
         var output = makeBibliography(items.anonymousDictionaryArticle);
-        var expected = '<div class="csl-entry">Cross, F. L., and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2d ed.; Oxford: Oxford University Press, 1983), 232.</div>';
-        
+        var expected = '<div class="csl-entry">Cross, F. L., and E. A. Livingstone (eds.). “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.</div>';
+        //original      <div class="csl-entry">Cross, F. L., and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.</div>
         assert.equal(output, expected);
     });
 
