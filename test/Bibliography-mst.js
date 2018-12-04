@@ -108,7 +108,7 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Bibliography::Article in a lexicon or theological dictionary", function() {
+    it("Bibliography::Article in a lexicon or theological dictionary", function() {
         var output = makeBibliography(items.articleInALexiconOrTheologicalDictionary);
         var expected = '<div class="csl-entry">Flender, O. and C. Brown. “Smell; Ὀσμή,” in <i>Dictionary of New Testament Theology</i> (edited by Colin Brown; 4 vols.; Grand Rapids: Zondervan, 1992), 3:599–601.</div>';
         //original      <div class="csl-entry">Flender, O. and C. Brown, “Smell; ὀσμή,” in <i>Dictionary of New Testament Theology</i> (edited by Colin Brown; 4 vols.; Grand Rapids: Zondervan, 1992), 3:599–601.</div>

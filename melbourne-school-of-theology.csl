@@ -483,9 +483,17 @@
   </macro>
   <macro name="pages">
     <choose>
-      <if type="chapter paper-conference article article-journal article-magazine article-newspaper" match="any">
-        <text variable="page" prefix=", "/>
+      <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary" match="any">
+        <group delimiter=":" prefix=", ">
+          <text variable="volume" />
+          <text variable="page" />
+        </group>
       </if>
+      <else-if type="article-journal">
+        <group prefix=", ">
+          <text variable="page" />
+        </group>
+      </else-if>
     </choose>
   </macro>
   <macro name="archive-note">
@@ -639,12 +647,6 @@
       <name/>
     </names>
   </macro>
-  <macro name="volume-page">
-    <group delimiter=":" prefix=", ">
-      <text variable="volume" />
-      <text variable="page" />
-    </group>
-  </macro>
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
     <layout suffix="." delimiter="; ">
       <choose>
@@ -687,7 +689,6 @@
       <text macro="locators-newspaper" prefix=", "/>
       <text macro="access-bib" prefix=", "/>
       <text macro="point-locators"/>
-      <text macro="volume-page"/>
     </layout>
   </bibliography>
 </style>
