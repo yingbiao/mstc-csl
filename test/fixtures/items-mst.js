@@ -625,7 +625,7 @@ module.exports = {
                 ]
             },
             "page": "1561-1564",
-            "edition": 2011,
+            "edition": "2011",
             "type": "chapter"
         }
     },

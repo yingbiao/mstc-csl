@@ -184,6 +184,9 @@
       <else-if match="all" variable="reviewed-author">
         <text macro="review-title" text-case="title"/>
       </else-if>
+      <else-if type="paper-conference">
+        <text variable="title" text-case="title" quotes="true" />
+      </else-if>
       <else>
         <text variable="title" text-case="title" quotes="true" suffix=","/>
       </else>
@@ -360,6 +363,9 @@
             <date variable="issued" text-case="capitalize-all">
               <date-part name="year"/>
             </date>
+          </else-if>
+          <else-if type="paper-conference">
+            <date variable="issued" form="text"/>
           </else-if>
           <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="any">
             <date variable="issued" text-case="capitalize-all">
