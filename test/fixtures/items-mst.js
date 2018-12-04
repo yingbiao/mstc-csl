@@ -74,7 +74,7 @@ module.exports = {
             "author": [
                 {
                     "family": "Kittel",
-                    "given": "B.P."
+                    "given": "B. P."
                 },
                 {
                     "family": "Hoffer",
@@ -82,7 +82,7 @@ module.exports = {
                 },
                 {
                     "family": "Wright",
-                    "given": "R.A."
+                    "given": "R. A."
                 }
             ],
             "publisher": "Yale University Press",
