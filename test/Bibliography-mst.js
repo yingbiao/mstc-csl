@@ -143,9 +143,9 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::Journal article viewed online", function() {
+    it("Bibliography::Journal article viewed online", function() {
         var output = makeBibliography(items.journalArticleViewedOnline);
-        var expected = '<div class="csl-entry">Jacobson, Rolf. “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” <i>Word & World</i> 22, no. 4 (2002), http://web.a.ebscohost.com/ehost/pdfviewer/ (accessed 29/01/15), 396–405. </div>';
+        var expected = '<div class="csl-entry">Jacobson, Rolf. “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” <i>Word &#38; World</i> 22, no. 4 (2002), http://web.a.ebscohost.com/ehost/pdfviewer/ (accessed 29/01/15), 396–405.</div>';
         
         assert.equal(output, expected);
     });

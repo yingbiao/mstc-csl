@@ -534,10 +534,18 @@ module.exports = {
                 ]
             },
             "page": "396-405",
-            "issume": 4,
+            "issue": 4,
             "volume": 22,
             "URL": "http://web.a.ebscohost.com/ehost/pdfviewer/",
-            "accessed": "2015-01-29",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2015,
+                        1,
+                        29
+                    ]
+                ]
+            },
             "type": "article-journal"
         }
     },
