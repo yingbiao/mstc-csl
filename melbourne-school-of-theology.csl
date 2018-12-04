@@ -485,7 +485,7 @@
   </macro>
   <macro name="pages">
     <choose>
-      <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary" match="any">
+      <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
         <group delimiter=":" prefix=", ">
           <text variable="volume" />
           <text variable="page" />

@@ -115,14 +115,14 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::Encyclopedia or dictionary", function() {
+    it("Bibliography::Encyclopedia or dictionary", function() {
         var output = makeBibliography(items.encyclopediaOrDictionary);
         var expected = '<div class="csl-entry">Walters, Stanley D. “Jacob Narrative,” in <i>The Anchor Bible Dictionary</i> (edited by David Noel Freedman; 6 vols.; New York: Doubleday, 1992), 3:599–606.</div>';
         
         assert.equal(output, expected);
     });
 
-    xit("Bibliography::Anonymous dictionary acticle", function() {
+    it.only("Bibliography::Anonymous dictionary acticle", function() {
         var output = makeBibliography(items.anonymousDictionaryArticle);
         var expected = '<div class="csl-entry">Cross, F. L., and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2d ed.; Oxford: Oxford University Press, 1983), 232.</div>';
         

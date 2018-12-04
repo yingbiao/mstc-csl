@@ -383,7 +383,7 @@ module.exports = {
                 ]
             },
             "page": "599-606",
-            "volumne": 3,
+            "volume": 3,
             "number-of-volumes": 6,
             "type": "entry-encyclopedia"
         }
