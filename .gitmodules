@@ -1,4 +1,4 @@
 [submodule "locales"]
 	path = locales
-	url = https://github.com/yingbiao/locales.git
+	url = https://github.com/citation-style-language/locales.git
 	branch = master
