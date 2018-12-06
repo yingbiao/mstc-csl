@@ -5,6 +5,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Basic Introduction to Biblical Hebrew, with CD",
+            "title-short": "Basic Introduction",
             "author": [
                 {
                     "family": "Hackett",
@@ -27,28 +28,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "The Westminster Confession and Catechisms in Modern English",
-            "editor": [
-                {
-                    "family": "Ward",
-                    "given": "Rowland"
-                }
-            ],
-            "publisher": "New Melbourne Press",
-            "publisher-place": "Wantirna",
-            "issued": {
-                "date-parts": [
-                    [
-                        2000
-                    ]
-                ]
-            },
-            "type": "book"
-        }        
-    },
-    editedBook: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "The Westminster Confession and Catechisms in Modern English",
+            "title-short": "Westminster Confession",
             "editor": [
                 {
                     "family": "Ward",
@@ -71,6 +51,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Biblical Hebrew: A Text and Workbook",
+            "title-short": "Biblical Hebrew",
             "author": [
                 {
                     "family": "Kittel",
@@ -101,6 +82,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition",
+            "title-short": "Babylon to Eternity",
             "author": [
                 {
                     "family": "Becking",
@@ -136,6 +118,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)",
+            "title-short": "Summa Theologiae",
             "author": [
                 {
                     "family": "Aquinas",

@@ -6,7 +6,7 @@ var items = require('./fixtures/items-mst.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Citation", function() {
+describe("Citation MST English", function() {
     var engine;
     var sys;
 
