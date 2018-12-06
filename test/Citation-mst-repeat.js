@@ -96,128 +96,128 @@ describe("Citation MST English ibid", function() {
     });
 
     it("Citation::Volume from a multi volume work", function() {
-        var output = makeCitationCluster(items.volumeFromAMultiVolumeWork, "119–123");
-        var expected = 'Donald Bloesch, <i>Essentials of Evangelical Theology</i> (San Francisco: Harper &#38; Row, 1982), 2:119–123.';
+        var output = makeCitationCluster(items.volumeFromAMultiVolumeWork, "87–89");
+        var expected = 'Bloesch, <i>Essentials</i>, 2:87–89.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Commentary or book in series with series number", function() {
-        var output = makeCitationCluster(items.commentaryOrBookInSeriesWithSeriesNumber, "88");
-        var expected = 'R. L. Braun, <i>1 Chronicles</i> (Word Biblical Commentary 14; Waco: Word, 1986), 88.';
+        var output = makeCitationCluster(items.commentaryOrBookInSeriesWithSeriesNumber, "81");
+        var expected = 'Braun, <i>1 Chronicles</i>, 81.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Edition other than the first", function() {
-        var output = makeCitationCluster(items.editionOtherThanTheFirst, "100");
-        var expected = 'T. Desmond Alexander, <i>From Paradise to Promised Land: An Introduction to the Pentateuch</i> (3rd ed.; Grand Rapids: Baker, 2012), 100.';
+        var output = makeCitationCluster(items.editionOtherThanTheFirst, "102-112");
+        var expected = 'Alexander, <i>Paradise to Promised Land</i>, 102–112.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Booked viewed online", function() {
-        var output = makeCitationCluster(items.bookViewedOnline, "14");
-        var expected = 'J. A. Hackett, <i>A Basic Introduction to Biblical Hebrew, with CD</i> (Peabody, MA: Hendrickson, 2010), http://books.google.com.au/books?id=UuMRFJqmJ_sC (accessed 29/01/15), 14.';
+        var output = makeCitationCluster(items.bookViewedOnline, "15");
+        var expected = 'Hackett, <i>Basic Introduction</i>, 15.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::ebook", function() {
-        var output = makeCitationCluster(items.ebook, "location 446/2830");
-        var expected = 'C. S. Lewis, <i>Mere Christianity</i> (Kindle ed.; Fount, 2010), location 446/2830.';
+        var output = makeCitationCluster(items.ebook, "451/2830");
+        var expected = 'Lewis, <i>Mere Christianity</i>, 451/2830.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Essay or chapter", function() {
-        var output = makeCitationCluster(items.essayOrChapter, "211");
-        var expected = 'John D. W. Watts, “A Frame for the Book of the Twelve: Hosea 1–3 and Malachi,” in <i>Reading and Hearing the Book of the Twelve</i> (ed. James Nogalski and Marvin Sweeney; Atlanta: Society of Biblical Literature, 2000), 211.';
+        var output = makeCitationCluster(items.essayOrChapter, "214");
+        var expected = 'Watts, “Frame,” 214.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Article in a lexicon or theological dictionary", function() {
-        var output = makeCitationCluster(items.articleInALexiconOrTheologicalDictionary, "599–600");
-        var expected = 'O. Flender and C. Brown, “Smell; Ὀσμή,” in <i>Dictionary of New Testament Theology</i> (ed. Colin Brown; Grand Rapids: Zondervan, 1992), 3:599–600.';
+        var output = makeCitationCluster(items.articleInALexiconOrTheologicalDictionary, "599");
+        var expected = 'Flender and Brown, “Smell; Ὀσμή,” 3:599.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Encyclopedia or dictionary", function() {
         var output = makeCitationCluster(items.encyclopediaOrDictionary, "601");
-        var expected = 'Stanley D. Walters, “Jacob Narrative,” in <i>The Anchor Bible Dictionary</i> (ed. David Noel Freedman; New York: Doubleday, 1992), 3:601.';
+        var expected = 'Walters, “Jacob Narrative,” 601.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Anonymous dictionary acticle", function() {
-        var output = makeCitationCluster(items.anonymousDictionaryArticle, "232");
-        var expected = 'F. L. Cross and E. A. Livingstone (eds.), “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.';
-        //  expected = 'F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2d ed.; Oxford: Oxford University Press, 1983), 232.'
+        var output = makeCitationCluster(items.anonymousDictionaryArticle, "233");
+        var expected = 'Cross and Livingstone, “Canon of Scripture,” 233.';
+
         assert.equal(output, expected);
     });
 
     it("Citation::Classical or ancient text", function() {
-        var output = makeCitationCluster(items.classicalOrAncientText, "17–33");
-        var expected = 'Martin Luther, “Disputation on the Power and Efficacy of Indulgences,” in <i>Luther’s Works: Career of the Reformer: I</i> (ed. Harold J. Grimm; trans. C. M. Jacobs; St. Louis, Mo.: Concordia, 1958), 31:17–33.';
+        var output = makeCitationCluster(items.classicalOrAncientText, "19");
+        var expected = 'Luther, “Disputation,” 19.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Journal article", function() {
-        var output = makeCitationCluster(items.journalArticle, "79");
-        var expected = 'B. O. Long, “A Darkness Between Brothers: Solomon and Adonijah,” <i>Journal for the Study of the Old Testament</i> 19 (1981), 79.';
+        var output = makeCitationCluster(items.journalArticle, "79-81");
+        var expected = 'Long, “Darkness,” 79–81.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Journal article viewed online", function() {
-        var output = makeCitationCluster(items.journalArticleViewedOnline, "400–401");
-        var expected = 'Rolf Jacobson, “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” <i>Word &#38; World</i> 22, no. 4 (2002), http://web.a.ebscohost.com/ehost/pdfviewer/ (accessed 29/01/15), 400–401.';
+        var output = makeCitationCluster(items.journalArticleViewedOnline, "402–403");
+        var expected = 'Jacobson, “Freedom,” 402–403.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Magazine or newspaper article", function() {
         var output = makeCitationCluster(items.magazineOrNewspaperArticle, "27");
-        var expected = 'Tim Stafford, “A Tale of Two Scientists,” <i>Christianity Today</i> (July 2012), 27.';
+        var expected = 'Stafford, “Tale,” 27.';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Thesis or dissertation", function() {
-        var output = makeCitationCluster(items.thesis, "50");
-        var expected = 'Samuel D. Giere, “A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE” (The University of St. Andrews: Ph.D. dissertation, 2007), 50.';
-        //original      Samuel D. Giere, “A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE” (The University of St. Andrews: Ph.D. diss., 2007), 50.
+        var output = makeCitationCluster(items.thesis, "51");
+        var expected = 'Giere, “New Glimpse,” 51.';
+        
         assert.equal(output, expected);
     });
 
     it("Citation::Study bible note or comment", function() {
-        var output = makeCitationCluster(items.studyBibleNoteOrComment, "1562");
-        var expected = 'Herbert Wolf and John H. Stek, “Introduction: Malachi,” in <i>The NIV Study Bible</i> (ed. Kenneth L. Barker; 2011th ed.; Grand Rapids: Zondervan, 2011), 1562.';
-        //original      Herbert Wolf and John H. Stek, “Introduction: Malachi,” in <i>The NIV Study Bible</i> (ed. Kenneth L. Barker; Grand Rapids: Zondervan, 2011), 1562.';        
+        var output = makeCitationCluster(items.studyBibleNoteOrComment, "1563");
+        var expected = 'Wolf and Stek, “Malachi,” 1563.';
+        
         assert.equal(output, expected);
     });
 
     it("Citation::Conferenec paper", function() {
         var output = makeCitationCluster(items.conferencePaper, "15");
-        var expected = 'Susan Niditch, “Oral Culture and Written Documents” (presented at the annual meeting of the New England Region of the SBL, Worcester, Mass., 25 March 1994), 15.';
-        //original      Susan Niditch, “Oral Culture and Written Documents” (paper presented at the annual meeting of the New England Region of the SBL, Worcester, Mass., 25 March 1994), 15.
+        var expected = 'Niditch, “Oral Culture,” 15.';
+        
         assert.equal(output, expected);
     });
 
     xit("Citation::Podcast or online video", function() {
         var output = makeCitationCluster(items.podcastOrOnlineVideo, "");
-        var expected = 'Eric Tlozek, “25 years after Oslo, the Middle East peace process is in pieces,” The World Today (Podcast audio; Thursday 13 Sept, 2018), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.';
-        //actual        Eric Tlozek, “25 Years after Oslo, the Middle East Peace Process Is in Pieces,” Podcast audio, http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.
+        var expected = 'Eric Tlozek, “25 years after Oslo.”';
+        
         assert.equal(output, expected);
     });
 
     xit("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage, "");
-        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).';
-        //actual        Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” in <i>Sapientia</i> May 3, 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).
+        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron.”';
+        
         assert.equal(output, expected);
     });  
 });
