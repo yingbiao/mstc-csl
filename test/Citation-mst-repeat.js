@@ -1,7 +1,8 @@
 'use strict';
 
 var fs = require('fs');
-var citeproc = require("citeproc-js-node");
+var citeprocjs = require("citeproc-js-node");
+var CSL = require("citeproc");
 var items = require('./fixtures/items-mst.js');
 var chai = require('chai');
 var assert = chai.assert;
@@ -11,14 +12,15 @@ describe("Citation MST English ibid", function() {
     var sys;
 
     before(function() {
-        sys = new citeproc.simpleSys();
+        sys = new citeprocjs.simpleSys();
         //Wherever your locale and style files are. None are included with the package.
         var enUS = fs.readFileSync('./locales/locales-en-US.xml', 'utf8');
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
         var styleString = fs.readFileSync('./melbourne-school-of-theology.csl', 'utf8');
-        engine = sys.newEngine(styleString, 'zh-CN', null);
+        //engine = sys.newEngine(styleString, 'zh-CN', null);
+        engine = new CSL.Engine(sys, styleString, 'en-GB', false);
     });
 
     function makeCitationCluster(items, pages) {
