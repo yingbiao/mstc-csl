@@ -50,14 +50,11 @@ describe("Citation MST English ibid", function() {
                 "noteIndex": 2
             }
         }        
-
         engine.processCitationCluster(citationCluster, [], []);
-        engine.setCitationId(citationCluster, true);
-        var citationId = Object.keys(engine.registry.citationreg.citationById)[0];
-        var preCitation = [[citationId, 1]];
-
-        var result= engine.processCitationCluster(newCitationCluster, preCitation, []);
-        return result[1][0][1];
+        var citationId = citationCluster.citationID;
+        var citationPre = [[citationId, 1]];
+        var result= engine.previewCitationCluster(newCitationCluster, citationPre, [], "html");
+        return result;
     }
 
     it("Citation::Book", function() {
