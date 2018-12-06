@@ -426,7 +426,7 @@
             </if>
             <else-if variable="volume" match="all">
               <choose>
-                <if type="chapter paper-conference article article-journal article-magazine article-newspaper entry entry-dictionary entry-encyclopedia" match="none">
+                <if type="chapter paper-conference article article-journal article-magazine article-newspaper entry entry-encyclopedia" match="none">
                   <choose>
                     <if match="all" variable="locator" locator="page">
                       <number suffix=":" variable="volume"/>
