@@ -145,7 +145,7 @@ describe("Citation MST English ibid", function() {
 
     it("Citation::Encyclopedia or dictionary", function() {
         var output = makeCitationCluster(items.encyclopediaOrDictionary, "601");
-        var expected = 'Walters, “Jacob Narrative,” 601.';
+        var expected = 'Walters, “Jacob Narrative,” 3:601.';
         
         assert.equal(output, expected);
     });
