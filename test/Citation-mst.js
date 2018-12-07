@@ -187,10 +187,10 @@ describe("Citation MST English", function() {
         assert.equal(output, expected);
     });
 
-    xit("Citation::Podcast or online video", function() {
+    it.only("Citation::Podcast or online video", function() {
         var output = makeCitationCluster(items.podcastOrOnlineVideo, "");
-        var expected = 'Eric Tlozek, “25 years after Oslo, the Middle East peace process is in pieces,” The World Today (Podcast audio; Thursday 13 Sept, 2018), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.';
-        //actual        Eric Tlozek, “25 Years after Oslo, the Middle East Peace Process Is in Pieces,” Podcast audio, http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.
+        var expected = 'Eric Tlozek, “25 Years after Oslo, the Middle East Peace Process Is in Pieces,” <i>The World Today</i> (Podcast audio), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.';
+        //  expected = 'Eric Tlozek, “25 years after Oslo, the Middle East peace process is in pieces,” <i>The World Today</i> (Podcast audio; Thursday 13 Sept, 2018), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.';
         assert.equal(output, expected);
     });
 

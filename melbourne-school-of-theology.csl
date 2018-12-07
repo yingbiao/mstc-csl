@@ -218,7 +218,11 @@
   <macro name="description-note">
     <group delimiter=", ">
       <text macro="interviewer-note"/>
-      <text variable="medium" text-case="capitalize-first"/>
+      <choose>
+        <if type="song" match="none">
+          <text variable="medium" text-case="capitalize-first"/>
+        </if>
+      </choose>
       <choose>
         <if variable="title" match="none"/>
         <else-if type="thesis speech" match="any"/>
@@ -512,6 +516,12 @@
         <text variable="issue" prefix=", no. "/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
+      <else-if type="song">
+        <text variable="collection-title" font-style="italic" prefix=" "/>
+        <group  prefix=" (" suffix=")" delimiter=";">
+          <text variable="medium"/>
+        </group>
+      </else-if>
       <else-if variable="publisher-place publisher" match="any">
         <group prefix=" (" suffix=")">
           <group delimiter="; " suffix="; ">
@@ -551,6 +561,12 @@
         <text variable="issue" prefix=", no. "/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
+      <else-if type="song">
+        <text variable="collection-title" font-style="italic" prefix=" "/>
+        <group  prefix=" (" suffix=")" delimiter=";">
+          <text variable="medium"/>
+        </group>
+      </else-if>
       <else-if variable="publisher-place publisher" match="any">
         <group delimiter="; " prefix=" (" suffix=")">
           <group delimiter="; ">
