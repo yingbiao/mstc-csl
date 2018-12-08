@@ -5,6 +5,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Basic Introduction to Biblical Hebrew, with CD",
+            "title-short": "Basic Introduction",
             "author": [
                 {
                     "family": "Hackett",
@@ -27,28 +28,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "The Westminster Confession and Catechisms in Modern English",
-            "editor": [
-                {
-                    "family": "Ward",
-                    "given": "Rowland"
-                }
-            ],
-            "publisher": "New Melbourne Press",
-            "publisher-place": "Wantirna",
-            "issued": {
-                "date-parts": [
-                    [
-                        2000
-                    ]
-                ]
-            },
-            "type": "book"
-        }        
-    },
-    editedBook: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "The Westminster Confession and Catechisms in Modern English",
+            "title-short": "Westminster Confession",
             "editor": [
                 {
                     "family": "Ward",
@@ -71,6 +51,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Biblical Hebrew: A Text and Workbook",
+            "title-short": "Biblical Hebrew",
             "author": [
                 {
                     "family": "Kittel",
@@ -101,6 +82,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition",
+            "title-short": "Babylon to Eternity",
             "author": [
                 {
                     "family": "Becking",
@@ -136,6 +118,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)",
+            "title-short": "Summa Theologiae",
             "author": [
                 {
                     "family": "Aquinas",
@@ -165,6 +148,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Essentials of Evangelical Theology",
+            "title-short": "Essentials",
             "author": [
                 {
                     "family": "Bloesch",
@@ -189,6 +173,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "1 Chronicles",
+            "title-short": "1 Chronicles",
             "author": [
                 {
                     "family": "Braun",
@@ -213,6 +198,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "From Paradise to Promised Land: An Introduction to the Pentateuch",
+            "title-short": "Paradise to Promised Land",
             "author": [
                 {
                     "family": "Alexander",
@@ -236,6 +222,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Basic Introduction to Biblical Hebrew, with CD",
+            "title-short": "Basic Introduction",
             "author": [
                 {
                     "family": "Hackett",
@@ -268,6 +255,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Mere Christianity",
+            "title-short": "Mere Christianity",
             "author": [
                 {
                     "family": "Lewis",
@@ -290,6 +278,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Frame for the Book of the Twelve: Hosea 1–3 and Malachi",
+            "title-short": "Frame",
             "author": [
                 {
                     "family": "Watts",
@@ -324,6 +313,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Smell; ὀσμή",
+            "title-short": "Smell; ὀσμή",
             "author": [
                 {
                     "family": "Flender",
@@ -360,6 +350,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Jacob Narrative",
+            "title-short": "Jacob Narrative",
             "author": [
                 {
                     "family": "Walters",
@@ -392,6 +383,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Canon of Scripture",
+            "title-short": "Canon of Scripture",
             "editor": [
                 {
                     "family": "Cross",
@@ -421,6 +413,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Disputation on the Power and Efficacy of Indulgences",
+            "title-short": "Disputation",
             "author": [
                 {
                     "family": "Luther",
@@ -458,38 +451,22 @@ module.exports = {
     anf_npnf_ccel: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "",
+            "title": "The Hexaemeron",
             "author": [
                 {
-                    "family": "Luther",
-                    "given": "Martin"
+                    "family": "Basil",
+                    "given": ""
                 }               
             ],
-            "editor": [
-                {
-                    "family": "Grimm",
-                    "given": "Harold J."
-                }               
-            ],
-            "translator": [
-                {
-                    "family": "Jacobs",
-                    "given": "C. M."
-                }               
-            ],
-            "container-title": "Luther’s Works: Career of the Reformer: I",
-            "publisher": "Concordia",
-            "publisher-place": "St. Louis, MO",
-            "issued": {
+            "container-title":"Nicene and Post-Nicene Fathers",
+            "URL":"http://www.ccel.org/ccel/schaff/npnf208.viii.iii.html",
+            "accessed": {
                 "date-parts": [
                     [
                         1958
                     ]
                 ]
             },
-            "page": "17-33",
-            "volume": 31,
-            "number-of-volumes": 55,
             "type": "chapter"
         }
     },
@@ -497,6 +474,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Darkness Between Brothers: Solomon and Adonijah",
+            "title-short": "Darkness",
             "author": [
                 {
                     "family": "Long",
@@ -520,6 +498,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle",
+            "title-short": "Freedom",
             "author": [
                 {
                     "family": "Jacobson",
@@ -554,6 +533,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A Tale of Two Scientists",
+            "title-short": "Tale",
             "author": [
                 {
                     "family": "Stafford",
@@ -577,6 +557,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE",
+            "title-short": "New Glimpse",
             "author": [
                 {
                     "family": "Giere",
@@ -599,6 +580,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Introduction: Malachi",
+            "title-short": "Malachi",
             "author": [
                 {
                     "family": "Wolf",
@@ -634,6 +616,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Oral Culture and Written Documents",
+            "title-short": "Oral Culture",
             "author": [
                 {
                     "family": "Niditch",
@@ -658,6 +641,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "25 years after Oslo, the Middle East peace process is in pieces",
+            "title-short": "25 years after Oslo",
             "author": [
                 {
                     "family": "Tlozek",
@@ -674,6 +658,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Creation & Time in Basil’s Hexaemeron",
+            "title-short": "Creation & Time in Basil’s Hexaemeron",
             "author": [
                 {
                     "family": "Brown",
