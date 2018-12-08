@@ -15,7 +15,7 @@
     <category citation-format="note"/>
     <category field="theology"/>
     <summary>Melbourne School of Theology format based on the Essay Style Guide</summary>
-    <updated>2017-04-21T02:01:09+00:00</updated>
+    <updated>2018-12-08T12:00:00+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
@@ -207,7 +207,7 @@
           </else-if>
         </choose>
       </if>
-      <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+      <else-if type="bill book graphic legal_case legislation motion_picture report" match="any">
         <text variable="title" form="short" text-case="title" font-style="italic"/>
       </else-if>
       <else>
@@ -387,6 +387,13 @@
           <else-if type="article-magazine" match="any">
             <date form="text" variable="issued" prefix="(" suffix=")">
               <date-part name="month"/>
+              <date-part name="year"/>
+            </date>
+          </else-if>
+          <else-if type="webpage" match="any">
+            <date variable="issued" text-case="capitalize-all">
+              <date-part name="day" suffix=" "/>
+              <date-part name="month" suffix=" "/>
               <date-part name="year"/>
             </date>
           </else-if>

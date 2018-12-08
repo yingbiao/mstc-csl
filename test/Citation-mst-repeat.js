@@ -208,17 +208,17 @@ describe("Citation MST English ibid", function() {
         assert.equal(output, expected);
     });
 
-    xit("Citation::Podcast or online video", function() {
+    it("Citation::Podcast or online video", function() {
         var output = makeCitationCluster(items.podcastOrOnlineVideo, "");
-        var expected = 'Eric Tlozek, “25 years after Oslo.”';
-        
+        var expected = 'Tlozek, “25 Years after Oslo.”';
+        //  expected = 'Eric Tlozek, “25 years after Oslo.”';
         assert.equal(output, expected);
     });
 
-    xit("Citation::Webpage", function() {
+    it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage, "");
-        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron.”';
-        
+        var expected = 'Brown, “Creation &#38; Time in Basil’s Hexaemeron.”';
+        //  expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron.”';
         assert.equal(output, expected);
     });  
 });

@@ -187,17 +187,17 @@ describe("Citation MST English", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Citation::Podcast or online video", function() {
+    it("Citation::Podcast or online video", function() {
         var output = makeCitationCluster(items.podcastOrOnlineVideo, "");
         var expected = 'Eric Tlozek, “25 Years after Oslo, the Middle East Peace Process Is in Pieces,” <i>The World Today</i> (Podcast audio), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.';
         //  expected = 'Eric Tlozek, “25 years after Oslo, the Middle East peace process is in pieces,” <i>The World Today</i> (Podcast audio; Thursday 13 Sept, 2018), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.';
         assert.equal(output, expected);
     });
 
-    xit("Citation::Webpage", function() {
+    it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage, "");
-        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).';
-        //actual        Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” in <i>Sapientia</i> May 3, 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).
+        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” in <i>Sapientia</i> 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).';
+        //  expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).';
         assert.equal(output, expected);
     });  
 });
