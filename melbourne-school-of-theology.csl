@@ -33,6 +33,7 @@
       <term name="editor" form="verb-short">ed.</term>
       <term name="translator" form="verb-short">Trans.</term>
       <term name="et-al">et al.</term>
+      <term name="presented at">paper presented at the</term>
       <term name="open-quote" form="symbol">'</term>
       <term name="close-quote" form="symbol">'</term>
     </terms>
@@ -234,7 +235,7 @@
   </macro>
   <macro name="container-title-note">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" "/>
@@ -253,7 +254,7 @@
   </macro>
   <macro name="container-title">
     <choose>
-      <if type="chapter paper-conference webpage entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
         <choose>
           <if match="any" variable="title">
             <text term="in" suffix=" "/>
@@ -362,6 +363,15 @@
               <date-part name="year"/>
             </date>
           </if>
+          <else-if type="webpage" match="any">
+            <group prefix="(" suffix=")">
+              <date variable="issued" text-case="capitalize-all">
+                <date-part name="day" suffix=" "/>
+                <date-part name="month" suffix=", "/>
+                <date-part name="year"/>
+              </date>
+            </group>
+          </else-if>
           <else-if type="legal_case">
             <text variable="authority" suffix=" "/>
             <date variable="issued" text-case="capitalize-all">
@@ -390,17 +400,10 @@
               <date-part name="year"/>
             </date>
           </else-if>
-          <else-if type="webpage" match="any">
-            <date variable="issued" text-case="capitalize-all">
-              <date-part name="day" suffix=" "/>
-              <date-part name="month" suffix=" "/>
-              <date-part name="year"/>
-            </date>
-          </else-if>
           <else>
             <date variable="issued" text-case="capitalize-all">
-              <date-part name="month" suffix=" "/>
-              <date-part name="day" suffix=", "/>
+              <date-part name="day" suffix=" "/>
+              <date-part name="month" suffix=", "/>
               <date-part name="year"/>
             </date>
           </else>
@@ -437,7 +440,7 @@
             </if>
             <else-if variable="volume" match="all">
               <choose>
-                <if type="chapter paper-conference article article-journal article-magazine article-newspaper entry" match="none">
+                <if type="paper-conference article article-journal article-magazine article-newspaper entry" match="none">
                   <choose>
                     <if match="all" variable="locator" locator="page">
                       <number suffix=":" variable="volume"/>

@@ -161,7 +161,7 @@ describe("Citation MST English ibid", function() {
 
     it("Citation::Classical or ancient text", function() {
         var output = makeCitationCluster(items.classicalOrAncientText, "19");
-        var expected = 'Luther, “Disputation,” 19.';
+        var expected = 'Luther, “Disputation,” 31:19.';
         
         assert.equal(output, expected);
     });
