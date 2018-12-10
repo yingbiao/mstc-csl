@@ -182,7 +182,7 @@ describe("Citation MST English", function() {
 
     it("Citation::Conferenec paper", function() {
         var output = makeCitationCluster(items.conferencePaper, "15");
-        var expected = 'Susan Niditch, “Oral Culture and Written Documents” (presented at the annual meeting of the New England Region of the SBL, Worcester, Mass., 25 March 1994), 15.';
+        var expected = 'Susan Niditch, “Oral Culture and Written Documents” (paper presented at the annual meeting of the New England Region of the SBL, Worcester, Mass., 25 March 1994), 15.';
         //original      Susan Niditch, “Oral Culture and Written Documents” (paper presented at the annual meeting of the New England Region of the SBL, Worcester, Mass., 25 March 1994), 15.
         assert.equal(output, expected);
     });
@@ -196,7 +196,7 @@ describe("Citation MST English", function() {
 
     it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage, "");
-        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” in <i>Sapientia</i> 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).';
+        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).';
         //  expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).';
         assert.equal(output, expected);
     });  
