@@ -49,7 +49,7 @@ describe("Citation MST English", function() {
 
     it("Citation::Edited Book", function() {
         var output = makeCitationCluster(items.editedBook, "40");
-        var expected = 'Rowland Ward (ed.), <i>The Westminster Confession and Catechisms in Modern English</i> (Wantirna: New Melbourne Press, 2000), 40.';
+        var expected = 'Rowland Ward ed., <i>The Westminster Confession and Catechisms in Modern English</i> (Wantirna: New Melbourne Press, 2000), 40.';
         
         assert.equal(output, expected);
     });
@@ -133,7 +133,7 @@ describe("Citation MST English", function() {
 
     it("Citation::Anonymous dictionary acticle", function() {
         var output = makeCitationCluster(items.anonymousDictionaryArticle, "232");
-        var expected = 'F. L. Cross and E. A. Livingstone (eds.), “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.';
+        var expected = 'F. L. Cross and E. A. Livingstone eds., “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.';
         //  expected = 'F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture” in <i>The Oxford Dictionary of the Christian Church</i> (2d ed.; Oxford: Oxford University Press, 1983), 232.'
         assert.equal(output, expected);
     });
