@@ -196,7 +196,7 @@ describe("Citation MST English", function() {
 
     it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage, "");
-        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> 3 May, 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).';
+        var expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).';
         //  expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).';
         assert.equal(output, expected);
     });  
