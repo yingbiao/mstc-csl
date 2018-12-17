@@ -2,11 +2,11 @@
 
 var fs = require('fs');
 var citeproc = require("citeproc-js-node");
-var items = require('./fixtures/items-mst.js');
+var items = require('./fixtures/items-english.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Citation MST English", function() {
+describe("Citation English", function() {
     var engine;
     var sys;
 

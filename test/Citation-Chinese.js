@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var citeproc = require("citeproc-js-node");
-var items = require('./fixtures/items.js');
+var items = require('./fixtures/items-chinese.js');
 var chai = require('chai');
 var assert = chai.assert;
 

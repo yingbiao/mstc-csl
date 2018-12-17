@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    singleAuthorChinese: {
+    book: {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "泪眼先知耶利米",

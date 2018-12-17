@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 var citeproc = require("citeproc-js-node");
-var items = require('./fixtures/items.js');
+var items = require('./fixtures/items-chinese.js');
 var chai = require('chai');
 var assert = chai.assert;
 
@@ -17,7 +17,7 @@ describe("Bibliography", function() {
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        var styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
+        var styleString = fs.readFileSync('./melbourne-school-of-theology.csl', 'utf8');
         engine = sys.newEngine(styleString, 'zh-CN', null);
     });
 
@@ -31,8 +31,8 @@ describe("Bibliography", function() {
         return bib[1][0].trim();
     }
 
-    it("Bibliography::Chinese::Book Single Author", function() {
-        var output = makeBibliography(items.singleAuthorChinese);
+    it.only("Bibliography::Book", function() {
+        var output = makeBibliography(items.book);
         var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北：校园书房出版社，1989。</div>';
         
         assert.equal(output, expected);
