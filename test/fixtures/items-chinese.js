@@ -24,59 +24,7 @@ module.exports = {
             "type": "book"
         }
     },
-    singleAuthorEnglish: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "The Clash of Civilizations",
-            "author": [
-                {
-                    "family": "Huntington",
-                    "given": "Samuel P."
-                }
-            ],
-            "publisher": "Touchstone Books",
-            "publisher-place": "London",
-            "language":"en-US",
-            "issued": {
-                "date-parts": [
-                    [
-                        1998
-                    ]
-                ]
-            },
-            "type": "book"
-        }
-    },
-    singleAuthorWithTranslatorChinese: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "历史学",
-            "author": [
-                {
-                    "family": "博",
-                    "given": "能汉"
-                }
-            ],
-            "translator": [
-                {
-                    "family": "黄",
-                    "given": "晓兰",
-                }
-            ],
-            "publisher": "天天出版社",
-            "publisher-place": "香港",
-            "language":"zh-CN",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003
-                    ]
-                ]
-            },
-            "type": "book"
-        }
-    },
-    singleEditorChinese: {
+    editedBook: {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "旧约小品",
@@ -99,71 +47,7 @@ module.exports = {
             "type": "book"
         }
     },
-    singleEditorEnglish: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "The Love of Brothers",
-            "editor": [
-                {
-                    "family": "Headman",
-                    "given": "David",
-                    "static-ordering": false
-                }
-            ],
-            "publisher": "Evergreen Books",
-            "publisher-place": "London",
-            "language":"en-US",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003
-                    ]
-                ]
-            },
-            "type": "book"
-        }
-    },
-    bookMultipleEditorsEnglish: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "Novum Testamentum Graece",
-            "editor": [
-                {
-                    "family": "Barbara",
-                    "given": "",
-                },
-                {
-                    "family": "Aland",
-                    "given": "Kurt",
-                },
-                {
-                    "family": "Karavidopoulos",
-                    "given": "Johannes",
-                },
-                {
-                    "family": "Martini",
-                    "given": "Carlo M.",
-                },
-                {
-                    "family": "Metzger",
-                    "given": "Bruce M.",
-                }
-            ],
-            "edition":"27th rev.",
-            "publisher": "Deutsche Bibelgesellschaft",
-            "publisher-place": "Stuttgart",
-            "language":"en-US",
-            "issued": {
-                "date-parts": [
-                    [
-                        1993
-                    ]
-                ]
-            },
-            "type": "book"
-        }
-    },
-    bookMultipleAuthorsChinese: {
+    bookWith2Or3AuthorsEditors: {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "雨过天晴",
@@ -194,31 +78,40 @@ module.exports = {
             "type": "book"
         }        
     },
-    bookMultipleAuthorsEnglish: {
+    bookWithMoreThan3AuthorsEditors: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "The Sun Is Black",
+            "title": "聖經正典與經外文獻導論",
             "author": [
                 {
-                    "family": "Victor",
-                    "given": "Solomon",
+                    "family": "鮑",
+                    "given": "維鈞",
                 },
                 {
-                    "family": "Laib",
-                    "given": "Augustine",
+                    "family": "黃",
+                    "given": "錫木",
                 },
                 {
-                    "family": "Calson",
-                    "given": "Yancey",
+                    "family": "羅",
+                    "given": "慶才",
+                },
+                {
+                    "family": "張",
+                    "given": "略",
+                },
+                {
+                    "family": "岑",
+                    "given": "少麟",
                 }
             ],
-            "publisher": "Doreen Publishing House",
-            "publisher-place": "Kuala Lumpur",
-            "language":"en-US",
+            "collection-title": "聖經導論叢書",
+            "publisher": "基道",
+            "publisher-place": "香港",
+            "language":"zh-CN",
             "issued": {
                 "date-parts": [
                     [
-                        2003
+                        2001
                     ]
                 ]
             },

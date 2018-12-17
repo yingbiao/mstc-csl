@@ -17,7 +17,7 @@ describe("Bibliography", function() {
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        var styleString = fs.readFileSync('./melbourne-school-of-theology.csl', 'utf8');
+        var styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
         engine = sys.newEngine(styleString, 'zh-CN', null);
     });
 
@@ -31,58 +31,30 @@ describe("Bibliography", function() {
         return bib[1][0].trim();
     }
 
-    it.only("Bibliography::Book", function() {
+    it("Bibliography::Book", function() {
         var output = makeBibliography(items.book);
-        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》。台北：校园书房出版社，1989。</div>';
+        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》（台北：校园书房出版社，1989）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Bibliography::English::Book Single Author", function() {
-        var output = makeBibliography(items.singleAuthorEnglish);
-        var expected = '<div class="csl-entry">Huntington, Samuel P. <i>The Clash of Civilizations</i>. London: Touchstone Books, 1998.</div>';
+    it("Bibliography::Edited Book", function() {
+        var output = makeBibliography(items.editedBook);
+        var expected = '<div class="csl-entry">李三谷编：《旧约小品》（台北：校园出版社，2003）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Bibliography::Chinese::Book Single Author with Translator", function() {
-        var output = makeBibliography(items.singleAuthorWithTranslatorChinese);
-        var expected = '<div class="csl-entry">博能汉：《历史学》，黄晓兰译。香港：天天出版社，2003。</div>';
+    it("Bibliography::Book with 2 or 3 authors (or editors)", function() {
+        var output = makeBibliography(items.bookWith2Or3AuthorsEditors);
+        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Bibliography::Chinese::Book Single Editor", function() {
-        var output = makeBibliography(items.singleEditorChinese);
-        var expected = '<div class="csl-entry">李三谷编：《旧约小品》。台北：校园出版社，2003。</div>';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Bibliography::English::Book Single Editor", function() {
-        var output = makeBibliography(items.singleEditorEnglish);
-        var expected = '<div class="csl-entry">Headman, David, ed. <i>The Love of Brothers</i>. London: Evergreen Books, 2003.</div>';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Bibliography::English::Book Multiple Editors", function() {
-        var output = makeBibliography(items.bookMultipleEditorsEnglish);
-        var expected = '<div class="csl-entry">Barbara, Kurt Aland, Johannes Karavidopoulos, Carlo M. Martini, and Bruce M. Metzger, eds. <i>Novum Testamentum Graece</i>. 27th rev. ed. Stuttgart: Deutsche Bibelgesellschaft, 1993.</div>';
-        
-        assert.equal(output, expected);
-    });  
-
-    it("Bibliography::Chinese::Book Multiple Authors", function() {
-        var output = makeBibliography(items.bookMultipleAuthorsChinese);
-        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》。新加坡：和联出版社，2003。</div>';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Bibliography::English::Book Multiple Authors", function() {
-        var output = makeBibliography(items.bookMultipleAuthorsEnglish);
-        var expected = '<div class="csl-entry">Victor, Solomon, Augustine Laib, and Yancey Calson. <i>The Sun Is Black</i>. Kuala Lumpur: Doreen Publishing House, 2003.</div>';
+    it.only("Bibliography::English::Book Multiple Authors", function() {
+        var output = makeBibliography(items.bookWithMoreThan3AuthorsEditors);
+        var expected = '<div class="csl-entry">鮑維鈞，黃錫木，羅慶才，張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。</div>';
         
         assert.equal(output, expected);
     });
