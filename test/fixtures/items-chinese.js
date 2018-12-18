@@ -231,30 +231,37 @@ module.exports = {
             "type": "book"
         }        
     },
-    articleInMagazineEnglish: {
+    essayOrChapter: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "The Myth Maker",
+            "title": "天下一家",
+            "title-short": "Frame",
             "author": [
                 {
-                    "family": "Weber",
-                    "given": "Bruce",
+                    "family": "黄",
+                    "given": "二冬"
                 }
             ],
-            "container-title":"New York Magazine",
-            "language":"en-US",
+            "editor": [
+                {
+                    "family": "千",
+                    "given": "百文"
+                }            
+            ],
+            "container-title": "地球村的演變",
+            "publisher": "漢陽出版社",
+            "publisher-place": "厦門",
+            "language":"zh-CN",
             "issued": {
                 "date-parts": [
                     [
-                        1985,
-                        10,
-                        20
+                        2003
                     ]
                 ]
             },
-            "page": "24-26",
-            "type": "article-magazine"
-        }        
+            "page": "335-350",
+            "type": "chapter"
+        }
     },
     articleInMagazineChinese: {
         "ITEM-1": {

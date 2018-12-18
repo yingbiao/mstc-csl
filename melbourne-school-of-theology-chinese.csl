@@ -850,7 +850,14 @@
         <text macro="review-title-chinese" text-case="title" quotes="true"/>
       </else-if>
       <else>
-        <text variable="title" text-case="title" quotes="true"/>
+        <choose>
+          <if variable="container-title">
+            <text variable="title" text-case="title" prefix="「" suffix="」"/>
+          </if>
+          <else>
+            <text variable="title" text-case="title" quotes="true"/>
+          </else>
+        </choose>
       </else>
     </choose>
   </macro>
@@ -914,16 +921,7 @@
     </choose>
   </macro>
   <macro name="container-title-chinese">
-    <choose>
-      <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
-        <choose>
-          <if match="any" variable="title">
-            <text term="in" suffix=" "/>
-          </if>
-        </choose>
-      </if>
-    </choose>
-    <text variable="container-title" text-case="title" font-style="italic"/>
+    <text variable="container-title" text-case="title" quotes="true" prefix="，"/>
   </macro>
   <macro name="collection-title-chinese">
     <text variable="collection-title" text-case="title"/>
@@ -1151,23 +1149,23 @@
         <text macro="pages-chinese"/>
       </if>
       <else-if type="article-journal">
-        <text variable="locator" prefix=", "/>
+        <text variable="locator" prefix="，"/>
       </else-if>
       <else>
-        <text macro="point-locators-note-chinese" prefix=", "/>
+        <text macro="point-locators-note-chinese" prefix="，"/>
       </else>
     </choose>
   </macro>
   <macro name="pages-chinese">
     <choose>
       <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
-        <group delimiter=":" prefix=", ">
+        <group delimiter="：" prefix="，">
           <text variable="volume" />
           <text variable="page" />
         </group>
       </if>
       <else-if type="article-journal">
-        <group prefix=", ">
+        <group prefix="，">
           <text variable="page" />
         </group>
       </else-if>
