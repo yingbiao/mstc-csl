@@ -118,115 +118,117 @@ module.exports = {
             "type": "book"
         }        
     },
-    articleInABookEditedByOthersChinese: {
+    volumeFromAMultiVolumeWork: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "天下一家",
+            "title": "上帝之城",
             "author": [
                 {
-                    "family": "黄",
-                    "given": "二东",
+                    "family": "奧古斯丁",
+                    "given": "",
                 }
             ],
-            "editor":[
+            "translator":[
                 {
-                    "family": "千",
-                    "given": "百文",
+                    "family": "王",
+                    "given": "曉朝",
                 }
             ],
-            "container-title":"地球村的演变",
-            "publisher": "汉阳出版社",
-            "publisher-place": "厦门",
+            "number-of-volumes": 3,
+            "volume": 3,
+            "collection-title":"歷代基督教思想學術文庫古代系列",
+            "publisher": "道風書社",
+            "publisher-place": "香港",
             "language":"zh-CN",
             "issued": {
                 "date-parts": [
                     [
-                        2003
+                        2004
                     ]
                 ]
             },
-            "type": "chapter"
+            "type": "book"
         }        
     },
-    articlesInABookEditedByOthersEnglish: {
+    commentaryOrBookInSeriesWithSeriesNumber: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "Japan and East Asia",
+            "title": "腓立比書：僕友的生命與事奉",
             "author": [
                 {
-                    "family": "Hughes",
-                    "given": "Christopher W.",
+                    "family": "黃",
+                    "given": "朱倫",
                 }
             ],
-            "editor":[
-                {
-                    "family": "Heenan",
-                    "given": "Patrick",
-                }
-            ],
-            "container-title":"The Japan Handbook",
-            "publisher": "Fitzroy Dearborn Publishers",
-            "publisher-place": "London",
-            "language":"en-US",
-            "issued": {
-                "date-parts": [
-                    [
-                        1998
-                    ]
-                ]
-            },
-            "page": "23-40",
-            "type": "chapter"
-        }        
-    },
-    articleInAJournalChinese: {
-        "ITEM-1": {
-            "id": "ITEM-1",
-            "title": "神学的本质探讨",
-            "author": [
-                {
-                    "family": "杨",
-                    "given": "品通",
-                }
-            ],
-            "container-title":"教会神学期刊",
+            "collection-title":"明道研經叢書50",
+            "publisher": "明道社",
+            "publisher-place": "香港",
             "language":"zh-CN",
-            "issue":"14",
             "issued": {
                 "date-parts": [
                     [
-                        2003,
-                        5
+                        2006
                     ]
                 ]
             },
-            "page": "19-24",
-            "type": "article-journal"
+            "type": "book"
         }        
     },
-    articleInAJournalEnglish: {
+    editionOtherThanTheFirst: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "A History of Christian Church in Bangkok",
-            "author": [
+            "title": "浸會在華佈道百年史略",
+            "editor": [
                 {
-                    "family": "Tallman",
-                    "given": "Francis C.",
+                    "family": "吳",
+                    "given": "立樂"
                 }
             ],
-            "container-title":"Journal of World Religions",
-            "language":"en-US",
-            "issue":"44",
+            "edition": "修订版",
+            "publisher": "浸信會出版部",
+            "publisher-place": "香港",
+            "language":"zh-CN",
             "issued": {
                 "date-parts": [
                     [
-                        2003,
-                        10
+                        1970
                     ]
                 ]
             },
-            "page": "203-223",
-            "type": "article-journal"
+            "type": "book"
+        }        
+    },
+    bookViewedOnline: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "牧養神的群羊",
+            "author": [
+                {
+                    "family": "何",
+                    "given": "衛中"
+                }
+            ],
+            "publisher": "金燈台",
+            "publisher-place": "香港",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "URL": "http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2014,
+                        9,
+                        8
+                    ]
+                ]
+            },
+            "type": "book"
         }        
     },
     articleInMagazineEnglish: {

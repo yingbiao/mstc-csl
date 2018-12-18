@@ -52,40 +52,40 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Bibliography::English::Book Multiple Authors", function() {
+    it("Bibliography::English::Book Multiple Authors", function() {
         var output = makeBibliography(items.bookWithMoreThan3AuthorsEditors);
         var expected = '<div class="csl-entry">鮑維鈞，黃錫木，羅慶才，張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Bibliography::Chinese::Article in a Book Edited by Others", function() {
-        var output = makeBibliography(items.articleInABookEditedByOthersChinese);
-        var expected = '<div class="csl-entry">黄二东：「天下一家」。《地球村的演变》，千百文编。厦门：汉阳出版社，2003。</div>';
+    it("Bibliography::Volume from a multi volume work", function() {
+        var output = makeBibliography(items.volumeFromAMultiVolumeWork);
+        var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》（王曉朝译，共三卷，歷代基督教思想學術文庫古代系列，香港：道風書社，2004）。</div>';
         
         assert.equal(output, expected);
-    });    
+    });
 
-    it("Bibliography::English::Article in a Book Edited by Others", function() {
-        var output = makeBibliography(items.articlesInABookEditedByOthersEnglish);
-        var expected = '<div class="csl-entry">Hughes, Christopher W. "Japan and East Asia". In <i>The Japan Handbook</i>. Edited by Patrick Heenan, 23–40. London: Fitzroy Dearborn Publishers, 1998.</div>';
+    it("Bibliography::Commentary or book in series with series number", function() {
+        var output = makeBibliography(items.commentaryOrBookInSeriesWithSeriesNumber);
+        var expected = '<div class="csl-entry">黃朱倫：《腓立比書：僕友的生命與事奉》（明道研經叢書50，香港：明道社，2006）。</div>';
         
         assert.equal(output, expected);
     }); 
 
-    it("Bibliography::Chinese::Article in a Journal", function() {
-        var output = makeBibliography(items.articleInAJournalChinese);
-        var expected = '<div class="csl-entry">杨品通：「神学的本质探讨」，《教会神学期刊》，14（2003 5月）：19–24。</div>';
+    it("Bibliography::Edition other than the first", function() {
+        var output = makeBibliography(items.editionOtherThanTheFirst);
+        var expected = '<div class="csl-entry">吳立樂编：《浸會在華佈道百年史略》（修订版，香港：浸信會出版部，1970）。</div>';
         
         assert.equal(output, expected);
-    }); 
+    });
 
-    it("Bibliography::English::Article in a Journal", function() {
-        var output = makeBibliography(items.articleInAJournalEnglish);
-        var expected = '<div class="csl-entry">Tallman, Francis C. "A History of Christian Church in Bangkok". <i>Journal of World Religions</i> 44 (October 2003): 203–223.</div>';
+    it.only("Bibliography::Booked viewed online", function() {
+        var output = makeBibliography(items.bookViewedOnline);
+        var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱）。</div>';
         
         assert.equal(output, expected);
-    }); 
+    });
 
     it("Bibliography::English::Article in a Magazine", function() {
         var output = makeBibliography(items.articleInMagazineEnglish);

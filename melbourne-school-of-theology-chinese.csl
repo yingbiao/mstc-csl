@@ -47,7 +47,28 @@
       <term name="accessed">参阅</term>
       <term name="interview">采访</term>
       <term name="recipient" form="verb">致函于</term>
-      <term name="collection-editor" form="verb-short">编</term>      
+      <term name="collection-editor" form="verb-short">编</term>
+      <term name="edition" form="short">版</term>
+      <term name="long-ordinal-11">十一</term>
+      <term name="long-ordinal-12">十二</term>
+      <term name="long-ordinal-13">十三</term>
+      <term name="long-ordinal-14">十四</term>
+      <term name="long-ordinal-15">十五</term>
+      <term name="long-ordinal-16">十六</term>
+      <term name="long-ordinal-17">十七</term>
+      <term name="long-ordinal-18">十八</term>
+      <term name="long-ordinal-19">十九</term>
+      <term name="long-ordinal-20">二十</term>
+      <term name="long-ordinal-21">二十一</term>
+      <term name="long-ordinal-22">二十二</term>
+      <term name="long-ordinal-23">二十三</term>
+      <term name="long-ordinal-24">二十四</term>
+      <term name="long-ordinal-25">二十五</term>
+      <term name="long-ordinal-26">二十六</term>
+      <term name="long-ordinal-27">二十七</term>
+      <term name="long-ordinal-28">二十八</term>
+      <term name="long-ordinal-29">二十九</term>
+      <term name="long-ordinal-30">三十</term>
     </terms>
   </locale>  
   <macro name="container-contributors-note">
@@ -705,20 +726,20 @@
     </group>
   </macro>
   <macro name="container-contributors-bibliography-chinese">
-    <group delimiter="; ">
+    <group delimiter="，">
       <choose>
         <if variable="author">
-          <names variable="editor" delimiter=", ">
-            <label form="verb" text-case="lowercase" suffix=" "/>
-            <name and="text" delimiter=", "/>
+          <names variable="editor" delimiter="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" text-case="lowercase"/>
           </names>
         </if>
       </choose>
       <choose>
         <if variable="author editor" match="any">
-          <names variable="translator" delimiter=", ">
-            <label form="verb" text-case="lowercase" suffix=" "/>
-            <name and="text" delimiter=", "/>
+          <names variable="translator" delimiter="，">
+            <name and="text" delimiter="，"/>
+            <label form="verb-short" text-case="lowercase"/>
           </names>
         </if>
       </choose>
@@ -799,8 +820,8 @@
     <names variable="author">
       <name form="short" and="text" et-al-min="4" et-al-use-first="1"/>
       <substitute>
-        <names variable="editor-chinese"/>
-        <names variable="translator-chinese"/>
+        <names variable="editor"/>
+        <names variable="translator"/>
       </substitute>
     </names>
     <text macro="recipient-short-chinese"/>
@@ -809,8 +830,8 @@
     <names variable="author">
       <name name-as-sort-order="all" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
       <substitute>
-        <names variable="editor-chinese"/>
-        <names variable="translator-chinese"/>
+        <names variable="editor"/>
+        <names variable="translator"/>
       </substitute>
     </names>
   </macro>
@@ -823,19 +844,13 @@
   <macro name="title-note-chinese">
     <choose>
       <if variable="title" match="none">
-        <text variable="genre" text-case="title"/>
+        <text variable="genre" text-case="title" quotes="true"/>
       </if>
-      <else-if type="bill book graphic legal_case legislation motion_picture report" match="any">
-        <text variable="title" text-case="title" font-style="italic"/>
-      </else-if>
       <else-if match="all" variable="reviewed-author">
-        <text macro="review-title-chinese" text-case="title"/>
-      </else-if>
-      <else-if type="paper-conference thesis" match="any">
-        <text variable="title" text-case="title" quotes="true" />
+        <text macro="review-title-chinese" text-case="title" quotes="true"/>
       </else-if>
       <else>
-        <text variable="title" text-case="title" quotes="true" suffix=","/>
+        <text variable="title" text-case="title" quotes="true"/>
       </else>
     </choose>
   </macro>
@@ -925,15 +940,15 @@
       <if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song entry-dictionary" match="any">
         <choose>
           <if is-numeric="edition">
-            <group delimiter=" ">
-              <number variable="edition" form="ordinal"/>
+            <group>
+              <text value="第"/>
+              <number variable="edition" form="long-ordinal"/>
               <text term="edition" form="short"/>
             </group>
           </if>
           <else>
             <group>
               <text variable="edition" text-case="capitalize-first"/>
-              <text term="edition" form="short" prefix=" "/>
             </group>
           </else>
         </choose>
@@ -1228,12 +1243,14 @@
           <group delimiter="，">
             <text macro="container-contributors-bibliography-chinese"/>
             <text macro="locators-note-chinese"/>
+            <group>
+              <text value="共" />
+              <number variable="number-of-volumes" form="long-ordinal"/>
+              <text term="volume" form="short" plural="true"/>
+            </group>
             <text macro="collection-title-chinese"/>
           </group>
-          <group>
-            <number variable="number-of-volumes" form="numeric"/>
-            <text term="volume" form="short" plural="true" prefix=" "/>
-          </group>
+
           <group delimiter="，">
             <group delimiter="">
               <choose>
@@ -1297,13 +1314,13 @@
       <choose>
         <if variable="URL">
           <text variable="URL"/>
-          <group delimiter=" " prefix="(" suffix=")">
-              <text term="accessed"/>
+          <group prefix="（" suffix="）">
               <date variable="accessed">
-                <date-part name="day" suffix="/" form="numeric-leading-zeros"/>
-                <date-part name="month" suffix="/" form="numeric-leading-zeros"/>
                 <date-part name="year" form="short"/>              
+                <date-part name="month" form="short"/>
+                <date-part name="day" form="short"/>
               </date>
+              <text term="accessed"/>
           </group>
         </if>
       </choose>
@@ -1351,14 +1368,14 @@
     <layout locale="zh-CN" suffix="。">
       <group>
         <text macro="contributors-chinese" suffix="："/>
-        <text macro="title-note-chinese" prefix="《" suffix="》"/>
-        <text macro="description-note"/>
-        <text macro="container-title"/>
+        <text macro="title-note-chinese"/>
+        <text macro="description-note-chinese"/>
+        <text macro="container-title-chinese"/>
       </group>
       <text macro="issue-bib-chinese"/>
-      <text macro="locators-newspaper" prefix="，"/>
-      <text macro="access-bib" prefix="，"/>
-      <text macro="point-locators"/>
+      <text macro="locators-newspaper-chinese" prefix="，"/>
+      <text macro="access-bib-chinese" prefix="，"/>
+      <text macro="point-locators-chinese"/>
     </layout> 
     <layout suffix=".">
       <group delimiter=" ">
