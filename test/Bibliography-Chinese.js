@@ -80,9 +80,9 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Bibliography::Booked viewed online", function() {
+    it("Bibliography::Booked viewed online", function() {
         var output = makeBibliography(items.bookViewedOnline);
-        var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱）。</div>';
+        var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参阅）。</div>';
         
         assert.equal(output, expected);
     });

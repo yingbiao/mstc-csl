@@ -1302,7 +1302,7 @@
     </group>
   </macro>
   <macro name="access-bib-chinese">
-    <group delimiter=" ">
+    <group>
       <choose>
         <if type="graphic report" match="any">
           <text macro="archive-note-chinese"/>
@@ -1315,10 +1315,10 @@
         <if variable="URL">
           <text variable="URL"/>
           <group prefix="（" suffix="）">
-              <date variable="accessed">
-                <date-part name="year" form="short"/>              
-                <date-part name="month" form="short"/>
-                <date-part name="day" form="short"/>
+              <date variable="accessed" form="text">
+                <date-part name="year"/>              
+                <date-part name="month"/>
+                <date-part name="day"/>
               </date>
               <text term="accessed"/>
           </group>
