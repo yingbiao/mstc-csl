@@ -1054,9 +1054,15 @@
             </group>
           </else-if>
           <else-if type="article-magazine" match="any">
-            <date form="text" variable="issued" prefix="(" suffix=")">
+            <date form="text" variable="issued" prefix="（" suffix="）">
               <date-part name="month"/>
               <date-part name="year"/>
+            </date>
+          </else-if>
+          <else-if type="article-journal" match="any">
+            <date form="text" variable="issued" prefix="（" suffix="）">
+              <date-part name="year"/>
+              <date-part name="month"/>
             </date>
           </else-if>
           <else>
@@ -1226,9 +1232,11 @@
   <macro name="issue-bib-chinese">
     <choose>
       <if type="article-journal">
-        <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=", no. "/>
-        <text macro="issued-chinese" prefix=" (" suffix=")"/>
+        <group prefix="，">
+          <text variable="volume" prefix=" "/>
+          <text variable="issue" />
+          <text macro="issued-chinese"/>
+        </group>
       </if>
       <else-if type="song">
         <text variable="collection-title" font-style="italic" prefix=" "/>
