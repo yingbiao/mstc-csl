@@ -263,30 +263,38 @@ module.exports = {
             "type": "chapter"
         }
     },
-    articleInMagazineChinese: {
+    articleInALexiconOrTheologicalDictionary: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "美国华侨习俗趣谈",
+            "title": "基督的寬容",
             "author": [
                 {
-                    "family": "李",
-                    "given": "约翰",
+                    "family": "馮",
+                    "given": "來平"
                 }
             ],
-            "container-title":"时代华侨周刊",
+            "editor": [
+                {
+                    "family": "邱",
+                    "given": "宋恩"
+                }
+            ],
+            "container-title": "世界神學辭典",
+            "publisher": "展徒出版社",
+            "publisher-place": "上海",
             "language":"zh-CN",
             "issued": {
                 "date-parts": [
                     [
-                        1957,
-                        10,
-                        30
+                        1990
                     ]
                 ]
             },
-            "page": "43-47",
-            "type": "article-magazine"
-        }        
+            "page": "25-26",
+            "volume": 3,
+            "number-of-volumes":4,
+            "type": "entry-dictionary"
+        }
     },
     bookInAMultiVolumeSeriesEnglish: {
         "ITEM-1": {

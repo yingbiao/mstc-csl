@@ -87,11 +87,17 @@ describe("Bibliography", function() {
         assert.equal(output, expected);
     });
 
-    it.only("Bibliography::Essay or chapter", function() {
+    it("Bibliography::Essay or chapter", function() {
         var output = makeBibliography(items.essayOrChapter);
         var expected = '<div class="csl-entry">黄二冬：「天下一家」，《地球村的演變》（千百文编，厦門：漢陽出版社，2003），335–350。</div>';
         
         assert.equal(output, expected);
     });
 
+    it("Bibliography::Article in a lexicon or theological dictionary", function() {
+        var output = makeBibliography(items.articleInALexiconOrTheologicalDictionary);
+        var expected = '<div class="csl-entry">馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，共四卷，上海：展徒出版社，1990），3：25–26。</div>';
+        //                                                                                    册
+        assert.equal(output, expected);
+    });    
 });
