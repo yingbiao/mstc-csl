@@ -1329,6 +1329,29 @@
     <text value="审阅"/>  
   </macro>  
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
+    <layout locale="zh-CN" suffix="。">
+      <choose>
+        <if position="subsequent ibid ibid-with-locator" match="any">
+          <group delimiter="，">
+            <text macro="contributors-short-chinese"/>
+            <text macro="title-short-chinese"/>
+            <text macro="point-locators-note-chinese"/>
+          </group>
+        </if>
+        <else>
+          <group>
+            <text macro="contributors-note-chinese" suffix="："/>
+            <text macro="title-note-chinese"/>
+            <text macro="description-note-chinese"/>
+            <text macro="container-title-note-chinese"/>
+          </group>
+          <text macro="issue-note-chinese"/>
+          <text macro="locators-newspaper-chinese" prefix="，"/>
+          <text macro="access-note-chinese" prefix="，"/>
+          <text macro="point-locators-chinese"/>
+        </else>
+      </choose>
+    </layout>  
     <layout suffix="." delimiter="; ">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">

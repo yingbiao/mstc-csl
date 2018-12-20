@@ -6,7 +6,7 @@ var items = require('./fixtures/items-chinese.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-xdescribe("Citation", function() {
+describe("Citation Chinese", function() {
     var engine;
     var sys;
 
@@ -40,282 +40,108 @@ xdescribe("Citation", function() {
         return engine.previewCitationCluster(citationCluster, [], [], "html");
     }
 
-    it("Citation::Chinese::Book Single Author", function() {
-        var output = makeCitationCluster(items.singleAuthorChinese, "74-76");
-        var expected = '杨牧谷：《泪眼先知耶利米》（台北：校园书房出版社，1989），74–76。';
-        assert.equal(output, expected);
-    });    
-
-    it("Citation::English::Book Single Author", function() {
-        var output = makeCitationCluster(items.singleAuthorEnglish, "268-272");
-        var expected = 'Samuel P. Huntington, <i>The Clash of Civilizations</i> (London: Touchstone Books, 1998), 268–272.';
-        
-        assert.equal(output, expected);
-    });    
-
-    it("Citation::Chinese::Book Single Author with Translator", function() {
-        var output = makeCitationCluster(items.singleAuthorWithTranslatorChinese, "96");
-        var expected = '博能汉：《历史学》，黄晓兰译（香港：天天出版社，2003），96。';
-        
-        assert.equal(output, expected);
-    });    
-
-    it("Citation::Chinese::Book Single Editor", function() {
-        var output = makeCitationCluster(items.singleEditorChinese, "24");
-        var expected = '李三谷编：《旧约小品》（台北：校园出版社，2003），24。';
+    it("Citation::Book", function() {
+        var output = makeCitationCluster(items.book, "74-76");
+        var expected = '楊牧谷：《淚眼先知耶利米》（台北：校園書房出版社，1989），74–76。';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::English::Book Single Editor", function() {
-        var output = makeCitationCluster(items.singleEditorEnglish, "68");
-        var expected = 'David Headman, ed., <i>The Love of Brothers</i> (London: Evergreen Books, 2003), 68.';
+    it("Citation::Edited Book", function() {
+        var output = makeCitationCluster(items.editedBook, "24");
+        var expected = '李三谷编：《舊約小品》（台北：校園出版社，2003），24。';
         
         assert.equal(output, expected);
-    });    
+    });
 
-    it("Citation::English::Book Multiple Editors", function() {
-        var output = makeCitationCluster(items.bookMultipleEditorsEnglish, "120");
-        var expected = 'Barbara, Kurt Aland, Johannes Karavidopoulos et al., eds., <i>Novum Testamentum Graece</i>, 27th rev. ed. (Stuttgart: Deutsche Bibelgesellschaft, 1993), 120.';
+    it("Citation::Book with 2 or 3 authors (or editors)", function() {
+        var output = makeCitationCluster(items.bookWith2Or3AuthorsEditors);
+        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003）。</div>';
         
         assert.equal(output, expected);
-    }); 
-
-    it("Citation::Chinese::Book Multiple Authors", function() {
-        var output = makeCitationCluster(items.bookMultipleAuthorsChinese, "36");
-        var expected = '杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003），36。';
-        
-        assert.equal(output, expected);
-    });    
+    });
 
     it("Citation::English::Book Multiple Authors", function() {
-        var output = makeCitationCluster(items.bookMultipleAuthorsEnglish, "193");
-        var expected = 'Solomon Victor, Augustine Laib, and Yancey Calson, <i>The Sun Is Black</i> (Kuala Lumpur: Doreen Publishing House, 2003), 193.';
+        var output = makeCitationCluster(items.bookWithMoreThan3AuthorsEditors);
+        var expected = '<div class="csl-entry">鮑維鈞，黃錫木，羅慶才，張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。</div>';
         
         assert.equal(output, expected);
-    });    
+    });
 
-    it("Citation::Chinese::Article in a Book Edited by Others", function() {
-        var output = makeCitationCluster(items.articleInABookEditedByOthersChinese, "339");
-        var expected = '黄二东：「天下一家」。《地球村的演变》，千百文编（厦门：汉阳出版社，2003），339。';
+    it("Citation::Volume from a multi volume work", function() {
+        var output = makeCitationCluster(items.volumeFromAMultiVolumeWork);
+        var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》（王曉朝译，共三卷，歷代基督教思想學術文庫古代系列，香港：道風書社，2004）。</div>';
         
         assert.equal(output, expected);
-    });  
+    });
 
-    it("Citation::English::Article in a Book Edited by Others", function() {
-        var output = makeCitationCluster(items.articlesInABookEditedByOthersEnglish, "23");
-        var expected = 'Christopher W. Hughes, "Japan and East Asia". in <i>The Japan Handbook</i>, ed. Patrick Heenan (London: Fitzroy Dearborn Publishers, 1998), 23.';
-        
-        assert.equal(output, expected);
-    });  
-    
-    it("Citation::Chinese::Article in a Journal", function() {
-        var output = makeCitationCluster(items.articleInAJournalChinese, "21");
-        var expected = '杨品通：「神学的本质探讨」，《教会神学期刊》，14（2003 5月）：21。';
+    it("Citation::Commentary or book in series with series number", function() {
+        var output = makeCitationCluster(items.commentaryOrBookInSeriesWithSeriesNumber);
+        var expected = '<div class="csl-entry">黃朱倫：《腓立比書：僕友的生命與事奉》（明道研經叢書50，香港：明道社，2006）。</div>';
         
         assert.equal(output, expected);
     }); 
 
-    it("Citation::English::Article in a Journal", function() {
-        var output = makeCitationCluster(items.articleInAJournalEnglish, "207");
-        var expected = 'Francis C. Tallman, "A History of Christian Church in Bangkok", <i>Journal of World Religions</i> 44 (October 2003): 207.';
-        
-        assert.equal(output, expected);
-    }); 
-
-    it("Citation::English::Article in a Magazine", function() {
-        var output = makeCitationCluster(items.articleInMagazineEnglish, "24");        
-        var expected = 'Bruce Weber, "The Myth Maker". <i>New York Magazine</i>, 20 October 1985, 24.';
-        
-        assert.equal(output, expected);
-    }); 
-
-    it("Citation::Chinese::Article in a Magazine", function() {
-        var output = makeCitationCluster(items.articleInMagazineChinese, "43");         
-        var expected = '李约翰：「美国华侨习俗趣谈」，《时代华侨周刊》，1957年10月30日，43。';
-        
-        assert.equal(output, expected);
-    }); 
-
-    it("Citation::English::Book in a Multi-Volume Series", function() {
-        var output = makeCitationCluster(items.bookInAMultiVolumeSeriesEnglish, "97");        
-        var expected = 'Raymond E. Brown, <i>The Gospel According to John I–XII</i>, Anchor Bible, ed. William Foxwell Albright and David Noel Freedman, vol. 29 (New York: Doubleday, 1966), 97.';
-        
-        assert.equal(output, expected);
-    }); 
-    
-    it("Citation::English::Book in a Multi-Volume Series 2", function() {
-        var output = makeCitationCluster(items.bookInAMultiVolumeSeriesEnglish2, "19");
-        var expected = 'Hans-Frederich Weiss, <i>Der Brief an die Hebräer: Übersetzt und Erklärt</i>, 15th ed. Kritisch-exegetischer Kommentar über das Neue Testament, ed. Heinrich August Wilhelm Meyer and Ferdinand Hahn, vol. 13 (Göttingen: Vandenhoeck &#38; Ruprecht, 1991), 19.';
+    it("Citation::Edition other than the first", function() {
+        var output = makeCitationCluster(items.editionOtherThanTheFirst);
+        var expected = '<div class="csl-entry">吳立樂编：《浸會在華佈道百年史略》（修订版，香港：浸信會出版部，1970）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::English::Book in a Multi-Volume Series 3", function() {
-        var output = makeCitationCluster(items.bookInAMultiVolumeSeriesEnglish3, "10");
-        var expected = 'Lauri Thurén, <i>Argument and Theology in 1 Peter: The Origins of Christian Paraenesis</i>, Journal for the Study of the New Testament: Supplement Series, ed. Stanley E. Porter et al., vol. 114 (Sheffield: Sheffield Academic Press, 1995), 10.';
-        
-        assert.equal(output, expected);
-    });   
-
-    it("Citation::Chinese::Article in a Dictionary", function() {
-        var output = makeCitationCluster(items.articleInADictionaryChinese, "25");        
-        var expected = '冯来平：「基督的宽容」，《世界神学辞典》，邱宋恩编，第三册（上海：展徒出版社），25。';
+    it("Citation::Booked viewed online", function() {
+        var output = makeCitationCluster(items.bookViewedOnline);
+        var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参阅）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::English::Article in a Dictionary", function() {
-        var output = makeCitationCluster(items.articleInADictionaryEnglish, "583");         
-        var expected = 'Pheme Perkins, "Gnosticism", in <i>New Interpreter’s Dictionary of the Bible</i>, ed. Katherine Doob Sakenfeld, vol. 2 (Nashville: Abingdon Press, 2007), 583.';
+    it("Citation::Essay or chapter", function() {
+        var output = makeCitationCluster(items.essayOrChapter);
+        var expected = '<div class="csl-entry">黄二冬：「天下一家」，《地球村的演變》（千百文编，厦門：漢陽出版社，2003），335–350。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::English::Article in a Dictionary with Translator", function() {
-        var output = makeCitationCluster(items.articleInADictionaryWithTranslatorEnglish, "8");
-        var expected = 'B. Lang Bergman, and H. Ringgren, "xb;z"", in <i>Theological Dictionary of the Old Testament</i>, ed. G. Johannes Botterweck and Helmer Ringgren, trans. David E. Green, vol. 4 (Grand Rapids: William B. Eerdmans Publishing Company, 1980), 8.';
+    it("Citation::Article in a lexicon or theological dictionary", function() {
+        var output = makeCitationCluster(items.articleInALexiconOrTheologicalDictionary);
+        var expected = '<div class="csl-entry">馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，共四卷，上海：展徒出版社，1990），3：25–26。</div>';
+        //                                                                                    册
+        assert.equal(output, expected);
+    });
+
+    it("Citation::Journal article", function() {
+        var output = makeCitationCluster(items.journalArticle);
+        var expected = '<div class="csl-entry">楊品通：「神學的本質探討」，《教會神學期刊》，14（2003年5月），19–24。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::English::Article in a Dictionary with Translator 2", function() {
-        var output = makeCitationCluster(items.articleInADictionaryWithTranslatorEnglish2, "181");
-        var expected = 'Johannes Behn, "qu,w", in <i>Theological Dictionary of the New Testament</i>, ed. Gerhard Kittel and Geoffrey W. Bromiley, trans. Geoffrey W. Bromiley, vol. 3 (Grand Rapids: Wm. B. Eerdmans Publishing Company, 1965), 181.';
+    it("Citation::Magazine or newspaper article", function() {
+        var output = makeCitationCluster(items.magazineOrNewspaperArticle);
+        var expected = '<div class="csl-entry">李約翰：「美國華僑習俗趣談」，《时代華僑周刊》（1957年10月30日），43–47。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::Chiense::Report", function() {
-        var output = makeCitationCluster(items.reportChinese, "20");
-        var expected = '陈泽崇：「执行部呈年会报告书」，《2001砂拉越华人年议会第二十六届年议会会议记录》，许必斌编（诗巫：砂拉越华人年议会，2001），20。';
+    it("Citation::Thesis or dissertation", function() {
+        var output = makeCitationCluster(items.thesis);
+        var expected = '<div class="csl-entry">劉庸：「基督教教育在南非華人教會群體中的發展模式」（太平洋天國神學院：博士論文，2000）。</div>';
         
         assert.equal(output, expected);
     });
 
-    it("Citation::English::Report", function() {
-        var output = makeCitationCluster(items.reportEnglish, "69");
-        var expected = 'Ivy Chou, "Board of Lay Training", in <i>Minutes of 12th Session of the Sarawak Annual Conference of the Methodist Church 1963</i> (Sibu: The Methodist Church, 1963), 69.';
-        
+    it("Citation::Conferenec paper", function() {
+        var output = makeCitationCluster(items.conferencePaper);
+        var expected = '<div class="csl-entry">謝木水：「神學如何失去靈性？」（新加坡神學院益道論述會上发表之专文，新加坡，2010年10月4日）。</div>';
+
         assert.equal(output, expected);
     });
 
-    it("Citation::Chiense::Statistics", function() {
-        var output = makeCitationCluster(items.statisticsChinese, "209");
-        var expected = '澳洲统计部：「1997年墨尔本华人人口的增长情况」，《澳洲人口普查1997》（堪培拉：澳洲官方出版社，1998），209。';
-        
-        assert.equal(output, expected);
-    });
+    it("Citation::Webpage", function() {
+        var output = makeCitationCluster(items.webpage);
+        var expected = '<div class="csl-entry">劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。</div>';
 
-    it("Citation::English::Statistics", function() {
-        var output = makeCitationCluster(items.statisticsEnglish, "58");
-        var expected = 'Department of Statistics Malaysia, "Total Polulation by Age Group: Sarawak", in <i>Population and Housing Census of Malaysia 2000</i> (Kuala Lumpur: Government Printing Office, 2000), 58.';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::Newspaper", function() {
-        var output = makeCitationCluster(items.newpaperChinese, "A4");
-        var expected = '黄孟礼：「美以美是新福州垦场的催化剂」，《卫理报》，2000年11月30日，A4。';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::English::Newspaper", function() {
-        var output = makeCitationCluster(items.newpaperEnglish, "12");
-        var expected = 'Steve Aston, "The Stars of Tomorrow", <i>The New York Times</i>, 4 January 1987, 12.';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::Thesis", function() {
-        var output = makeCitationCluster(items.thesisChinese, "10");
-        var expected = '刘庸：「基督教教育在南非华人教会群体中的发展模式」，（博士论文，太平洋天国神学院，2000），10。';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::English::Thesis", function() {
-        var output = makeCitationCluster(items.thesisEnglish, "90");
-        var expected = 'Lancer Austin, "The Quest for a Historical Jesus in Sarawak" (Ph.D. diss., University of Chicago, 1996), 90.';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::Webpage", function() {
-        var output = makeCitationCluster(items.webpageChinese, "");
-        var expected = '刘小枫：「历史玩完了？」，《汉语基督教文化研究所》，取自 http://www.iscs.org.hk/article18.htm 网址，2002年8月5日参阅。';
-        
-        assert.equal(output, expected);
-    }); 
-    
-    it("Citation::English::Webpage", function() {
-        var output = makeCitationCluster(items.websiteEnglish, "");
-        var expected = 'Michael Pingka, "Flowers in Sarawak", <i>Sarawak Flower Journal</i>; available from http://www.sarawakflower/ggg.html (accessed 14 August 2002).';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::Interview", function() {
-        var output = makeCitationCluster(items.interviewChinese, "");
-        var expected = '叶少华，成团主席，由笔者采访，2003年4月9日，墨尔本，卡带录音。';
-        
-        assert.equal(output, expected);
-    }); 
-    
-    it("Citation::English::Interview", function() {
-        var output = makeCitationCluster(items.interviewEnglish, "");
-        var expected = 'Steven Albert mayor of Kuching, Interview by author, 23 September 2003, Sibu, East Malaysia, Tape recording.';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::Letter", function() {
-        var output = makeCitationCluster(items.letterChinese, "");
-        var expected = '田德建，致函于方重名，1876年10月25日，抄本存于北京大学图书馆特藏部，中国北京。';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::English::Letter", function() {
-        var output = makeCitationCluster(items.letterEnglish, "");
-        var expected = 'James Matthew Hoover, to A. B. Leonard, 13 March 1899, transcript in Hoover, J.M. - Malaya 1899, Missionary Files 1, United Methodist Church Archives, Madison, NJ, USA.';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::VCD", function() {
-        var output = makeCitationCluster(items.vcdChinese, "");
-        var expected = '唐明清：「启示录的七个教会」，《新约圣经CD版》（台北：校园出版社，2001）。';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::English::VCD", function() {
-        var output = makeCitationCluster(items.vcdEnglish, "");
-        var expected = 'King Morris, <i>The Chinese Mind</i>, [CD-ROM] (Kuala Lumpur: The Chinese Press, 2002).';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::Chinese::CD", function() {
-        var output = makeCitationCluster(items.cdChinese, "");
-        var expected = '唐明清：「启示录的七个教会」，《新约圣经CD版》（台北：校园出版社，2001）。';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::English::CD", function() {
-        var output = makeCitationCluster(items.cdEnglish, "");
-        var expected = 'King Morris, <i>The Chinese Mind</i>, [CD-ROM] (Kuala Lumpur: The Chinese Press, 2002).';
-        
-        assert.equal(output, expected);
-    });
-
-    it("Citation::English::BookWithNoSeriesAuthor", function() {
-        var output = makeCitationCluster(items.bookWithNoSeriesAuthor, "126");
-        var expected = 'Harold Henry Rowley, <i>The Book of Job</i>, New century Bible commentary (Grand Rapids, Mich: Eerdmans, 1980), 126.';
-        
         assert.equal(output, expected);
     });
 });

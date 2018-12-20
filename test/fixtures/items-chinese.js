@@ -4,14 +4,14 @@ module.exports = {
     book: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "泪眼先知耶利米",
+            "title": "淚眼先知耶利米",
             "author": [
                 {
-                    "family": "杨",
+                    "family": "楊",
                     "given": "牧谷"
                 }
             ],
-            "publisher": "校园书房出版社",
+            "publisher": "校園書房出版社",
             "publisher-place": "台北",
             "language":"zh-CN",
             "issued": {
@@ -27,14 +27,14 @@ module.exports = {
     editedBook: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "旧约小品",
+            "title": "舊約小品",
             "editor": [
                 {
                     "family": "李",
                     "given": "三谷"
                 }
             ],
-            "publisher": "校园出版社",
+            "publisher": "校園出版社",
             "publisher-place": "台北",
             "language":"zh-CN",
             "issued": {

@@ -6,7 +6,7 @@ var items = require('./fixtures/items-chinese.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Bibliography", function() {
+describe("Bibliography Chinese", function() {
     var engine;
     var sys;
 
@@ -33,14 +33,14 @@ describe("Bibliography", function() {
 
     it("Bibliography::Book", function() {
         var output = makeBibliography(items.book);
-        var expected = '<div class="csl-entry">杨牧谷：《泪眼先知耶利米》（台北：校园书房出版社，1989）。</div>';
+        var expected = '<div class="csl-entry">楊牧谷：《淚眼先知耶利米》（台北：校園書房出版社，1989）。</div>';
         
         assert.equal(output, expected);
     });
 
     it("Bibliography::Edited Book", function() {
         var output = makeBibliography(items.editedBook);
-        var expected = '<div class="csl-entry">李三谷编：《旧约小品》（台北：校园出版社，2003）。</div>';
+        var expected = '<div class="csl-entry">李三谷编：《舊約小品》（台北：校園出版社，2003）。</div>';
         
         assert.equal(output, expected);
     });
