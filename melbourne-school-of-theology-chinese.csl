@@ -49,6 +49,7 @@
       <term name="recipient" form="verb">致函于</term>
       <term name="collection-editor" form="verb-short">编</term>
       <term name="edition" form="short">版</term>
+      <term name="presented at">上发表之专文</term>
       <term name="long-ordinal-11">十一</term>
       <term name="long-ordinal-12">十二</term>
       <term name="long-ordinal-13">十三</term>
@@ -371,7 +372,6 @@
           </group>
           <group delimiter=" ">
             <text variable="genre"/>
-            <text value="dissertation"/>
           </group>
         </if>
         <else>
@@ -851,7 +851,7 @@
       </else-if>
       <else>
         <choose>
-          <if variable="container-title">
+          <if variable="container-title" type="thesis paper-conference" match="any">
             <text variable="title" text-case="title" prefix="「" suffix="」"/>
           </if>
           <else>
@@ -983,8 +983,8 @@
   </macro>
   <macro name="event-chinese">
     <group>
-      <text term="presented at" suffix=" "/>
       <text variable="event"/>
+      <text term="presented at"/>
     </group>
   </macro>
   <macro name="publisher-chinese">
@@ -997,7 +997,6 @@
           </group>
           <group delimiter=" ">
             <text variable="genre"/>
-            <text value="dissertation"/>
           </group>
         </if>
         <else>
@@ -1016,18 +1015,12 @@
       <if variable="issued">
         <choose>
           <if type="graphic report" match="any">
-            <date variable="issued" text-case="capitalize-all">
-              <date-part name="month" suffix=" "/>
-              <date-part name="day" suffix=", "/>
-              <date-part name="year"/>
+            <date form="text" date-parts="year-month-day" variable="issued">
             </date>
           </if>
           <else-if type="webpage" match="any">
-            <group prefix="(" suffix=")">
-              <date variable="issued" text-case="capitalize-all">
-                <date-part name="day" suffix=" "/>
-                <date-part name="month" suffix=", "/>
-                <date-part name="year"/>
+            <group prefix="（" suffix="）">
+              <date form="text" date-parts="year-month-day" variable="issued">
               </date>
             </group>
           </else-if>
@@ -1046,17 +1039,16 @@
             </date>
           </else-if>
           <else-if type="interview" match="any">
-            <group delimiter=", " prefix="(" suffix=")">
+            <group delimiter="，" prefix="（" suffix="）">
               <text variable="note"/>
               <date form="text" date-parts="year-month-day" variable="issued">
-                <date-part name="day" form="ordinal"/>
               </date>
             </group>
           </else-if>
           <else-if type="article-magazine" match="any">
             <date form="text" variable="issued" prefix="（" suffix="）">
-              <date-part name="month"/>
               <date-part name="year"/>
+              <date-part name="month"/>
             </date>
           </else-if>
           <else-if type="article-journal" match="any">
@@ -1067,8 +1059,6 @@
           </else-if>
           <else>
             <date variable="issued" text-case="capitalize-all">
-              <date-part name="day" suffix=" "/>
-              <date-part name="month" suffix=", "/>
               <date-part name="year"/>
             </date>
           </else>

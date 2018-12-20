@@ -346,19 +346,19 @@ module.exports = {
             "type": "article-magazine"
         }
     },
-    thesisChinese: {
+    thesis: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "基督教教育在南非华人教会群体中的发展模式",
+            "title": "基督教教育在南非華人教會群體中的發展模式",
             "author": [
                 {
-                    "family": "刘",
+                    "family": "劉",
                     "given": "庸",
                 }                
             ],
-            "genre":"博士论文",
+            "genre":"博士論文",
             "language":"zh-CN",
-            "publisher":"太平洋天国神学院",
+            "publisher":"太平洋天國神學院",
             "issued": {
                 "date-parts": [
                     [
@@ -369,15 +369,40 @@ module.exports = {
             "type": "thesis"
         }         
     },
-    webpageChinese: {
+    conferencePaper: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "历史玩完了？",
-            "container-title":"汉语基督教文化研究所",
+            "title": "神學如何失去靈性？",
             "author": [
                 {
-                    "family": "刘",
-                    "given": "小枫",
+                    "family": "謝",
+                    "given": "木水"
+                }
+            ],
+            "event": "新加坡神學院益道論述會",
+            "publisher-place": "新加坡",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        10,
+                        4
+                    ]
+                ]
+            },
+            "type": "paper-conference"
+        }
+    },
+    webpage: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "歷史玩完了？",
+            "container-title":"漢語基督教文化研究所",
+            "author": [
+                {
+                    "family": "劉",
+                    "given": "小楓",
                 }                
             ],
             "URL":"http://www.iscs.org.hk/article18.htm",
@@ -390,7 +415,16 @@ module.exports = {
                         5
                     ]
                 ]
-            },            
+            },
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        5,
+                        3
+                    ]
+                ]
+            },
             "type": "webpage"
         }         
     },

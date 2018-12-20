@@ -114,4 +114,25 @@ describe("Bibliography", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Thesis or dissertation", function() {
+        var output = makeBibliography(items.thesis);
+        var expected = '<div class="csl-entry">劉庸：「基督教教育在南非華人教會群體中的發展模式」（太平洋天國神學院：博士論文，2000）。</div>';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::Conferenec paper", function() {
+        var output = makeBibliography(items.conferencePaper);
+        var expected = '<div class="csl-entry">謝木水：「神學如何失去靈性？」（新加坡神學院益道論述會上发表之专文，新加坡，2010年10月4日）。</div>';
+
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::Webpage", function() {
+        var output = makeBibliography(items.webpage);
+        var expected = '<div class="csl-entry">劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。</div>';
+
+        assert.equal(output, expected);
+    });
 });

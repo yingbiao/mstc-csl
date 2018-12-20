@@ -17,7 +17,7 @@ describe("Bibliography English", function() {
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);
         sys.addLocale('zh-CN', zhCN);
-        var styleString = fs.readFileSync('./melbourne-school-of-theology.csl', 'utf8');
+        var styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
         engine = sys.newEngine(styleString, 'zh-CN', null);
     });
 
