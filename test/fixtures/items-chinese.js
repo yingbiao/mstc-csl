@@ -320,7 +320,32 @@ module.exports = {
             "page": "19-24",
             "type": "article-journal"
         }        
-    },    
+    },
+    magazineOrNewspaperArticle: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "美國華僑習俗趣談",
+            "author": [
+                {
+                    "family": "李",
+                    "given": "約翰",
+                }
+            ],
+            "container-title":"时代華僑周刊",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        1957,
+                        10,
+                        30
+                    ]
+                ]
+            },
+            "page": "43-47",
+            "type": "article-magazine"
+        }
+    },
     thesisChinese: {
         "ITEM-1": {
             "id": "ITEM-1",

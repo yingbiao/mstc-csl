@@ -1225,7 +1225,7 @@
         </group>
       </else-if>
       <else>
-        <text macro="issued-chinese" prefix=" "/>
+        <text macro="issued-chinese"/>
       </else>
     </choose>
   </macro>
@@ -1278,7 +1278,7 @@
         </group>
       </else-if>
       <else>
-        <text macro="issued-chinese" prefix=" "/>
+        <text macro="issued-chinese"/>
       </else>
     </choose>
   </macro>
