@@ -9,20 +9,24 @@ var assert = chai.assert;
 describe("Citation English", function() {
     var engine;
     var sys;
+    var styleString;
 
     before(function() {
         sys = new citeproc.simpleSys();
+
         //Wherever your locale and style files are. None are included with the package.
         var enUS = fs.readFileSync('./locales/locales-en-US.xml', 'utf8');
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        var styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
+        styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
         engine = sys.newEngine(styleString, 'zh-CN', null);
     });
 
     function makeCitationCluster(items, pages) {
         sys.items = items;
+        engine.updateItems(items);
+
         var citationCluster=
         {
             "citationItems": [ 

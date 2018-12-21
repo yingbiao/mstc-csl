@@ -1,8 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var citeprocjs = require("citeproc-js-node");
-var CSL = require("citeproc");
+var citeproc = require("citeproc-js-node");
 var items = require('./fixtures/items-english.js');
 var chai = require('chai');
 var assert = chai.assert;
@@ -10,21 +9,23 @@ var assert = chai.assert;
 describe("Citation English Repeat", function() {
     var engine;
     var sys;
+    var styleString;
 
     before(function() {
-        sys = new citeprocjs.simpleSys();
+        sys = new citeproc.simpleSys();
+
         //Wherever your locale and style files are. None are included with the package.
         var enUS = fs.readFileSync('./locales/locales-en-US.xml', 'utf8');
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        var styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
-        //engine = sys.newEngine(styleString, 'zh-CN', null);
-        engine = new CSL.Engine(sys, styleString, 'en-GB', false);
+        styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
+        engine = sys.newEngine(styleString, 'zh-CN', null);
     });
 
     function makeCitationCluster(items, pages) {
         sys.items = items;
+        engine.updateItems(items);
 
         var citationCluster=
         {
@@ -80,12 +81,10 @@ describe("Citation English Repeat", function() {
         assert.equal(output, expected);
     });
 
-    xit("Citation::Book with more than 3 authors (or editors)", function() {
+    it("Citation::Book with more than 3 authors (or editors)", function() {
         var output = makeCitationCluster(items.bookWithMoreThan3AuthorsEditors, "3");
         var expected = 'Becking et al., <i>Babylon to Eternity</i>, 3.';
-        //This is weird, on Zotero with this style it generate the expected output
-        //however, in code, it generates the following        
-        //              Becking, Cannegieter, van de Poll, et al., <i>Babylon to Eternity</i>, 3.
+
         assert.equal(output, expected);
     });
 

@@ -235,7 +235,6 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "天下一家",
-            "title-short": "Frame",
             "author": [
                 {
                     "family": "黄",
