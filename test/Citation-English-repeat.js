@@ -216,7 +216,7 @@ describe("Citation English Repeat", function() {
 
     it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage, "");
-        var expected = 'Brown, “Creation &#38; Time in Basil’s Hexaemeron.”';
+        var expected = 'Brown, “Creation &#38; Time.”';
         //  expected = 'Andrew Brown, “Creation &#38; Time in Basil’s Hexaemeron.”';
         assert.equal(output, expected);
     });  

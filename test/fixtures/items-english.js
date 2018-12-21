@@ -658,7 +658,7 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "Creation & Time in Basil’s Hexaemeron",
-            "title-short": "Creation & Time in Basil’s Hexaemeron",
+            "title-short": "Creation & Time",
             "author": [
                 {
                     "family": "Brown",
