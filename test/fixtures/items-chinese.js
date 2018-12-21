@@ -50,22 +50,22 @@ module.exports = {
     bookWith2Or3AuthorsEditors: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "雨过天晴",
+            "title": "雨過天晴",
             "author": [
                 {
                     "family": "杜",
                     "given": "德民",
                 },
                 {
-                    "family": "张",
-                    "given": "爱杨",
+                    "family": "張",
+                    "given": "愛楊",
                 },
                 {
-                    "family": "陈",
-                    "given": "丰裕",
+                    "family": "陳",
+                    "given": "豐裕",
                 }
             ],
-            "publisher": "和联出版社",
+            "publisher": "和聯出版社",
             "publisher-place": "新加坡",
             "language":"zh-CN",
             "issued": {
@@ -135,7 +135,7 @@ module.exports = {
                 }
             ],
             "number-of-volumes": 3,
-            "volume": 3,
+            "volume": 2,
             "collection-title":"歷代基督教思想學術文庫古代系列",
             "publisher": "道風書社",
             "publisher-place": "香港",
@@ -184,7 +184,7 @@ module.exports = {
                     "given": "立樂"
                 }
             ],
-            "edition": "修订版",
+            "edition": "修訂版",
             "publisher": "浸信會出版部",
             "publisher-place": "香港",
             "language":"zh-CN",

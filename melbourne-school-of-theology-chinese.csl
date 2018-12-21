@@ -765,7 +765,7 @@
   </macro>
   <macro name="contributors-note-chinese">
     <names variable="author">
-      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1"/>
+      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="，"/>
       <substitute>
         <text macro="editor-note-chinese"/>
         <text macro="translator-note-chinese"/>
@@ -902,23 +902,7 @@
     </group>
   </macro>
   <macro name="container-title-note-chinese">
-    <choose>
-      <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
-        <choose>
-          <if match="any" variable="title">
-            <text term="in" />
-          </if>
-        </choose>
-      </if>
-    </choose>
-    <choose>
-      <if type="article-journal" match="all" variable="container-title-short">
-        <text variable="container-title-short" font-style="italic"/>
-      </if>
-      <else>
-        <text variable="container-title" text-case="title" font-style="italic"/>
-      </else>
-    </choose>
+    <text variable="container-title" text-case="title" quotes="true" prefix="，"/>
   </macro>
   <macro name="container-title-chinese">
     <text variable="container-title" text-case="title" quotes="true" prefix="，"/>
@@ -1175,9 +1159,11 @@
   <macro name="issue-note-chinese">
     <choose>
       <if type="article-journal">
-        <text variable="volume" />
-        <text variable="issue" />
-        <text macro="issued-chinese" prefix="（" suffix="）"/>
+        <group prefix="，">
+          <text variable="volume" />
+          <text variable="issue" />
+          <text macro="issued-chinese"/>
+        </group>
       </if>
       <else-if type="song">
         <text variable="collection-title" font-style="italic"/>
@@ -1271,7 +1257,7 @@
     </choose>
   </macro>
   <macro name="access-note-chinese">
-    <group delimiter=" ">
+    <group>
       <choose>
         <if type="graphic report" match="any">
           <text macro="archive-note-chinese"/>

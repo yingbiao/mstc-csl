@@ -47,7 +47,7 @@ describe("Bibliography Chinese", function() {
 
     it("Bibliography::Book with 2 or 3 authors (or editors)", function() {
         var output = makeBibliography(items.bookWith2Or3AuthorsEditors);
-        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003）。</div>';
+        var expected = '<div class="csl-entry">杜德民，張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003）。</div>';
         
         assert.equal(output, expected);
     });
@@ -75,7 +75,7 @@ describe("Bibliography Chinese", function() {
 
     it("Bibliography::Edition other than the first", function() {
         var output = makeBibliography(items.editionOtherThanTheFirst);
-        var expected = '<div class="csl-entry">吳立樂编：《浸會在華佈道百年史略》（修订版，香港：浸信會出版部，1970）。</div>';
+        var expected = '<div class="csl-entry">吳立樂编：《浸會在華佈道百年史略》（修訂版，香港：浸信會出版部，1970）。</div>';
         
         assert.equal(output, expected);
     });

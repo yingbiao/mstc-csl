@@ -55,92 +55,92 @@ describe("Citation Chinese", function() {
     });
 
     it("Citation::Book with 2 or 3 authors (or editors)", function() {
-        var output = makeCitationCluster(items.bookWith2Or3AuthorsEditors);
-        var expected = '<div class="csl-entry">杜德民，张爱杨和陈丰裕：《雨过天晴》（新加坡：和联出版社，2003）。</div>';
+        var output = makeCitationCluster(items.bookWith2Or3AuthorsEditors, "36");
+        var expected = '杜德民，張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003），36。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::English::Book Multiple Authors", function() {
-        var output = makeCitationCluster(items.bookWithMoreThan3AuthorsEditors);
-        var expected = '<div class="csl-entry">鮑維鈞，黃錫木，羅慶才，張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。</div>';
+        var output = makeCitationCluster(items.bookWithMoreThan3AuthorsEditors, "47-49");
+        var expected = '鮑維鈞等：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001），47–49。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Volume from a multi volume work", function() {
-        var output = makeCitationCluster(items.volumeFromAMultiVolumeWork);
-        var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》（王曉朝译，共三卷，歷代基督教思想學術文庫古代系列，香港：道風書社，2004）。</div>';
+        var output = makeCitationCluster(items.volumeFromAMultiVolumeWork, "99");
+        var expected = '奧古斯丁：《上帝之城》（王曉朝译，歷代基督教思想學術文庫古代系列，香港：道風書社，2004），2：99。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Commentary or book in series with series number", function() {
-        var output = makeCitationCluster(items.commentaryOrBookInSeriesWithSeriesNumber);
-        var expected = '<div class="csl-entry">黃朱倫：《腓立比書：僕友的生命與事奉》（明道研經叢書50，香港：明道社，2006）。</div>';
+        var output = makeCitationCluster(items.commentaryOrBookInSeriesWithSeriesNumber, "114");
+        var expected = '黃朱倫：《腓立比書：僕友的生命與事奉》（明道研經叢書50，香港：明道社，2006），114。';
         
         assert.equal(output, expected);
     }); 
 
     it("Citation::Edition other than the first", function() {
-        var output = makeCitationCluster(items.editionOtherThanTheFirst);
-        var expected = '<div class="csl-entry">吳立樂编：《浸會在華佈道百年史略》（修订版，香港：浸信會出版部，1970）。</div>';
+        var output = makeCitationCluster(items.editionOtherThanTheFirst, "75");
+        var expected = '吳立樂编：《浸會在華佈道百年史略》（修訂版，香港：浸信會出版部，1970），75。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Booked viewed online", function() {
-        var output = makeCitationCluster(items.bookViewedOnline);
-        var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参阅）。</div>';
+        var output = makeCitationCluster(items.bookViewedOnline, "13");
+        var expected = '何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参阅），13。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Essay or chapter", function() {
-        var output = makeCitationCluster(items.essayOrChapter);
-        var expected = '<div class="csl-entry">黄二冬：「天下一家」，《地球村的演變》（千百文编，厦門：漢陽出版社，2003），335–350。</div>';
+        var output = makeCitationCluster(items.essayOrChapter, "339");
+        var expected = '黄二冬：「天下一家」，《地球村的演變》（千百文编，厦門：漢陽出版社，2003），339。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Article in a lexicon or theological dictionary", function() {
-        var output = makeCitationCluster(items.articleInALexiconOrTheologicalDictionary);
-        var expected = '<div class="csl-entry">馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，共四卷，上海：展徒出版社，1990），3：25–26。</div>';
-        //                                                                                    册
+        var output = makeCitationCluster(items.articleInALexiconOrTheologicalDictionary, "25");
+        var expected = '馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，上海：展徒出版社，1990），3：25。';
+        
         assert.equal(output, expected);
     });
 
     it("Citation::Journal article", function() {
-        var output = makeCitationCluster(items.journalArticle);
-        var expected = '<div class="csl-entry">楊品通：「神學的本質探討」，《教會神學期刊》，14（2003年5月），19–24。</div>';
+        var output = makeCitationCluster(items.journalArticle, "21");
+        var expected = '楊品通：「神學的本質探討」，《教會神學期刊》，14（2003年5月），21。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Magazine or newspaper article", function() {
-        var output = makeCitationCluster(items.magazineOrNewspaperArticle);
-        var expected = '<div class="csl-entry">李約翰：「美國華僑習俗趣談」，《时代華僑周刊》（1957年10月30日），43–47。</div>';
+        var output = makeCitationCluster(items.magazineOrNewspaperArticle, "43");
+        var expected = '李約翰：「美國華僑習俗趣談」，《时代華僑周刊》（1957年10月30日），43。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Thesis or dissertation", function() {
-        var output = makeCitationCluster(items.thesis);
-        var expected = '<div class="csl-entry">劉庸：「基督教教育在南非華人教會群體中的發展模式」（太平洋天國神學院：博士論文，2000）。</div>';
+        var output = makeCitationCluster(items.thesis, "10");
+        var expected = '劉庸：「基督教教育在南非華人教會群體中的發展模式」（太平洋天國神學院：博士論文，2000），10。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Conferenec paper", function() {
-        var output = makeCitationCluster(items.conferencePaper);
-        var expected = '<div class="csl-entry">謝木水：「神學如何失去靈性？」（新加坡神學院益道論述會上发表之专文，新加坡，2010年10月4日）。</div>';
+        var output = makeCitationCluster(items.conferencePaper, "1");
+        var expected = '謝木水：「神學如何失去靈性？」（新加坡神學院益道論述會上发表之专文，新加坡，2010年10月4日），1。';
 
         assert.equal(output, expected);
     });
 
     it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage);
-        var expected = '<div class="csl-entry">劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。</div>';
+        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。';
 
         assert.equal(output, expected);
     });
