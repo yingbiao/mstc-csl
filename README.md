@@ -79,7 +79,7 @@
 ## Edited Book
 **注脚格式**
 >Rowland Ward, ed., *The Westminster Confession and Catechisms in Modern English* (Wantirna: New Melbourne Press, 2000), 40.   
->李三谷編：《舊約小品》（台北：校園s出版社，2003），24。  
+>李三谷編：《舊約小品》（台北：校園出版社，2003），24。  
 
 **重复引用格式**
 >Ward, *Westminster Confession*, 39.  
@@ -169,7 +169,7 @@
 ## Book viewed online
 **注脚格式**
 >J. A. Hackett, *A Basic Introduction to Biblical Hebrew, with CD* (Peabody, MA: Hendrickson, 2010), http://books.google.com.au/books?id=UuMRFJqmJ_sC (accessed 29/01/15), 14.   
->何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱），13。
+>何衛中：《牧養神的群羊》（香港：金燈台，2010），http://www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱），13。
 
 **重复引用格式**
 >Hackett, *Basic Introduction*, 15.   
@@ -177,7 +177,7 @@
 
 **参考书目格式**
 >Hackett, J. A. *A Basic Introduction to Biblical Hebrew, with CD* (Peabody, MA: Hendrickson, 2010), http://books.google.com.au/books?id=UuMRFJqmJ_sC (accessed 29/01/15).  
->何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱）。
+>何衛中：《牧養神的群羊》（香港：金燈台，2010），http://www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱）。
 
 ## E-book
 **注脚格式**
