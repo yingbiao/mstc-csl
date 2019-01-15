@@ -396,7 +396,7 @@
               <date-part name="year"/>
             </date>
           </if>
-          <else-if type="webpage" match="any">
+          <else-if type="webpage post post-weblog" match="any">
             <group prefix="(" suffix=")">
               <date variable="issued" text-case="capitalize-all">
                 <date-part name="day" suffix=" "/>
@@ -1004,7 +1004,7 @@
             <date form="text" date-parts="year-month-day" variable="issued">
             </date>
           </if>
-          <else-if type="webpage" match="any">
+          <else-if type="webpage post-weblog post" match="any">
             <group prefix="（" suffix="）">
               <date form="text" date-parts="year-month-day" variable="issued">
               </date>

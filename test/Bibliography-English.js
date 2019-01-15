@@ -194,4 +194,18 @@ describe("Bibliography English", function() {
         //  expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).</div>';
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Blogpost", function() {
+        var output = makeBibliography(items.blogPost);
+        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
+        
+        assert.equal(output, expected);
+    }); 
+    
+    it("Bibliography::Forumpost", function() {
+        var output = makeBibliography(items.forumPost);
+        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
+        
+        assert.equal(output, expected);
+    });
 });

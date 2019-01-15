@@ -427,4 +427,72 @@ module.exports = {
             "type": "webpage"
         }         
     },
+    blogpost: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "歷史玩完了？",
+            "container-title":"漢語基督教文化研究所",
+            "author": [
+                {
+                    "family": "劉",
+                    "given": "小楓",
+                }                
+            ],
+            "URL":"http://www.iscs.org.hk/article18.htm",
+            "language":"zh-CN",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2002,
+                        8,
+                        5
+                    ]
+                ]
+            },
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "type": "post-weblog"
+        }         
+    },
+    forumPost: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "歷史玩完了？",
+            "container-title":"漢語基督教文化研究所",
+            "author": [
+                {
+                    "family": "劉",
+                    "given": "小楓",
+                }                
+            ],
+            "URL":"http://www.iscs.org.hk/article18.htm",
+            "language":"zh-CN",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2002,
+                        8,
+                        5
+                    ]
+                ]
+            },
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "type": "post"
+        }         
+    },
 }

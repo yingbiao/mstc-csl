@@ -148,4 +148,18 @@ describe("Citation Chinese", function() {
 
         assert.equal(output, expected);
     });
+
+    it("Citation::Blogpost", function() {
+        var output = makeCitationCluster(items.blogpost);
+        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。';
+
+        assert.equal(output, expected);
+    });
+
+    it("Citation::Forumpost", function() {
+        var output = makeCitationCluster(items.forumPost);
+        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。';
+
+        assert.equal(output, expected);
+    });
 });
