@@ -49,6 +49,8 @@
       <term name="recipient" form="verb">致函于</term>
       <term name="collection-editor" form="verb-short">编</term>
       <term name="edition" form="short">版</term>
+      <term name="volume">册</term>
+      <term name="volume" form="short">册</term>
       <term name="presented at">上发表之专文</term>
       <term name="long-ordinal-11">十一</term>
       <term name="long-ordinal-12">十二</term>
@@ -775,13 +777,13 @@
   </macro>
   <macro name="editor-chinese">
     <names variable="editor">
-      <name name-as-sort-order="first" and="text" sort-separator="，" delimiter="，" delimiter-precedes-last="always"/>
+      <name name-as-sort-order="first" and="text" sort-separator="，" delimiter="、" delimiter-precedes-last="always"/>
       <label form="short"/>
     </names>
   </macro>
   <macro name="translator-chinese">
     <names variable="translator">
-      <name name-as-sort-order="first" and="text" sort-separator="，" delimiter="，" delimiter-precedes-last="always"/>
+      <name name-as-sort-order="first" and="text" sort-separator="，" delimiter="、" delimiter-precedes-last="always"/>
       <label form="verb-short"/>
     </names>
   </macro>
@@ -802,7 +804,7 @@
   </macro>
   <macro name="contributors-chinese">
     <names variable="author interviewer">
-      <name and="text" delimiter="，" delimiter-precedes-last="contextual" name-as-sort-order="first"/>
+      <name and="text" delimiter="、" delimiter-precedes-last="contextual" name-as-sort-order="first"/>
       <substitute>
         <text macro="editor-chinese"/>
         <text macro="translator-chinese"/>
