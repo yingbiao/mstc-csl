@@ -820,7 +820,7 @@
   </macro>
   <macro name="contributors-short-chinese">
     <names variable="author">
-      <name and="text" et-al-min="4" et-al-use-first="1" delimiter="，"/>
+      <name form="short" and="text" et-al-min="4" et-al-use-first="1" delimiter="，"/>
       <substitute>
         <text macro="editor-chinese"/>
         <text macro="translator-chinese"/>
@@ -881,10 +881,10 @@
       <else>
         <choose>
           <if variable="container-title" type="thesis paper-conference" match="any">
-            <text variable="title" text-case="title" prefix="「" suffix="」"/>
+            <text variable="title" form="short" text-case="title" prefix="「" suffix="」"/>
           </if>
           <else>
-            <text variable="title" text-case="title" quotes="true"/>
+            <text variable="title" form="short" text-case="title" quotes="true"/>
           </else>
         </choose>
       </else>

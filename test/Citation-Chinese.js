@@ -162,4 +162,11 @@ describe("Citation Chinese", function() {
 
         assert.equal(output, expected);
     });
+
+    it("Citation::Book", function() {
+        var output = makeCitationCluster(items.englishAuthor, "74-76");
+        var expected = 'Colin A. J.：《淚眼先知耶利米》（台北：校園書房出版社，1989），74–76。';
+        
+        assert.equal(output, expected);
+    });
 });
