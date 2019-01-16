@@ -7,8 +7,8 @@ module.exports = {
             "title": "淚眼先知耶利米",
             "author": [
                 {
-                    "family": "楊",
-                    "given": "牧谷"
+                    "family": "楊牧谷",
+                    "given": ""
                 }
             ],
             "publisher": "校園書房出版社",
@@ -30,8 +30,8 @@ module.exports = {
             "title": "舊約小品",
             "editor": [
                 {
-                    "family": "李",
-                    "given": "三谷"
+                    "family": "李三谷",
+                    "given": ""
                 }
             ],
             "publisher": "校園出版社",
@@ -53,16 +53,16 @@ module.exports = {
             "title": "雨過天晴",
             "author": [
                 {
-                    "family": "杜",
-                    "given": "德民",
+                    "family": "杜德民",
+                    "given": "",
                 },
                 {
-                    "family": "張",
-                    "given": "愛楊",
+                    "family": "張愛楊",
+                    "given": "",
                 },
                 {
-                    "family": "陳",
-                    "given": "豐裕",
+                    "family": "陳豐裕",
+                    "given": "",
                 }
             ],
             "publisher": "和聯出版社",
@@ -84,24 +84,24 @@ module.exports = {
             "title": "聖經正典與經外文獻導論",
             "author": [
                 {
-                    "family": "鮑",
-                    "given": "維鈞",
+                    "family": "鮑維鈞",
+                    "given": "",
                 },
                 {
-                    "family": "黃",
-                    "given": "錫木",
+                    "family": "黃錫木",
+                    "given": "",
                 },
                 {
-                    "family": "羅",
-                    "given": "慶才",
+                    "family": "羅慶才",
+                    "given": "",
                 },
                 {
-                    "family": "張",
-                    "given": "略",
+                    "family": "張略",
+                    "given": "",
                 },
                 {
-                    "family": "岑",
-                    "given": "少麟",
+                    "family": "岑少麟",
+                    "given": "",
                 }
             ],
             "collection-title": "聖經導論叢書",
@@ -130,8 +130,8 @@ module.exports = {
             ],
             "translator":[
                 {
-                    "family": "王",
-                    "given": "曉朝",
+                    "family": "王曉朝",
+                    "given": "",
                 }
             ],
             "number-of-volumes": 3,
@@ -154,10 +154,11 @@ module.exports = {
         "ITEM-1": {
             "id": "ITEM-1",
             "title": "腓立比書：僕友的生命與事奉",
+            "title-short": "腓立比書",
             "author": [
                 {
-                    "family": "黃",
-                    "given": "朱倫",
+                    "family": "黃朱倫",
+                    "given": "",
                 }
             ],
             "collection-title":"明道研經叢書50",
@@ -180,8 +181,8 @@ module.exports = {
             "title": "浸會在華佈道百年史略",
             "editor": [
                 {
-                    "family": "吳",
-                    "given": "立樂"
+                    "family": "吳立樂",
+                    "given": ""
                 }
             ],
             "edition": "修訂版",
@@ -204,8 +205,8 @@ module.exports = {
             "title": "牧養神的群羊",
             "author": [
                 {
-                    "family": "何",
-                    "given": "衛中"
+                    "family": "何衛中",
+                    "given": ""
                 }
             ],
             "publisher": "金燈台",
@@ -237,14 +238,14 @@ module.exports = {
             "title": "天下一家",
             "author": [
                 {
-                    "family": "黄",
-                    "given": "二冬"
+                    "family": "黄二冬",
+                    "given": ""
                 }
             ],
             "editor": [
                 {
-                    "family": "千",
-                    "given": "百文"
+                    "family": "千百文",
+                    "given": ""
                 }            
             ],
             "container-title": "地球村的演變",
@@ -268,14 +269,14 @@ module.exports = {
             "title": "基督的寬容",
             "author": [
                 {
-                    "family": "馮",
-                    "given": "來平"
+                    "family": "馮來平",
+                    "given": ""
                 }
             ],
             "editor": [
                 {
-                    "family": "邱",
-                    "given": "宋恩"
+                    "family": "邱宋恩",
+                    "given": ""
                 }
             ],
             "container-title": "世界神學辭典",
@@ -301,8 +302,8 @@ module.exports = {
             "title": "神學的本質探討",
             "author": [
                 {
-                    "family": "楊",
-                    "given": "品通",
+                    "family": "楊品通",
+                    "given": "",
                 }
             ],
             "container-title":"教會神學期刊",
@@ -326,8 +327,8 @@ module.exports = {
             "title": "美國華僑習俗趣談",
             "author": [
                 {
-                    "family": "李",
-                    "given": "約翰",
+                    "family": "李約翰",
+                    "given": "",
                 }
             ],
             "container-title":"时代華僑周刊",
@@ -351,8 +352,8 @@ module.exports = {
             "title": "基督教教育在南非華人教會群體中的發展模式",
             "author": [
                 {
-                    "family": "劉",
-                    "given": "庸",
+                    "family": "劉庸",
+                    "given": "",
                 }                
             ],
             "genre":"博士論文",
@@ -374,8 +375,8 @@ module.exports = {
             "title": "神學如何失去靈性？",
             "author": [
                 {
-                    "family": "謝",
-                    "given": "木水"
+                    "family": "謝木水",
+                    "given": ""
                 }
             ],
             "event": "新加坡神學院益道論述會",
@@ -400,8 +401,8 @@ module.exports = {
             "container-title":"漢語基督教文化研究所",
             "author": [
                 {
-                    "family": "劉",
-                    "given": "小楓",
+                    "family": "劉小楓",
+                    "given": "",
                 }                
             ],
             "URL":"http://www.iscs.org.hk/article18.htm",
@@ -426,5 +427,96 @@ module.exports = {
             },
             "type": "webpage"
         }         
+    },
+    blogpost: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "歷史玩完了？",
+            "container-title":"漢語基督教文化研究所",
+            "author": [
+                {
+                    "family": "劉小楓",
+                    "given": "",
+                }                
+            ],
+            "URL":"http://www.iscs.org.hk/article18.htm",
+            "language":"zh-CN",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2002,
+                        8,
+                        5
+                    ]
+                ]
+            },
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "type": "post-weblog"
+        }         
+    },
+    forumPost: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "歷史玩完了？",
+            "container-title":"漢語基督教文化研究所",
+            "author": [
+                {
+                    "family": "劉小楓",
+                    "given": "",
+                }                
+            ],
+            "URL":"http://www.iscs.org.hk/article18.htm",
+            "language":"zh-CN",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2002,
+                        8,
+                        5
+                    ]
+                ]
+            },
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "type": "post"
+        }         
+    },
+    englishAuthor: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "淚眼先知耶利米",
+            "author": [
+                {
+                    "family": "Colin",
+                    "given": "A. J."
+                }
+            ],
+            "publisher": "校園書房出版社",
+            "publisher-place": "台北",
+            "language":"zh-CN",
+            "issued": {
+                "date-parts": [
+                    [
+                        1989
+                    ]
+                ]
+            },
+            "type": "book"
+        }
     },
 }

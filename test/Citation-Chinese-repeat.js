@@ -97,7 +97,7 @@ describe("Citation Chinese", function() {
 
     it("Citation::Commentary or book in series with series number", function() {
         var output = makeCitationCluster(items.commentaryOrBookInSeriesWithSeriesNumber, "117");
-        var expected = '黃朱倫：《腓立比書：僕友的生命與事奉》，117。';
+        var expected = '黃朱倫：《腓立比書》，117。';
         
         assert.equal(output, expected);
     }); 
@@ -162,6 +162,13 @@ describe("Citation Chinese", function() {
         var output = makeCitationCluster(items.webpage);
         var expected = '劉小楓：「歷史玩完了？」。';
 
+        assert.equal(output, expected);
+    });
+
+    it("Citation::EnglishAuthor", function() {
+        var output = makeCitationCluster(items.englishAuthor, "70");
+        var expected = 'Colin：《淚眼先知耶利米》，70。';
+        
         assert.equal(output, expected);
     });
 });

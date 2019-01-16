@@ -50,21 +50,21 @@ describe("Bibliography Chinese", function() {
 
     it("Bibliography::Book with 2 or 3 authors (or editors)", function() {
         var output = makeBibliography(items.bookWith2Or3AuthorsEditors);
-        var expected = '<div class="csl-entry">杜德民，張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003）。</div>';
+        var expected = '<div class="csl-entry">杜德民、張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003）。</div>';
         
         assert.equal(output, expected);
     });
 
     it("Bibliography::English::Book Multiple Authors", function() {
         var output = makeBibliography(items.bookWithMoreThan3AuthorsEditors);
-        var expected = '<div class="csl-entry">鮑維鈞，黃錫木，羅慶才，張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。</div>';
+        var expected = '<div class="csl-entry">鮑維鈞、黃錫木、羅慶才、張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。</div>';
         
         assert.equal(output, expected);
     });
 
     it("Bibliography::Volume from a multi volume work", function() {
         var output = makeBibliography(items.volumeFromAMultiVolumeWork);
-        var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》（王曉朝译，共三卷，歷代基督教思想學術文庫古代系列，香港：道風書社，2004）。</div>';
+        var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》（王曉朝译，共三册，歷代基督教思想學術文庫古代系列，香港：道風書社，2004）。</div>';
         
         assert.equal(output, expected);
     });
@@ -99,8 +99,8 @@ describe("Bibliography Chinese", function() {
 
     it("Bibliography::Article in a lexicon or theological dictionary", function() {
         var output = makeBibliography(items.articleInALexiconOrTheologicalDictionary);
-        var expected = '<div class="csl-entry">馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，共四卷，上海：展徒出版社，1990），3：25–26。</div>';
-        //                                                                                    册
+        var expected = '<div class="csl-entry">馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，共四册，上海：展徒出版社，1990），3：25–26。</div>';
+
         assert.equal(output, expected);
     });
 
@@ -136,6 +136,13 @@ describe("Bibliography Chinese", function() {
         var output = makeBibliography(items.webpage);
         var expected = '<div class="csl-entry">劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。</div>';
 
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::EnglishAuthor", function() {
+        var output = makeBibliography(items.englishAuthor);
+        var expected = '<div class="csl-entry">Colin A. J.：《淚眼先知耶利米》（台北：校園書房出版社，1989）。</div>';
+        
         assert.equal(output, expected);
     });
 });

@@ -687,5 +687,73 @@ module.exports = {
             },
             "type": "webpage"
         }
+    },
+    blogPost: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Creation & Time in Basil’s Hexaemeron",
+            "title-short": "Creation & Time",
+            "author": [
+                {
+                    "family": "Brown",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Sapientia",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2018,
+                        1,
+                        29
+                    ]
+                ]
+            },
+            "URL": "http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "type": "post-weblog"
+        }
+    },
+    forumPost: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "Creation & Time in Basil’s Hexaemeron",
+            "title-short": "Creation & Time",
+            "author": [
+                {
+                    "family": "Brown",
+                    "given": "Andrew"
+                }
+            ],
+            "container-title": "Sapientia",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2018,
+                        1,
+                        29
+                    ]
+                ]
+            },
+            "URL": "http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        5,
+                        3
+                    ]
+                ]
+            },
+            "type": "post"
+        }
     }
 };
