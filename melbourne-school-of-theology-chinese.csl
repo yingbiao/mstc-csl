@@ -827,6 +827,11 @@
         <text macro="translator-note-chinese"/>
       </substitute>
     </names>
+    <choose>
+      <if type="article-journal" variable="author translator" match="all">
+        <text macro="translator-chinese" prefix="（" suffix="）"/>
+      </if>
+    </choose>
     <text macro="recipient-note-chinese"/>
   </macro>
   <macro name="editor-chinese">
@@ -864,6 +869,11 @@
         <text macro="translator-chinese"/>
       </substitute>
     </names>
+    <choose>
+      <if type="article-journal" variable="author translator" match="all">
+        <text macro="translator-chinese" prefix="（" suffix="）"/>
+      </if>
+    </choose>
     <text macro="recipient-chinese" prefix="。"/>
   </macro>
   <macro name="recipient-short-chinese">
@@ -880,6 +890,11 @@
         <text macro="translator-chinese"/>
       </substitute>
     </names>
+    <choose>
+      <if type="article-journal" variable="author translator" match="all">
+        <text macro="translator-chinese" prefix="（" suffix="）"/>
+      </if>
+    </choose>
     <text macro="recipient-short-chinese"/>
   </macro>
   <macro name="contributors-sort-chinese">

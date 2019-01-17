@@ -519,4 +519,45 @@ module.exports = {
             "type": "book"
         }
     },
+    journalWithTranslator: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "約翰•歐文論牧師的責任",
+            "author": [
+                {
+                    "family": "約翰•歐文",
+                    "given": ""
+                }
+            ],
+            "translator": [
+                {
+                    "family": "述寧",
+                    "given": ""
+                }
+            ],
+            "container-title":"教會",
+            "language":"zh-TW",
+            "issue":"70",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        3
+                    ]
+                ]
+            },
+            "URL":"https://www.churchchina.org/wp-content/uploads/ccpdf/070cc1803.pdf",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2019,
+                        1,
+                        15
+                    ]
+                ]
+            },
+            "page": "19",
+            "type": "article-journal"
+        }
+    }
 }

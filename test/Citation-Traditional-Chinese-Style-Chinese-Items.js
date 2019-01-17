@@ -171,4 +171,11 @@ describe("Citation Traditional Chinese Style Chinese Items", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::Journal article with translator", function() {
+        var output = makeCitationCluster(items.journalWithTranslator, 19);
+        var expected = '約翰•歐文（述寧譯）：「約翰•歐文論牧師的責任」，《教會》70（2018年3月），https://www.churchchina.org/wp-content/uploads/ccpdf/070cc1803.pdf（2019年1月15日參閱），19。';
+        
+        assert.equal(output, expected);
+    });
 });

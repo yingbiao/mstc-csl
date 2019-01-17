@@ -173,4 +173,11 @@ describe("Citation Traditional Chinese Style Chinese Items Repeat", function() {
         
         assert.equal(output, expected);
     });
+
+    it("Citation::Journal article with translator", function() {
+        var output = makeCitationCluster(items.journalWithTranslator, 20);
+        var expected = '約翰•歐文（述寧譯）：「約翰•歐文論牧師的責任」，20。';
+        
+        assert.equal(output, expected);
+    });
 });
