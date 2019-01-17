@@ -118,7 +118,7 @@ describe("Citation Chinese Style Chinese Items", function() {
 
     it("Citation::Journal article", function() {
         var output = makeCitationCluster(items.journalArticle, "21");
-        var expected = '楊品通：「神學的本質探討」，《教會神學期刊》，14（2003年5月），21。';
+        var expected = '楊品通：「神學的本質探討」，《教會神學期刊》14（2003年5月），21。';
         
         assert.equal(output, expected);
     });
@@ -168,6 +168,13 @@ describe("Citation Chinese Style Chinese Items", function() {
     it("Citation::Book", function() {
         var output = makeCitationCluster(items.englishAuthor, "74-76");
         var expected = 'Colin A. J.：《淚眼先知耶利米》（台北：校園書房出版社，1989），74–76。';
+        
+        assert.equal(output, expected);
+    });
+
+    it("Citation::Journal article with translator", function() {
+        var output = makeCitationCluster(items.journalWithTranslator, 19);
+        var expected = '約翰•歐文（述寧译）：「約翰•歐文論牧師的責任」，《教會》70（2018年3月），https://www.churchchina.org/wp-content/uploads/ccpdf/070cc1803.pdf（2019年1月15日参阅），19。';
         
         assert.equal(output, expected);
     });
