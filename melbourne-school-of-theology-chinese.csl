@@ -44,6 +44,12 @@
   </locale>
   <locale xml:lang="zh-CN">
     <terms>
+      <term name="total">共</term>
+      <term name="unpublished">未出版</term>
+      <term name="report">报告</term>
+      <term name="noof">第</term>
+      <term name="reviewed">审阅</term>
+      <term name="reviewed_by">由</term>
       <term name="accessed">参阅</term>
       <term name="interview">采访</term>
       <term name="recipient" form="verb">致函于</term>
@@ -72,6 +78,54 @@
       <term name="long-ordinal-28">二十八</term>
       <term name="long-ordinal-29">二十九</term>
       <term name="long-ordinal-30">三十</term>
+
+      <term name="editor" form="short">编</term>
+    </terms>
+  </locale>  
+  <locale xml:lang="zh-TW">
+    <terms>
+      <term name="total">共</term>
+      <term name="unpublished">未出版</term>
+      <term name="report">報告</term>
+      <term name="noof">第</term>
+      <term name="reviewed">審閱</term>
+      <term name="reviewed_by">由</term>
+      <term name="accessed">參閱</term>
+      <term name="interview">採訪</term>
+      <term name="recipient" form="verb">致函於</term>
+      <term name="collection-editor" form="verb-short">編</term>
+      <term name="edition" form="short">版</term>
+      <term name="volume">冊</term>
+      <term name="volume" form="short">冊</term>
+      <term name="presented at">上發表之專文</term>
+      <term name="long-ordinal-11">十一</term>
+      <term name="long-ordinal-12">十二</term>
+      <term name="long-ordinal-13">十三</term>
+      <term name="long-ordinal-14">十四</term>
+      <term name="long-ordinal-15">十五</term>
+      <term name="long-ordinal-16">十六</term>
+      <term name="long-ordinal-17">十七</term>
+      <term name="long-ordinal-18">十八</term>
+      <term name="long-ordinal-19">十九</term>
+      <term name="long-ordinal-20">二十</term>
+      <term name="long-ordinal-21">二十一</term>
+      <term name="long-ordinal-22">二十二</term>
+      <term name="long-ordinal-23">二十三</term>
+      <term name="long-ordinal-24">二十四</term>
+      <term name="long-ordinal-25">二十五</term>
+      <term name="long-ordinal-26">二十六</term>
+      <term name="long-ordinal-27">二十七</term>
+      <term name="long-ordinal-28">二十八</term>
+      <term name="long-ordinal-29">二十九</term>
+      <term name="long-ordinal-30">三十</term>
+
+      <term name="editor" form="short">編</term>
+      <term name="and">和</term>
+
+      <term name="open-quote">《</term>
+      <term name="close-quote">》</term>
+      <term name="open-inner-quote">〈</term>
+      <term name="close-inner-quote">〉</term>      
     </terms>
   </locale>  
   <macro name="container-contributors-note">
@@ -918,7 +972,7 @@
     <text variable="collection-number" />
     <choose>
       <if type="report" match="all" is-numeric="number">
-        <text value="报告" prefix="，" suffix="："/>
+        <text term="report" prefix="，" suffix="："/>
         <number variable="number"/>
       </if>
     </choose>
@@ -929,7 +983,7 @@
         <choose>
           <if is-numeric="edition">
             <group>
-              <text value="第"/>
+              <text term="noof"/>
               <number variable="edition" form="long-ordinal"/>
               <text term="edition" form="short"/>
             </group>
@@ -1191,7 +1245,7 @@
                 <else-if type="speech" match="any">
                   <choose>
                     <if match="none" variable="publisher-place">
-                      <text value="未出版"/>
+                      <text term="unpublished"/>
                     </if>
                   </choose>
                   <text variable="genre"/>
@@ -1230,7 +1284,7 @@
             <text macro="container-contributors-bibliography-chinese"/>
             <text macro="locators-note-chinese"/>
             <group>
-              <text value="共" />
+              <text term="total" />
               <number variable="number-of-volumes" form="long-ordinal"/>
               <text term="volume" form="short" plural="true"/>
             </group>
@@ -1244,7 +1298,7 @@
                 <else-if type="speech" match="any">
                   <choose>
                     <if match="none" variable="publisher-place">
-                      <text value="未出版"/>
+                      <text term="unpublished"/>
                     </if>
                   </choose>
                   <text variable="genre"/>
@@ -1314,11 +1368,11 @@
   </macro>
   <macro name="review-title-chinese">
     <text variable="title" text-case="title" font-style="italic"/>
-    <text value="由" text-case="title" prefix="，"/>
+    <text term="reviewed_by" text-case="title" prefix="，"/>
     <names variable="reviewed-author">
       <name/>
     </names>
-    <text value="审阅"/>  
+    <text term="reviewed"/>  
   </macro>  
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
     <layout locale="zh-CN" suffix="。">
@@ -1343,7 +1397,30 @@
           <text macro="point-locators-chinese"/>
         </else>
       </choose>
-    </layout>  
+    </layout> 
+    <layout locale="zh-TW" suffix="。">
+      <choose>
+        <if position="subsequent ibid ibid-with-locator" match="any">
+          <group>
+            <text macro="contributors-short-chinese" suffix="："/>
+            <text macro="title-short-chinese"/>
+            <text macro="point-locators-note-chinese" prefix="，"/>
+          </group>
+        </if>
+        <else>
+          <group>
+            <text macro="contributors-note-chinese" suffix="："/>
+            <text macro="title-note-chinese"/>
+            <text macro="description-note-chinese"/>
+            <text macro="container-title-note-chinese"/>
+          </group>
+          <text macro="issue-note-chinese"/>
+          <text macro="locators-newspaper-chinese" prefix="，"/>
+          <text macro="access-note-chinese" prefix="，"/>
+          <text macro="point-locators-chinese"/>
+        </else>
+      </choose>
+    </layout> 
     <layout suffix="." delimiter="; ">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">
@@ -1375,6 +1452,18 @@
       <key variable="issued"/>
     </sort>
     <layout locale="zh-CN" suffix="。">
+      <group>
+        <text macro="contributors-chinese" suffix="："/>
+        <text macro="title-note-chinese"/>
+        <text macro="description-note-chinese"/>
+        <text macro="container-title-chinese"/>
+      </group>
+      <text macro="issue-bib-chinese"/>
+      <text macro="locators-newspaper-chinese" prefix="，"/>
+      <text macro="access-bib-chinese" prefix="，"/>
+      <text macro="point-locators-chinese"/>
+    </layout> 
+    <layout locale="zh-TW" suffix="。">
       <group>
         <text macro="contributors-chinese" suffix="："/>
         <text macro="title-note-chinese"/>

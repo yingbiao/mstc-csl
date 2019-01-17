@@ -2,11 +2,11 @@
 
 var fs = require('fs');
 var citeproc = require("citeproc-js-node");
-var items = require('./fixtures/items-simplified-chinese.js');
+var items = require('./fixtures/items-traditional-chinese.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Citation Chinese Style Chinese Items", function() {
+describe("Citation Traditional Chinese Style Chinese Items", function() {
     var engine;
     var sys;
     var styleString;
@@ -20,9 +20,9 @@ describe("Citation Chinese Style Chinese Items", function() {
         var zhTW = fs.readFileSync('./locales/locales-zh-TW.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        sys.addLocale('zh-TW', zhCN);
+        sys.addLocale('zh-TW', zhTW);
         styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
-        engine = sys.newEngine(styleString, 'zh-CN', null);
+        engine = sys.newEngine(styleString, 'zh-TW', null);
     });
 
     function makeCitationCluster(items, pages) {
@@ -55,7 +55,7 @@ describe("Citation Chinese Style Chinese Items", function() {
 
     it("Citation::Edited Book", function() {
         var output = makeCitationCluster(items.editedBook, "24");
-        var expected = '李三谷编：《舊約小品》（台北：校園出版社，2003），24。';
+        var expected = '李三谷編：《舊約小品》（台北：校園出版社，2003），24。';
         
         assert.equal(output, expected);
     });
@@ -76,7 +76,7 @@ describe("Citation Chinese Style Chinese Items", function() {
 
     it("Citation::Volume from a multi volume work", function() {
         var output = makeCitationCluster(items.volumeFromAMultiVolumeWork, "99");
-        var expected = '奧古斯丁：《上帝之城》（王曉朝译，歷代基督教思想學術文庫古代系列，香港：道風書社，2004），2：99。';
+        var expected = '奧古斯丁：《上帝之城》（王曉朝譯，歷代基督教思想學術文庫古代系列，香港：道風書社，2004），2：99。';
         
         assert.equal(output, expected);
     });
@@ -90,28 +90,28 @@ describe("Citation Chinese Style Chinese Items", function() {
 
     it("Citation::Edition other than the first", function() {
         var output = makeCitationCluster(items.editionOtherThanTheFirst, "75");
-        var expected = '吳立樂编：《浸會在華佈道百年史略》（修訂版，香港：浸信會出版部，1970），75。';
+        var expected = '吳立樂編：《浸會在華佈道百年史略》（修訂版，香港：浸信會出版部，1970），75。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Booked viewed online", function() {
         var output = makeCitationCluster(items.bookViewedOnline, "13");
-        var expected = '何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参阅），13。';
+        var expected = '何衛中：《牧養神的群羊》（香港：金燈台，2010），http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日參閱），13。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Essay or chapter", function() {
         var output = makeCitationCluster(items.essayOrChapter, "339");
-        var expected = '黄二冬：「天下一家」，《地球村的演變》（千百文编，厦門：漢陽出版社，2003），339。';
+        var expected = '黄二冬：「天下一家」，《地球村的演變》（千百文編，厦門：漢陽出版社，2003），339。';
         
         assert.equal(output, expected);
     });
 
     it("Citation::Article in a lexicon or theological dictionary", function() {
         var output = makeCitationCluster(items.articleInALexiconOrTheologicalDictionary, "25");
-        var expected = '馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩编，上海：展徒出版社，1990），3：25。';
+        var expected = '馮來平：「基督的寬容」，《世界神學辭典》（邱宋恩編，上海：展徒出版社，1990），3：25。';
         
         assert.equal(output, expected);
     });
@@ -139,28 +139,28 @@ describe("Citation Chinese Style Chinese Items", function() {
 
     it("Citation::Conferenec paper", function() {
         var output = makeCitationCluster(items.conferencePaper, "1");
-        var expected = '謝木水：「神學如何失去靈性？」（新加坡神學院益道論述會上发表之专文，新加坡，2010年10月4日），1。';
+        var expected = '謝木水：「神學如何失去靈性？」（新加坡神學院益道論述會上發表之專文，新加坡，2010年10月4日），1。';
 
         assert.equal(output, expected);
     });
 
     it("Citation::Webpage", function() {
         var output = makeCitationCluster(items.webpage);
-        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。';
+        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日參閱）。';
 
         assert.equal(output, expected);
     });
 
     it("Citation::Blogpost", function() {
         var output = makeCitationCluster(items.blogpost);
-        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。';
+        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日參閱）。';
 
         assert.equal(output, expected);
     });
 
     it("Citation::Forumpost", function() {
         var output = makeCitationCluster(items.forumPost);
-        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参阅）。';
+        var expected = '劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日參閱）。';
 
         assert.equal(output, expected);
     });
