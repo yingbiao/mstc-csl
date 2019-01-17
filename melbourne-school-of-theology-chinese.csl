@@ -1219,7 +1219,7 @@
   <macro name="issue-note-chinese">
     <choose>
       <if type="article-journal">
-        <group prefix="，">
+        <group>
           <text variable="volume" />
           <text variable="issue" />
           <text macro="issued-chinese"/>
@@ -1266,7 +1266,7 @@
   <macro name="issue-bib-chinese">
     <choose>
       <if type="article-journal">
-        <group prefix="，">
+        <group>
           <text variable="volume"/>
           <text variable="issue" />
           <text macro="issued-chinese"/>

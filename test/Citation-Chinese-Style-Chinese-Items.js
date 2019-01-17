@@ -118,7 +118,7 @@ describe("Citation Chinese Style Chinese Items", function() {
 
     it("Citation::Journal article", function() {
         var output = makeCitationCluster(items.journalArticle, "21");
-        var expected = '楊品通：「神學的本質探討」，《教會神學期刊》，14（2003年5月），21。';
+        var expected = '楊品通：「神學的本質探討」，《教會神學期刊》14（2003年5月），21。';
         
         assert.equal(output, expected);
     });

@@ -108,7 +108,7 @@ describe("Bibliography Chinese Style Chinese Items", function() {
 
     it("Bibliography::Journal article", function() {
         var output = makeBibliography(items.journalArticle);
-        var expected = '<div class="csl-entry">楊品通：「神學的本質探討」，《教會神學期刊》，14（2003年5月），19–24。</div>';
+        var expected = '<div class="csl-entry">楊品通：「神學的本質探討」，《教會神學期刊》14（2003年5月），19–24。</div>';
         
         assert.equal(output, expected);
     });
