@@ -6,7 +6,7 @@ var items = require('./fixtures/items-english.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Bibliography English", function() {
+describe("Bibliography Chinese Style English Items", function() {
     var engine;
     var sys;
     var styleString;
