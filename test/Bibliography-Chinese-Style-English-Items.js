@@ -17,8 +17,10 @@ describe("Bibliography Chinese Style English Items", function() {
         //Wherever your locale and style files are. None are included with the package.
         var enUS = fs.readFileSync('./locales/locales-en-US.xml', 'utf8');
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
+        var zhTW = fs.readFileSync('./locales/locales-zh-TW.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
+        sys.addLocale('zh-TW', zhCN);
         styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
         engine = sys.newEngine(styleString, 'zh-CN', null);
     });

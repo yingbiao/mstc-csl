@@ -2,11 +2,11 @@
 
 var fs = require('fs');
 var citeproc = require("citeproc-js-node");
-var items = require('./fixtures/items-simplified-chinese.js');
+var items = require('./fixtures/items-traditional-chinese.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Citation Chinese Style Chinese Items Repeat", function() {
+describe("Citation Traditional Chinese Style Chinese Items Repeat", function() {
     var engine;
     var sys;
     var styleString;
@@ -20,9 +20,9 @@ describe("Citation Chinese Style Chinese Items Repeat", function() {
         var zhTW = fs.readFileSync('./locales/locales-zh-TW.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        sys.addLocale('zh-TW', zhCN);
+        sys.addLocale('zh-TW', zhTW);
         styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
-        engine = sys.newEngine(styleString, 'zh-CN', null);
+        engine = sys.newEngine(styleString, 'zh-TW', null);
     });
 
     function makeCitationCluster(items, pages) {
@@ -71,7 +71,7 @@ describe("Citation Chinese Style Chinese Items Repeat", function() {
 
     it("Citation::Edited Book", function() {
         var output = makeCitationCluster(items.editedBook, "29");
-        var expected = '李三谷编：《舊約小品》，29。';
+        var expected = '李三谷編：《舊約小品》，29。';
         
         assert.equal(output, expected);
     });
@@ -106,7 +106,7 @@ describe("Citation Chinese Style Chinese Items Repeat", function() {
 
     it("Citation::Edition other than the first", function() {
         var output = makeCitationCluster(items.editionOtherThanTheFirst, "105");
-        var expected = '吳立樂编：《浸會在華佈道百年史略》，105。';
+        var expected = '吳立樂編：《浸會在華佈道百年史略》，105。';
         
         assert.equal(output, expected);
     });
