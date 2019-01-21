@@ -821,7 +821,7 @@
   </macro>
   <macro name="contributors-note-chinese">
     <names variable="author">
-      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="，"/>
+      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="、"/>
       <substitute>
         <text macro="editor-note-chinese"/>
         <text macro="translator-note-chinese"/>
