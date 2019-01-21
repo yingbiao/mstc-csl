@@ -821,7 +821,7 @@
   </macro>
   <macro name="contributors-note-chinese">
     <names variable="author">
-      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="、"/>
+      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="、" />
       <substitute>
         <text macro="editor-note-chinese"/>
         <text macro="translator-note-chinese"/>
@@ -863,7 +863,7 @@
   </macro>
   <macro name="contributors-chinese">
     <names variable="author interviewer">
-      <name and="text" delimiter="、" delimiter-precedes-last="contextual" name-as-sort-order="first"/>
+      <name and="text" delimiter="、" delimiter-precedes-last="contextual"/>
       <substitute>
         <text macro="editor-chinese"/>
         <text macro="translator-chinese"/>
@@ -890,11 +890,6 @@
         <text macro="translator-chinese"/>
       </substitute>
     </names>
-    <choose>
-      <if type="article-journal" variable="author translator" match="all">
-        <text macro="translator-chinese" prefix="（" suffix="）"/>
-      </if>
-    </choose>
     <text macro="recipient-short-chinese"/>
   </macro>
   <macro name="contributors-sort-chinese">

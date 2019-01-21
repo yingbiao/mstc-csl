@@ -157,7 +157,7 @@ describe("Bibliography Traditional Chinese Style Chinese Items", function() {
 
     it("Bibliography::EnglishAuthor", function() {
         var output = makeBibliography(items.englishAuthor);
-        var expected = '<div class="csl-entry">Colin A. J.：《淚眼先知耶利米》（台北：校園書房出版社，1989）。</div>';
+        var expected = '<div class="csl-entry">Colin R. Alan：《淚眼先知耶利米》（台北：校園書房出版社，1989）。</div>';
         
         assert.equal(output, expected);
     });

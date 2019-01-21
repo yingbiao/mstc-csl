@@ -503,7 +503,7 @@ module.exports = {
             "author": [
                 {
                     "family": "Colin",
-                    "given": "A. J."
+                    "given": "R. Alan"
                 }
             ],
             "publisher": "校園書房出版社",
