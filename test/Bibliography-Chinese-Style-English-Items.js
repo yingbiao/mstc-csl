@@ -45,7 +45,7 @@ describe("Bibliography Chinese Style English Items", function() {
 
     it("Bibliography::Edited Book", function() {
         var output = makeBibliography(items.editedBook);
-        var expected = '<div class="csl-entry">Ward, Rowland ed. <i>The Westminster Confession and Catechisms in Modern English</i> (Wantirna: New Melbourne Press, 2000).</div>';
+        var expected = '<div class="csl-entry">Ward, Rowland, ed. <i>The Westminster Confession and Catechisms in Modern English</i> (Wantirna: New Melbourne Press, 2000).</div>';
         
         assert.equal(output, expected);
     });
@@ -129,7 +129,7 @@ describe("Bibliography Chinese Style English Items", function() {
 
     it("Bibliography::Anonymous dictionary acticle", function() {
         var output = makeBibliography(items.anonymousDictionaryArticle);
-        var expected = '<div class="csl-entry">Cross, F. L., and E. A. Livingstone eds. “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.</div>';
+        var expected = '<div class="csl-entry">Cross, F. L., and E. A. Livingstone, eds. “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.</div>';
 
         assert.equal(output, expected);
     });
@@ -192,21 +192,21 @@ describe("Bibliography Chinese Style English Items", function() {
 
     it("Bibliography::Webpage", function() {
         var output = makeBibliography(items.webpage);
-        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
-        //  expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (Henry Center for Theological Understanding), 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).</div>';
+        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
+        
         assert.equal(output, expected);
     });
 
     it("Bibliography::Blogpost", function() {
         var output = makeBibliography(items.blogPost);
-        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
+        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
         
         assert.equal(output, expected);
     }); 
     
     it("Bibliography::Forumpost", function() {
         var output = makeBibliography(items.forumPost);
-        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May, 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
+        var expected = '<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i> (3 May 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/01/18).</div>';
         
         assert.equal(output, expected);
     });

@@ -85,7 +85,7 @@
   <macro name="editor-note">
     <names variable="editor">
       <name and="text" et-al-min="4" et-al-use-first="1"/>
-      <label form="short" prefix=" " suffix=""/>
+      <label form="short" prefix=", " suffix=""/>
     </names>
   </macro>
   <macro name="translator-note">
@@ -113,7 +113,7 @@
   <macro name="editor">
     <names variable="editor">
       <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
-      <label form="short" prefix=" " suffix=""/>
+      <label form="short" prefix=", " suffix=""/>
     </names>
   </macro>
   <macro name="translator">
@@ -370,7 +370,7 @@
             <group prefix="(" suffix=")">
               <date variable="issued" text-case="capitalize-all">
                 <date-part name="day" suffix=" "/>
-                <date-part name="month" suffix=", "/>
+                <date-part name="month" suffix=" "/>
                 <date-part name="year"/>
               </date>
             </group>
