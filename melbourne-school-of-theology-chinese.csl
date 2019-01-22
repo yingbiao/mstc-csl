@@ -19,7 +19,7 @@
     <category citation-format="note"/>
     <category field="theology"/>
     <summary>Melbourne School of Theology Chinese Department format based on the Essay Style Guide</summary>
-    <updated>2019-01-17T12:00:00+00:00</updated>
+    <updated>2019-01-22T12:00:00+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
@@ -171,7 +171,7 @@
   <macro name="editor-note">
     <names variable="editor">
       <name and="text" et-al-min="4" et-al-use-first="1"/>
-      <label form="short" prefix=" " suffix=""/>
+      <label form="short" prefix=", " suffix=""/>
     </names>
   </macro>
   <macro name="translator-note">
@@ -199,7 +199,7 @@
   <macro name="editor">
     <names variable="editor">
       <name name-as-sort-order="first" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
-      <label form="short" prefix=" " suffix=""/>
+      <label form="short" prefix=", " suffix=""/>
     </names>
   </macro>
   <macro name="translator">
@@ -456,7 +456,7 @@
             <group prefix="(" suffix=")">
               <date variable="issued" text-case="capitalize-all">
                 <date-part name="day" suffix=" "/>
-                <date-part name="month" suffix=", "/>
+                <date-part name="month" suffix=" "/>
                 <date-part name="year"/>
               </date>
             </group>
@@ -821,7 +821,7 @@
   </macro>
   <macro name="contributors-note-chinese">
     <names variable="author">
-      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="，"/>
+      <name and="text" delimiter-precedes-last="contextual" et-al-min="4" et-al-use-first="1" delimiter="、" />
       <substitute>
         <text macro="editor-note-chinese"/>
         <text macro="translator-note-chinese"/>
@@ -863,7 +863,7 @@
   </macro>
   <macro name="contributors-chinese">
     <names variable="author interviewer">
-      <name and="text" delimiter="、" delimiter-precedes-last="contextual" name-as-sort-order="first"/>
+      <name and="text" delimiter="、" delimiter-precedes-last="contextual"/>
       <substitute>
         <text macro="editor-chinese"/>
         <text macro="translator-chinese"/>
@@ -890,11 +890,6 @@
         <text macro="translator-chinese"/>
       </substitute>
     </names>
-    <choose>
-      <if type="article-journal" variable="author translator" match="all">
-        <text macro="translator-chinese" prefix="（" suffix="）"/>
-      </if>
-    </choose>
     <text macro="recipient-short-chinese"/>
   </macro>
   <macro name="contributors-sort-chinese">

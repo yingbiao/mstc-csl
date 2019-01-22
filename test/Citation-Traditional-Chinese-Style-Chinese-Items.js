@@ -62,7 +62,7 @@ describe("Citation Traditional Chinese Style Chinese Items", function() {
 
     it("Citation::Book with 2 or 3 authors (or editors)", function() {
         var output = makeCitationCluster(items.bookWith2Or3AuthorsEditors, "36");
-        var expected = '杜德民，張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003），36。';
+        var expected = '杜德民、張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003），36。';
         
         assert.equal(output, expected);
     });
@@ -167,7 +167,7 @@ describe("Citation Traditional Chinese Style Chinese Items", function() {
 
     it("Citation::Book", function() {
         var output = makeCitationCluster(items.englishAuthor, "74-76");
-        var expected = 'Colin A. J.：《淚眼先知耶利米》（台北：校園書房出版社，1989），74–76。';
+        var expected = 'Colin R. Alan：《淚眼先知耶利米》（台北：校園書房出版社，1989），74–76。';
         
         assert.equal(output, expected);
     });
