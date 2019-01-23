@@ -13,7 +13,6 @@ module.exports = {
             ],
             "publisher": "校園書房出版社",
             "publisher-place": "台北",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -36,7 +35,6 @@ module.exports = {
             ],
             "publisher": "校園出版社",
             "publisher-place": "台北",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -67,7 +65,6 @@ module.exports = {
             ],
             "publisher": "和聯出版社",
             "publisher-place": "新加坡",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -107,7 +104,6 @@ module.exports = {
             "collection-title": "聖經導論叢書",
             "publisher": "基道",
             "publisher-place": "香港",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -139,7 +135,6 @@ module.exports = {
             "collection-title":"歷代基督教思想學術文庫古代系列",
             "publisher": "道風書社",
             "publisher-place": "香港",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -164,7 +159,6 @@ module.exports = {
             "collection-title":"明道研經叢書50",
             "publisher": "明道社",
             "publisher-place": "香港",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -188,7 +182,6 @@ module.exports = {
             "edition": "修訂版",
             "publisher": "浸信會出版部",
             "publisher-place": "香港",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -211,7 +204,6 @@ module.exports = {
             ],
             "publisher": "金燈台",
             "publisher-place": "香港",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -251,7 +243,6 @@ module.exports = {
             "container-title": "地球村的演變",
             "publisher": "漢陽出版社",
             "publisher-place": "厦門",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -282,7 +273,6 @@ module.exports = {
             "container-title": "世界神學辭典",
             "publisher": "展徒出版社",
             "publisher-place": "上海",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -307,7 +297,6 @@ module.exports = {
                 }
             ],
             "container-title":"教會神學期刊",
-            "language":"zh-TW",
             "issue":"14",
             "issued": {
                 "date-parts": [
@@ -332,7 +321,6 @@ module.exports = {
                 }
             ],
             "container-title":"时代華僑周刊",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -357,7 +345,6 @@ module.exports = {
                 }                
             ],
             "genre":"博士論文",
-            "language":"zh-TW",
             "publisher":"太平洋天國神學院",
             "issued": {
                 "date-parts": [
@@ -381,7 +368,6 @@ module.exports = {
             ],
             "event": "新加坡神學院益道論述會",
             "publisher-place": "新加坡",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -406,7 +392,6 @@ module.exports = {
                 }                
             ],
             "URL":"http://www.iscs.org.hk/article18.htm",
-            "language":"zh-TW",
             "accessed": {
                 "date-parts": [
                     [
@@ -440,7 +425,6 @@ module.exports = {
                 }                
             ],
             "URL":"http://www.iscs.org.hk/article18.htm",
-            "language":"zh-TW",
             "accessed": {
                 "date-parts": [
                     [
@@ -474,7 +458,6 @@ module.exports = {
                 }                
             ],
             "URL":"http://www.iscs.org.hk/article18.htm",
-            "language":"zh-TW",
             "accessed": {
                 "date-parts": [
                     [
@@ -508,7 +491,6 @@ module.exports = {
             ],
             "publisher": "校園書房出版社",
             "publisher-place": "台北",
-            "language":"zh-TW",
             "issued": {
                 "date-parts": [
                     [
@@ -536,7 +518,6 @@ module.exports = {
                 }
             ],
             "container-title":"教會",
-            "language":"zh-TW",
             "issue":"70",
             "issued": {
                 "date-parts": [
