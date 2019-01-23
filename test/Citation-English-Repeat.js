@@ -6,7 +6,7 @@ var items = require('./fixtures/items-english.js');
 var chai = require('chai');
 var assert = chai.assert;
 
-describe("Citation English Style Repeat", function() {
+describe("Citation English Repeat", function() {
     var sys;
     var engineEnglish;
     var engineChinese;
@@ -16,7 +16,6 @@ describe("Citation English Style Repeat", function() {
     before(function() {
         sys = new citeproc.simpleSys();
 
-        //Wherever your locale and style files are. None are included with the package.
         var enUS = fs.readFileSync('./locales/locales-en-US.xml', 'utf8');
         var zhCN = fs.readFileSync('./locales/locales-zh-CN.xml', 'utf8');
         var zhTW = fs.readFileSync('./locales/locales-zh-TW.xml', 'utf8');
