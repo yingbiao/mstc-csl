@@ -78,7 +78,7 @@ describe("Citation Traditional Chinese Style Chinese Items Repeat", function() {
 
     it("Citation::Book with 2 or 3 authors (or editors)", function() {
         var output = makeCitationCluster(items.bookWith2Or3AuthorsEditors, "45");
-        var expected = '杜德民，張愛楊和陳豐裕：《雨過天晴》，45。';
+        var expected = '杜德民、張愛楊和陳豐裕：《雨過天晴》，45。';
         
         assert.equal(output, expected);
     });
