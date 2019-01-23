@@ -20,7 +20,7 @@ describe("Bibliography Chinese Style Chinese Items", function() {
         var zhTW = fs.readFileSync('./locales/locales-zh-TW.xml', 'utf8');
         sys.addLocale('en-US', enUS);        
         sys.addLocale('zh-CN', zhCN);
-        sys.addLocale('zh-TW', zhCN);
+        sys.addLocale('zh-TW', zhTW);
         styleString = fs.readFileSync('./melbourne-school-of-theology-chinese.csl', 'utf8');
         engine = sys.newEngine(styleString, 'zh-CN', null);
     });
