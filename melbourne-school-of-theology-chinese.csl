@@ -428,6 +428,7 @@
           </group>
           <group delimiter=" ">
             <text variable="genre"/>
+            <text value="dissertation"/>
           </group>
         </if>
         <else>
