@@ -252,4 +252,24 @@ describe("Citation Chinese Repeat", function() {
         expected = '約翰•歐文：「約翰•歐文論牧師的責任」，20。';
         assert.equal(output, expected);
     });
+
+    it("Citation::Book with 2 authors", function() {
+        var output = makeCitationCluster(items.editedBookWith2Editors, "zh-CN", 19);
+        var expected = '李三谷和李二谷编：《舊約小品》，19。';
+        assert.equal(output, expected);
+
+        output = makeCitationCluster(items.editedBookWith2Editors, "zh-TW", 19);
+        expected = '李三谷和李二谷編：《舊約小品》，19。';
+        assert.equal(output, expected);
+    });
+
+    it("Citation::Book with 2 translators", function() {
+        var output = makeCitationCluster(items.translatedBookWith2Translators, "zh-CN", 19);
+        var expected = '李三谷和李二谷译：《舊約小品》，19。';
+        assert.equal(output, expected);
+
+        output = makeCitationCluster(items.translatedBookWith2Translators, "zh-TW", 19);
+        expected = '李三谷和李二谷譯：《舊約小品》，19。';
+        assert.equal(output, expected);
+    });
 });
