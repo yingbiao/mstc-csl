@@ -223,4 +223,24 @@ describe("Bibliography Chinese", function() {
         expected = '<div class="csl-entry">約翰•歐文（述寧譯）：「約翰•歐文論牧師的責任」，《教會》70（2018年3月），https://www.churchchina.org/wp-content/uploads/ccpdf/070cc1803.pdf（2019年1月15日參閱），19。</div>';        
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Book with 2 editors", function() {
+        var output = makeBibliography(items.editedBookWith2Editors, "zh-CN");
+        var expected = '<div class="csl-entry">李三谷和李二谷编：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+
+        output = makeBibliography(items.editedBookWith2Editors, "zh-TW");
+        expected = '<div class="csl-entry">李三谷和李二谷編：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::Book with 2 translators", function() {
+        var output = makeBibliography(items.translatedBookWith2Translators, "zh-CN");
+        var expected = '<div class="csl-entry">李三谷和李二谷译：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+
+        output = makeBibliography(items.translatedBookWith2Translators, "zh-TW");
+        expected = '<div class="csl-entry">李三谷和李二谷譯：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+    });
 });
