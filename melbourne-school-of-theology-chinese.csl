@@ -767,7 +767,7 @@
       <choose>
         <if variable="author">
           <names variable="editor" delimiter="，">
-            <name and="text" delimiter="，"/>
+            <name and="text" delimiter="、"/>
             <label form="verb-short"/>
           </names>
         </if>
@@ -775,7 +775,7 @@
       <choose>
         <if variable="author editor" match="any">
           <names variable="translator" delimiter="，">
-            <name and="text" delimiter="，"/>
+            <name and="text" delimiter="、"/>
             <label form="verb-short" text-case="lowercase"/>
           </names>
         </if>
@@ -787,7 +787,7 @@
       <choose>
         <if variable="author">
           <names variable="editor" delimiter="，">
-            <name and="text" delimiter="，"/>
+            <name and="text" delimiter="、"/>
             <label form="verb-short" text-case="lowercase"/>
           </names>
         </if>
@@ -795,7 +795,7 @@
       <choose>
         <if variable="author editor" match="any">
           <names variable="translator" delimiter="，">
-            <name and="text" delimiter="，"/>
+            <name and="text" delimiter="、"/>
             <label form="verb-short" text-case="lowercase"/>
           </names>
         </if>
@@ -816,7 +816,7 @@
   </macro>
   <macro name="recipient-note-chinese">
     <names variable="recipient" delimiter="，">
-      <name and="text" et-al-min="4" et-al-use-first="3"/>
+      <name and="text" et-al-min="4" et-al-use-first="3" delimiter="、"/>
       <label form="verb" />
     </names>
   </macro>
@@ -879,7 +879,7 @@
   </macro>
   <macro name="recipient-short-chinese">
     <names variable="recipient">
-      <name form="short" and="text" delimiter="，"/>
+      <name form="short" and="text" delimiter="、"/>
       <label form="verb"/>
     </names>
   </macro>
@@ -904,7 +904,7 @@
   </macro>
   <macro name="interviewer-note-chinese">
     <names variable="interviewer" delimiter="，">
-      <name and="text" delimiter="，"/>
+      <name and="text" delimiter="、"/>
       <label form="verb"/>
     </names>
   </macro>
@@ -1381,7 +1381,7 @@
     <text variable="title" text-case="title" font-style="italic"/>
     <text term="reviewed_by" text-case="title" prefix="，"/>
     <names variable="reviewed-author">
-      <name/>
+      <name delimiter="、"/>
     </names>
     <text term="reviewed"/>  
   </macro>  
