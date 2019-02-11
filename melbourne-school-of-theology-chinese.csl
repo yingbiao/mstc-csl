@@ -804,13 +804,13 @@
   </macro>
   <macro name="editor-note-chinese">
     <names variable="editor">
-      <name and="text" et-al-min="4" et-al-use-first="1"/>
+      <name and="text" et-al-min="4" et-al-use-first="1" delimiter="、"/>
       <label form="short"/>
     </names>
   </macro>
   <macro name="translator-note-chinese">
     <names variable="translator">
-      <name and="text" et-al-min="4" et-al-use-first="1"/>
+      <name and="text" et-al-min="4" et-al-use-first="1" delimiter="、"/>
       <label form="verb-short"/>
     </names>
   </macro>

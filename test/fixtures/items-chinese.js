@@ -593,4 +593,64 @@ module.exports = {
             "type": "chapter"
         }
     },
+    editedBookWith3Editors: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "舊約小品",
+            "editor": [
+                {
+                    "family": "李三谷",
+                    "given": ""
+                },
+                {
+                    "family": "李二谷",
+                    "given": ""
+                },
+                {
+                    "family": "李一谷",
+                    "given": ""
+                }
+            ],
+            "publisher": "校園出版社",
+            "publisher-place": "台北",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "type": "chapter"
+        }
+    },
+    translatedBookWith3Translators: {
+        "ITEM-1": {
+            "id": "ITEM-1",
+            "title": "舊約小品",
+            "translator": [
+                {
+                    "family": "李三谷",
+                    "given": ""
+                },
+                {
+                    "family": "李二谷",
+                    "given": ""
+                },
+                {
+                    "family": "李一谷",
+                    "given": ""
+                }
+            ],
+            "publisher": "校園出版社",
+            "publisher-place": "台北",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "type": "chapter"
+        }
+    },
 }

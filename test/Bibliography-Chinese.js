@@ -243,4 +243,24 @@ describe("Bibliography Chinese", function() {
         expected = '<div class="csl-entry">李三谷和李二谷譯：《舊約小品》（台北：校園出版社，2003）。</div>';
         assert.equal(output, expected);
     });
+
+    it("Bibliography::Book with 3 editors", function() {
+        var output = makeBibliography(items.editedBookWith3Editors, "zh-CN");
+        var expected = '<div class="csl-entry">李三谷、李二谷和李一谷编：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+
+        output = makeBibliography(items.editedBookWith3Editors, "zh-TW");
+        expected = '<div class="csl-entry">李三谷、李二谷和李一谷編：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+    });
+
+    it("Bibliography::Book with 3 translators", function() {
+        var output = makeBibliography(items.translatedBookWith3Translators, "zh-CN");
+        var expected = '<div class="csl-entry">李三谷、李二谷和李一谷译：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+
+        output = makeBibliography(items.translatedBookWith3Translators, "zh-TW");
+        expected = '<div class="csl-entry">李三谷、李二谷和李一谷譯：《舊約小品》（台北：校園出版社，2003）。</div>';
+        assert.equal(output, expected);
+    });
 });
