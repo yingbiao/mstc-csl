@@ -173,16 +173,16 @@
 
 ## Book viewed online
 **注脚格式**
->J. A. Hackett, *A Basic Introduction to Biblical Hebrew, with CD* (Peabody, MA: Hendrickson, 2010), http://books.google.com.au/books?id=UuMRFJqmJ_sC (accessed 29/01/15), 14.   
->何衛中：《牧養神的群羊》（香港：金燈台，2010），http://www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱），13。
+>J. A. Hackett, *A Basic Introduction to Biblical Hebrew, with CD* (Peabody, MA: Hendrickson, 2010), <http://books.google.com.au/books?id=UuMRFJqmJ_sC> (accessed 29/01/15), 14.   
+>何衛中：《牧養神的群羊》（香港：金燈台，2010），<http://www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf>（2014年9月8日参閱），13。
 
 **重复引用格式**
 >Hackett, *Basic Introduction*, 15.   
 >何衛中：《牧養神的群羊》，20。
 
 **参考书目格式**
->Hackett, J. A. *A Basic Introduction to Biblical Hebrew, with CD* (Peabody, MA: Hendrickson, 2010), http://books.google.com.au/books?id=UuMRFJqmJ_sC (accessed 29/01/15).  
->何衛中：《牧養神的群羊》（香港：金燈台，2010），http://www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参閱）。
+>Hackett, J. A. *A Basic Introduction to Biblical Hebrew, with CD* (Peabody, MA: Hendrickson, 2010), <http://books.google.com.au/books?id=UuMRFJqmJ_sC> (accessed 29/01/15).  
+>何衛中：《牧養神的群羊》（香港：金燈台，2010），<http://www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf>（2014年9月8日参閱）。
 
 ## E-book
 **注脚格式**
@@ -253,13 +253,13 @@
 
 ## Journal article viewed online
 **注脚格式**
->Rolf Jacobson, “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” *Word & World* 22, no. 4 (2002), http://web.a.ebscohost.com/ehost/pdfviewer/ (accessed 29/01/15), 400–401. 
+>Rolf Jacobson, “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” *Word & World* 22, no. 4 (2002), <http://web.a.ebscohost.com/ehost/pdfviewer/> (accessed 29/01/15), 400–401. 
 
 **重复引用格式**
 >Jacobson, “Freedom,” 402–403. 
 
 **参考书目格式**
->Jacobson, Rolf. “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” *Word & World* 22, no. 4 (2002), http://web.a.ebscohost.com/ehost/pdfviewer/ (accessed 29/01/15), 396–405. 
+>Jacobson, Rolf. “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” *Word & World* 22, no. 4 (2002), <http://web.a.ebscohost.com/ehost/pdfviewer/> (accessed 29/01/15), 396–405. 
 
 ## Magazine/newspaper article
 **注脚格式**
@@ -315,7 +315,7 @@
 
 ## Podcast or Online Video
 **注脚格式**
->Eric Tlozek, “25 years after Oslo, the Middle East peace process is in pieces,” *The World Today* (Podcast audio), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450 (accessed 12/11/18).
+>Eric Tlozek, “25 years after Oslo, the Middle East peace process is in pieces,” *The World Today* (Podcast audio), <http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450> (accessed 12/11/18).
 
 
 **重复引用格式**
@@ -323,12 +323,12 @@
 
 
 **参考书目格式**
->Tlozek, Eric. “25 years after Oslo, the Middle East peace process is in pieces,” *The World Today* (Podcast audio), http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450 (accessed 12/11/18).
+>Tlozek, Eric. “25 years after Oslo, the Middle East peace process is in pieces,” *The World Today* (Podcast audio), <http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450> (accessed 12/11/18).
 
 ## Web page
 **注脚格式**
-> Andrew Brown, “Creation & Time in Basil’s Hexaemeron,” *Sapientia* (3 May 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).  
->劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参閱）。
+> Andrew Brown, “Creation & Time in Basil’s Hexaemeron,” *Sapientia* (3 May 2017), <http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/> (accessed 29/1/18).  
+>劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），<http://www.iscs.org.hk/article18.htm>（2002年8月5日参閱）。
 
 
 **重复引用格式**
@@ -336,5 +336,5 @@
 >劉小楓：「歷史玩完了？」。
 
 **参考书目格式**
->Brown, Andrew. “Creation & Time in Basil’s Hexaemeron,” Sapientia (3 May 2017), http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/ (accessed 29/1/18).  
->劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），http://www.iscs.org.hk/article18.htm（2002年8月5日参閱）。
+>Brown, Andrew. “Creation & Time in Basil’s Hexaemeron,” Sapientia (3 May 2017), <http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/> (accessed 29/1/18).  
+>劉小楓：「歷史玩完了？」，《漢語基督教文化研究所》（2001年5月3日），<http://www.iscs.org.hk/article18.htm>（2002年8月5日参閱）。
