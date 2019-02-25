@@ -97,15 +97,15 @@
 ## Book with 2-3 authors or editors
 **注脚格式**
 >B. P. Kittel, V. Hoffer, and R. A. Wright, *Biblical Hebrew: A Text and Workbook* (New Haven: Yale University Press, 1989), 22.  
->杜德民，張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003），36。
+>杜德民、張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003），36。
 
 **重复引用格式**
 >Kittel, Hoffer, and Wright, *Biblical Hebrew*, 12.   
->杜德民，張愛楊和陳豐裕：《雨過天晴》，45。
+>杜德民、張愛楊和陳豐裕：《雨過天晴》，45。
 
 **参考书目格式**
 >Kittel, B.P., V. Hoffer, and R.A. Wright. *Biblical Hebrew: A Text and Workbook* (New Haven: Yale University Press, 1989).  
->杜德民，張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003）。
+>杜德民、張愛楊和陳豐裕：《雨過天晴》（新加坡：和聯出版社，2003）。
 
 ## Book with more than three authors or editors
 **注脚格式**
@@ -118,7 +118,7 @@
 
 **参考书目格式**
 >Becking, Bob, Alex Cannegieter, Wilfred van de Poll, and Anne-Mareike Wetter. *From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition* (BibleWorld; London: Equinox, 2009).  
->鮑維鈞，黃錫木，羅慶才，張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。
+>鮑維鈞、黃錫木、羅慶才、張略和岑少麟：《聖經正典與經外文獻導論》（聖經導論叢書，香港：基道，2001）。
 
 ## Classical or ancient text (whole volume)
 **注脚格式**
