@@ -299,10 +299,10 @@
         </choose>
       </if>
       <else-if type="bill book graphic legal_case legislation motion_picture report" match="any">
-        <text variable="title" form="short" text-case="title" font-style="italic"/>
+        <text variable="title" form="short" text-case="title" font-style="italic" suffix="‪"/>
       </else-if>
       <else>
-        <text variable="title" form="short" text-case="title" quotes="true"/>
+        <text variable="title" form="short" text-case="title" quotes="true" suffix="‪"/>
       </else>
     </choose>
   </macro>
