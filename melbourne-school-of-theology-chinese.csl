@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" and="symbol" page-range-format="expanded" demote-non-dropping-particle="sort-only" default-locale="en-US">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.0" and="symbol" page-range-format="expanded" demote-non-dropping-particle="sort-only">
   <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Melbourne School of Theology (Chinese)</title>
@@ -250,11 +250,11 @@
     <text macro="recipient-short"/>
   </macro>
   <macro name="contributors-sort">
-    <names variable="author">
+    <names variable="author interviewer" match="any">
       <name name-as-sort-order="all" and="text" sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
       <substitute>
-        <names variable="editor"/>
-        <names variable="translator"/>
+        <text macro="editor"/>
+        <text macro="translator"/>
       </substitute>
     </names>
   </macro>
@@ -1386,53 +1386,7 @@
     <text term="reviewed"/>  
   </macro>  
   <citation et-al-min="4" et-al-use-first="3" disambiguate-add-names="true" disambiguate-add-givenname="true">
-    <layout locale="zh-CN" suffix="。">
-      <choose>
-        <if position="subsequent ibid ibid-with-locator" match="any">
-          <group>
-            <text macro="contributors-short-chinese" suffix="："/>
-            <text macro="title-short-chinese"/>
-            <text macro="point-locators-note-chinese" prefix="，"/>
-          </group>
-        </if>
-        <else>
-          <group>
-            <text macro="contributors-note-chinese" suffix="："/>
-            <text macro="title-note-chinese"/>
-            <text macro="description-note-chinese"/>
-            <text macro="container-title-note-chinese"/>
-          </group>
-          <text macro="issue-note-chinese"/>
-          <text macro="locators-newspaper-chinese" prefix="，"/>
-          <text macro="access-note-chinese" prefix="，"/>
-          <text macro="point-locators-chinese"/>
-        </else>
-      </choose>
-    </layout> 
-    <layout locale="zh-TW" suffix="。">
-      <choose>
-        <if position="subsequent ibid ibid-with-locator" match="any">
-          <group>
-            <text macro="contributors-short-chinese" suffix="："/>
-            <text macro="title-short-chinese"/>
-            <text macro="point-locators-note-chinese" prefix="，"/>
-          </group>
-        </if>
-        <else>
-          <group>
-            <text macro="contributors-note-chinese" suffix="："/>
-            <text macro="title-note-chinese"/>
-            <text macro="description-note-chinese"/>
-            <text macro="container-title-note-chinese"/>
-          </group>
-          <text macro="issue-note-chinese"/>
-          <text macro="locators-newspaper-chinese" prefix="，"/>
-          <text macro="access-note-chinese" prefix="，"/>
-          <text macro="point-locators-chinese"/>
-        </else>
-      </choose>
-    </layout> 
-    <layout suffix="." delimiter="; ">
+    <layout locale="en-US" suffix="." delimiter="; ">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">
           <group delimiter=", ">
@@ -1455,6 +1409,52 @@
         </else>
       </choose>
     </layout>
+    <layout locale="zh-TW" suffix="。">
+      <choose>
+        <if position="subsequent ibid ibid-with-locator" match="any">
+          <group>
+            <text macro="contributors-short-chinese" suffix="："/>
+            <text macro="title-short-chinese"/>
+            <text macro="point-locators-note-chinese" prefix="，"/>
+          </group>
+        </if>
+        <else>
+          <group>
+            <text macro="contributors-note-chinese" suffix="："/>
+            <text macro="title-note-chinese"/>
+            <text macro="description-note-chinese"/>
+            <text macro="container-title-note-chinese"/>
+          </group>
+          <text macro="issue-note-chinese"/>
+          <text macro="locators-newspaper-chinese" prefix="，"/>
+          <text macro="access-note-chinese" prefix="，"/>
+          <text macro="point-locators-chinese"/>
+        </else>
+      </choose>
+    </layout>
+    <layout suffix="。">
+      <choose>
+        <if position="subsequent ibid ibid-with-locator" match="any">
+          <group>
+            <text macro="contributors-short-chinese" suffix="："/>
+            <text macro="title-short-chinese"/>
+            <text macro="point-locators-note-chinese" prefix="，"/>
+          </group>
+        </if>
+        <else>
+          <group>
+            <text macro="contributors-note-chinese" suffix="："/>
+            <text macro="title-note-chinese"/>
+            <text macro="description-note-chinese"/>
+            <text macro="container-title-note-chinese"/>
+          </group>
+          <text macro="issue-note-chinese"/>
+          <text macro="locators-newspaper-chinese" prefix="，"/>
+          <text macro="access-note-chinese" prefix="，"/>
+          <text macro="point-locators-chinese"/>
+        </else>
+      </choose>
+    </layout>  
   </citation>
   <bibliography et-al-min="10" et-al-use-first="9" hanging-indent="true">
     <sort>
@@ -1462,18 +1462,18 @@
       <key variable="title"/>
       <key variable="issued"/>
     </sort>
-    <layout locale="zh-CN" suffix="。">
-      <group>
-        <text macro="contributors-chinese" suffix="："/>
-        <text macro="title-note-chinese"/>
-        <text macro="description-note-chinese"/>
-        <text macro="container-title-chinese"/>
+    <layout locale="en-US" suffix=".">
+      <group delimiter=" ">
+        <text macro="contributors" suffix="."/>
+        <text macro="title-note"/>
+        <text macro="description-note"/>
+        <text macro="container-title"/>
       </group>
-      <text macro="issue-bib-chinese"/>
-      <text macro="locators-newspaper-chinese" prefix="，"/>
-      <text macro="access-bib-chinese" prefix="，"/>
-      <text macro="point-locators-chinese"/>
-    </layout> 
+      <text macro="issue-bib"/>
+      <text macro="locators-newspaper" prefix=", "/>
+      <text macro="access-bib" prefix=", "/>
+      <text macro="point-locators"/>
+    </layout>
     <layout locale="zh-TW" suffix="。">
       <group>
         <text macro="contributors-chinese" suffix="："/>
@@ -1486,17 +1486,17 @@
       <text macro="access-bib-chinese" prefix="，"/>
       <text macro="point-locators-chinese"/>
     </layout> 
-    <layout suffix=".">
-      <group delimiter=" ">
-        <text macro="contributors" suffix="."/>
-        <text macro="title-note"/>
-        <text macro="description-note"/>
-        <text macro="container-title"/>
+    <layout suffix="。">
+      <group>
+        <text macro="contributors-chinese" suffix="："/>
+        <text macro="title-note-chinese"/>
+        <text macro="description-note-chinese"/>
+        <text macro="container-title-chinese"/>
       </group>
-      <text macro="issue-bib"/>
-      <text macro="locators-newspaper" prefix=", "/>
-      <text macro="access-bib" prefix=", "/>
-      <text macro="point-locators"/>
-    </layout>
+      <text macro="issue-bib-chinese"/>
+      <text macro="locators-newspaper-chinese" prefix="，"/>
+      <text macro="access-bib-chinese" prefix="，"/>
+      <text macro="point-locators-chinese"/>
+    </layout> 
   </bibliography>
 </style>
