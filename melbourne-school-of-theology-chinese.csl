@@ -3,11 +3,11 @@
   <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Melbourne School of Theology (Chinese)</title>
-    <title-short>MST</title-short>
+    <title-short>MSTC</title-short>
     <id>http://www.zotero.org/styles/melbourne-school-of-theology-chinese</id>
     <link href="http://www.zotero.org/styles/melbourne-school-of-theology-chinese" rel="self"/>
     <link href="http://www.zotero.org/styles/society-of-biblical-literature-fullnote-bibliography" rel="template"/>
-    <link href="http://www.mst.edu.au/wp-content/uploads/2015/02/MST-Essay-Guide-15.pdf" rel="documentation"/>
+    <link href="http://www.mst.edu.au/wp-content/uploads/2018/06/MST-Essay-Guide-15.3.pdf" rel="documentation"/>
     <author>
       <name>Scott Cove</name>
       <email>scott@dewie.net.au</email>
@@ -19,7 +19,7 @@
     <category citation-format="note"/>
     <category field="theology"/>
     <summary>Melbourne School of Theology Chinese Department format based on the Essay Style Guide</summary>
-    <updated>2019-02-11T19:00:00+10:00</updated>
+    <updated>2019-05-21T18:00:00+10:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
