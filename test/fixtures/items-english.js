@@ -14,6 +14,7 @@ module.exports = {
             ],
             "publisher": "Hendrickson",
             "publisher-place": "Peabody, MA",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
@@ -37,6 +38,7 @@ module.exports = {
             ],
             "publisher": "New Melbourne Press",
             "publisher-place": "Wantirna",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
@@ -68,6 +70,7 @@ module.exports = {
             ],
             "publisher": "Yale University Press",
             "publisher-place": "New Haven",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
@@ -102,6 +105,7 @@ module.exports = {
                 }
             ],
             "collection-title": "BibleWorld",
+            "language": "en-US",
             "publisher": "Equinox",
             "publisher-place": "London",
             "issued": {
@@ -132,6 +136,7 @@ module.exports = {
                 }
             ],
             "number-of-volumes": 60,
+            "language": "en-US",
             "publisher": "Blackfriars",
             "publisher-place": "London",
             "issued": {
@@ -157,6 +162,7 @@ module.exports = {
             ],
             "number-of-volumes": 2,
             "volume": 2,
+            "language": "en-US",
             "publisher": "Harper & Row",
             "publisher-place": "San Francisco",
             "issued": {
@@ -182,6 +188,7 @@ module.exports = {
             ],
             "collection-title": "Word Biblical Commentary",
             "collection-number":14,
+            "language": "en-US",
             "publisher": "Word",
             "publisher-place": "Waco",
             "issued": {
@@ -206,6 +213,7 @@ module.exports = {
                 }
             ],
             "edition": 3,
+            "language": "en-US",
             "publisher": "Baker",
             "publisher-place": "Grand Rapids",
             "issued": {
@@ -229,6 +237,7 @@ module.exports = {
                     "given": "J. A."
                 }
             ],
+            "language": "en-US",
             "publisher": "Hendrickson",
             "publisher-place": "Peabody, MA",
             "issued": {
@@ -263,6 +272,7 @@ module.exports = {
                 }
             ],
             "edition": "Kindle",
+            "language": "en-US",
             "publisher": "Fount",
             "issued": {
                 "date-parts": [
@@ -296,6 +306,7 @@ module.exports = {
                 }
             ],
             "container-title": "Reading and Hearing the Book of the Twelve",
+            "language": "en-US",
             "publisher": "Society of Biblical Literature",
             "publisher-place": "Atlanta",
             "issued": {
@@ -331,6 +342,7 @@ module.exports = {
                 }
             ],
             "container-title": "Dictionary of New Testament Theology",
+            "language": "en-US",
             "publisher": "Zondervan",
             "publisher-place": "Grand Rapids",
             "issued": {
@@ -364,6 +376,7 @@ module.exports = {
                 }
             ],
             "container-title": "The Anchor Bible Dictionary",
+            "language": "en-US",
             "publisher": "Doubleday",
             "publisher-place": "New York",
             "issued": {
@@ -395,6 +408,7 @@ module.exports = {
                 }                
             ],
             "container-title": "The Oxford Dictionary of the Christian Church",
+            "language": "en-US",
             "publisher": "Oxford University Press",
             "publisher-place": "Oxford",
             "issued": {
@@ -433,6 +447,7 @@ module.exports = {
                 }               
             ],
             "container-title": "Luther’s Works: Career of the Reformer: I",
+            "language": "en-US",
             "publisher": "Concordia",
             "publisher-place": "St. Louis, Mo.",
             "issued": {
@@ -459,6 +474,7 @@ module.exports = {
                 }               
             ],
             "container-title":"Nicene and Post-Nicene Fathers",
+            "language": "en-US",
             "URL":"http://www.ccel.org/ccel/schaff/npnf208.viii.iii.html",
             "accessed": {
                 "date-parts": [
@@ -482,6 +498,7 @@ module.exports = {
                 }
             ],
             "container-title": "Journal for the Study of the Old Testament",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
@@ -506,6 +523,7 @@ module.exports = {
                 }
             ],
             "container-title": "Word & World",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
@@ -541,6 +559,7 @@ module.exports = {
                 }
             ],
             "container-title": "Christianity Today",
+            "language": "en-US",
             "issued": {
                 "date-parts": [
                     [
@@ -565,6 +584,7 @@ module.exports = {
                 }
             ],
             "genre": "Ph.D.",
+            "language": "en-US",
             "publisher": "The University of St. Andrews",
             "issued": {
                 "date-parts": [
@@ -598,6 +618,7 @@ module.exports = {
                 }
             ],
             "container-title": "The NIV Study Bible",
+            "language": "en-US",
             "publisher": "Zondervan",
             "publisher-place": "Grand Rapids",
             "issued": {
@@ -624,6 +645,7 @@ module.exports = {
                 }
             ],
             "event": "annual meeting of the New England Region of the SBL",
+            "language": "en-US",
             "publisher-place": "Worcester, Mass.",
             "issued": {
                 "date-parts": [
@@ -640,8 +662,8 @@ module.exports = {
     podcastOrOnlineVideo: {
         "ITEM-1": {
             "id": "ITEM-1",
-            "title": "25 years after Oslo, the Middle East peace process is in pieces",
-            "title-short": "25 years after Oslo",
+            "title": "25 Years after Oslo, the Middle East Peace Process Is in Pieces",
+            "title-short": "25 Years after Oslo",
             "author": [
                 {
                     "family": "Tlozek",
@@ -649,6 +671,7 @@ module.exports = {
                 }
             ],
             "collection-title": "The World Today",
+            "language": "en-US",
             "medium": "Podcast audio",
             "URL": "http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450",            
             "type": "song"
@@ -666,6 +689,7 @@ module.exports = {
                 }
             ],
             "container-title": "Sapientia",
+            "language": "en-US",
             "accessed": {
                 "date-parts": [
                     [
@@ -700,6 +724,7 @@ module.exports = {
                 }
             ],
             "container-title": "Sapientia",
+            "language": "en-US",
             "accessed": {
                 "date-parts": [
                     [
@@ -734,6 +759,7 @@ module.exports = {
                 }
             ],
             "container-title": "Sapientia",
+            "language": "en-US",
             "accessed": {
                 "date-parts": [
                     [
