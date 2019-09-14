@@ -1410,7 +1410,7 @@
         </else>
       </choose>
     </layout>
-    <layout locale="zh-TW" suffix="。">
+    <layout locale="zh-TW" suffix="。" delimiter="；">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">
           <group>
@@ -1433,7 +1433,7 @@
         </else>
       </choose>
     </layout>
-    <layout suffix="。">
+    <layout suffix="。" delimiter="；">
       <choose>
         <if position="subsequent ibid ibid-with-locator" match="any">
           <group>
