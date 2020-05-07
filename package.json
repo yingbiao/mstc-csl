@@ -19,8 +19,8 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
-    "citeproc": "^2.1.212",
+    "citeproc": "^2.3.7",
     "citeproc-js-node": "0.0.3",
-    "mocha": "^5.2.0"
+    "mocha": "^7.1.2"
   }
 }
