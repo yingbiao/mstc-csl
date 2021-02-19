@@ -1,4 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/5iy5b7t8x8avp4rw/branch/master?svg=true)](https://ci.appveyor.com/project/YingbiaoWang/mstc-csl/branch/master)
+<!-- [![Build status](https://ci.appveyor.com/api/projects/status/5iy5b7t8x8avp4rw/branch/master?svg=true)](https://ci.appveyor.com/project/YingbiaoWang/mstc-csl/branch/master) -->
+
+![Continous Integration](https://github.com/yingbiao/mstc-csl/workflows/Continuous%20Integration/badge.svg?branch=master)
 
 # 墨尔本神学院中文部 Zotero 样式
 
