@@ -56,8 +56,8 @@
       <term name="recipient" form="verb">致函于</term>
       <term name="collection-editor" form="verb-short">编</term>
       <term name="edition" form="short">版</term>
-      <term name="volume">册</term>
-      <term name="volume" form="short">册</term>
+      <term name="volume">卷</term>
+      <term name="volume" form="short">卷</term>
       <term name="presented at">上发表之专文</term>
       <term name="long-ordinal-11">十一</term>
       <term name="long-ordinal-12">十二</term>
@@ -96,8 +96,8 @@
       <term name="recipient" form="verb">致函於</term>
       <term name="collection-editor" form="verb-short">編</term>
       <term name="edition" form="short">版</term>
-      <term name="volume">冊</term>
-      <term name="volume" form="short">冊</term>
+      <term name="volume">卷</term>
+      <term name="volume" form="short">卷</term>
       <term name="presented at">上發表之專文</term>
       <term name="long-ordinal-11">十一</term>
       <term name="long-ordinal-12">十二</term>
@@ -1291,8 +1291,8 @@
         </group>
       </else-if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="，" prefix="。" suffix="">
-          <group delimiter="，">
+        <group delimiter="。" prefix="。" suffix="">
+          <group delimiter="。">
             <text macro="container-contributors-bibliography-chinese"/>
             <text macro="locators-note-chinese"/>
             <group>
@@ -1302,7 +1302,6 @@
             </group>
             <text macro="collection-title-chinese"/>
           </group>
-
           <group delimiter="，">
             <group>
               <choose>

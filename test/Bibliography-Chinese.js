@@ -73,7 +73,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::English::Book Multiple Authors", function () {
+	it("Bibliography::English::Book Multiple Authors", function () {
 		var output = makeBibliography(
 			items.bookWithMoreThan3AuthorsEditors,
 			"zh-CN"
@@ -88,7 +88,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Volume from a multi volume work", function () {
+	it.only("Bibliography::Volume from a multi volume work", function () {
 		var output = makeBibliography(items.volumeFromAMultiVolumeWork, "zh-CN");
 		var expected =
 			'<div class="csl-entry">奧古斯丁：《上帝之城》。王曉朝译。共三卷。歷代基督教思想學術文庫古代系列。香港：道風書社，2004。</div>';
