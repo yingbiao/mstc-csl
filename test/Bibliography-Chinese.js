@@ -88,7 +88,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Volume from a multi volume work", function () {
+	it("Bibliography::Volume from a multi volume work", function () {
 		var output = makeBibliography(items.volumeFromAMultiVolumeWork, "zh-CN");
 		var expected =
 			'<div class="csl-entry">奧古斯丁：《上帝之城》。王曉朝译。共三卷。歷代基督教思想學術文庫古代系列。香港：道風書社，2004。</div>';
@@ -130,15 +130,15 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Booked viewed online", function () {
+	it.only("Bibliography::Booked viewed online", function () {
 		var output = makeBibliography(items.bookViewedOnline, "zh-CN");
 		var expected =
-			'<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日参阅）。</div>';
+			'<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.bookViewedOnline, "zh-TW");
 		expected =
-			'<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf（2014年9月8日參閱）。</div>';
+			'<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
 		assert.equal(output, expected);
 	});
 

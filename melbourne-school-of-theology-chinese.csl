@@ -1365,14 +1365,14 @@
       <choose>
         <if variable="URL">
           <text variable="URL"/>
-          <group prefix="（" suffix="）">
+          <!-- <group prefix="（" suffix="）">
               <date variable="accessed" form="text">
                 <date-part name="year"/>              
                 <date-part name="month"/>
                 <date-part name="day"/>
               </date>
               <text term="accessed"/>
-          </group>
+          </group> -->
         </if>
       </choose>
     </group>
