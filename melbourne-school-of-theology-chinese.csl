@@ -983,23 +983,38 @@
     <text variable="container-title" text-case="title" quotes="true" prefix="，"/>
   </macro>
   <macro name="container-title-chinese">
-    <group prefix="。">
-      <if variable="container-title">
-        <if variable="page">
-          <text term="page" />
-          <text variable="page" />
-          <text term="at" />
-        </if>
-        <text variable="container-title" text-case="title" quotes="true"/>
-        <if variable="volume">
-          <group>
-            <text term="noof"/>
-            <number variable="volume" form="long-ordinal"/>
-            <text term="volume"/>
-          </group>
-        </if>
+    <choose>
+      <if type="article-journal" match="any" >
+        <group prefix="，">
+          <text variable="container-title" text-case="title" quotes="true"/>
+        </group>
       </if>
-    </group>
+      <else>
+        <group prefix="。">
+          <choose>
+            <if type="entry-dictionary entry-encyclopedia" match="none">
+              <text variable="container-title" text-case="title" quotes="true"/>
+            </if>
+            <else>
+              <if variable="page">
+                <text term="page" />
+                <text variable="page" />
+                <text term="at" />
+              </if>
+              <text variable="container-title" text-case="title" quotes="true"/>
+              <if variable="volume">
+                <group>
+                  <text term="noof"/>
+                  <number variable="volume" form="long-ordinal"/>
+                  <text term="volume"/>
+                </group>
+              </if>
+            </else>
+          </choose>
+        </group>
+      </else>
+    </choose>
+
   </macro>
   <macro name="collection-title-chinese">
     <text variable="collection-title" text-case="title"/>
@@ -1128,9 +1143,8 @@
             </date>
           </else-if>
           <else-if type="article-journal" match="any">
-            <date form="text" variable="issued" prefix="（" suffix="）">
-              <date-part name="year"/>
-              <date-part name="month"/>
+            <date form="numeric" date-parts="year" variable="issued" prefix="（" suffix="）">
+              <!-- <date-part name="year"/> -->
             </date>
           </else-if>
           <else>
@@ -1221,7 +1235,7 @@
         <text macro="pages-chinese"/>
       </if>
       <else-if type="article-journal">
-        <text variable="locator" prefix="，"/>
+        <text variable="locator" prefix="："/>
       </else-if>
       <else>
         <text macro="point-locators-note-chinese" prefix="，"/>
@@ -1237,7 +1251,7 @@
         </group> -->
       </if>
       <else-if type="article-journal">
-        <group prefix="，">
+        <group prefix="：">
           <text variable="page" />
         </group>
       </else-if>

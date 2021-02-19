@@ -124,7 +124,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Article in a lexicon or theological dictionary", function () {
+	it("Bibliography::Article in a lexicon or theological dictionary", function () {
 		var output = makeBibliography(items.articleInALexiconOrTheologicalDictionary, "zh-CN");
 		var expected = '<div class="csl-entry">馮來平：“基督的寬容”。页25–26于《世界神學辭典》第三册。邱宋恩编。共四册。上海：展徒出版社，1990。</div>';
 		assert.equal(output, expected);
@@ -134,7 +134,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Journal article", function () {
+	it.only("Bibliography::Journal article", function () {
 		var output = makeBibliography(items.journalArticle, "zh-CN");
 		var expected = '<div class="csl-entry">楊品通：“神學的本質探討”，《教會神學期刊》14（2003）：19–24。</div>';
 		assert.equal(output, expected);
