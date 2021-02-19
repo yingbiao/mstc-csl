@@ -130,7 +130,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Booked viewed online", function () {
+	it("Bibliography::Booked viewed online", function () {
 		var output = makeBibliography(items.bookViewedOnline, "zh-CN");
 		var expected =
 			'<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
@@ -142,7 +142,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Essay or chapter", function () {
+	it.only("Bibliography::Essay or chapter", function () {
 		var output = makeBibliography(items.essayOrChapter, "zh-CN");
 		var expected =
 			'<div class="csl-entry">黄二冬：“天下一家”。页335–350于《地球村的演變》。千百文编。厦門：漢陽出版社，2003。</div>';

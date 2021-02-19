@@ -81,6 +81,9 @@
       <term name="long-ordinal-30">三十</term>
 
       <term name="editor" form="short">编</term>
+
+      <term name="page">页</term>
+      <term name="at">于</term>
     </terms>
   </locale>  
   <locale xml:lang="zh-TW">
@@ -126,7 +129,10 @@
       <term name="open-quote">《</term>
       <term name="close-quote">》</term>
       <term name="open-inner-quote">〈</term>
-      <term name="close-inner-quote">〉</term>      
+      <term name="close-inner-quote">〉</term>
+
+      <term name="page">頁</term>
+      <term name="at">於</term>
     </terms>
   </locale>  
   <macro name="container-contributors-note">
@@ -920,7 +926,7 @@
       <else>
         <choose>
           <if variable="container-title" type="thesis paper-conference" match="any">
-            <text variable="title" text-case="title" prefix="「" suffix="」"/>
+            <text variable="title" text-case="title" prefix="“" suffix="”"/>
           </if>
           <else>
             <text variable="title" text-case="title" quotes="true"/>
@@ -977,7 +983,16 @@
     <text variable="container-title" text-case="title" quotes="true" prefix="，"/>
   </macro>
   <macro name="container-title-chinese">
-    <text variable="container-title" text-case="title" quotes="true" prefix="，"/>
+    <group prefix="。">
+      <if variable="container-title">
+        <if variable="page">
+          <text term="page" />
+          <text variable="page" />
+          <text term="at" />
+        </if>
+        <text variable="container-title" text-case="title" quotes="true"/>
+      </if>
+    </group>
   </macro>
   <macro name="collection-title-chinese">
     <text variable="collection-title" text-case="title"/>
@@ -1211,7 +1226,7 @@
       <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
         <group delimiter="：" prefix="，">
           <text variable="volume" />
-          <text variable="page" />
+          <!-- <text variable="page" /> -->
         </group>
       </if>
       <else-if type="article-journal">
