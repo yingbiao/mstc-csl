@@ -56,8 +56,8 @@
       <term name="recipient" form="verb">致函于</term>
       <term name="collection-editor" form="verb-short">编</term>
       <term name="edition" form="short">版</term>
-      <term name="volume">卷</term>
-      <term name="volume" form="short">卷</term>
+      <term name="volume">册</term>
+      <term name="volume" form="short">册</term>
       <term name="presented at">上发表之专文</term>
       <term name="long-ordinal-11">十一</term>
       <term name="long-ordinal-12">十二</term>
@@ -99,8 +99,8 @@
       <term name="recipient" form="verb">致函於</term>
       <term name="collection-editor" form="verb-short">編</term>
       <term name="edition" form="short">版</term>
-      <term name="volume">卷</term>
-      <term name="volume" form="short">卷</term>
+      <term name="volume">冊</term>
+      <term name="volume" form="short">冊</term>
       <term name="presented at">上發表之專文</term>
       <term name="long-ordinal-11">十一</term>
       <term name="long-ordinal-12">十二</term>
@@ -991,6 +991,13 @@
           <text term="at" />
         </if>
         <text variable="container-title" text-case="title" quotes="true"/>
+        <if variable="volume">
+          <group>
+            <text term="noof"/>
+            <number variable="volume" form="long-ordinal"/>
+            <text term="volume"/>
+          </group>
+        </if>
       </if>
     </group>
   </macro>
@@ -1147,11 +1154,11 @@
                     <if match="none" locator="verse">
                       <choose>
                         <if variable="volume">
-                          <group>
+                          <!-- <group>
                             <number variable="volume" form="numeric"/>
                             <text term="volume" form="short"/>
                             <label prefix="，" variable="locator" form="short"/>
-                          </group>
+                          </group> -->
                         </if>
                         <else>
                           <label variable="locator" form="short" />
@@ -1163,7 +1170,7 @@
               </choose>
             </if>
             <else-if variable="volume" match="all">
-              <choose>
+              <!-- <choose>
                 <if type="paper-conference article article-journal article-magazine article-newspaper entry" match="none">
                   <choose>
                     <if match="all" variable="locator" locator="page">
@@ -1171,7 +1178,7 @@
                     </if>
                   </choose>
                 </if>
-              </choose>
+              </choose> -->
             </else-if>
           </choose>
         </if>
@@ -1182,11 +1189,11 @@
                 <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
                   <choose>
                     <if variable="volume">
-                      <group>
+                      <!-- <group>
                         <text term="volume" form="short"/>
                         <number variable="volume" form="numeric"/>
                         <label prefix="，" variable="locator" form="short"/>
-                      </group>
+                      </group> -->
                     </if>
                     <else>
                       <label variable="locator" form="short" />
@@ -1196,11 +1203,11 @@
               </choose>
             </if>
             <else-if variable="volume" match="all">
-              <choose>
+              <!-- <choose>
                 <if type="chapter paper-conference article entry-dictionary article-newspaper entry-encyclopedia book" match="any">
                   <number suffix="：" variable="volume"/>
                 </if>
-              </choose>
+              </choose> -->
             </else-if>
           </choose>
         </else>
@@ -1224,10 +1231,10 @@
   <macro name="pages-chinese">
     <choose>
       <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
-        <group delimiter="：" prefix="，">
+        <!-- <group delimiter="：" prefix="，">
           <text variable="volume" />
-          <!-- <text variable="page" /> -->
-        </group>
+          <text variable="page" />
+        </group> -->
       </if>
       <else-if type="article-journal">
         <group prefix="，">
