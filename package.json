@@ -1,26 +1,26 @@
 {
-  "name": "mstc-csl",
-  "version": "1.0.0",
-  "description": "MSTC CSL",
-  "main": "src/app.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yingbiao/mstc-csl.git"
-  },
-  "author": "Yingbiao Wang",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yingbiao/mstc-csl/issues"
-  },
-  "homepage": "https://github.com/yingbiao/mstc-csl#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "citeproc": "^2.3.7",
-    "citeproc-js-node": "0.0.3",
-    "mocha": "^7.1.2"
-  }
+	"name": "mstc-csl",
+	"version": "1.0.0",
+	"description": "MSTC CSL",
+	"main": "src/app.js",
+	"scripts": {
+		"test": "mocha"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yingbiao/mstc-csl.git"
+	},
+	"author": "Yingbiao Wang",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yingbiao/mstc-csl/issues"
+	},
+	"homepage": "https://github.com/yingbiao/mstc-csl#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"chai": "^4.3.0",
+		"citeproc": "^2.4.59",
+		"citeproc-js-node": "0.0.3",
+		"mocha": "^8.3.0"
+	}
 }
