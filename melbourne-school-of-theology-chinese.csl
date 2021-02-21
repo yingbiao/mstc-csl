@@ -1081,25 +1081,27 @@
     </group>
   </macro>
   <macro name="publisher-chinese">
-    <group delimiter="，">
       <choose>
         <if type="thesis" match="any">
-          <text variable="genre"/>
           <group delimiter="，">
-            <text variable="publisher"/>
-            <text variable="publisher-place"/>
+            <text variable="genre"/>
+            <group delimiter="，">
+              <text variable="publisher"/>
+              <text variable="publisher-place"/>
+            </group>
           </group>
         </if>
         <else>
-          <choose>
-            <if variable="publisher-place">              
-              <text variable="publisher-place" text-case="capitalize-first"/>
-            </if>
-          </choose>
-          <text variable="publisher"/>
+          <group delimiter="：">
+            <choose>
+              <if variable="publisher-place">              
+                <text variable="publisher-place" text-case="capitalize-first"/>
+              </if>
+            </choose>
+            <text variable="publisher"/>
+          </group>
         </else>
       </choose>
-    </group>
   </macro>
   <macro name="issued-chinese">
     <choose>

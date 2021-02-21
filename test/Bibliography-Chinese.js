@@ -174,7 +174,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Webpage", function () {
+	it("Bibliography::Webpage", function () {
 		var output = makeBibliography(items.webpage, "zh-CN");
 		var expected = '<div class="csl-entry">劉小楓：“歷史玩完了？”。《漢語基督教文化研究所》。2001年5月3日。http://www.iscs.org.hk/article18.htm。</div>';
 		assert.equal(output, expected);
