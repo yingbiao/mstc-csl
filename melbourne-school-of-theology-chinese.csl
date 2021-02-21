@@ -984,7 +984,7 @@
   </macro>
   <macro name="container-title-chinese">
     <choose>
-      <if type="article-journal" match="any" >
+      <if type="article-journal article-magazine" match="any" >
         <group prefix="，">
           <text variable="container-title" text-case="title" quotes="true"/>
         </group>
@@ -1137,9 +1137,7 @@
             </group>
           </else-if>
           <else-if type="article-magazine" match="any">
-            <date form="text" variable="issued" prefix="（" suffix="）">
-              <date-part name="year"/>
-              <date-part name="month"/>
+            <date form="numeric" date-parts="year" variable="issued" prefix="（" suffix="）">
             </date>
           </else-if>
           <else-if type="article-journal" match="any">
@@ -1244,13 +1242,13 @@
   </macro>
   <macro name="pages-chinese">
     <choose>
-      <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
+      <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
         <!-- <group delimiter="：" prefix="，">
           <text variable="volume" />
           <text variable="page" />
         </group> -->
       </if>
-      <else-if type="article-journal">
+      <else-if type="article-journal article article-magazine article-newspaper">
         <group prefix="：">
           <text variable="page" />
         </group>

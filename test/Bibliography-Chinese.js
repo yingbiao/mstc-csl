@@ -134,7 +134,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Journal article", function () {
+	it("Bibliography::Journal article", function () {
 		var output = makeBibliography(items.journalArticle, "zh-CN");
 		var expected = '<div class="csl-entry">楊品通：“神學的本質探討”，《教會神學期刊》14（2003）：19–24。</div>';
 		assert.equal(output, expected);
@@ -144,7 +144,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Magazine or newspaper article", function () {
+	it.only("Bibliography::Magazine or newspaper article", function () {
 		var output = makeBibliography(items.magazineOrNewspaperArticle, "zh-CN");
 		var expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》（1957）：43–47。</div>';
 		assert.equal(output, expected);
