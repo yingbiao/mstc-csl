@@ -1081,14 +1081,14 @@
     </group>
   </macro>
   <macro name="publisher-chinese">
-    <group delimiter="：">
+    <group delimiter="，">
       <choose>
         <if type="thesis" match="any">
+          <text variable="genre"/>
           <group delimiter="，">
             <text variable="publisher"/>
             <text variable="publisher-place"/>
           </group>
-          <text variable="genre"/>
         </if>
         <else>
           <choose>
