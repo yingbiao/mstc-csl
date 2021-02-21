@@ -146,11 +146,11 @@ describe("Bibliography Chinese", function () {
 
 	it("Bibliography::Magazine or newspaper article", function () {
 		var output = makeBibliography(items.magazineOrNewspaperArticle, "zh-CN");
-		var expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》（1957）：43–47。</div>';
+		var expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43–47。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.magazineOrNewspaperArticle, "zh-TW");
-		expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》（1957）：43–47。</div>';
+		expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43–47。</div>';
 		assert.equal(output, expected);
 	});
 
