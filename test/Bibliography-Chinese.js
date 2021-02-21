@@ -6,7 +6,7 @@ var items = require("./fixtures/items-chinese.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe("Bibliography Chinese", function () {
+describe.only("Bibliography Chinese", function () {
 	var sys;
 	var engine;
 	var styleString;
@@ -76,11 +76,11 @@ describe("Bibliography Chinese", function () {
 
 	it("Bibliography::Volume from a multi volume work", function () {
 		var output = makeBibliography(items.volumeFromAMultiVolumeWork, "zh-CN");
-		var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》。王曉朝译。共三卷。歷代基督教思想學術文庫古代系列。香港：道風書社，2004。</div>';
+		var expected = '<div class="csl-entry">奧古斯丁：《上帝之城》。王曉朝译。共三册。歷代基督教思想學術文庫古代系列。香港：道風書社，2004。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.volumeFromAMultiVolumeWork, "zh-TW");
-		expected = '<div class="csl-entry">奧古斯丁：《上帝之城》。王曉朝譯。共三卷。歷代基督教思想學術文庫古代系列。香港：道風書社，2004。</div>';
+		expected = '<div class="csl-entry">奧古斯丁：《上帝之城》。王曉朝譯。共三冊。歷代基督教思想學術文庫古代系列。香港：道風書社，2004。</div>';
 		assert.equal(output, expected);
 	});
 
@@ -214,7 +214,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Journal article with translator", function () {
+	it("Bibliography::Journal article with translator", function () {
 		var output = makeBibliography(items.journalWithTranslator, "zh-CN");
 		var expected = '<div class="csl-entry">約翰•歐文（述寧译）：“約翰•歐文論牧師的責任”，《教會》70（2018）：19。https://www.churchchina.org/wp-content/uploads/ccpdf/070cc1803.pdf。</div>';
 		assert.equal(output, expected);

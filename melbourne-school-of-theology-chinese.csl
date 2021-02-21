@@ -992,23 +992,27 @@
       <else>
         <group prefix="。">
           <choose>
-            <if type="entry-dictionary entry-encyclopedia" match="none">
+            <if type="entry-dictionary entry-encyclopedia chapter" match="none">
               <text variable="container-title" text-case="title" quotes="true"/>
             </if>
             <else>
-              <if variable="page">
-                <text term="page" />
-                <text variable="page" />
-                <text term="at" />
-              </if>
+              <choose>
+                <if variable="page">
+                  <text term="page" />
+                  <text variable="page" />
+                  <text term="at" />
+                </if>
+              </choose>
               <text variable="container-title" text-case="title" quotes="true"/>
-              <if variable="volume">
-                <group>
-                  <text term="noof"/>
-                  <number variable="volume" form="long-ordinal"/>
-                  <text term="volume"/>
-                </group>
-              </if>
+              <choose>
+                <if variable="volume">
+                  <group>
+                    <text term="noof"/>
+                    <number variable="volume" form="long-ordinal"/>
+                    <text term="volume"/>
+                  </group>
+                </if>
+              </choose>
             </else>
           </choose>
         </group>
@@ -1399,17 +1403,28 @@
         </else-if>
       </choose>
       <choose>
-        <if variable="URL">
-          <text variable="URL"/>
-          <!-- <group prefix="（" suffix="）">
-              <date variable="accessed" form="text">
-                <date-part name="year"/>              
-                <date-part name="month"/>
-                <date-part name="day"/>
-              </date>
-              <text term="accessed"/>
-          </group> -->
+        <if type="webpage post-weblog post article-journal" match="any">
+          <choose>
+            <if variable="URL">
+              <text variable="URL" prefix="。" />
+              <!-- <group prefix="（" suffix="）">
+                  <date variable="accessed" form="text">
+                    <date-part name="year"/>              
+                    <date-part name="month"/>
+                    <date-part name="day"/>
+                  </date>
+                  <text term="accessed"/>
+              </group> -->
+            </if>
+          </choose>
         </if>
+        <else>
+          <choose>
+            <if variable="URL">
+              <text variable="URL" prefix="，" />
+            </if>
+          </choose>
+        </else>
       </choose>
     </group>
   </macro>
@@ -1520,7 +1535,7 @@
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper-chinese" prefix="，"/>
       <text macro="point-locators-chinese"/>
-      <text macro="access-bib-chinese" prefix="。"/>
+      <text macro="access-bib-chinese"/>
     </layout> 
     <layout suffix="。">
       <group>
@@ -1532,7 +1547,7 @@
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper-chinese" prefix="，"/>
       <text macro="point-locators-chinese"/>
-      <text macro="access-bib-chinese" prefix="。"/>
+      <text macro="access-bib-chinese"/>
     </layout> 
   </bibliography>
 </style>
