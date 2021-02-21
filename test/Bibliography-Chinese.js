@@ -164,7 +164,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Conferenec paper", function () {
+	it("Bibliography::Conferenec paper", function () {
 		var output = makeBibliography(items.conferencePaper, "zh-CN");
 		var expected = '<div class="csl-entry">謝木水：“神學如何失去靈性？”。新加坡神學院益道論述會上发表之专文。新加坡，2010年10月4日。</div>';
 		assert.equal(output, expected);
@@ -174,7 +174,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Webpage", function () {
+	it.only("Bibliography::Webpage", function () {
 		var output = makeBibliography(items.webpage, "zh-CN");
 		var expected = '<div class="csl-entry">劉小楓：“歷史玩完了？”。《漢語基督教文化研究所》。2001年5月3日。http://www.iscs.org.hk/article18.htm。</div>';
 		assert.equal(output, expected);

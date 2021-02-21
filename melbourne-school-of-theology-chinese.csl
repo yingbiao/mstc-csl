@@ -1110,7 +1110,7 @@
             </date>
           </if>
           <else-if type="webpage post-weblog post" match="any">
-            <group prefix="（" suffix="）">
+            <group prefix="。" suffix="">
               <date form="text" date-parts="year-month-day" variable="issued">
               </date>
             </group>
@@ -1517,7 +1517,7 @@
       </group>
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper-chinese" prefix="，"/>
-      <text macro="access-bib-chinese" prefix="，"/>
+      <text macro="access-bib-chinese" prefix="。"/>
       <text macro="point-locators-chinese"/>
     </layout> 
     <layout suffix="。">
@@ -1529,7 +1529,7 @@
       </group>
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper-chinese" prefix="，"/>
-      <text macro="access-bib-chinese" prefix="，"/>
+      <text macro="access-bib-chinese" prefix="。"/>
       <text macro="point-locators-chinese"/>
     </layout> 
   </bibliography>
