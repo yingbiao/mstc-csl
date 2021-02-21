@@ -214,7 +214,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Journal article with translator", function () {
+	it.only("Bibliography::Journal article with translator", function () {
 		var output = makeBibliography(items.journalWithTranslator, "zh-CN");
 		var expected = '<div class="csl-entry">約翰•歐文（述寧译）：“約翰•歐文論牧師的責任”，《教會》70（2018）：19。https://www.churchchina.org/wp-content/uploads/ccpdf/070cc1803.pdf。</div>';
 		assert.equal(output, expected);

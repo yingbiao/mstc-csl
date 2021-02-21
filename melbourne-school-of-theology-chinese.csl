@@ -1519,8 +1519,8 @@
       </group>
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper-chinese" prefix="，"/>
-      <text macro="access-bib-chinese" prefix="。"/>
       <text macro="point-locators-chinese"/>
+      <text macro="access-bib-chinese" prefix="。"/>
     </layout> 
     <layout suffix="。">
       <group>
@@ -1531,8 +1531,8 @@
       </group>
       <text macro="issue-bib-chinese"/>
       <text macro="locators-newspaper-chinese" prefix="，"/>
-      <text macro="access-bib-chinese" prefix="。"/>
       <text macro="point-locators-chinese"/>
+      <text macro="access-bib-chinese" prefix="。"/>
     </layout> 
   </bibliography>
 </style>
