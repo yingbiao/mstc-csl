@@ -6,7 +6,7 @@ var items = require("./fixtures/items-chinese.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe.only("Citation Chinese", function () {
+describe("Citation Chinese", function () {
 	var engine;
 	var sys;
 	var styleString;
@@ -157,7 +157,7 @@ describe.only("Citation Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Citation::Magazine or newspaper article", function () {
+	it("Citation::Magazine or newspaper article", function () {
 		var output = makeCitationCluster(items.magazineOrNewspaperArticle, "zh-CN", "43");
 		var expected = "李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43。";
 		assert.equal(output, expected);

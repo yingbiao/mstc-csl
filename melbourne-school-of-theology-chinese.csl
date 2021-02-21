@@ -1116,6 +1116,59 @@
             </date>
           </if>
           <else-if type="webpage post-weblog post" match="any">
+            <group prefix="，" suffix="">
+              <date form="text" date-parts="year-month-day" variable="issued">
+              </date>
+            </group>
+          </else-if>
+          <else-if type="legal_case">
+            <text variable="authority"/>
+            <date variable="issued" text-case="capitalize-all">
+              <date-part name="year"/>
+            </date>
+          </else-if>
+          <else-if type="paper-conference">
+            <date form="text" date-parts="year" variable="issued"/>
+          </else-if>
+          <else-if type="bill book chapter graphic legal_case legislation motion_picture report song thesis" match="any">
+            <date variable="issued" text-case="capitalize-all">
+              <date-part name="year"/>
+            </date>
+          </else-if>
+          <else-if type="interview" match="any">
+            <group delimiter="，" prefix="（" suffix="）">
+              <text variable="note"/>
+              <date form="text" date-parts="year-month-day" variable="issued">
+              </date>
+            </group>
+          </else-if>
+          <else-if type="article-magazine" match="any">
+            <date form="numeric" date-parts="year" variable="issued" prefix="（" suffix="）">
+            </date>
+          </else-if>
+          <else-if type="article-journal" match="any">
+            <date form="numeric" date-parts="year" variable="issued" prefix="（" suffix="）">
+              <!-- <date-part name="year"/> -->
+            </date>
+          </else-if>
+          <else>
+            <date variable="issued" text-case="capitalize-all">
+              <date-part name="year"/>
+            </date>
+          </else>
+        </choose>
+      </if>
+    </choose>
+  </macro>
+  <macro name="issued-bib-chinese">
+    <choose>
+      <if variable="issued">
+        <choose>
+          <if type="graphic report" match="any">
+            <date form="text" date-parts="year-month-day" variable="issued">
+            </date>
+          </if>
+          <else-if type="webpage post-weblog post" match="any">
             <group prefix="。" suffix="">
               <date form="text" date-parts="year-month-day" variable="issued">
               </date>
@@ -1315,7 +1368,14 @@
         <text variable="locator" prefix="："/>
       </else-if>
       <else>
-        <text macro="point-locators-note-chinese" prefix="："/>
+        <choose>
+          <if type="article-magazine article-newspaper">
+            <text macro="point-locators-note-chinese" prefix="："/>
+          </if>
+          <else>
+            <text macro="point-locators-note-chinese" prefix="，"/>
+          </else>
+        </choose>
       </else>
     </choose>
   </macro>
@@ -1423,7 +1483,7 @@
         <group>
           <text variable="volume"/>
           <text variable="issue" />
-          <text macro="issued-chinese"/>
+          <text macro="issued-bib-chinese"/>
         </group>
       </if>
       <else-if type="song">
@@ -1460,12 +1520,12 @@
           </group>
           <group delimiter="，">
             <text macro="publisher-chinese"/>
-            <text macro="issued-chinese"/>
+            <text macro="issued-bib-chinese"/>
           </group>
         </group>
       </else-if>
       <else>
-        <text macro="issued-chinese"/>
+        <text macro="issued-bib-chinese"/>
       </else>
     </choose>
   </macro>
