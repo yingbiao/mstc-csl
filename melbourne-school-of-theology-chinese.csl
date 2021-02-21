@@ -1336,21 +1336,21 @@
             </group>
             <text macro="collection-title-chinese"/>
           </group>
+          <group>
+            <choose>
+              <if variable="title" match="none"/>
+              <else-if type="speech" match="any">
+                <choose>
+                  <if match="none" variable="publisher-place">
+                    <text term="unpublished"/>
+                  </if>
+                </choose>
+                <text variable="genre"/>
+              </else-if>
+            </choose>
+            <text macro="event-chinese"/>
+          </group>
           <group delimiter="，">
-            <group>
-              <choose>
-                <if variable="title" match="none"/>
-                <else-if type="speech" match="any">
-                  <choose>
-                    <if match="none" variable="publisher-place">
-                      <text term="unpublished"/>
-                    </if>
-                  </choose>
-                  <text variable="genre"/>
-                </else-if>
-              </choose>
-              <text macro="event-chinese"/>
-            </group>
             <text macro="publisher-chinese"/>
             <text macro="issued-chinese"/>
           </group>

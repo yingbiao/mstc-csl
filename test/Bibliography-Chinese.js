@@ -144,7 +144,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it.only("Bibliography::Magazine or newspaper article", function () {
+	it("Bibliography::Magazine or newspaper article", function () {
 		var output = makeBibliography(items.magazineOrNewspaperArticle, "zh-CN");
 		var expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》（1957）：43–47。</div>';
 		assert.equal(output, expected);
@@ -164,7 +164,7 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
-	it("Bibliography::Conferenec paper", function () {
+	it.only("Bibliography::Conferenec paper", function () {
 		var output = makeBibliography(items.conferencePaper, "zh-CN");
 		var expected = '<div class="csl-entry">謝木水：“神學如何失去靈性？”。新加坡神學院益道論述會上发表之专文。新加坡，2010年10月4日。</div>';
 		assert.equal(output, expected);
