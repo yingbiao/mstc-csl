@@ -40,6 +40,7 @@
       <term name="presented at">paper presented at the</term>
       <term name="open-quote" form="symbol">'</term>
       <term name="close-quote" form="symbol">'</term>
+      <term name="of">of</term>
     </terms>
   </locale>
   <macro name="container-contributors-note">
@@ -259,8 +260,8 @@
   <macro name="container-title">
     <group delimiter=" ">
       <choose>
-        <if type="chapter" variable="page" match="all">
-          <text value="Pages"/>
+        <if type="chapter entry-dictionary entry-encyclopedia" variable="page" match="all">
+          <text term="page" text-case="title" plural="true" />
           <text variable="page" />
         </if>
       </choose>
@@ -271,6 +272,15 @@
               <text term="in" suffix=" "/>
             </if>
           </choose>
+        </if>
+      </choose>
+      <choose>
+        <if type="chapter entry-dictionary entry-encyclopedia" variable="volume" match="all">
+          <group>
+            <text term="volume" form="short" />
+            <text variable="volume" form="numeric"/>
+          </group>
+          <text term="of" />
         </if>
       </choose>
       <text variable="container-title" text-case="title" font-style="italic"/>
@@ -511,7 +521,7 @@
   </macro>
   <macro name="pages">
     <choose>
-      <if type="paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
+      <if type="paper-conference article article-magazine article-newspaper" match="any">
         <group delimiter=":" prefix=", ">
           <text variable="volume" />
           <text variable="page" />
