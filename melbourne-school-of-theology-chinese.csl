@@ -1434,8 +1434,10 @@
     <choose>
       <if type="article-journal article-magazine article-newspaper">
         <group>
-          <text variable="volume" />
-          <text variable="issue" />
+          <group delimiter=".">
+            <text variable="volume" />
+            <text variable="issue" />
+          </group>
           <text macro="issued-chinese"/>
         </group>
       </if>
@@ -1481,8 +1483,10 @@
     <choose>
       <if type="article-journal article-magazine article-newspaper">
         <group>
-          <text variable="volume"/>
-          <text variable="issue" />
+          <group delimiter=".">
+            <text variable="volume"/>
+            <text variable="issue" />
+          </group>
           <text macro="issued-bib-chinese"/>
         </group>
       </if>

@@ -273,7 +273,8 @@ module.exports = {
 			issued: {
 				"date-parts": [[1957, 10, 30]],
 			},
-			volume: "33.12",
+			issue: "12",
+			volume: "33",
 			page: "43-47",
 			type: "article-magazine",
 		},
