@@ -511,9 +511,9 @@
             </group>
           </else-if>
           <else-if type="article-magazine" match="any">
-            <date form="text" variable="issued" prefix="(" suffix=")">
-              <date-part name="month"/>
-              <date-part name="year"/>
+            <date form="text" date-parts="year-month" variable="issued">
+              <date-part name="month" form="long"/>
+              <date-part name="year" form="numeric" prefix="(" suffix=")" />
             </date>
           </else-if>
           <else>
@@ -609,19 +609,19 @@
         <text variable="locator" prefix=": "/>
       </else-if>
       <else>
-        <text macro="point-locators-note" prefix=", "/>
+        <text macro="point-locators-note" article-magazine article-newspaper prefix=", "/>
       </else>
     </choose>
   </macro>
   <macro name="pages">
     <choose>
-      <if type="paper-conference article article-magazine article-newspaper" match="any">
+      <if type="paper-conference article">
         <group delimiter=":" prefix=", ">
           <text variable="volume" />
           <text variable="page" />
         </group>
       </if>
-      <else-if type="article-journal">
+      <else-if type="article-journal article-magazine article-newspaper">
         <group prefix=": ">
           <text variable="page" />
         </group>

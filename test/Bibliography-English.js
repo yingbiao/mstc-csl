@@ -198,7 +198,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Journal article viewed online", function () {
+	it("Bibliography::Journal article viewed online", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.journalArticleViewedOnline);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.journalArticleViewedOnline);
 		var expected =
@@ -208,10 +208,10 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Magazine or newspaper article", function () {
+	it.only("Bibliography::Magazine or newspaper article", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.magazineOrNewspaperArticle);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.magazineOrNewspaperArticle);
-		var expected = '<div class="csl-entry">Stafford, Tim. “A Tale of Two Scientists.” <i>Christianity Today</i> July (2012):22–29.</div>';
+		var expected = '<div class="csl-entry">Stafford, Tim. “A Tale of Two Scientists.” <i>Christianity Today</i> July (2012): 22–29.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
