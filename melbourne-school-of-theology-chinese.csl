@@ -369,10 +369,8 @@
       </choose>
       <choose>
         <if type="chapter entry-dictionary entry-encyclopedia" variable="volume" match="all">
-          <group>
-            <text term="volume" form="short" />
-            <text variable="volume" form="numeric"/>
-          </group>
+          <text term="volume" form="short" />
+          <text variable="volume" form="numeric"/>
           <text term="of" />
         </if>
       </choose>

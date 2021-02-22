@@ -149,11 +149,11 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Article in a lexicon or theological dictionary", function () {
+	it("Bibliography::Article in a lexicon or theological dictionary", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.articleInALexiconOrTheologicalDictionary);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.articleInALexiconOrTheologicalDictionary);
 		var expected =
-			'<div class="csl-entry">Flender, O. and C. Brown. “Smell; Ὀσμή.” Pages 599–601 in vol.3 of <i>Dictionary of New Testament Theology</i>. Edited by Colin Brown. 4 vols. Grand Rapids: Zondervan, 1992.</div>';
+			'<div class="csl-entry">Flender, O. and C. Brown. “Smell; Ὀσμή.” Pages 599–601 in vol. 3 of <i>Dictionary of New Testament Theology</i>. Edited by Colin Brown. 4 vols. Grand Rapids: Zondervan, 1992.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
@@ -163,7 +163,7 @@ describe.only("Bibliography English", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.encyclopediaOrDictionary);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.encyclopediaOrDictionary);
 		var expected =
-			'<div class="csl-entry">Walters, Stanley D. “Jacob Narrative.” Pages 599–606 in vol.3 of <i>The Anchor Bible Dictionary</i>. Edited by David Noel Freedman. 6 vols. New York: Doubleday, 1992.</div>';
+			'<div class="csl-entry">Walters, Stanley D. “Jacob Narrative.” Pages 599–606 in vol. 3 of <i>The Anchor Bible Dictionary</i>. Edited by David Noel Freedman. 6 vols. New York: Doubleday, 1992.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
@@ -183,13 +183,13 @@ describe.only("Bibliography English", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.classicalOrAncientText);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.classicalOrAncientText);
 		var expected =
-			'<div class="csl-entry">Luther, Martin. “Disputation on the Power and Efficacy of Indulgences.” Pages 17–33 in vol. 31 of <i>Luther’s Works: Career of the Reformer: I</i>. Edited by Harold J. Grimm, Translated by C. M. Jacobs. 55 vols. St. Louis, Mo.: Concordia, 1958.</div>';
+			'<div class="csl-entry">Luther, Martin. “Disputation on the Power and Efficacy of Indulgences.” Pages 17–33 in vol. 31 of <i>Luther’s Works: Career of the Reformer: I</i>. Edited by Harold J. Grimm. Translated by C. M. Jacobs. 55 vols. St. Louis, Mo.: Concordia, 1958.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Journal article", function () {
+	it.only("Bibliography::Journal article", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.journalArticle);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.journalArticle);
 		var expected = '<div class="csl-entry">Long, B. O. “A Darkness Between Brothers: Solomon and Adonijah,” <i>Journal for the Study of the Old Testament</i> 19 (1981): 79–94.</div>';
