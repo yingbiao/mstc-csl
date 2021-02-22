@@ -237,7 +237,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Conferenec paper", function () {
+	it("Bibliography::Conferenec paper", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.conferencePaper);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.conferencePaper);
 		var expected =
@@ -247,7 +247,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Podcast or online video", function () {
+	it.only("Bibliography::Podcast or online video", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.podcastOrOnlineVideo);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.podcastOrOnlineVideo);
 		var expected =

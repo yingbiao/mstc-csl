@@ -684,9 +684,9 @@
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if type="song">
-        <text variable="collection-title" font-style="italic" prefix=" "/>
-        <group  prefix=" (" suffix=")" delimiter=";">
+        <group  prefix=" "  delimiter=". ">
           <text variable="medium"/>
+        <text variable="collection-title" font-style="italic"/>
         </group>
       </else-if>
       <else-if variable="publisher-place publisher" match="any">
@@ -751,29 +751,56 @@
     </group>
   </macro>
   <macro name="access-bib">
-    <group delimiter=" ">
-      <choose>
-        <if type="graphic report" match="any">
-          <text macro="archive-note"/>
-        </if>
-        <else-if type="article-journal article-magazine article-newspaper bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="none">
-          <text macro="archive-note"/>
-        </else-if>
-      </choose>
-      <choose>
-        <if variable="URL">
-          <text variable="URL"/>
-          <!-- <group delimiter=" " prefix="(" suffix=")">
-              <text term="accessed"/>
-              <date variable="accessed">
-                <date-part name="day" suffix="/" form="numeric-leading-zeros"/>
-                <date-part name="month" suffix="/" form="numeric-leading-zeros"/>
-                <date-part name="year" form="short"/>              
-              </date>
-          </group> -->
-        </if>
-      </choose>
-    </group>
+    <choose>
+      <if type="song">
+        <group delimiter=" " prefix=", ">
+          <choose>
+            <if type="song" >
+              <choose>
+                <if variable="accessed">
+                  <group delimiter=" " prefix="(" suffix=")">
+                      <text term="accessed"/>
+                      <date variable="accessed">
+                        <date-part name="day" suffix="/" form="numeric-leading-zeros"/>
+                        <date-part name="month" suffix="/" form="numeric-leading-zeros"/>
+                        <date-part name="year" form="short"/>              
+                      </date>
+                  </group>
+                </if>
+                <else>
+                  <text term="no date" form="short" />
+                </else>
+              </choose>
+            </if>
+            <else-if type="article-journal article-magazine article-newspaper bill book chapter graphic legal_case legislation motion_picture paper-conference report thesis" match="none">
+              <text macro="archive-note"/>
+            </else-if>
+          </choose>
+          <choose>
+            <if variable="URL">
+              <text variable="URL"/>
+            </if>
+          </choose>
+        </group>
+      </if>
+      <else>
+        <group delimiter=" " prefix=". ">
+          <choose>
+            <if type="graphic report" match="any">
+              <text macro="archive-note"/>
+            </if>
+            <else-if type="article-journal article-magazine article-newspaper bill book chapter graphic legal_case legislation motion_picture paper-conference report thesis" match="none">
+              <text macro="archive-note"/>
+            </else-if>
+          </choose>
+          <choose>
+            <if variable="URL">
+              <text variable="URL"/>
+            </if>
+          </choose>
+        </group>
+      </else>
+    </choose>
   </macro>
   <macro name="review-title">
     <text value="Review of "/>
@@ -1696,7 +1723,7 @@
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
       <text macro="point-locators"/>
-      <text macro="access-bib" prefix=". "/>
+      <text macro="access-bib"/>
     </layout>
     <layout locale="zh-TW" suffix="。">
       <group>
