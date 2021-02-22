@@ -208,7 +208,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Magazine or newspaper article", function () {
+	it("Bibliography::Magazine or newspaper article", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.magazineOrNewspaperArticle);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.magazineOrNewspaperArticle);
 		var expected = '<div class="csl-entry">Stafford, Tim. “A Tale of Two Scientists.” <i>Christianity Today</i> July (2012): 22–29.</div>';
@@ -217,7 +217,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Thesis or dissertation", function () {
+	it.only("Bibliography::Thesis or dissertation", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.thesis);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.thesis);
 		var expected =

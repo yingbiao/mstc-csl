@@ -447,14 +447,10 @@
   <macro name="publisher">
     <group delimiter=": ">
       <choose>
-        <if type="thesis" match="any">
+        <if type="thesis">
           <group delimiter=", ">
-            <text variable="publisher"/>
-            <text variable="publisher-place"/>
-          </group>
-          <group delimiter=" ">
             <text variable="genre"/>
-            <text value="dissertation"/>
+            <text variable="publisher"/>
           </group>
         </if>
         <else>
