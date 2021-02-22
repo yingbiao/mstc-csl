@@ -532,7 +532,6 @@ module.exports = {
 				"date-parts": [[2011]],
 			},
 			page: "1561-1564",
-			edition: "2011",
 			type: "chapter",
 		},
 	},
