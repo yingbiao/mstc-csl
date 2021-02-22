@@ -184,14 +184,17 @@
       <if variable="title" match="none">
         <text variable="genre" text-case="title"/>
       </if>
-      <else-if type="bill book graphic legal_case legislation motion_picture report" match="any">
+      <else-if type="bill book graphic legal_case legislation motion_picture report">
         <text variable="title" text-case="title" font-style="italic"/>
       </else-if>
       <else-if match="all" variable="reviewed-author">
         <text macro="review-title" text-case="title"/>
       </else-if>
-      <else-if type="paper-conference thesis" match="any">
+      <else-if type="paper-conference thesis">
         <text variable="title" text-case="title" quotes="true" />
+      </else-if>
+      <else-if type="article-journal">
+        <text variable="title" text-case="title" quotes="true" suffix=","/>
       </else-if>
       <else>
         <text variable="title" text-case="title" quotes="true" suffix="."/>
@@ -510,7 +513,7 @@
         <text macro="pages"/>
       </if>
       <else-if type="article-journal">
-        <text variable="locator" prefix=", "/>
+        <text variable="locator" prefix=": "/>
       </else-if>
       <else>
         <text macro="point-locators-note" prefix=", "/>
@@ -526,7 +529,7 @@
         </group>
       </if>
       <else-if type="article-journal">
-        <group prefix=", ">
+        <group prefix=": ">
           <text variable="page" />
         </group>
       </else-if>
