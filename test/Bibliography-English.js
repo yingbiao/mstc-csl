@@ -46,7 +46,7 @@ describe("Bibliography English", function () {
 		return bib[1][0].trim();
 	}
 
-	it("Bibliography::Book", function () {
+	it.only("Bibliography::Book", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.book);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.book);
 		var expected = '<div class="csl-entry">Hackett, J. A. <i>A Basic Introduction to Biblical Hebrew, with CD</i>. Peabody, MA: Hendrickson, 2010.</div>';

@@ -582,7 +582,7 @@
         </group>
       </else-if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="; " prefix=" (" suffix=")">
+        <group delimiter="; " prefix=". " suffix="">
           <group delimiter="; ">
             <text macro="container-contributors-bibliography"/>
             <text macro="locators-note"/>
