@@ -77,13 +77,13 @@ describe.only("Bibliography English", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.bookWithMoreThan3AuthorsEditors);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.bookWithMoreThan3AuthorsEditors);
 		var expected =
-			'<div class="csl-entry">Becking, Bob, Alex Cannegieter, Wilfred van de Poll, and Anne-Mareike Wetter. <i>From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition</i>. BibleWorld; London: Equinox, 2009.</div>';
+			'<div class="csl-entry">Becking, Bob, Alex Cannegieter, Wilfred van de Poll, and Anne-Mareike Wetter. <i>From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition</i>. BibleWorld. London: Equinox, 2009.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Classic or ancient text (whole volume)", function () {
+	it("Bibliography::Classic or ancient text (whole volume)", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.classicalOrAncientTextWholeVolume);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.classicalOrAncientTextWholeVolume);
 		var expected =
@@ -120,7 +120,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Booked viewed online", function () {
+	it.only("Bibliography::Booked viewed online", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.bookViewedOnline);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.bookViewedOnline);
 		var expected =
