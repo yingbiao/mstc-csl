@@ -953,7 +953,7 @@
       <else>
         <choose>
           <if variable="container-title" type="thesis paper-conference" match="any">
-            <text variable="title" form="short" text-case="title" prefix="「" suffix="」"/>
+            <text variable="title" form="short" text-case="title" prefix="“" suffix="”"/>
           </if>
           <else>
             <text variable="title" form="short" text-case="title" quotes="true"/>
