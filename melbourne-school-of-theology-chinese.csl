@@ -684,7 +684,7 @@
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=", no. "/>
+        <text variable="issue" prefix="."/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if type="song">
@@ -1699,8 +1699,8 @@
       </group>
       <text macro="issue-bib"/>
       <text macro="locators-newspaper" prefix=", "/>
-      <text macro="access-bib" prefix=". "/>
       <text macro="point-locators"/>
+      <text macro="access-bib" prefix=". "/>
     </layout>
     <layout locale="zh-TW" suffix="。">
       <group>

@@ -189,7 +189,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Journal article", function () {
+	it("Bibliography::Journal article", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.journalArticle);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.journalArticle);
 		var expected = '<div class="csl-entry">Long, B. O. “A Darkness Between Brothers: Solomon and Adonijah,” <i>Journal for the Study of the Old Testament</i> 19 (1981): 79–94.</div>';
@@ -198,11 +198,11 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Journal article viewed online", function () {
+	it.only("Bibliography::Journal article viewed online", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.journalArticleViewedOnline);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.journalArticleViewedOnline);
 		var expected =
-			'<div class="csl-entry">Jacobson, Rolf. “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” <i>Word &#38; World</i> 22.4 (2002):396–405. http://web.a.ebscohost.com/ehost/pdfviewer/.</div>';
+			'<div class="csl-entry">Jacobson, Rolf. “A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle,” <i>Word &#38; World</i> 22.4 (2002): 396–405. http://web.a.ebscohost.com/ehost/pdfviewer/.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
