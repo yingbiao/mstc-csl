@@ -6,7 +6,7 @@ var items = require("./fixtures/items-english.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe("Bibliography English", function () {
+describe.only("Bibliography English", function () {
 	var sys;
 	var engineEnglish;
 	var engineChinese;
@@ -46,7 +46,7 @@ describe("Bibliography English", function () {
 		return bib[1][0].trim();
 	}
 
-	it.only("Bibliography::Book", function () {
+	it("Bibliography::Book", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.book);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.book);
 		var expected = '<div class="csl-entry">Hackett, J. A. <i>A Basic Introduction to Biblical Hebrew, with CD</i>. Peabody, MA: Hendrickson, 2010.</div>';
@@ -83,11 +83,11 @@ describe("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Classic or ancient text (whole volume)", function () {
+	it.only("Bibliography::Classic or ancient text (whole volume)", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.classicalOrAncientTextWholeVolume);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.classicalOrAncientTextWholeVolume);
 		var expected =
-			'<div class="csl-entry">Aquinas, Thomas. <i>Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)</i>. Edited by William A. Wallace; 60 vols. London: Blackfriars, 1964.</div>';
+			'<div class="csl-entry">Aquinas, Thomas. <i>Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)</i>. Edited by William A. Wallace. 60 vols. London: Blackfriars, 1964.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);

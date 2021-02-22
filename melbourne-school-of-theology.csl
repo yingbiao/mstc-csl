@@ -63,11 +63,11 @@
     </group>
   </macro>
   <macro name="container-contributors-bibliography">
-    <group delimiter="; ">
+    <group delimiter=". ">
       <choose>
         <if variable="author">
           <names variable="editor" delimiter=", ">
-            <label form="verb" text-case="lowercase" suffix=" "/>
+            <label form="verb" text-case="sentence" suffix=" "/>
             <name and="text" delimiter=", "/>
           </names>
         </if>
@@ -75,7 +75,7 @@
       <choose>
         <if variable="author editor" match="any">
           <names variable="translator" delimiter=", ">
-            <label form="verb" text-case="lowercase" suffix=" "/>
+            <label form="verb" text-case="sentence" suffix=" "/>
             <name and="text" delimiter=", "/>
           </names>
         </if>
@@ -582,8 +582,8 @@
         </group>
       </else-if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="; " prefix=". " suffix="">
-          <group delimiter="; ">
+        <group delimiter=". " prefix=". " suffix="">
+          <group delimiter=". ">
             <text macro="container-contributors-bibliography"/>
             <text macro="locators-note"/>
             <text macro="collection-title"/>
