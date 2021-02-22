@@ -6,7 +6,7 @@ var items = require("./fixtures/items-english.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe.only("Bibliography English", function () {
+describe("Bibliography English", function () {
 	var sys;
 	var engineEnglish;
 	var engineChinese;
@@ -247,7 +247,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Podcast or online video", function () {
+	it("Bibliography::Podcast or online video", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.podcastOrOnlineVideo);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.podcastOrOnlineVideo);
 		var expected =
@@ -281,7 +281,7 @@ describe.only("Bibliography English", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.forumPost);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.forumPost);
 		var expected =
-			'<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i>. 3 May 2017, http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/.</div>';
+			'<div class="csl-entry">Brown, Andrew. “Creation &#38; Time in Basil’s Hexaemeron,” <i>Sapientia</i>. 3 May 2017. http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);

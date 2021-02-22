@@ -286,7 +286,7 @@
       <else-if type="paper-conference thesis">
         <text variable="title" text-case="title" quotes="true" />
       </else-if>
-      <else-if type="article-journal">
+      <else-if type="article-journal webpage post-weblog post">
         <text variable="title" text-case="title" quotes="true" suffix=","/>
       </else-if>
       <else>
@@ -476,7 +476,7 @@
             </date>
           </if>
           <else-if type="webpage post post-weblog" match="any">
-            <group prefix="(" suffix=")">
+            <group prefix=". ">
               <date variable="issued" text-case="capitalize-all">
                 <date-part name="day" suffix=" "/>
                 <date-part name="month" suffix=" "/>
@@ -507,7 +507,7 @@
             </group>
           </else-if>
           <else-if type="article-magazine" match="any">
-            <date form="text" date-parts="year-month" variable="issued">
+            <date form="text" date-parts="year-month" variable="issued" prefix=" ">
               <date-part name="month" form="long"/>
               <date-part name="year" form="numeric" prefix="(" suffix=")" />
             </date>
@@ -721,7 +721,7 @@
         </group>
       </else-if>
       <else>
-        <text macro="issued" prefix=" "/>
+        <text macro="issued"/>
       </else>
     </choose>
   </macro>
