@@ -440,7 +440,7 @@
   </macro>
   <macro name="event">
     <group>
-      <text term="presented at" suffix=" "/>
+      <text term="presented at" text-case="sentence" suffix=" "/>
       <text variable="event"/>
     </group>
   </macro>
@@ -700,21 +700,21 @@
             <number variable="number-of-volumes" form="numeric"/>
             <text term="volume" form="short" plural="true" prefix=" "/>
           </group>
+          <group delimiter=" ">
+            <choose>
+              <if variable="title" match="none"/>
+              <else-if type="speech" match="any">
+                <choose>
+                  <if match="none" variable="publisher-place">
+                    <text value="Unpublished "/>
+                  </if>
+                </choose>
+                <text variable="genre"/>
+              </else-if>
+            </choose>
+            <text macro="event"/>
+          </group>
           <group delimiter=", ">
-            <group delimiter=" ">
-              <choose>
-                <if variable="title" match="none"/>
-                <else-if type="speech" match="any">
-                  <choose>
-                    <if match="none" variable="publisher-place">
-                      <text value="Unpublished "/>
-                    </if>
-                  </choose>
-                  <text variable="genre"/>
-                </else-if>
-              </choose>
-              <text macro="event"/>
-            </group>
             <text macro="publisher"/>
             <text macro="issued"/>
           </group>

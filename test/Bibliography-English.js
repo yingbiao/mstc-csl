@@ -227,7 +227,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Study bible note or comment", function () {
+	it("Bibliography::Study bible note or comment", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.studyBibleNoteOrComment);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.studyBibleNoteOrComment);
 		var expected =
@@ -237,7 +237,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Conferenec paper", function () {
+	it.only("Bibliography::Conferenec paper", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.conferencePaper);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.conferencePaper);
 		var expected =

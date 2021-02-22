@@ -548,7 +548,7 @@ module.exports = {
 			],
 			event: "annual meeting of the New England Region of the SBL",
 			language: "en-US",
-			"publisher-place": "Worcester, Mass.",
+			"publisher-place": "Worcester, MA",
 			issued: {
 				"date-parts": [[1994, 3, 25]],
 			},
