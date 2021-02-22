@@ -193,7 +193,7 @@
         <text variable="title" text-case="title" quotes="true" />
       </else-if>
       <else>
-        <text variable="title" text-case="title" quotes="true" suffix=","/>
+        <text variable="title" text-case="title" quotes="true" suffix="."/>
       </else>
     </choose>
   </macro>
@@ -257,16 +257,24 @@
     </choose>
   </macro>
   <macro name="container-title">
-    <choose>
-      <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
-        <choose>
-          <if match="any" variable="title">
-            <text term="in" suffix=" "/>
-          </if>
-        </choose>
-      </if>
-    </choose>
-    <text variable="container-title" text-case="title" font-style="italic"/>
+    <group delimiter=" ">
+      <choose>
+        <if type="chapter" variable="page" match="all">
+          <text value="Pages"/>
+          <text variable="page" />
+        </if>
+      </choose>
+      <choose>
+        <if type="chapter paper-conference entry-dictionary entry-encyclopedia" match="any">
+          <choose>
+            <if match="any" variable="title">
+              <text term="in" suffix=" "/>
+            </if>
+          </choose>
+        </if>
+      </choose>
+      <text variable="container-title" text-case="title" font-style="italic"/>
+    </group>
   </macro>
   <macro name="collection-title">
     <text variable="collection-title" text-case="title"/>
@@ -503,7 +511,7 @@
   </macro>
   <macro name="pages">
     <choose>
-      <if type="chapter paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
+      <if type="paper-conference article article-magazine article-newspaper entry-dictionary entry-encyclopedia" match="any">
         <group delimiter=":" prefix=", ">
           <text variable="volume" />
           <text variable="page" />

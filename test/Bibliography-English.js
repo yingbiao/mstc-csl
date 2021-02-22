@@ -120,7 +120,7 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Bibliography::Booked viewed online", function () {
+	it("Bibliography::Booked viewed online", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.bookViewedOnline);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.bookViewedOnline);
 		var expected =
@@ -139,11 +139,11 @@ describe.only("Bibliography English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Bibliography::Essay or chapter", function () {
+	it.only("Bibliography::Essay or chapter", function () {
 		var outputEnglishStyle = makeBibliographyFromEnglishStyle(items.essayOrChapter);
 		var outputChineseStyle = makeBibliographyFromChineseStyle(items.essayOrChapter);
 		var expected =
-			'<div class="csl-entry">Watts, John D. W. “A Frame for the Book of the Twelve: Hosea 1–3 and Malachi.” Pages 209-217 in <i>Reading and Hearing the Book of the Twelve</i>. Edited by James Nogalski and Marvin Sweeney. Atlanta: Society of Biblical Literature, 2000.</div>';
+			'<div class="csl-entry">Watts, John D. W. “A Frame for the Book of the Twelve: Hosea 1–3 and Malachi.” Pages 209–217 in <i>Reading and Hearing the Book of the Twelve</i>. Edited by James Nogalski and Marvin Sweeney. Atlanta: Society of Biblical Literature, 2000.</div>';
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
