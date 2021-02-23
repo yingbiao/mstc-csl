@@ -192,17 +192,17 @@ describe.only("Citation English", function () {
 	it("Citation::Anonymous dictionary acticle", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.anonymousDictionaryArticle, "232");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.anonymousDictionaryArticle, "232");
-		var expected = "F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i>, 2nd ed. (Oxford: Oxford University Press, 1983), 232.";
+		var expected = "F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Citation::Classical or ancient text", function () {
+	it.only("Citation::Classical or ancient text", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.classicalOrAncientText, "17–33");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.classicalOrAncientText, "17–33");
 		var expected =
-			"Martin Luther, “Disputation on the Power and Efficacy of Indulgences,” in <i>Luther’s Works: Career of the Reformer: I</i> (ed. Harold J. Grimm; trans. C. M. Jacobs; St. Louis, Mo.: Concordia, 1958), 31:17–33.";
+			"Martin Luther, “Disputation on the Power and Efficacy of Indulgences,” in <i>Luther’s Works: Career of the Reformer: I</i>, ed. Harold J. Grimm; trans. C. M. Jacobs (St. Louis, Mo.: Concordia, 1958), 31:17–33.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
