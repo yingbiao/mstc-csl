@@ -152,7 +152,7 @@ describe.only("Citation English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Citation::ebook", function () {
+	it.only("Citation::ebook", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.ebook, "location 446/2830");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.ebook, "location 446/2830");
 		var expected = "C. S. Lewis, <i>Mere Christianity</i> (Kindle ed.; Fount, 2010), location 446/2830.";

@@ -417,7 +417,7 @@
           <choose>
             <if variable="locator" match="any"/>
           </choose>
-          <text macro="edition-note"/>
+          <!-- <text macro="edition-note"/> -->
         </group>
       </if>
     </choose>
@@ -657,6 +657,7 @@
           </group>
         </group>
         <group prefix=" (" suffix=")">
+          <text macro="edition-note" suffix="; "/>
           <group delimiter=", ">
             <group delimiter=" ">
               <choose>
