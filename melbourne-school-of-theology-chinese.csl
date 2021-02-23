@@ -290,6 +290,28 @@
         <text variable="title" text-case="title" quotes="true" suffix=","/>
       </else-if>
       <else>
+        <text variable="title" text-case="title" quotes="true" suffix=","/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="title-bib">
+    <choose>
+      <if variable="title" match="none">
+        <text variable="genre" text-case="title"/>
+      </if>
+      <else-if type="bill book graphic legal_case legislation motion_picture report">
+        <text variable="title" text-case="title" font-style="italic"/>
+      </else-if>
+      <else-if match="all" variable="reviewed-author">
+        <text macro="review-title" text-case="title"/>
+      </else-if>
+      <else-if type="paper-conference thesis">
+        <text variable="title" text-case="title" quotes="true" />
+      </else-if>
+      <else-if type="article-journal webpage post-weblog post">
+        <text variable="title" text-case="title" quotes="true" suffix=","/>
+      </else-if>
+      <else>
         <text variable="title" text-case="title" quotes="true" suffix="."/>
       </else>
     </choose>
@@ -1723,7 +1745,7 @@
     <layout locale="en-US" suffix=".">
       <group delimiter=" ">
         <text macro="contributors" suffix="."/>
-        <text macro="title-note"/>
+        <text macro="title-bib"/>
         <text macro="description-note"/>
         <text macro="container-title"/>
       </group>
