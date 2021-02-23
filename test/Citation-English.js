@@ -6,7 +6,7 @@ var items = require("./fixtures/items-english.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe("Citation English", function () {
+describe.only("Citation English", function () {
 	var sys;
 	var engineEnglish;
 	var engineChinese;
@@ -100,7 +100,7 @@ describe("Citation English", function () {
 	it("Citation::Book with more than 3 authors (or editors)", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.bookWithMoreThan3AuthorsEditors, "2");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.bookWithMoreThan3AuthorsEditors, "2");
-		var expected = "Bob Becking et al., <i>From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition</i> (BibleWorld; London: Equinox, 2009), 2.";
+		var expected = "Bob Becking et al., <i>From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition</i>, BibleWorld (London: Equinox, 2009), 2.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
@@ -110,7 +110,7 @@ describe("Citation English", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.classicalOrAncientTextWholeVolume, "27-31");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.classicalOrAncientTextWholeVolume, "27-31");
 		var expected =
-			"Thomas Aquinas, <i>Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)</i>, ed. William A. Wallace, 60 vols. (London: Blackfriars, 1964), 27–31.";
+			"Thomas Aquinas, <i>Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)</i>, ed. William A. Wallace (London: Blackfriars, 1964), 27–31.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);

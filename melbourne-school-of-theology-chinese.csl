@@ -645,12 +645,18 @@
         </group>
       </else-if>
       <else-if variable="publisher-place publisher" match="any">
-        <group prefix=" (" suffix=")">
-          <group delimiter="; " suffix="; ">
-            <text macro="container-contributors-note"/>
-            <text macro="locators-note"/>
+        <group delimiter=", " prefix=", " suffix=" ">
+          <text macro="container-contributors-note"/>
+          <text macro="locators-note"/>
+          <!-- <group>
+            <number variable="number-of-volumes" form="numeric"/>
+            <text term="volume" form="short" plural="true" prefix=" "/>
+          </group> -->
+          <group delimiter=", ">
             <text macro="collection-title"/>
           </group>
+        </group>
+        <group prefix=" (" suffix=")">
           <group delimiter=", ">
             <group delimiter=" ">
               <choose>
@@ -738,14 +744,14 @@
       <choose>
         <if variable="URL">
           <text variable="URL"/>
-          <group delimiter=" " prefix="(" suffix=")">
+          <!-- <group delimiter=" " prefix="(" suffix=")">
               <text term="accessed"/>
               <date variable="accessed">
                 <date-part name="day" suffix="/" form="numeric-leading-zeros"/>
                 <date-part name="month" suffix="/" form="numeric-leading-zeros"/>
                 <date-part name="year" form="short"/>              
               </date>
-          </group>
+          </group> -->
         </if>
       </choose>
     </group>
@@ -1655,8 +1661,8 @@
           </group>
           <text macro="issue-note"/>
           <text macro="locators-newspaper" prefix=", "/>
-          <text macro="access-note" prefix=", "/>
           <text macro="point-locators"/>
+          <text macro="access-note" prefix=", "/>
         </else>
       </choose>
     </layout>
