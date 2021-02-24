@@ -578,7 +578,7 @@
             </date>
           </else-if>
           <else-if type="paper-conference">
-            <date variable="issued" date-parts="year" form="text"/>
+            <date variable="issued" form="text"/>
           </else-if>
           <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="any">
             <date variable="issued" text-case="capitalize-all">
@@ -787,6 +787,7 @@
       <else-if variable="publisher-place publisher" match="any">
         <group delimiter=". " prefix=". " suffix="">
           <group delimiter=". ">
+            <text macro="edition-note"/>
             <text macro="container-contributors-bibliography"/>
             <text macro="locators-note"/>
             <text macro="collection-title"/>
