@@ -649,9 +649,10 @@
           <group delimiter=", ">
             <text macro="collection-title"/>
           </group>
+          
+          <text macro="edition-note" suffix=""/>
         </group>
         <group prefix=" (" suffix=")">
-          <text macro="edition-note" suffix="; "/>
           <group delimiter=", ">
             <group delimiter=" ">
               <choose>

@@ -6,7 +6,7 @@ var items = require("./fixtures/items-english.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe.only("Citation English", function () {
+describe("Citation English", function () {
 	var sys;
 	var engineEnglish;
 	var engineChinese;
@@ -155,7 +155,7 @@ describe.only("Citation English", function () {
 	it("Citation::ebook", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.ebook, "location 446/2830");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.ebook, "location 446/2830");
-		var expected = "C. S. Lewis, <i>Mere Christianity</i> (Kindle ed.; Fount, 2010), location 446/2830.";
+		var expected = "C. S. Lewis, <i>Mere Christianity</i>, Kindle ed. (Fount, 2010), location 446/2830.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
@@ -192,7 +192,7 @@ describe.only("Citation English", function () {
 	it("Citation::Anonymous dictionary acticle", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.anonymousDictionaryArticle, "232");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.anonymousDictionaryArticle, "232");
-		var expected = "F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i> (2nd ed.; Oxford: Oxford University Press, 1983), 232.";
+		var expected = "F. L. Cross and E. A. Livingstone, eds., “Canon of Scripture,” in <i>The Oxford Dictionary of the Christian Church</i>, 2nd ed. (Oxford: Oxford University Press, 1983), 232.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
