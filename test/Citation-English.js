@@ -6,7 +6,7 @@ var items = require("./fixtures/items-english.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe("Citation English", function () {
+describe.only("Citation English", function () {
 	var sys;
 	var engineEnglish;
 	var engineChinese;
@@ -254,7 +254,7 @@ describe("Citation English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Citation::Conferenec paper", function () {
+	it("Citation::Conferenec paper", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.conferencePaper, "15");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.conferencePaper, "15");
 		var expected = "Susan Niditch, “Oral Culture and Written Documents” (paper presented at the annual meeting of the New England Region of the SBL, Worcester, MA, 1994), 15.";
