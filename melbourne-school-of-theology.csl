@@ -564,7 +564,7 @@
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=", no. "/>
+        <text variable="issue" prefix="."/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if type="song">

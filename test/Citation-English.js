@@ -198,7 +198,7 @@ describe.only("Citation English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Citation::Classical or ancient text", function () {
+	it("Citation::Classical or ancient text", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.classicalOrAncientText, "17–33");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.classicalOrAncientText, "17–33");
 		var expected =
@@ -227,7 +227,7 @@ describe.only("Citation English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Citation::Magazine or newspaper article", function () {
+	it.only("Citation::Magazine or newspaper article", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.magazineOrNewspaperArticle, "27");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.magazineOrNewspaperArticle, "27");
 		var expected = "Tim Stafford, “A Tale of Two Scientists,” <i>Christianity Today</i> July (2012): 27.";

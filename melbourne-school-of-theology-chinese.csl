@@ -623,7 +623,7 @@
       <if variable="locator" match="none">
         <text macro="pages"/>
       </if>
-      <else-if type="article-journal">
+      <else-if type="article-journal article-magazine article-newspaper">
         <text variable="locator" prefix=": "/>
       </else-if>
       <else>
@@ -657,7 +657,7 @@
     <choose>
       <if type="article-journal">
         <text variable="volume" prefix=" "/>
-        <text variable="issue" prefix=", no. "/>
+        <text variable="issue" prefix="."/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
       <else-if type="song">
