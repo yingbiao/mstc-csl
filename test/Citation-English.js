@@ -6,7 +6,7 @@ var items = require("./fixtures/items-english.js");
 var chai = require("chai");
 var assert = chai.assert;
 
-describe.only("Citation English", function () {
+describe("Citation English", function () {
 	var sys;
 	var engineEnglish;
 	var engineChinese;
@@ -227,7 +227,7 @@ describe.only("Citation English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it.only("Citation::Magazine or newspaper article", function () {
+	it("Citation::Magazine or newspaper article", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.magazineOrNewspaperArticle, "27");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.magazineOrNewspaperArticle, "27");
 		var expected = "Tim Stafford, “A Tale of Two Scientists,” <i>Christianity Today</i> July (2012): 27.";
@@ -248,13 +248,13 @@ describe.only("Citation English", function () {
 	it("Citation::Study bible note or comment", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.studyBibleNoteOrComment, "1562");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.studyBibleNoteOrComment, "1562");
-		var expected = "Herbert Wolf and John H. Stek, “Introduction: Malachi,” in <i>The NIV Study Bible</i>, ed. Kenneth L. Barker; (Grand Rapids: Zondervan, 2011), 1562.";
+		var expected = "Herbert Wolf and John H. Stek, “Introduction: Malachi,” in <i>The NIV Study Bible</i>, ed. Kenneth L. Barker (Grand Rapids: Zondervan, 2011), 1562.";
 
 		assert.equal(outputEnglishStyle, expected);
 		assert.equal(outputChineseStyle, expected);
 	});
 
-	it("Citation::Conferenec paper", function () {
+	it.only("Citation::Conferenec paper", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.conferencePaper, "15");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.conferencePaper, "15");
 		var expected = "Susan Niditch, “Oral Culture and Written Documents” (paper presented at the annual meeting of the New England Region of the SBL, Worcester, MA, 1994), 15.";

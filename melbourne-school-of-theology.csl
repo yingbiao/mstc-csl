@@ -367,6 +367,12 @@
       </if>
     </choose>
   </macro>
+  <macro name="event-note">
+    <group>
+      <text term="presented at" text-case="lowercase" suffix=" "/>
+      <text variable="event"/>
+    </group>
+  </macro>
   <macro name="event">
     <group>
       <text term="presented at" text-case="sentence" suffix=" "/>
@@ -420,7 +426,7 @@
             </date>
           </else-if>
           <else-if type="paper-conference">
-            <date variable="issued" form="text"/>
+            <date variable="issued" date-parts="year" form="text"/>
           </else-if>
           <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="any">
             <date variable="issued" text-case="capitalize-all">
@@ -600,7 +606,7 @@
                   <text variable="genre"/>
                 </else-if>
               </choose>
-              <text macro="event"/>
+              <text macro="event-note"/>
             </group>
             <text macro="publisher"/>
             <text macro="issued"/>
