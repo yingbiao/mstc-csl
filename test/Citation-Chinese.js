@@ -159,11 +159,11 @@ describe("Citation Chinese", function () {
 
 	it("Citation::Magazine or newspaper article", function () {
 		var output = makeCitationCluster(items.magazineOrNewspaperArticle, "zh-CN", "43");
-		var expected = "李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43。";
+		var expected = "史馨：“馬克龍民望回升反擊黃背心之亂”，《亞洲週刊》33.12（2019）：43。";
 		assert.equal(output, expected);
 
 		output = makeCitationCluster(items.magazineOrNewspaperArticle, "zh-TW", "43");
-		expected = "李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43。";
+		expected = "史馨：“馬克龍民望回升反擊黃背心之亂”，《亞洲週刊》33.12（2019）：43。";
 		assert.equal(output, expected);
 	});
 

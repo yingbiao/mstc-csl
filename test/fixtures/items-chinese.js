@@ -186,6 +186,27 @@ module.exports = {
 			type: "book",
 		},
 	},
+	ebook: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "紅樓夢",
+			"title-short": "紅樓夢",
+			author: [
+				{
+					family: "曹雪芹",
+					given: "",
+				},
+			],
+			edition: "Kindle",
+			publisher: "藝雅",
+			"publisher-place": "Czech Republic",
+			issued: {
+				"date-parts": [[2017]],
+			},
+			page: "Loc 134/18602",
+			type: "book",
+		},
+	},
 	essayOrChapter: {
 		"ITEM-1": {
 			id: "ITEM-1",
@@ -240,6 +261,115 @@ module.exports = {
 			type: "entry-dictionary",
 		},
 	},
+	anonymousDictionaryArticle: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "文士",
+			"title-short": "文士",
+			editor: [
+				{
+					family: "陳惠榮",
+					given: "",
+				},
+			],
+			"container-title": "證主聖經百科全書",
+			publisher: "福音證主協會",
+			"publisher-place": "香港",
+			issued: {
+				"date-parts": [[1995]],
+			},
+			page: "1022-1024",
+			volume: 2,
+			"number-of-volumes": 3,
+			type: "entry-dictionary",
+		},
+	},
+	classicalOrAncientText: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "在信心中的祈禱",
+			"title-short": "在信心中的祈禱",
+			author: [
+				{
+					family: "馬丁路德",
+					given: "",
+				},
+			],
+			editor: [
+				{
+					family: "傅士德",
+					given: "",
+				},
+				{
+					family: "史雅各",
+					given: "",
+				},
+			],
+			translator: [
+				{
+					family: "袁達志",
+					given: "",
+				},
+				{
+					family: "陶婉儀",
+					given: "",
+				},
+			],
+			"container-title": "屬靈操練之旅",
+			publisher: "天道書樓",
+			"publisher-place": "香港",
+			issued: {
+				"date-parts": [[2004]],
+			},
+			page: "183-190",
+			type: "chapter",
+		},
+	},
+	anf_npnf_ccel: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "人的造成10.2",
+			author: [
+				{
+					family: "貴鉤利",
+					given: "",
+				},
+			],
+			editor: [
+				{
+					family: "章文新",
+					given: "",
+				},
+			],
+			translator: [
+				{
+					family: "沈鮮維幀",
+					given: "",
+				},
+				{
+					family: "都孟高",
+					given: "",
+				},
+				{
+					family: "馬葆煉",
+					given: "",
+				},
+				{
+					family: "謝扶雅",
+					given: "",
+				},
+			],
+			"container-title": "東方教父選集",
+			publisher: "基督教文藝",
+			"publisher-place": "香港",
+			issued: {
+				"date-parts": [[1989]],
+			},
+			edition: 2,
+			page: "19-20",
+			type: "chapter",
+		},
+	},
 	journalArticle: {
 		"ITEM-1": {
 			id: "ITEM-1",
@@ -259,23 +389,44 @@ module.exports = {
 			type: "article-journal",
 		},
 	},
-	magazineOrNewspaperArticle: {
+	journalArticleViewedOnline: {
 		"ITEM-1": {
 			id: "ITEM-1",
-			title: "美國華僑習俗趣談",
+			title: "路德與加爾文的社會政治思想",
+			"title-short": "路德與加爾文的社會政治思想",
 			author: [
 				{
-					family: "李約翰",
+					family: "楊慶球",
 					given: "",
 				},
 			],
-			"container-title": "时代華僑周刊",
+			"container-title": "教會",
 			issued: {
-				"date-parts": [[1957, 10, 30]],
+				"date-parts": [[2018]],
+			},
+			page: "29-42",
+			issue: 69,
+			URL: "https://www.churchchina.org/wp-content/uploads/ccpdf/069cc1801.pdf",
+			type: "article-journal",
+		},
+	},
+	magazineOrNewspaperArticle: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "馬克龍民望回升反擊黃背心之亂",
+			author: [
+				{
+					family: "史馨",
+					given: "",
+				},
+			],
+			"container-title": "亞洲週刊",
+			issued: {
+				"date-parts": [[2019]],
 			},
 			issue: "12",
 			volume: "33",
-			page: "43-47",
+			page: "36-37",
 			type: "article-magazine",
 		},
 	},
@@ -297,6 +448,37 @@ module.exports = {
 			type: "thesis",
 		},
 	},
+	studyBibleNoteOrComment: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "認識教義與靈命成長",
+			"title-short": "認識教義與靈命成長",
+			author: [
+				{
+					family: "李少秋",
+					given: "",
+				},
+			],
+			editor: [
+				{
+					family: "高明發",
+					given: "",
+				},
+				{
+					family: "張達民",
+					given: "",
+				},
+			],
+			"container-title": "聖經研讀版 - 新譯本",
+			publisher: "環球聖經公會",
+			"publisher-place": "香港",
+			issued: {
+				"date-parts": [[2011]],
+			},
+			page: "2080-2081",
+			type: "chapter",
+		},
+	},
 	conferencePaper: {
 		"ITEM-1": {
 			id: "ITEM-1",
@@ -313,6 +495,23 @@ module.exports = {
 				"date-parts": [[2010, 10, 4]],
 			},
 			type: "paper-conference",
+		},
+	},
+	podcastOrOnlineVideo: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "復興的使命群體",
+			"title-short": "復興的使命群體",
+			author: [
+				{
+					family: "楊柏滿",
+					given: "",
+				},
+			],
+			"collection-title": "華人教會網路",
+			medium: "語音錄音",
+			URL: "http://www.church.com.hk/acms/content.asp?site=cdc&op=show&type=product&code=019300&layout=sermon",
+			type: "song",
 		},
 	},
 	webpage: {

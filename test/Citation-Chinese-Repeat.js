@@ -173,11 +173,11 @@ describe("Citation Chinese Repeat", function () {
 
 	it("Citation::Magazine or newspaper article", function () {
 		var output = makeCitationCluster(items.magazineOrNewspaperArticle, "zh-CN", "45");
-		var expected = "李約翰：“美國華僑習俗趣談”，45。";
+		var expected = "史馨：“馬克龍民望回升反擊黃背心之亂”，45。";
 		assert.equal(output, expected);
 
 		output = makeCitationCluster(items.magazineOrNewspaperArticle, "zh-TW", "45");
-		expected = "李約翰：“美國華僑習俗趣談”，45。";
+		expected = "史馨：“馬克龍民望回升反擊黃背心之亂”，45。";
 		assert.equal(output, expected);
 	});
 

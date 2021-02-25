@@ -114,6 +114,16 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Bibliography::ebook", function () {
+		var output = makeBibliography(items.ebook, "zh-CN");
+		var expected = '<div class="csl-entry">曹雪芹：《紅樓夢》。Kindle版。Czech Republic：藝雅，2017。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.ebook, "zh-TW");
+		expected = '<div class="csl-entry">曹雪芹：《紅樓夢》。Kindle版。Czech Republic：藝雅，2017。</div>';
+		assert.equal(output, expected);
+	});
+
 	it("Bibliography::Essay or chapter", function () {
 		var output = makeBibliography(items.essayOrChapter, "zh-CN");
 		var expected = '<div class="csl-entry">黄二冬：“天下一家”。页335–350于《地球村的演變》。千百文编。厦門：漢陽出版社，2003。</div>';
@@ -134,6 +144,36 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Bibliography::Anonymous dictionary acticle", function () {
+		var output = makeBibliography(items.anonymousDictionaryArticle, "zh-CN");
+		var expected = '<div class="csl-entry">陳惠榮编：“文士”。页1022–1024于《證主聖經百科全書》第二册。共三册。香港：福音證主協會，1995。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.anonymousDictionaryArticle, "zh-TW");
+		expected = '<div class="csl-entry">陳惠榮編：“文士”。頁1022–1024於《證主聖經百科全書》第二冊。共三冊。香港：福音證主協會，1995。</div>';
+		assert.equal(output, expected);
+	});
+
+	it("Bibliography::Classical or ancient text", function () {
+		var output = makeBibliography(items.classicalOrAncientText, "zh-CN");
+		var expected = '<div class="csl-entry">馬丁路德：“在信心中的祈禱”。页183–190于《屬靈操練之旅》。傅士德和史雅各编。袁達志和陶婉儀译。香港：天道書樓，2004。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.classicalOrAncientText, "zh-TW");
+		expected = '<div class="csl-entry">馬丁路德：“在信心中的祈禱”。頁183–190於《屬靈操練之旅》。傅士德和史雅各編。袁達志和陶婉儀譯。香港：天道書樓，2004。</div>';
+		assert.equal(output, expected);
+	});
+
+	it("Bibliography::ANF/NPNF/CCEL", function () {
+		var output = makeBibliography(items.anf_npnf_ccel, "zh-CN");
+		var expected = '<div class="csl-entry">貴鉤利：“人的造成10.2”。頁19-20於《東方教父選集》。章文新編。沈鮮維幀、都孟高、馬葆煉和謝扶雅譯，第二版。香港：基督教文藝，1989。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.anf_npnf_ccel, "zh-TW");
+		expected = '<div class="csl-entry">貴鉤利：“人的造成10.2”。頁19-20於《東方教父選集》。章文新編。沈鮮維幀、都孟高、馬葆煉和謝扶雅譯，第二版。香港：基督教文藝，1989。</div>';
+		assert.equal(output, expected);
+	});
+
 	it("Bibliography::Journal article", function () {
 		var output = makeBibliography(items.journalArticle, "zh-CN");
 		var expected = '<div class="csl-entry">楊品通：“神學的本質探討”，《教會神學期刊》14（2003）：19–24。</div>';
@@ -144,13 +184,23 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Bibliography::Journal article viewed online", function () {
+		var output = makeBibliography(items.journalArticleViewedOnline, "zh-CN");
+		var expected = '<div class="csl-entry">楊慶球：“路德與加爾文的社會政治思想”，《教會》69（2018）：29–42。https://www.churchchina.org/wp-content/uploads/ccpdf/069cc1801.pdf。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.journalArticleViewedOnline, "zh-TW");
+		expected = '<div class="csl-entry">楊慶球：“路德與加爾文的社會政治思想”，《教會》69（2018）：29–42。https://www.churchchina.org/wp-content/uploads/ccpdf/069cc1801.pdf。</div>';
+		assert.equal(output, expected);
+	});
+
 	it("Bibliography::Magazine or newspaper article", function () {
 		var output = makeBibliography(items.magazineOrNewspaperArticle, "zh-CN");
-		var expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43–47。</div>';
+		var expected = '<div class="csl-entry">史馨：“馬克龍民望回升反擊黃背心之亂”，《亞洲週刊》33.12（2019）：36–37。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.magazineOrNewspaperArticle, "zh-TW");
-		expected = '<div class="csl-entry">李約翰：“美國華僑習俗趣談”，《时代華僑周刊》33.12（1957）：43–47。</div>';
+		expected = '<div class="csl-entry">史馨：“馬克龍民望回升反擊黃背心之亂”，《亞洲週刊》33.12（2019）：36–37。</div>';
 		assert.equal(output, expected);
 	});
 
@@ -164,6 +214,16 @@ describe("Bibliography Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Bibliography::Study bible note or comment", function () {
+		var output = makeBibliography(items.studyBibleNoteOrComment, "zh-CN");
+		var expected = '<div class="csl-entry">李少秋：“認識教義與靈命成長”。頁2080-2081於《聖經研讀版 - 新譯本》。高明發和張達民編。第二版。香港：環球聖經公會，2011。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.studyBibleNoteOrComment, "zh-TW");
+		expected = '<div class="csl-entry">李少秋：“認識教義與靈命成長”。頁2080-2081於《聖經研讀版 - 新譯本》。高明發和張達民編。第二版。香港：環球聖經公會，2011。</div>';
+		assert.equal(output, expected);
+	});
+
 	it("Bibliography::Conferenec paper", function () {
 		var output = makeBibliography(items.conferencePaper, "zh-CN");
 		var expected = '<div class="csl-entry">謝木水：“神學如何失去靈性？”。新加坡神學院益道論述會上发表之专文。新加坡，2010年10月4日。</div>';
@@ -171,6 +231,17 @@ describe("Bibliography Chinese", function () {
 
 		output = makeBibliography(items.conferencePaper, "zh-TW");
 		expected = '<div class="csl-entry">謝木水：“神學如何失去靈性？”。新加坡神學院益道論述會上發表之專文。新加坡，2010年10月4日。</div>';
+		assert.equal(output, expected);
+	});
+
+	it("Bibliography::Podcast or online video", function () {
+		var output = makeBibliography(items.podcastOrOnlineVideo, "zh-CN");
+		var expected =
+			'<div class="csl-entry">楊柏滿：《復興的使命群體》華人教會網路（語音錄音）。http://www.church.com.hk/acms/content.asp?site=cdc&op=show&type=product&code=019300&layout=sermon。</div>';
+		assert.equal(output, expected);
+
+		output = makeBibliography(items.podcastOrOnlineVideo, "zh-TW");
+		expected = '<div class="csl-entry">楊柏滿：《復興的使命群體》華人教會網路（語音錄音）。http://www.church.com.hk/acms/content.asp?site=cdc&op=show&type=product&code=019300&layout=sermon。</div>';
 		assert.equal(output, expected);
 	});
 
