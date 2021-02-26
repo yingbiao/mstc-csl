@@ -136,7 +136,8 @@ module.exports = {
 					given: "",
 				},
 			],
-			"collection-title": "明道研經叢書50",
+			"collection-title": "明道研經叢書",
+			"collection-number": "50",
 			publisher: "明道社",
 			"publisher-place": "香港",
 			issued: {
@@ -405,7 +406,7 @@ module.exports = {
 				"date-parts": [[2018]],
 			},
 			page: "29-42",
-			issue: 69,
+			issue: "69",
 			URL: "https://www.churchchina.org/wp-content/uploads/ccpdf/069cc1801.pdf",
 			type: "article-journal",
 		},
