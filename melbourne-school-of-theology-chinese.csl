@@ -19,7 +19,7 @@
     <category citation-format="note"/>
     <category field="theology"/>
     <summary>Melbourne School of Theology Chinese Department format based on the Essay Style Guide</summary>
-    <updated>2019-05-21T18:00:00+10:00</updated>
+    <updated>2021-02-26T23:00:00+10:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
@@ -692,7 +692,7 @@
         <text variable="locator" prefix=": "/>
       </else-if>
       <else>
-        <text macro="point-locators-note" article-magazine article-newspaper prefix=", "/>
+        <text macro="point-locators-note" prefix=", "/>
       </else>
     </choose>
   </macro>
@@ -1652,14 +1652,14 @@
         </group>
       </else-if>
       <else-if variable="publisher-place publisher" match="any">
-        <group delimiter="。" prefix="。" suffix="">
+        <group delimiter="。" prefix="。">
           <group delimiter="。">
             <text macro="container-contributors-bibliography-chinese"/>
             <text macro="locators-note-chinese"/>
             <group>
               <text term="total" />
               <number variable="number-of-volumes" form="long-ordinal"/>
-              <text term="volume" form="short" plural="true"/>
+              <text term="volume" form="short" />
             </group>
             <text macro="collection-title-chinese"/>
           </group>

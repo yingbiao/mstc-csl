@@ -1,0 +1,805 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <bib:BookSection rdf:about="#item_132">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Book><dc:title>The NIV Study Bible</dc:title></bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Grand Rapids</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Zondervan</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wolf</foaf:surname>
+                        <foaf:givenName>Herbert</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stek</foaf:surname>
+                        <foaf:givenName>John H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barker</foaf:surname>
+                        <foaf:givenName>Kenneth L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Introduction: Malachi</dc:title>
+        <dc:date>2011</dc:date>
+        <z:language>en-US</z:language>
+        <bib:pages>1561-1564</bib:pages>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="#item_133">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+               <dc:title>Reading and Hearing the Book of the Twelve</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Atlanta</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Society of Biblical Literature</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Watts</foaf:surname>
+                        <foaf:givenName>John D. W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nogalski</foaf:surname>
+                        <foaf:givenName>James</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sweeney</foaf:surname>
+                        <foaf:givenName>Marvin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>A Frame for the Book of the Twelve: Hosea 1–3 and Malachi</dc:title>
+        <dc:date>2000</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>A Frame for the Book of the Twelve</z:shortTitle>
+        <bib:pages>209-217</bib:pages>
+    </bib:BookSection>
+    <bib:Book rdf:about="#item_134">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Wantirna</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>New Melbourne Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ward</foaf:surname>
+                        <foaf:givenName>Rowland</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>The Westminster Confession and Catechisms in Modern English</dc:title>
+        <dc:date>2000</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Westminster Confession</z:shortTitle>
+    </bib:Book>
+    <rdf:Description rdf:about="#item_135">
+        <z:itemType>encyclopediaArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <prism:volume>3</prism:volume>
+                <dc:title>The Anchor Bible Dictionary</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>New York</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Doubleday</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Walters</foaf:surname>
+                        <foaf:givenName>Stanley D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Freedman</foaf:surname>
+                        <foaf:givenName>David Noel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Jacob Narrative</dc:title>
+        <dc:date>1992</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Jacob</z:shortTitle>
+        <z:numberOfVolumes>6</z:numberOfVolumes>
+        <bib:pages>599-606</bib:pages>
+    </rdf:Description>
+    <rdf:Description rdf:about="#item_136">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Worcester, MA</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Niditch</foaf:surname>
+                        <foaf:givenName>Susan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Oral Culture and Written Documents</dc:title>
+        <dc:date>25 March 1994</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Oral Culture</z:shortTitle>
+        <bib:presentedAt>
+            <bib:Conference>
+                <dc:title>annual meeting of the New England Region of the SBL</dc:title>
+            </bib:Conference>
+        </bib:presentedAt>
+    </rdf:Description>
+    <bib:BookSection rdf:about="#item_137">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <prism:volume>31</prism:volume>
+                <dc:title>Luther’s Works: Career of the Reformer: I</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>St. Louis, MO</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Concordia</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Luther</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Grimm</foaf:surname>
+                        <foaf:givenName>Harold J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <z:translators>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jacobs</foaf:surname>
+                        <foaf:givenName>C. M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:translators>
+        <dc:title>Disputation on the Power and Efficacy of Indulgences</dc:title>
+        <dc:date>1958</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Disputation</z:shortTitle>
+        <z:numberOfVolumes>55</z:numberOfVolumes>
+        <bib:pages>17-33</bib:pages>
+    </bib:BookSection>
+    <bib:Article rdf:about="#item_138">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>19</prism:volume>
+                <dc:title>Journal for the Study of the Old Testament</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Long</foaf:surname>
+                        <foaf:givenName>B. O.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>A Darkness Between Brothers: Solomon and Adonijah</dc:title>
+        <dc:date>1981</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Darkness</z:shortTitle>
+        <bib:pages>79-94</bib:pages>
+    </bib:Article>
+    <bib:Book rdf:about="#item_139">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>New Haven</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Yale University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kittel</foaf:surname>
+                        <foaf:givenName>B.P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hoffer</foaf:surname>
+                        <foaf:givenName>V.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wright</foaf:surname>
+                        <foaf:givenName>R.A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Biblical Hebrew: A Text and Workbook</dc:title>
+        <dc:date>1989</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Biblical Hebrew</z:shortTitle>
+    </bib:Book>
+    <bib:Article rdf:about="http://web.a.ebscohost.com/ehost/pdfviewer/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>22</prism:volume>
+                <dc:title>Word &amp; World</dc:title>
+                <prism:number>4</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jacobson</foaf:surname>
+                        <foaf:givenName>Rolf</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>A Freedom That Is No Freedom: Jeremiah 34 and the Sabbatical Principle</dc:title>
+        <dc:date>2002</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Freedom</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://web.a.ebscohost.com/ehost/pdfviewer/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2015-01-29</dcterms:dateSubmitted>
+        <bib:pages>396-405</bib:pages>
+    </bib:Article>
+    <bib:Book rdf:about="http://books.google.com.au/books?id=UuMRFJqmJ_sC">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Peabody, MA</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Hendrickson</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hackett</foaf:surname>
+                        <foaf:givenName>J. A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>A Basic Introduction to Biblical Hebrew, with CD</dc:title>
+        <dc:date>2010</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Basic Introduction</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://books.google.com.au/books?id=UuMRFJqmJ_sC</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2015-01-29</dcterms:dateSubmitted>
+    </bib:Book>
+    <bib:Book rdf:about="#item_142">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Peabody, MA</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Hendrickson</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hackett</foaf:surname>
+                        <foaf:givenName>J. A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>A Basic Introduction to Biblical Hebrew, with CD</dc:title>
+        <dc:date>2010</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Basic Introduction</z:shortTitle>
+    </bib:Book>
+    <bib:Thesis rdf:about="#item_143">
+        <z:itemType>thesis</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>University of St. Andrews</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Giere</foaf:surname>
+                        <foaf:givenName>Samuel D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>A New Glimpse of Day One: An Intertextual History of Genesis 1.1–5 in Hebrew and Greek Texts up to 200 CE</dc:title>
+        <dc:date>2007</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>New Glimpse</z:shortTitle>
+        <z:type>Ph.D. dissertation</z:type>
+    </bib:Thesis>
+    <rdf:Description rdf:about="#item_144">
+        <z:itemType>dictionaryEntry</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <prism:volume>3</prism:volume>
+                <dc:title>Dictionary of New Testament Theology</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Grand Rapids</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Zondervan</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Flender</foaf:surname>
+                        <foaf:givenName>O.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Brown</foaf:surname>
+                        <foaf:givenName>C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Brown</foaf:surname>
+                        <foaf:givenName>Colin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Smell; ὀσμή</dc:title>
+        <dc:date>1992</dc:date>
+        <z:language>en-US</z:language>
+        <z:numberOfVolumes>4</z:numberOfVolumes>
+        <bib:pages>599-601</bib:pages>
+    </rdf:Description>
+    <rdf:Description rdf:about="#item_145">
+        <z:itemType>dictionaryEntry</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+               <dc:title>The Oxford Dictionary of the Christian Church</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Oxford</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Oxford University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cross</foaf:surname>
+                        <foaf:givenName>F. L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Livingstone</foaf:surname>
+                        <foaf:givenName>E. A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Canon of Scripture</dc:title>
+        <dc:date>1983</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Canon</z:shortTitle>
+        <bib:pages>232</bib:pages>
+        <prism:edition>2</prism:edition>
+    </rdf:Description>
+    <bib:Document rdf:about="http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Sapientia</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Brown</foaf:surname>
+                        <foaf:givenName>Andrew</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Creation &amp; Time in Basil’s Hexaemeron</dc:title>
+        <dc:date>3 May 2017</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Creation &amp; Time</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://henrycenter.tiu.edu/2017/05/creation-time-in-basils-hexaemeron/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2018-01-29</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Book rdf:about="#item_147">
+        <z:itemType>book</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:title>Word Biblical Commentary</dc:title>
+                <dc:identifier>14</dc:identifier>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Waco</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Word</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Braun</foaf:surname>
+                        <foaf:givenName>R. L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>1 Chronicles</dc:title>
+        <dc:date>1986</dc:date>
+        <z:language>en-US</z:language>
+    </bib:Book>
+    <bib:Book rdf:about="#item_148">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>London</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Blackfriars</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Aquinas</foaf:surname>
+                        <foaf:givenName>Thomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wallace</foaf:surname>
+                        <foaf:givenName>William A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Summa Theologiae: Latin Text and English Translation, Introductions, Notes, Appendices and Glossaries. Vol. 10: Cosmogony (1a. 65–74)</dc:title>
+        <dc:date>1964</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Summa Theologiae</z:shortTitle>
+        <z:numberOfVolumes>60</z:numberOfVolumes>
+    </bib:Book>
+    <bib:Book rdf:about="#item_149">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Grand Rapids</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Baker</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alexander</foaf:surname>
+                        <foaf:givenName>T. Desmond</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>From Paradise to Promised Land: An Introduction to the Pentateuch</dc:title>
+        <dc:date>2012</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Paradise to Promised Land</z:shortTitle>
+        <prism:edition>3</prism:edition>
+    </bib:Book>
+    <bib:Book rdf:about="#item_150">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>Fount</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lewis</foaf:surname>
+                        <foaf:givenName>C. S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Mere Christianity</dc:title>
+        <dc:date>2010</dc:date>
+        <z:language>en-US</z:language>
+        <prism:edition>Kindle</prism:edition>
+    </bib:Book>
+    <bib:Book rdf:about="#item_151">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>San Francisco</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Harper &amp; Row</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bloesch</foaf:surname>
+                        <foaf:givenName>Donald</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Essentials of Evangelical Theology</dc:title>
+        <dc:date>1982</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Essentials</z:shortTitle>
+        <prism:volume>2</prism:volume>
+        <z:numberOfVolumes>2</z:numberOfVolumes>
+    </bib:Book>
+    <bib:Book rdf:about="#item_152">
+        <z:itemType>book</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Series><dc:title>BibleWorld</dc:title></bib:Series>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>London</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Equinox</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Becking</foaf:surname>
+                        <foaf:givenName>Bob</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cannegieter</foaf:surname>
+                        <foaf:givenName>Alex</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>van de Poll</foaf:surname>
+                        <foaf:givenName>Wilfred</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wetter</foaf:surname>
+                        <foaf:givenName>Anne-Mareike</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>From Babylon to Eternity: The Exile Remembered and Constructed in Text and Tradition</dc:title>
+        <dc:date>2009</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>From Babylon to Eternity</z:shortTitle>
+    </bib:Book>
+    <bib:Article rdf:about="#item_153">
+        <z:itemType>magazineArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Periodical>
+               <dc:title>Christianity Today</dc:title>
+            </bib:Periodical>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stafford</foaf:surname>
+                        <foaf:givenName>Tim</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>A Tale of Two Scientists</dc:title>
+        <dc:date>July 2012</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Tale</z:shortTitle>
+        <bib:pages>22-29</bib:pages>
+    </bib:Article>
+    <bib:Recording rdf:about="http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450">
+        <z:itemType>podcast</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+               <dcterms:alternative>The World Today</dcterms:alternative>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <z:podcasters>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tlozek</foaf:surname>
+                        <foaf:givenName>Eric</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:podcasters>
+        <dc:title>25 years after Oslo, the Middle East peace process is in pieces</dc:title>
+        <z:language>en-US</z:language>
+        <z:shortTitle>25 years after Oslo</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2018-09-13</dcterms:dateSubmitted>
+        <z:medium>Podcast audio</z:medium>
+    </bib:Recording>
+</rdf:RDF>
