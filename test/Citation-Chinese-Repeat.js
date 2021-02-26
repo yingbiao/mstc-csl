@@ -141,6 +141,16 @@ describe("Citation Chinese Repeat", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Ebook", function () {
+		var output = makeCitationCluster(items.ebook, "zh-CN", "15056/18602");
+		var expected = "曹雪芹：《紅樓夢》，15056/18602。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.ebook, "zh-TW", "15056/18602");
+		expected = "曹雪芹：《紅樓夢》，15056/18602。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Essay or chapter", function () {
 		var output = makeCitationCluster(items.essayOrChapter, "zh-CN", "345");
 		var expected = "黄二冬：“天下一家”，345。";
@@ -161,6 +171,36 @@ describe("Citation Chinese Repeat", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Anonymous dictionary acticle", function () {
+		var output = makeCitationCluster(items.anonymousDictionaryArticle, "zh-CN", "1023");
+		var expected = "陳惠榮编：“文士”，2：1023。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.anonymousDictionaryArticle, "zh-TW", "1023");
+		expected = "陳惠榮編：“文士”，2：1023。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::Classical or ancient text", function () {
+		var output = makeCitationCluster(items.classicalOrAncientText, "zh-CN", "185");
+		var expected = "馬丁路德：“在信心中的祈禱”，185。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.classicalOrAncientText, "zh-TW", "185");
+		expected = "馬丁路德：“在信心中的祈禱”，185。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::ANF/NPNF/CCEL", function () {
+		var output = makeCitationCluster(items.anf_npnf_ccel, "zh-CN", "19-20");
+		var expected = "貴鉤利：“人的造成10.2”，19–20。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.anf_npnf_ccel, "zh-TW", "19-20");
+		expected = "貴鉤利：“人的造成10.2”，19–20。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Journal article", function () {
 		var output = makeCitationCluster(items.journalArticle, "zh-CN", "23");
 		var expected = "楊品通：“神學的本質探討”，23。";
@@ -168,6 +208,16 @@ describe("Citation Chinese Repeat", function () {
 
 		output = makeCitationCluster(items.journalArticle, "zh-TW", "23");
 		expected = "楊品通：“神學的本質探討”，23。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::Journal article viewed online", function () {
+		var output = makeCitationCluster(items.journalArticleViewedOnline, "zh-CN", "36");
+		var expected = "楊慶球：“路德與加爾文的社會政治思想”，36。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.journalArticleViewedOnline, "zh-TW", "36");
+		expected = "楊慶球：“路德與加爾文的社會政治思想”，36。";
 		assert.equal(output, expected);
 	});
 
@@ -191,6 +241,16 @@ describe("Citation Chinese Repeat", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Study bible note or comment", function () {
+		var output = makeCitationCluster(items.studyBibleNoteOrComment, "zh-CN", "2081");
+		var expected = "李少秋：“認識教義與靈命成長”，2081。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.studyBibleNoteOrComment, "zh-TW", "2081");
+		expected = "李少秋：“認識教義與靈命成長”，2081。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Conferenec paper", function () {
 		var output = makeCitationCluster(items.conferencePaper, "zh-CN", "4");
 		var expected = "謝木水：“神學如何失去靈性？”，4。";
@@ -198,6 +258,16 @@ describe("Citation Chinese Repeat", function () {
 
 		output = makeCitationCluster(items.conferencePaper, "zh-TW", "4");
 		expected = "謝木水：“神學如何失去靈性？”，4。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::Podcast or online video", function () {
+		var output = makeCitationCluster(items.podcastOrOnlineVideo, "zh-CN", "");
+		var expected = "楊柏滿：《復興的使命群體》。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.podcastOrOnlineVideo, "zh-TW", "");
+		expected = "楊柏滿：《復興的使命群體》。";
 		assert.equal(output, expected);
 	});
 
