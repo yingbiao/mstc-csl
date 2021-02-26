@@ -127,6 +127,16 @@ describe("Citation Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Ebook", function () {
+		var output = makeCitationCluster(items.ebook, "zh-CN", "Loc 134/18602");
+		var expected = "曹雪芹：《紅樓夢》（Kindle版，Czech Republic：藝雅，2017），Loc 134/18602。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.ebook, "zh-TW", "Loc 134/18602");
+		expected = "曹雪芹：《紅樓夢》（Kindle版，Czech Republic：藝雅，2017），Loc 134/18602。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Essay or chapter", function () {
 		var output = makeCitationCluster(items.essayOrChapter, "zh-CN", "339");
 		var expected = "黄二冬：“天下一家”，《地球村的演變》（千百文编，厦門：漢陽出版社，2003），339。";
@@ -147,6 +157,36 @@ describe("Citation Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Anonymous dictionary acticle", function () {
+		var output = makeCitationCluster(items.anonymousDictionaryArticle, "zh-CN", "1022-1023");
+		var expected = "陳惠榮编：“文士”，《證主聖經百科全書》（香港：福音證主協會，1995），2：1022–1023。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.anonymousDictionaryArticle, "zh-TW", "1022-1023");
+		expected = "陳惠榮編：“文士”，《證主聖經百科全書》（香港：福音證主協會，1995），2：1022–1023。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::Classical or ancient text", function () {
+		var output = makeCitationCluster(items.classicalOrAncientText, "zh-CN", "184");
+		var expected = "馬丁路德：“在信心中的祈禱”，《屬靈操練之旅》（傅士德和史雅各编，袁達志和陶婉儀译，香港：天道書樓，2004），184。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.classicalOrAncientText, "zh-TW", "184");
+		expected = "馬丁路德：“在信心中的祈禱”，《屬靈操練之旅》（傅士德和史雅各編，袁達志和陶婉儀譯，香港：天道書樓，2004），184。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::ANF/NPNF/CCEL", function () {
+		var output = makeCitationCluster(items.anf_npnf_ccel, "zh-CN", "19");
+		var expected = "貴鉤利：“人的造成10.2”，《東方教父選集》（章文新编，沈鮮維幀、都孟高、馬葆煉等译，第二版，香港：基督教文藝，1989），19。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.anf_npnf_ccel, "zh-TW", "19");
+		expected = "貴鉤利：“人的造成10.2”，《東方教父選集》（章文新編，沈鮮維幀、都孟高、馬葆煉等譯，第二版，香港：基督教文藝，1989），19。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Journal article", function () {
 		var output = makeCitationCluster(items.journalArticle, "zh-CN", "21");
 		var expected = "楊品通：“神學的本質探討”，《教會神學期刊》14（2003）：21。";
@@ -154,6 +194,16 @@ describe("Citation Chinese", function () {
 
 		output = makeCitationCluster(items.journalArticle, "zh-TW", "21");
 		expected = "楊品通：“神學的本質探討”，《教會神學期刊》14（2003）：21。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::Journal article viewed online", function () {
+		var output = makeCitationCluster(items.journalArticleViewedOnline, "zh-CN", "35");
+		var expected = "楊慶球：“路德與加爾文的社會政治思想”，《教會》69（2018）：35，https://www.churchchina.org/wp-content/uploads/ccpdf/069cc1801.pdf。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.journalArticleViewedOnline, "zh-TW", "35");
+		expected = "楊慶球：“路德與加爾文的社會政治思想”，《教會》69（2018）：35，https://www.churchchina.org/wp-content/uploads/ccpdf/069cc1801.pdf。";
 		assert.equal(output, expected);
 	});
 
@@ -177,6 +227,16 @@ describe("Citation Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Study bible note or comment", function () {
+		var output = makeCitationCluster(items.studyBibleNoteOrComment, "zh-CN", "2080");
+		var expected = "李少秋：“認識教義與靈命成長”，《聖經研讀版 - 新譯本》（高明發和張達民编，第二版，香港：環球聖經公會，2011），2080。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.studyBibleNoteOrComment, "zh-TW", "2080");
+		expected = "李少秋：“認識教義與靈命成長”，《聖經研讀版 - 新譯本》（高明發和張達民編，第二版，香港：環球聖經公會，2011），2080。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Conferenec paper", function () {
 		var output = makeCitationCluster(items.conferencePaper, "zh-CN", "1");
 		var expected = "謝木水：“神學如何失去靈性？”（新加坡神學院益道論述會上发表之专文，新加坡，2010年），1。";
@@ -184,6 +244,16 @@ describe("Citation Chinese", function () {
 
 		output = makeCitationCluster(items.conferencePaper, "zh-TW", "1");
 		expected = "謝木水：“神學如何失去靈性？”（新加坡神學院益道論述會上發表之專文，新加坡，2010年），1。";
+		assert.equal(output, expected);
+	});
+
+	it("Citation::Podcast or online video", function () {
+		var output = makeCitationCluster(items.podcastOrOnlineVideo, "zh-CN", "");
+		var expected = "楊柏滿：《復興的使命群體》華人教會網路（語音錄音），http://www.church.com.hk/acms/content.asp?site=cdc&#38;op=show&#38;type=product&#38;code=019300&#38;layout=sermon。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.podcastOrOnlineVideo, "zh-TW", "");
+		expected = "楊柏滿：《復興的使命群體》華人教會網路（語音錄音），http://www.church.com.hk/acms/content.asp?site=cdc&#38;op=show&#38;type=product&#38;code=019300&#38;layout=sermon。";
 		assert.equal(output, expected);
 	});
 
