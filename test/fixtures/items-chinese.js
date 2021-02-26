@@ -197,7 +197,7 @@ module.exports = {
 					given: "",
 				},
 			],
-			edition: "Kindle",
+			edition: "Kindle版",
 			publisher: "藝雅",
 			"publisher-place": "Czech Republic",
 			issued: {
@@ -475,6 +475,7 @@ module.exports = {
 			issued: {
 				"date-parts": [[2011]],
 			},
+			edition: 2,
 			page: "2080-2081",
 			type: "chapter",
 		},

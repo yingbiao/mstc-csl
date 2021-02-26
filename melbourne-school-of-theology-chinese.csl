@@ -945,7 +945,7 @@
     </group>
   </macro>
   <macro name="container-contributors-bibliography-chinese">
-    <group delimiter="，">
+    <group delimiter="。">
       <choose>
         <if variable="author">
           <names variable="editor" delimiter="，">
@@ -1716,28 +1716,9 @@
         </else-if>
       </choose>
       <choose>
-        <if type="webpage post-weblog post article-journal" match="any">
-          <choose>
-            <if variable="URL">
-              <text variable="URL" prefix="。" />
-              <!-- <group prefix="（" suffix="）">
-                  <date variable="accessed" form="text">
-                    <date-part name="year"/>              
-                    <date-part name="month"/>
-                    <date-part name="day"/>
-                  </date>
-                  <text term="accessed"/>
-              </group> -->
-            </if>
-          </choose>
+        <if variable="URL">
+          <text variable="URL" prefix="。" />
         </if>
-        <else>
-          <choose>
-            <if variable="URL">
-              <text variable="URL" prefix="，" />
-            </if>
-          </choose>
-        </else>
       </choose>
     </group>
   </macro>

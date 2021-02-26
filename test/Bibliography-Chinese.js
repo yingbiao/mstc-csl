@@ -106,11 +106,11 @@ describe("Bibliography Chinese", function () {
 
 	it("Bibliography::Booked viewed online", function () {
 		var output = makeBibliography(items.bookViewedOnline, "zh-CN");
-		var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
+		var expected = '<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010。http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.bookViewedOnline, "zh-TW");
-		expected = '<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010，http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
+		expected = '<div class="csl-entry">何衛中：《牧養神的群羊》。香港：金燈台，2010。http//www.goldenlampstand.org/download/GL217A_Pastoral_TC.pdf。</div>';
 		assert.equal(output, expected);
 	});
 
@@ -166,11 +166,11 @@ describe("Bibliography Chinese", function () {
 
 	it("Bibliography::ANF/NPNF/CCEL", function () {
 		var output = makeBibliography(items.anf_npnf_ccel, "zh-CN");
-		var expected = '<div class="csl-entry">貴鉤利：“人的造成10.2”。頁19-20於《東方教父選集》。章文新編。沈鮮維幀、都孟高、馬葆煉和謝扶雅譯，第二版。香港：基督教文藝，1989。</div>';
+		var expected = '<div class="csl-entry">貴鉤利：“人的造成10.2”。页19–20于《東方教父選集》。章文新编。沈鮮維幀、都孟高、馬葆煉和謝扶雅译。第二版。香港：基督教文藝，1989。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.anf_npnf_ccel, "zh-TW");
-		expected = '<div class="csl-entry">貴鉤利：“人的造成10.2”。頁19-20於《東方教父選集》。章文新編。沈鮮維幀、都孟高、馬葆煉和謝扶雅譯，第二版。香港：基督教文藝，1989。</div>';
+		expected = '<div class="csl-entry">貴鉤利：“人的造成10.2”。頁19–20於《東方教父選集》。章文新編。沈鮮維幀、都孟高、馬葆煉和謝扶雅譯。第二版。香港：基督教文藝，1989。</div>';
 		assert.equal(output, expected);
 	});
 
@@ -216,11 +216,11 @@ describe("Bibliography Chinese", function () {
 
 	it("Bibliography::Study bible note or comment", function () {
 		var output = makeBibliography(items.studyBibleNoteOrComment, "zh-CN");
-		var expected = '<div class="csl-entry">李少秋：“認識教義與靈命成長”。頁2080-2081於《聖經研讀版 - 新譯本》。高明發和張達民編。第二版。香港：環球聖經公會，2011。</div>';
+		var expected = '<div class="csl-entry">李少秋：“認識教義與靈命成長”。页2080–2081于《聖經研讀版 - 新譯本》。高明發和張達民编。第二版。香港：環球聖經公會，2011。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.studyBibleNoteOrComment, "zh-TW");
-		expected = '<div class="csl-entry">李少秋：“認識教義與靈命成長”。頁2080-2081於《聖經研讀版 - 新譯本》。高明發和張達民編。第二版。香港：環球聖經公會，2011。</div>';
+		expected = '<div class="csl-entry">李少秋：“認識教義與靈命成長”。頁2080–2081於《聖經研讀版 - 新譯本》。高明發和張達民編。第二版。香港：環球聖經公會，2011。</div>';
 		assert.equal(output, expected);
 	});
 
@@ -237,11 +237,12 @@ describe("Bibliography Chinese", function () {
 	it("Bibliography::Podcast or online video", function () {
 		var output = makeBibliography(items.podcastOrOnlineVideo, "zh-CN");
 		var expected =
-			'<div class="csl-entry">楊柏滿：《復興的使命群體》華人教會網路（語音錄音）。http://www.church.com.hk/acms/content.asp?site=cdc&op=show&type=product&code=019300&layout=sermon。</div>';
+			'<div class="csl-entry">楊柏滿：《復興的使命群體》華人教會網路（語音錄音）。http://www.church.com.hk/acms/content.asp?site=cdc&#38;op=show&#38;type=product&#38;code=019300&#38;layout=sermon。</div>';
 		assert.equal(output, expected);
 
 		output = makeBibliography(items.podcastOrOnlineVideo, "zh-TW");
-		expected = '<div class="csl-entry">楊柏滿：《復興的使命群體》華人教會網路（語音錄音）。http://www.church.com.hk/acms/content.asp?site=cdc&op=show&type=product&code=019300&layout=sermon。</div>';
+		expected =
+			'<div class="csl-entry">楊柏滿：《復興的使命群體》華人教會網路（語音錄音）。http://www.church.com.hk/acms/content.asp?site=cdc&#38;op=show&#38;type=product&#38;code=019300&#38;layout=sermon。</div>';
 		assert.equal(output, expected);
 	});
 
