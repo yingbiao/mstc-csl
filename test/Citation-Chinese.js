@@ -257,6 +257,16 @@ describe("Citation Chinese", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Broadcast", function () {
+		var output = makeCitationCluster(items.broadcast, "zh-CN", "");
+		var expected = "楊柏滿：《復興的使命群體》華人教會網路（語音錄音），http://www.church.com.hk/acms/content.asp?site=cdc&#38;op=show&#38;type=product&#38;code=019300&#38;layout=sermon。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.broadcast, "zh-TW", "");
+		expected = "楊柏滿：《復興的使命群體》華人教會網路（語音錄音），http://www.church.com.hk/acms/content.asp?site=cdc&#38;op=show&#38;type=product&#38;code=019300&#38;layout=sermon。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Webpage", function () {
 		var output = makeCitationCluster(items.webpage, "zh-CN", "");
 		var expected = "劉小楓：“歷史玩完了？”，《漢語基督教文化研究所》，2001年5月3日，http://www.iscs.org.hk/article18.htm。";

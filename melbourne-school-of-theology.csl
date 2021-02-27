@@ -19,7 +19,7 @@
     <category citation-format="note"/>
     <category field="theology"/>
     <summary>Melbourne School of Theology format based on the Essay Style Guide</summary>
-    <updated>2021-02-26T23:00:00+10:00</updated>
+    <updated>2021-02-27T22:00:00+10:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en-US">
@@ -250,7 +250,7 @@
     <group delimiter=", ">
       <text macro="interviewer-note"/>
       <choose>
-        <if type="song" match="none">
+        <if type="song broadcast" match="none">
           <text variable="medium" text-case="capitalize-first"/>
         </if>
       </choose>
@@ -321,7 +321,7 @@
   </macro>
   <macro name="edition-note">
     <choose>
-      <if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song entry-dictionary" match="any">
+      <if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song broadcast entry-dictionary" match="any">
         <choose>
           <if is-numeric="edition">
             <group delimiter=" ">
@@ -341,7 +341,7 @@
   </macro>
   <macro name="locators-note">
     <choose>
-      <if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song entry-dictionary" match="any">
+      <if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song broadcast entry-dictionary" match="any">
         <group delimiter=", ">
           <choose>
             <if variable="locator" match="any"/>
@@ -428,7 +428,7 @@
           <else-if type="paper-conference">
             <date variable="issued" date-parts="year" form="text"/>
           </else-if>
-          <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="any">
+          <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song broadcast thesis" match="any">
             <date variable="issued" text-case="capitalize-all">
               <date-part name="year"/>
             </date>
@@ -487,7 +487,7 @@
           <else-if type="paper-conference">
             <date variable="issued" form="text"/>
           </else-if>
-          <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="any">
+          <else-if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song broadcast thesis" match="any">
             <date variable="issued" text-case="capitalize-all">
               <date-part name="year"/>
             </date>
@@ -524,7 +524,7 @@
           <choose>
             <if locator="page" match="none">
               <choose>
-                <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+                <if type="bill book graphic legal_case legislation motion_picture report song broadcast" match="any">
                   <choose>
                     <if match="none" locator="verse">
                       <choose>
@@ -561,7 +561,7 @@
           <choose>
             <if locator="page chapter" match="none">
               <choose>
-                <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+                <if type="bill book graphic legal_case legislation motion_picture report song broadcast" match="any">
                   <choose>
                     <if variable="volume">
                       <group>
@@ -632,7 +632,7 @@
         <text variable="issue" prefix="."/>
         <text macro="issued-note" prefix=" (" suffix=")"/>
       </if>
-      <else-if type="song">
+      <else-if type="song broadcast">
         <group  prefix=" " suffix="" delimiter=", ">
           <text variable="medium"/>
           <text variable="collection-title" font-style="italic" prefix=" "/>
@@ -685,7 +685,7 @@
         <text variable="issue" prefix="."/>
         <text macro="issued" prefix=" (" suffix=")"/>
       </if>
-      <else-if type="song">
+      <else-if type="song broadcast">
         <group delimiter=". " prefix=" ">
           <text variable="medium"/>
           <text variable="collection-title" font-style="italic"/>
@@ -734,7 +734,7 @@
         <if type="graphic report" match="any">
           <text macro="archive-note"/>
         </if>
-        <else-if type="song" >
+        <else-if type="song broadcast" >
           <choose>
             <if variable="accessed">
               <group delimiter=" " prefix="(" suffix=")">
@@ -751,7 +751,7 @@
             </else>
           </choose>
         </else-if>
-        <else-if type="article-journal article-magazine article-newspaper bill book chapter graphic legal_case legislation motion_picture paper-conference report song thesis" match="none">
+        <else-if type="article-journal article-magazine article-newspaper bill book chapter graphic legal_case legislation motion_picture paper-conference report song broadcast thesis" match="none">
           <text macro="archive-note"/>
         </else-if>
       </choose>
@@ -772,10 +772,10 @@
   </macro>
   <macro name="access-bib">
     <choose>
-      <if type="song">
+      <if type="song broadcast">
         <group delimiter=" " prefix=", ">
           <choose>
-            <if type="song" >
+            <if type="song broadcast" >
               <choose>
                 <if variable="accessed">
                   <group delimiter=" " prefix="(" suffix=")">

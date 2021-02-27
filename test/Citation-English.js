@@ -273,6 +273,16 @@ describe("Citation English", function () {
 		assert.equal(outputChineseStyle, expected);
 	});
 
+	it("Citation::Broadcast", function () {
+		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.broadcast, "");
+		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.broadcast, "");
+		var expected =
+			"Eric Tlozek, “25 Years after Oslo, the Middle East Peace Process Is in Pieces,” Podcast audio, <i>The World Today</i>, n.d., http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450.";
+
+		assert.equal(outputEnglishStyle, expected);
+		assert.equal(outputChineseStyle, expected);
+	});
+
 	it("Citation::Webpage", function () {
 		var outputEnglishStyle = makeCitationClusterFromEnglishStyle(items.webpage, "");
 		var outputChineseStyle = makeCitationClusterFromChineseStyle(items.webpage, "");
