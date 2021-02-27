@@ -271,6 +271,16 @@ describe("Citation Chinese Repeat", function () {
 		assert.equal(output, expected);
 	});
 
+	it("Citation::Broadcast", function () {
+		var output = makeCitationCluster(items.broadcast, "zh-CN", "");
+		var expected = "楊柏滿：《復興的使命群體》。";
+		assert.equal(output, expected);
+
+		output = makeCitationCluster(items.broadcast, "zh-TW", "");
+		expected = "楊柏滿：《復興的使命群體》。";
+		assert.equal(output, expected);
+	});
+
 	it("Citation::Webpage", function () {
 		var output = makeCitationCluster(items.webpage, "zh-CN", "");
 		var expected = "劉小楓：“歷史玩完了？”。";

@@ -516,6 +516,23 @@ module.exports = {
 			type: "song",
 		},
 	},
+	broadcast: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "復興的使命群體",
+			"title-short": "復興的使命群體",
+			author: [
+				{
+					family: "楊柏滿",
+					given: "",
+				},
+			],
+			"collection-title": "華人教會網路",
+			medium: "語音錄音",
+			URL: "http://www.church.com.hk/acms/content.asp?site=cdc&op=show&type=product&code=019300&layout=sermon",
+			type: "broadcast",
+		},
+	},
 	webpage: {
 		"ITEM-1": {
 			id: "ITEM-1",

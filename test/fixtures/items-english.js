@@ -573,6 +573,24 @@ module.exports = {
 			type: "song",
 		},
 	},
+	broadcast: {
+		"ITEM-1": {
+			id: "ITEM-1",
+			title: "25 Years after Oslo, the Middle East Peace Process Is in Pieces",
+			"title-short": "25 Years after Oslo",
+			author: [
+				{
+					family: "Tlozek",
+					given: "Eric",
+				},
+			],
+			"collection-title": "The World Today",
+			language: "en-US",
+			medium: "Podcast audio",
+			URL: "http://www.abc.net.au/radio/programs/worldtoday/25-years-after-oslo-the-middle-east-peace-process-is-in-pieces/10242450",
+			type: "broadcast",
+		},
+	},
 	webpage: {
 		"ITEM-1": {
 			id: "ITEM-1",
